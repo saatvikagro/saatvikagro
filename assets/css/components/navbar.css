@@ -88,9 +88,10 @@
 }
 
 .navbar__link {
+  font-family: var(--font-heading);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-medium);
-  color: var(--color-text);
+  font-weight: var(--font-weight-bold);
+  color: var(--color-heading);
   text-decoration: none;
   padding-block: var(--space-2);
   position: relative;

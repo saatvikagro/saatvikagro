@@ -1,40 +1,30 @@
 /* ============================================================
    SAATVIK AGRO — BUTTON COMPONENTS
-   BEM: .btn, .btn--primary, .btn--secondary, .btn--dark, .btn--white
+   BEM: .btn, .btn--primary, .btn--secondary, .btn--outline
    ============================================================ */
 
 .btn {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: var(--space-2);
-  padding: 0.875rem 1.75rem;
-  font-family: var(--font-body);
+  padding: 0 var(--space-8);
+  height: 56px; /* Taller, premium buttons */
+  font-family: var(--font-heading);
   font-size: var(--font-size-base);
-  font-weight: var(--font-weight-semibold);
-  line-height: 1;
+  font-weight: var(--font-weight-bold);
   text-align: center;
   text-decoration: none;
-  white-space: nowrap;
+  text-transform: uppercase;
+  letter-spacing: var(--letter-spacing-wide);
+  border-radius: var(--radius-pill); /* Pill shape */
   border: 2px solid transparent;
-  border-radius: var(--radius-md);
   cursor: pointer;
-  transition:
-    background-color var(--transition-base),
-    border-color var(--transition-base),
-    color var(--transition-base),
-    transform var(--transition-fast),
-    box-shadow var(--transition-base);
+  transition: all var(--transition-base);
+  white-space: nowrap;
 }
 
-.btn:hover {
-  transform: translateY(-2px);
-}
-
-.btn:active {
-  transform: translateY(0);
-}
-
-/* Primary — orange CTA */
+/* Primary Button (Orange) */
 .btn--primary {
   background-color: var(--color-secondary);
   color: var(--color-text-white);
@@ -42,76 +32,73 @@
 }
 
 .btn--primary:hover {
-  background-color: var(--color-secondary-dark);
-  border-color: var(--color-secondary-dark);
+  background-color: var(--color-primary);
+  border-color: var(--color-primary);
   color: var(--color-text-white);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-/* Secondary — outline (navy) */
+/* Secondary Button (Navy) */
 .btn--secondary {
-  background-color: transparent;
-  color: var(--color-primary);
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
   border-color: var(--color-primary);
 }
 
 .btn--secondary:hover {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
+  background-color: var(--color-secondary);
+  border-color: var(--color-secondary);
+  transform: translateY(-2px);
   box-shadow: var(--shadow-md);
 }
 
-/* Dark — solid navy */
-.btn--dark {
-  background-color: var(--color-primary);
-  color: var(--color-text-white);
+/* Outline Button */
+.btn--outline {
+  background-color: transparent;
+  color: var(--color-primary);
   border-color: var(--color-primary);
 }
 
-.btn--dark:hover {
-  background-color: var(--color-primary-dark);
-  border-color: var(--color-primary-dark);
-  box-shadow: var(--shadow-md);
+.btn--outline:hover {
+  background-color: var(--color-primary);
+  color: var(--color-text-white);
+  transform: translateY(-2px);
 }
 
-/* White — for dark backgrounds */
-.btn--white {
-  background-color: var(--color-bg);
-  color: var(--color-primary);
-  border-color: var(--color-bg);
-}
-
-.btn--white:hover {
-  background-color: var(--color-bg-alt);
-  box-shadow: var(--shadow-md);
-}
-
-/* Ghost white — outline for dark backgrounds */
-.btn--ghost-white {
+.btn--outline-white {
   background-color: transparent;
   color: var(--color-text-white);
-  border-color: rgba(255,255,255,0.6);
-}
-
-.btn--ghost-white:hover {
-  background-color: rgba(255,255,255,0.1);
   border-color: var(--color-text-white);
 }
 
-/* Sizes */
+.btn--outline-white:hover {
+  background-color: var(--color-text-white);
+  color: var(--color-primary);
+  transform: translateY(-2px);
+}
+
+/* Button Sizes */
 .btn--sm {
-  padding: 0.625rem 1.25rem;
+  height: 48px;
+  padding: 0 var(--space-6);
   font-size: var(--font-size-sm);
 }
 
 .btn--lg {
-  padding: 1.125rem 2.25rem;
+  height: 64px;
+  padding: 0 var(--space-10);
   font-size: var(--font-size-lg);
 }
 
-/* Icon inside button */
+/* Button Icon */
 .btn__icon {
-  width: 18px;
-  height: 18px;
-  flex-shrink: 0;
+  width: 20px;
+  height: 20px;
+  fill: currentColor;
+  transition: transform var(--transition-base);
+}
+
+.btn:hover .btn__icon {
+  transform: translateX(4px);
 }
