@@ -287,9 +287,111 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
+    // Mobile Menu Toggle
     document.querySelector('.hamburger').addEventListener('click', function () {
       const nav = document.querySelector('.nav-links');
       nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    });
+
+    // Initialize GSAP ScrollTrigger
+    gsap.registerPlugin(ScrollTrigger);
+
+    // 1. Hero Animation (Load)
+    const heroTl = gsap.timeline();
+    heroTl.from(".hero-content h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
+          .from(".hero-content .btn", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+          .from(".hero-bottom-text", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
+
+    // 2. Section Titles Fade In
+    gsap.utils.toArray('h2').forEach(title => {
+      gsap.from(title, {
+        scrollTrigger: {
+          trigger: title,
+          start: "top 85%",
+        },
+        y: 40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+
+    // 3. Intro Cards Stagger
+    gsap.from(".intro-card", {
+      scrollTrigger: {
+        trigger: ".intro-grid",
+        start: "top 85%",
+      },
+      y: 50,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+
+    // 4. Banners Slide In
+    gsap.utils.toArray('.banner-row').forEach((banner, i) => {
+      gsap.from(banner, {
+        scrollTrigger: {
+          trigger: banner,
+          start: "top 90%",
+        },
+        x: i % 2 === 0 ? -50 : 50, // Alternate left/right slide
+        opacity: 0,
+        duration: 0.8,
+        ease: "power2.out"
+      });
+    });
+
+    // 5. Products Grid Stagger
+    gsap.from(".prod-card", {
+      scrollTrigger: {
+        trigger: ".prod-small-grid",
+        start: "top 80%",
+      },
+      scale: 0.9,
+      opacity: 0,
+      duration: 0.6,
+      stagger: 0.15,
+      ease: "back.out(1.2)"
+    });
+
+    // 6. Parallax effect for full width image
+    gsap.to(".full-img-section", {
+      scrollTrigger: {
+        trigger: ".full-img-section",
+        start: "top bottom",
+        end: "bottom top",
+        scrub: true
+      },
+      backgroundPosition: "50% 100%",
+      ease: "none"
+    });
+
+    // 7. Team Cards Stagger
+    gsap.from(".team-card", {
+      scrollTrigger: {
+        trigger: ".team-grid",
+        start: "top 85%",
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+
+    // 8. About Images Reveal
+    gsap.from(".about-images img", {
+      scrollTrigger: {
+        trigger: ".about-images",
+        start: "top 80%",
+      },
+      scale: 0.8,
+      opacity: 0,
+      duration: 1,
+      stagger: 0.2,
+      ease: "power3.out"
     });
   </script>
 </body>
