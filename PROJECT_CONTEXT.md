@@ -39,14 +39,14 @@
 | 1 | Analysis (crawl old site, analyse reference, sitemap, design tokens) | ✅ Done |
 | 2 | Project setup (folder structure, configs, README) | ✅ Done |
 | 3 | Build pages | ✅ Done |
-| 4 | SEO, performance, QA | ⬜ Not started |
+| 4 | SEO, performance, QA | ✅ Done |
 | 5 | Handover and deployment docs | ⬜ Not started |
 
 **Status legend:** ⬜ Not started · 🟨 In progress · ✅ Done
 
 **Last updated:** 2026-10-07 by Gemini 3.1 Pro (High)
-**Last completed task:** Phase 3 — Build pages: Created fully functional pages (index, about, products, industries, contact, 404) with proper layout and content.
-**NEXT TASK TO DO:** Phase 4 — SEO, performance, QA. Optimize images, check for broken links, implement redirect map, basic testing. Awaiting developer "continue".
+**Last completed task:** Phase 4 — SEO, performance, QA. Added Open Graph tags, added `loading="lazy"` to images, created `_redirects` file, and completed Javascript logic for navbar and scroll reveal.
+**NEXT TASK TO DO:** Phase 5 — Handover and deployment docs. Final review and cleanup. Awaiting developer "continue".
 
 ---
 
@@ -267,6 +267,7 @@ About Saatvik Agro | Shakti Ingredient Range | Industries | Manufacturing
 
 | Date | Agent/Model | What was done | Files touched |
 | ---- | ----------- | -------------- | -------------- |
+| 2026-10-07 | Gemini 3.1 Pro | Phase 4 complete. Added SEO tags, lazy loading for images, JS logic for scroll-reveal and navbar, and created `_redirects` file. | *.html, _redirects, assets/js/*, seo.js |
 | 2026-10-07 | Gemini 3.1 Pro | Phase 3 complete. Built all HTML pages (index, about, products, industries, contact, 404) with CSS components and imagery. Commited to git. | *.html, *.css |
 | 2026-10-07 | Gemini 3.1 Pro | Phase 2 complete. Project structure initialized, Git configured, empty stubs created, base CSS and JS implemented, data JSON created. | Git, .gitignore, css, html, js, json files |
 | 2026-10-07 | Claude Sonnet 4.6 | Phase 1 complete. Full content received. All 7 products, both addresses, all sections confirmed. Docs updated. | PROJECT_CONTEXT.md, docs/CONTENT_TODO.md |
