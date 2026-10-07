@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Saatvik Agro — Exact Soil Reference Design</title>
+  <title>Saatvik Agro — Dairy Farm</title>
 
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,19 +19,19 @@
 
   <!-- NAVBAR -->
   <header class="header flex-between">
-    <a href="index.html" class="logo">
-      <img src="assets/images/logo/logo.svg" alt="Saatvik Agro" height="35"
-        onerror="this.src='https://placehold.co/150x40/FFFFFF/1B3051?text=Saatvik'">
+    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">
+      <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-secondary)"><circle cx="12" cy="12" r="12"/></svg>
+      Saatvik
     </a>
 
     <button class="hamburger">☰</button>
 
     <ul class="nav-links">
       <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="industries.html">Industries</a></li>
-      <li><a href="contact.html">Contact Us</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="farm.html">Farm</a></li>
+      <li><a href="shop.html">Shop</a></li>
+      <li><a href="contact.html">Contact</a></li>
     </ul>
 
     <div class="nav-contact">
@@ -42,28 +42,18 @@
             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
           </path>
         </svg>
-        +91 99999 99999
+        +1 234 567
       </div>
-      <a href="contact.html" class="btn btn--dark">Get in Touch</a>
+      <a href="contact.html" class="btn btn--dark">Talk to us</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="hero-content">
-      <h1>High Quality Maize, Pure Strength</h1>
-      <a href="products.html" class="btn btn--dark">Explore Products</a>
-      <div class="hero-bottom-text">Partnering with pure growth</div>
-    </div>
-
-    <div class="hero-image">
-      <img src="assets/images/content/farm1.jpg" alt="Maize Farming">
-    </div>
-
-    <div class="wave-divider">
-      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
-        <path fill="#ffffff" d="M0,120 L1440,120 L1440,0 C1120,80 820,120 420,40 C220,0 0,60 0,60 Z"></path>
-      </svg>
+    <div class="container hero-content">
+      <h1>Driven by purity.<br>Guided by science.<br>Built for consistency.</h1>
+      <a href="products.html" class="btn btn--accent" style="background-color: #F18825; color: white; border-radius: 4px; padding: 0 40px;">Explore</a>
+      <div class="hero-bottom-text">High quality maize products<br>for a healthier future</div>
     </div>
   </section>
 
@@ -71,12 +61,11 @@
   <section class="section-intro container">
     <div class="intro-header">
       <div class="intro-title-wrap">
-        <span class="intro-label">Our Expertise</span>
-        <h2>Nourishing industry with pure maize</h2>
+        <span class="intro-label">ABOUT OUR FARM</span>
+        <h2>Nourishing lives with pure milk</h2>
       </div>
       <div class="intro-text-wrap">
-        <p>Saatvik Agro is dedicated to creating high quality maize-based ingredients that power everyday products
-          across food, nutrition, animal feed, and industrial applications.</p>
+        <p>Our cows graze in open pastures, eating fresh grass and herbs. This ensures our milk is not just fresh, but packed with natural goodness.</p>
       </div>
     </div>
 
@@ -85,120 +74,102 @@
         <svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
           <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" />
         </svg>
-        <h3>Food Grade Starch</h3>
-        <p>Premium quality starch engineered for food and beverage consistency.</p>
-        <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg></a>
+        <h3>Fresh Milk Daily</h3>
+        <p>Our milk is delivered fresh from the farm to your doorstep every morning.</p>
+        <a href="products.html" class="btn-circle-small">Read more</a>
       </div>
       <div class="intro-card">
         <svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
           <circle cx="12" cy="12" r="10" />
           <path d="M12 8v8M8 12h8" />
         </svg>
-        <h3>Liquid Glucose</h3>
-        <p>High-purity glucose syrup for confectionery and pharma applications.</p>
-        <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg></a>
+        <h3>100% Natural & Pure</h3>
+        <p>We never use any artificial additives, hormones, or preservatives.</p>
+        <a href="products.html" class="btn-circle-small">Read more</a>
       </div>
       <div class="intro-card">
         <svg class="intro-icon" viewBox="0 0 24 24" fill="none" stroke="var(--color-primary)" stroke-width="1.5">
           <rect x="3" y="3" width="18" height="18" rx="2" ry="2" />
           <path d="M3 9h18M9 21V9" />
         </svg>
-        <h3>Industrial Starch</h3>
-        <p>Optimized for paper, textile, and packaging strength.</p>
-        <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-            <path d="M5 12h14M12 5l7 7-7 7" />
-          </svg></a>
+        <h3>Rich in Nutrients</h3>
+        <p>Our dairy is packed with calcium, vitamins, and protein for your family's health.</p>
+        <a href="products.html" class="btn-circle-small">Read more</a>
       </div>
     </div>
   </section>
 
   <!-- SECTION 2: Banners (Stacked) -->
-  <section class="section-banners">
-    <div class="banner-row">
+  <section class="section-banners container">
+    <div class="banner-row bg-white">
       <div class="banner-content">
-        <h2>Facilities that empower</h2>
-        <p>State of the art processing plant in Chhindwara, MP.</p>
+        <h2>Fresh harvests that nourish</h2>
+        <p>We ensure every drop of milk is purely natural.</p>
       </div>
-      <a href="about.html" class="btn-circle"><svg viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg></a>
+      <div class="banner-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      </div>
     </div>
 
-    <div class="banner-row">
+    <div class="banner-row bg-dark">
       <div class="banner-content">
         <h2>Sustaining solutions</h2>
-        <p>Committed to zero waste and sustainable farming.</p>
+        <p>Committed to eco-friendly farming practices.</p>
       </div>
-      <a href="about.html" class="btn-circle"><svg viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg></a>
+      <div class="banner-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      </div>
     </div>
 
-    <div class="banner-row">
+    <div class="banner-row bg-yellow">
       <div class="banner-content">
-        <h2>Leading the industry</h2>
-        <p>Pioneering maize derivative technology since inception.</p>
+        <h2>Lasting local impact</h2>
+        <p>Supporting our community with every product.</p>
       </div>
-      <a href="about.html" class="btn-circle"><svg viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg></a>
+      <div class="banner-icon">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+      </div>
     </div>
   </section>
 
   <!-- SECTION 3: Products Grid -->
   <section class="section-products">
     <div class="container">
-      <span class="intro-label">Our Produce</span>
-      <h2>Discover versatile maize ingredients for your industry today</h2>
+      <span class="intro-label">WHAT YOU CAN GET</span>
+      <h2>Discover fresh dairy and<br>natural milk products for<br>your home today</h2>
 
       <div class="prod-grid">
         <div class="prod-large">
-          <img src="assets/images/content/factory.jpg" alt="Products">
+          <img src="assets/images/content/farm1.jpg" alt="Products">
         </div>
 
         <div class="prod-small-grid">
           <div class="prod-card">
-            <div class="prod-img-wrap"><img src="assets/images/content/powder.jpg" alt="Maltodex"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Milk"></div>
             <div class="prod-card-content">
-              <h3>Shakti Maltodex</h3>
-              <p>Premium maltodextrin</p>
-              <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg></a>
+              <h3>Fresh Whole Milk</h3>
+              <p>1 L - $4.00</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap"><img src="assets/images/content/gluten.jpg" alt="Gluten"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Cheese"></div>
             <div class="prod-card-content">
-              <h3>Gluten Meal</h3>
-              <p>High protein feed</p>
-              <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg></a>
+              <h3>Artisan Cheddar Cheese</h3>
+              <p>200g - $6.50</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap"><img src="assets/images/content/fibre.jpg" alt="Fibre"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Butter"></div>
             <div class="prod-card-content">
-              <h3>Dry Fibre</h3>
-              <p>Cattle nutrition</p>
-              <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg></a>
+              <h3>Farmhouse Butter Block</h3>
+              <p>250g - $5.00</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap"><img src="assets/images/content/germ.jpg" alt="Germ"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Cream"></div>
             <div class="prod-card-content">
-              <h3>Maize Germ</h3>
-              <p>Oil extraction ready</p>
-              <a href="products.html" class="btn-circle"><svg viewBox="0 0 24 24">
-                  <path d="M5 12h14M12 5l7 7-7 7" />
-                </svg></a>
+              <h3>Pure Natural Fresh Cream</h3>
+              <p>500ml - $4.50</p>
             </div>
           </div>
         </div>
@@ -207,39 +178,33 @@
   </section>
 
   <!-- SECTION 4: Full Image Banner -->
-  <section class="full-img-section">
-    <a href="about.html" class="btn-circle"><svg viewBox="0 0 24 24">
-        <path d="M5 12h14M12 5l7 7-7 7" />
-      </svg></a>
+  <section class="full-img-section" style="background-image: url('assets/images/content/farm1.jpg');">
   </section>
 
   <!-- SECTION 5: Team Grid -->
   <section class="section-team container">
     <div class="flex-between">
       <div>
-        <span class="intro-label">Leadership</span>
-        <h2>Together building dairy goodness, united in purpose</h2>
+        <span class="intro-label">MEET OUR TEAM</span>
+        <h2>Together building dairy goodness,<br>united in purpose</h2>
       </div>
-      <a href="about.html" class="btn-circle"><svg viewBox="0 0 24 24">
-          <path d="M5 12h14M12 5l7 7-7 7" />
-        </svg></a>
     </div>
 
     <div class="team-grid">
       <div class="team-card">
         <img src="assets/images/content/team1.jpg" alt="Team">
-        <h3>Expert Agronomists</h3>
-        <p>Sourcing the finest maize</p>
+        <h3>Jacob Miles</h3>
+        <p>Head Farmer</p>
       </div>
       <div class="team-card">
         <img src="assets/images/content/team2.jpg" alt="Team">
-        <h3>Quality Technicians</h3>
-        <p>Ensuring batch consistency</p>
+        <h3>John Davis</h3>
+        <p>Dairy Specialist</p>
       </div>
       <div class="team-card">
         <img src="assets/images/content/team3.jpg" alt="Team">
-        <h3>Process Engineers</h3>
-        <p>Optimizing plant efficiency</p>
+        <h3>Sarah Jones</h3>
+        <p>Quality Control</p>
       </div>
     </div>
   </section>
@@ -247,25 +212,15 @@
   <!-- SECTION 6: About Dual Overlap -->
   <section class="section-about container">
     <div class="about-grid">
-      <div class="about-images">
-        <img src="assets/images/content/farm1.jpg" class="about-img-1" alt="Farm">
-        <img src="assets/images/content/factory.jpg" class="about-img-2" alt="Factory">
+      <div class="about-images" style="display: flex; gap: 0;">
+        <img src="assets/images/content/team4.jpg" style="width: 45%; object-fit: cover; height: 300px; margin-top: auto;" alt="Farm">
+        <img src="assets/images/content/team1.jpg" style="width: 65%; object-fit: cover; height: 400px; margin-left: -10%; z-index: 2;" alt="Factory">
       </div>
-      <div class="about-content">
-        <span class="intro-label">About Us</span>
-        <h2>Rooted in purity, built for scale.</h2>
-        <p>Saatvik Agro is the agro-ingredient unit of the Saatvik Group, dedicated to creating high quality maize-based
-          ingredients that power everyday products across food, nutrition, animal feed, and industrial applications.</p>
-        <p>From our headquarters in Indore to our sprawling plant in Chhindwara, our operations are designed to deliver
-          uncompromising quality at scale.</p>
-        <div class="signature-wrap">
-          <img src="assets/images/content/team1.jpg" alt="CEO">
-          <div>
-            <strong>Managing Director</strong>
-            <div style="font-family: 'Instrument Sans', cursive; font-size: 1.5rem; color: var(--color-secondary);">
-              Saatvik Agro</div>
-          </div>
-        </div>
+      <div class="about-content" style="padding-left: 40px;">
+        <span class="intro-label">KNOW ABOUT US</span>
+        <h2>About us</h2>
+        <p>We are a family-owned dairy farm dedicated to providing the freshest, most natural milk and dairy products to our community. Our passion for healthy, happy cows means better milk for you and your family.</p>
+        <p>From our farm directly to your table, we oversee every step to ensure uncompromising quality.</p>
       </div>
     </div>
   </section>
@@ -277,11 +232,10 @@
         <path fill="#ffffff" d="M0,60 C320,0 420,60 720,30 C1020,0 1120,60 1440,30 L1440,60 L0,60 Z"></path>
       </svg>
     </div>
-    <h2>"Choosing Saatvik for our ingredients was the best decision we've made. Every batch is treated with a lot of
-      care every day."</h2>
+    <h2>"Choosing Saatvik for our family's nutrition was the best decision we've made. Every bottle is fresh and full of natural goodness."</h2>
     <div style="margin-top: 30px;">
       <img src="assets/images/content/test1.jpg" alt="Client" style="width: 60px; height: 60px; border-radius: 50%;">
-      <div style="font-weight: 700; color: var(--color-primary); margin-top: 10px;">— Industry Partner</div>
+      <div style="font-weight: 700; color: var(--color-primary); margin-top: 10px;">Marie Smith</div>
     </div>
     <div class="wave-bottom-yellow">
       <svg viewBox="0 0 1440 60" preserveAspectRatio="none">
@@ -293,59 +247,39 @@
   <!-- FOOTER -->
   <footer class="footer">
     <div class="container">
-      <div class="footer-top">
-        <h2>Growing authentic ingredients</h2>
-        <a href="contact.html" class="btn btn--dark" style="background: #fff; color: var(--color-primary);">Get in
-          Touch</a>
-      </div>
-
       <div class="footer-grid">
-        <div class="footer-col">
-          <img src="assets/images/logo/logo.svg" alt="Saatvik Agro"
-            style="height: 40px; filter: brightness(0) invert(1);"
-            onerror="this.src='https://placehold.co/150x40/FFFFFF/1B3051?text=Saatvik'">
-          <p>Saatvik Agro is a pioneering agro-processor dedicated to sustainable agriculture and the production of
-            high-quality maize derivatives.</p>
+        <div class="footer-col" style="grid-column: span 2;">
+          <h2 style="color: white; font-size: 2rem; margin-bottom: 20px;">Saatvik</h2>
+          <p style="max-width: 300px;">Providing the finest natural dairy products, nurtured with care and delivered fresh.</p>
+          <a href="contact.html" class="btn btn--accent" style="background-color: #F3C319; color: var(--color-primary); margin-top: 20px;">Shop now</a>
         </div>
 
         <div class="footer-col">
-          <h4>Contact</h4>
-          <ul>
-            <li>marketing.agro@saatvikgroup.com</li>
-            <li>+91 XXXXX XXXXX</li>
-            <li style="margin-top: 20px;">A-404, Shagun Arcade, Indore</li>
-          </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Links</h4>
+          <h4>Pages</h4>
           <ul>
             <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="products.html">Products</a></li>
-            <li><a href="industries.html">Industries</a></li>
+            <li><a href="about.html">About us</a></li>
+            <li><a href="farm.html">Farm</a></li>
+            <li><a href="shop.html">Shop</a></li>
+            <li><a href="contact.html">Contact</a></li>
           </ul>
         </div>
 
         <div class="footer-col">
-          <h4>Social</h4>
-          <div style="display: flex; gap: 15px;">
-            <a href="#" class="btn-circle" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1);"><svg
-                viewBox="0 0 24 24">
-                <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z" />
-              </svg></a>
-            <a href="#" class="btn-circle" style="width: 40px; height: 40px; background: rgba(255,255,255,0.1);"><svg
-                viewBox="0 0 24 24">
-                <path
-                  d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z" />
-              </svg></a>
+          <h4>Contact us</h4>
+          <ul>
+            <li>hello@saatvik.com</li>
+            <li>+1 234 567 890</li>
+            <li>123 Dairy Lane, Countryside</li>
+          </ul>
+          <div style="display: flex; gap: 15px; margin-top: 20px;">
+            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
+            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
           </div>
         </div>
       </div>
-
-      <div
-        style="margin-top: 60px; font-size: 0.9rem; color: rgba(255,255,255,0.5); display: flex; justify-content: space-between;">
-        <span>© 2026 Saatvik Agro. All Rights Reserved.</span>
+      <div style="margin-top: 60px; font-size: 0.9rem; color: rgba(255,255,255,0.5); text-align: left; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+        <span>© 2026 Saatvik. All Rights Reserved.</span>
       </div>
     </div>
   </footer>
@@ -353,37 +287,10 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-    // Mobile Menu Toggle
     document.querySelector('.hamburger').addEventListener('click', function () {
       const nav = document.querySelector('.nav-links');
       nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
     });
-
-    // GSAP Scroll Animation for Banners
-    gsap.registerPlugin(ScrollTrigger);
-
-    // Animate the banner rows stacking on top of each other
-    const banners = gsap.utils.toArray('.banner-row');
-
-    banners.forEach((banner, i) => {
-      if (i === banners.length - 1) return; // don't animate the last one
-
-      ScrollTrigger.create({
-        trigger: banner,
-        start: "top center",
-        endTrigger: ".section-banners",
-        end: "bottom bottom",
-        pin: true,
-        pinSpacing: false,
-        animation: gsap.to(banner, {
-          scale: 1 - ((banners.length - i) * 0.03), // Subtle shrink
-          opacity: 1 - ((banners.length - i) * 0.1),
-          ease: "none"
-        }),
-        scrub: true
-      });
-    });
   </script>
 </body>
-
 </html>
