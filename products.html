@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Products | Saatvik Agro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/products.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="header-main">
+    <a href="index.html" class="header-logo">
+      <img src="assets/images/logo/logo.svg" alt="Saatvik Agro" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
+    </a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" style="display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--color-primary);">
+      ☰
+    </button>
+    <ul class="header-nav">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--dark header-btn">Get in Touch</a>
+  </header>
+
+
+  <section class="shop-header">
+    <h1>Our Products</h1>
+    <div class="shop-controls">
+      <span>Showing all 6 results</span>
+      <select style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
+        <option>Sort by industry</option>
+      </select>
+    </div>
+  </section>
+
+  <section class="shop-grid">
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/powder.jpg" alt="Food Grade Starch"></div>
+      <h3>Food Grade Starch</h3>
+      <p>Food & Nutrition</p>
+    </a>
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/glucose.jpg" alt="Liquid Glucose"></div>
+      <h3>Liquid Glucose</h3>
+      <p>Confectionery</p>
+    </a>
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/fibre.jpg" alt="Yellow Dextrin"></div>
+      <h3>Yellow Dextrin</h3>
+      <p>Adhesives & Foundry</p>
+    </a>
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/white-dex.jpg" alt="White Dextrin"></div>
+      <h3>White Dextrin</h3>
+      <p>Textile & Paper</p>
+    </a>
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/gluten.jpg" alt="Gluten Meal"></div>
+      <h3>Maize Gluten Meal</h3>
+      <p>Animal Feed</p>
+    </a>
+    <a href="#" class="shop-card">
+      <div class="shop-card__image"><img src="assets/images/content/germ.jpg" alt="Maize Germ"></div>
+      <h3>Maize Germ</h3>
+      <p>Oil Extraction</p>
+    </a>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer-soil">
+    <div class="footer-top">
+      <h2>Growing authentic ingredients</h2>
+      <a href="contact.html" class="btn btn--outline" style="border-color: #fff; color: #fff;">Contact Us</a>
+    </div>
+    <div class="footer-links-grid">
+      <div>
+        <img src="assets/images/logo/logo.svg" alt="Saatvik Agro" style="height: 40px; filter: brightness(0) invert(1); margin-bottom: 20px;" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'">
+        <p>Driven by purity. Guided by science. Built for consistency.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="industries.html">Industries</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>marketing.agro@saatvikgroup.com</li>
+          <li>+91 XXXXX XXXXX</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <ul>
+          <li><strong>Corporate Office:</strong><br>A-404, Shagun Arcade, Vijay Nagar, Indore - 452010</li>
+        </ul>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.header-nav');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+      }
+    });
+  </script>
+</body>
+</html>
