@@ -2,211 +2,235 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Industries We Serve | Saatvik Agro</title>
-  <meta name="description" content="Discover the industries powered by Saatvik Agro's premium maize-based ingredients, including food, bakery, dairy, pharmaceuticals, and animal nutrition." />
-  <meta property="og:title" content="Industries We Serve | Saatvik Agro" />
-  <meta property="og:description" content="Discover the industries powered by Saatvik Agro's premium maize-based ingredients, including food, bakery, dairy, pharmaceuticals, and animal nutrition." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.saatvikagro.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  
-  <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
-<body class="page-industries">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Industries | Saatvik Agro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="navbar" id="navbar">
-    <div class="navbar__topbar">
-      <a href="mailto:marketing.agro@saatvikgroup.com">
-        <svg class="navbar__topbar-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        marketing.agro@saatvikgroup.com
-      </a>
-    </div>
-    
-    <div class="navbar__inner">
-      <a href="../index.html" class="navbar__logo">
-        <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/1B3051/FFFFFF?text=Saatvik+Agro'" />
-      </a>
-      
-      <button class="navbar__toggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-      
-      <nav class="navbar__menu" id="nav-menu">
-        <li><a href="../index.html" class="navbar__link">Home</a></li>
-        <li><a href="about.html" class="navbar__link">About Us</a></li>
-        <li><a href="products.html" class="navbar__link">Products</a></li>
-        <li><a href="industries.html" class="navbar__link active">Industries</a></li>
-        <li><a href="contact.html" class="navbar__link">Contact Us</a></li>
-      </nav>
-      
-      <a href="../assets/brochure.pdf" class="btn btn--primary navbar__cta">Download Brochure</a>
-    </div>
-    <div class="navbar__overlay" id="nav-overlay"></div>
+    /* Global & Header/Footer CSS from exact match */
+    :root {
+      --color-primary: #1B3051;
+      --color-secondary: #EC8026;
+      --color-bg: #FFFFFF;
+      --color-bg-alt: #F9F8F6;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 50px;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #4A505E;
+      background-color: var(--color-bg);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Sans', serif;
+      color: var(--color-primary);
+      margin-top: 0;
+      letter-spacing: -0.03em;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 32px;
+      height: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn--dark { background-color: var(--color-primary); color: #fff; }
+    .btn--dark:hover { background-color: var(--color-secondary); color: #fff; }
+    .btn--outline { background-color: transparent; border: 2px solid var(--color-primary); color: var(--color-primary); }
+    .btn--outline:hover { background-color: var(--color-primary); color: #fff; }
+
+    /* Navbar */
+    .header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .header-logo img { height: 40px; }
+    .header-nav { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+    .header-nav a { text-decoration: none; color: var(--color-primary); font-weight: 600; font-size: 16px; transition: color 0.3s; }
+    .header-nav a:hover { color: var(--color-secondary); }
+
+    /* Footer */
+    .footer-soil {
+      background: var(--color-primary);
+      padding: 100px 5% 50px 5%;
+      color: #fff;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .footer-top h2 { font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0; max-width: 600px;}
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    .footer-links-grid p { color: rgba(255,255,255,0.6); }
+    .footer-links-grid h4 { color: #fff; font-size: 1.2rem; margin-bottom: 20px;}
+    .footer-links-grid ul { list-style: none; padding: 0; margin: 0; }
+    .footer-links-grid ul li { margin-bottom: 10px; }
+    .footer-links-grid ul a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .footer-links-grid ul a:hover { color: var(--color-secondary); }
+
+    @media (max-width: 768px) {
+      .navbar__toggle { display: block !important; }
+      .header-nav { display: none; width: 100%; flex-direction: column; position: absolute; top: 80px; left: 0; background: #fff; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+      .header-btn { display: none; }
+    }
+
+
+  .ind-header { padding: 80px 5% 40px 5%; text-align: center; }
+  .ind-header h1 { font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 20px; }
+  .ind-header p { font-size: 1.2rem; color: #666; max-width: 700px; margin: 0 auto; }
+  
+  .ind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); gap: 40px; padding: 50px 5% 100px 5%; }
+  .ind-card { background: #fff; border-radius: var(--radius-xl); overflow: hidden; box-shadow: 0 10px 40px rgba(0,0,0,0.06); display: flex; flex-direction: column; }
+  .ind-card img { width: 100%; height: 250px; object-fit: cover; }
+  .ind-card-content { padding: 40px; flex: 1; display: flex; flex-direction: column;}
+  .ind-card h3 { font-size: 2rem; margin-bottom: 15px; }
+  .ind-card p { font-size: 1.05rem; color: #666; margin-bottom: 20px; line-height: 1.6; flex: 1;}
+  
+  @media(max-width: 768px) {
+    .ind-grid { grid-template-columns: 1fr; }
+  }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header-main">
+    <a href="../index.html" class="header-logo">
+      <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
+    </a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" style="display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--color-primary);">
+      ☰
+    </button>
+    <ul class="header-nav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--dark header-btn">Get in Touch</a>
   </header>
 
-  <main>
-    <!-- ==================== PAGE HEADER ==================== -->
-    <section class="section section--dark text-center" style="padding-top: 120px;">
-      <div class="container reveal">
-        <span class="section-label section-label--light">Serving Industries</span>
-        <h1>Industries That Shape Everyday Life</h1>
-        <p class="lead text-white mt-4" style="max-width: 700px; margin-inline: auto;">
-          Our ingredients work silently behind some of the most essential products across diverse sectors.
-        </p>
-      </div>
-    </section>
 
-    <!-- ==================== INDUSTRIES GRID ==================== -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-3">
-          
-          <div class="card reveal delay-100">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Food and Beverages</h3>
-              <p class="card__text">We provide essential ingredients like food-grade starch and liquid glucose that enhance texture, stability, and flavour in a wide variety of food and beverage products.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
+  <section class="ind-header">
+    <h1>Industries We Serve</h1>
+    <p>Our premium maize derivatives are engineered to empower diverse industrial applications worldwide.</p>
+  </section>
 
-          <div class="card reveal delay-200">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Confectionery and Bakery</h3>
-              <p class="card__text">Our liquid glucose and maltodextrin ranges are engineered for consistent sweetness, smooth texture, and dependable moisture balance in bakery and confectionery manufacturing.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
-
-          <div class="card reveal delay-300">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Dairy and Nutrition</h3>
-              <p class="card__text">We supply highly functional ingredients that support stability and body in dairy formulations and specialized nutritional products.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
-
-          <div class="card reveal delay-100">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Pharmaceuticals and Nutraceuticals</h3>
-              <p class="card__text">Our high-purity ingredients meet stringent quality requirements to serve as dependable excipients and functional additives in the pharmaceutical and nutraceutical sectors.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
-
-          <div class="card reveal delay-200">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Animal Nutrition</h3>
-              <p class="card__text">With Shakti Gluten Meal, Dry Fibre, and Maize Germ, we offer nutrient-dense, high-protein feed ingredients that deliver sustained energy and balanced nutrition for livestock.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
-
-          <div class="card reveal delay-300">
-            <div class="card__image" style="height:200px; background: url('https://placehold.co/400x300/E8E4DC/1B3051?text=Industry') center/cover;"></div>
-            <div class="card__body">
-              <h3 class="card__title">Industrial Applications</h3>
-              <p class="card__text">Our industrial-grade starch powder provides consistent binding and viscosity for textiles, paper, adhesives, and allied industrial processes.</p>
-              <a href="products.html" class="btn btn--secondary btn--sm">View Relevant Products</a>
-            </div>
-          </div>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ==================== CTA ==================== -->
-    <section class="section section--alt">
-      <div class="container flex-center flex-col reveal text-center">
-        <h2 class="mb-4">Let's Build Better Ingredients Together</h2>
-        <p class="lead mb-6" style="max-width: 600px;">Whether you are developing new formulations, scaling production, or seeking reliable ingredient partners, Saatvik Agro is ready to support your journey.</p>
-        <div class="flex gap-md flex-wrap justify-center mt-5">
-          <a href="mailto:marketing.agro@saatvikgroup.com" class="btn btn--primary">Email Us</a>
-          <a href="contact.html" class="btn btn--secondary">Contact Sales</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <!-- Logo & About -->
-      <div>
-        <a href="../index.html" class="footer__logo">
-          <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
-        </a>
-        <p class="footer__tagline">
-          Rooted in purity and strengthened by science, we convert responsibly sourced maize into functional, reliable ingredients that meet the evolving needs of modern manufacturers.
-        </p>
-      </div>
-
-      <!-- Links -->
-      <div>
-        <h4 class="footer__heading">Quick Links</h4>
-        <div class="footer__links">
-          <a href="about.html" class="footer__link">About Saatvik Agro</a>
-          <a href="products.html" class="footer__link">Shakti Ingredient Range</a>
-          <a href="industries.html" class="footer__link">Industries</a>
-          <a href="about.html#manufacturing" class="footer__link">Manufacturing</a>
-        </div>
-      </div>
-
-      <!-- Links Col 2 -->
-      <div>
-        <h4 class="footer__heading">Support</h4>
-        <div class="footer__links">
-          <a href="contact.html" class="footer__link">Contact Us</a>
-          <a href="../assets/brochure.pdf" class="footer__link">Download Catalogue</a>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h4 class="footer__heading">Get In Touch</h4>
-        
-        <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <div>
-            <div class="footer__contact-label">Email</div>
-            <div class="footer__contact-text"><a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a></div>
-          </div>
-        </div>
-
-        <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <div>
-            <div class="footer__contact-label">Corporate Office</div>
-            <div class="footer__contact-text">Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, UP-201318</div>
-          </div>
-        </div>
+  <section class="ind-grid">
+    <div class="ind-card">
+      <img src="https://images.unsplash.com/photo-1556767576-5ec41e3239ea?q=80&w=800&auto=format&fit=crop" alt="Food">
+      <div class="ind-card-content">
+        <h3>Food & Nutrition</h3>
+        <p>From bakery products to beverages, our food-grade starch and liquid glucose provide texture, sweetness, and stability.</p>
+        <a href="products.html" class="btn btn--outline" style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
       </div>
     </div>
-    
-    <!-- Bottom bar -->
-    <div class="container footer__bottom">
-      <div class="footer__copyright">
-        &copy; 2026 Saatvik Agro Processors Private Limited. All Rights Reserved.
+    <div class="ind-card">
+      <img src="https://images.unsplash.com/photo-1587582423116-ec07293f0395?q=80&w=800&auto=format&fit=crop" alt="Paper">
+      <div class="ind-card-content">
+        <h3>Paper & Packaging</h3>
+        <p>High-strength industrial starches and dextrins designed specifically for corrugation, sizing, and paper binding.</p>
+        <a href="products.html" class="btn btn--outline" style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
       </div>
-      <div class="footer__bottom-links">
-        <a href="#" class="footer__bottom-link">Privacy Policy</a>
-        <a href="#" class="footer__bottom-link">Terms of Service</a>
+    </div>
+    <div class="ind-card">
+      <img src="https://images.unsplash.com/photo-1627997931392-563630f9d997?q=80&w=800&auto=format&fit=crop" alt="Animal Feed">
+      <div class="ind-card-content">
+        <h3>Animal Feed</h3>
+        <p>Nutrient-rich maize gluten and fibre offering high protein and digestibility for cattle and poultry nutrition.</p>
+        <a href="products.html" class="btn btn--outline" style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
+      </div>
+    </div>
+    <div class="ind-card">
+      <img src="https://images.unsplash.com/photo-1584308666744-24d5e468088f?q=80&w=800&auto=format&fit=crop" alt="Pharma">
+      <div class="ind-card-content">
+        <h3>Pharmaceuticals</h3>
+        <p>Pure, safe, and consistent starch powders and syrups used as binders and fillers in medicinal tablets.</p>
+        <a href="products.html" class="btn btn--outline" style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer-soil">
+    <div class="footer-top">
+      <h2>Growing authentic ingredients</h2>
+      <a href="contact.html" class="btn btn--outline" style="border-color: #fff; color: #fff;">Contact Us</a>
+    </div>
+    <div class="footer-links-grid">
+      <div>
+        <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro" style="height: 40px; filter: brightness(0) invert(1); margin-bottom: 20px;" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'">
+        <p>Driven by purity. Guided by science. Built for consistency.</p>
+      </div>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="industries.html">Industries</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>marketing.agro@saatvikgroup.com</li>
+          <li>+91 XXXXX XXXXX</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <ul>
+          <li><strong>Corporate Office:</strong><br>A-404, Shagun Arcade, Vijay Nagar, Indore - 452010</li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="../assets/js/main.js"></script>
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.header-nav');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+      }
+    });
+  </script>
 </body>
 </html>

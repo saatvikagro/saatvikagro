@@ -2,221 +2,256 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Contact Us | Saatvik Agro</title>
-  <meta name="description" content="Get in touch with Saatvik Agro for premium maize-based ingredients. Reach out to our corporate office or manufacturing unit." />
-  <meta property="og:title" content="Contact Us | Saatvik Agro" />
-  <meta property="og:description" content="Get in touch with Saatvik Agro for premium maize-based ingredients. Reach out to our corporate office or manufacturing unit." />
-  <meta property="og:type" content="website" />
-  <meta property="og:url" content="https://www.saatvikagro.com/" />
-  <meta name="twitter:card" content="summary_large_image" />
-  
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
-  
-  <link rel="stylesheet" href="../assets/css/main.css" />
-</head>
-<body class="page-contact">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <style>
 
-  <!-- ==================== HEADER ==================== -->
-  <header class="navbar" id="navbar">
-    <div class="navbar__topbar">
-      <a href="mailto:marketing.agro@saatvikgroup.com">
-        <svg class="navbar__topbar-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-        marketing.agro@saatvikgroup.com
-      </a>
-    </div>
-    
-    <div class="navbar__inner">
-      <a href="../index.html" class="navbar__logo">
-        <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/1B3051/FFFFFF?text=Saatvik+Agro'" />
-      </a>
-      
-      <button class="navbar__toggle" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-        <span class="navbar__toggle-bar"></span>
-      </button>
-      
-      <nav class="navbar__menu" id="nav-menu">
-        <li><a href="../index.html" class="navbar__link">Home</a></li>
-        <li><a href="about.html" class="navbar__link">About Us</a></li>
-        <li><a href="products.html" class="navbar__link">Products</a></li>
-        <li><a href="industries.html" class="navbar__link">Industries</a></li>
-        <li><a href="contact.html" class="navbar__link active">Contact Us</a></li>
-      </nav>
-      
-      <a href="../assets/brochure.pdf" class="btn btn--primary navbar__cta">Download Brochure</a>
-    </div>
-    <div class="navbar__overlay" id="nav-overlay"></div>
+    /* Global & Header/Footer CSS from exact match */
+    :root {
+      --color-primary: #1B3051;
+      --color-secondary: #EC8026;
+      --color-bg: #FFFFFF;
+      --color-bg-alt: #F9F8F6;
+      --radius-lg: 16px;
+      --radius-xl: 24px;
+      --radius-pill: 50px;
+    }
+    body {
+      font-family: 'DM Sans', sans-serif;
+      color: #4A505E;
+      background-color: var(--color-bg);
+      margin: 0;
+      padding: 0;
+      overflow-x: hidden;
+    }
+    h1, h2, h3, h4 {
+      font-family: 'Instrument Sans', serif;
+      color: var(--color-primary);
+      margin-top: 0;
+      letter-spacing: -0.03em;
+    }
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0 32px;
+      height: 50px;
+      font-family: 'DM Sans', sans-serif;
+      font-weight: 700;
+      font-size: 14px;
+      text-transform: uppercase;
+      letter-spacing: 0.1em;
+      border-radius: 50px;
+      text-decoration: none;
+      transition: all 0.3s ease;
+      border: none;
+      cursor: pointer;
+    }
+    .btn--dark { background-color: var(--color-primary); color: #fff; }
+    .btn--dark:hover { background-color: var(--color-secondary); color: #fff; }
+    .btn--outline { background-color: transparent; border: 2px solid var(--color-primary); color: var(--color-primary); }
+    .btn--outline:hover { background-color: var(--color-primary); color: #fff; }
+
+    /* Navbar */
+    .header-main {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 5%;
+      background: #fff;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.05);
+    }
+    .header-logo img { height: 40px; }
+    .header-nav { display: flex; gap: 32px; list-style: none; margin: 0; padding: 0; }
+    .header-nav a { text-decoration: none; color: var(--color-primary); font-weight: 600; font-size: 16px; transition: color 0.3s; }
+    .header-nav a:hover { color: var(--color-secondary); }
+
+    /* Footer */
+    .footer-soil {
+      background: var(--color-primary);
+      padding: 100px 5% 50px 5%;
+      color: #fff;
+    }
+    .footer-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      border-bottom: 1px solid rgba(255,255,255,0.1);
+      padding-bottom: 50px;
+      margin-bottom: 50px;
+      flex-wrap: wrap;
+      gap: 30px;
+    }
+    .footer-top h2 { font-size: clamp(2rem, 4vw, 3rem); color: #fff; margin: 0; max-width: 600px;}
+    .footer-links-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 40px;
+    }
+    .footer-links-grid p { color: rgba(255,255,255,0.6); }
+    .footer-links-grid h4 { color: #fff; font-size: 1.2rem; margin-bottom: 20px;}
+    .footer-links-grid ul { list-style: none; padding: 0; margin: 0; }
+    .footer-links-grid ul li { margin-bottom: 10px; }
+    .footer-links-grid ul a { color: rgba(255,255,255,0.7); text-decoration: none; }
+    .footer-links-grid ul a:hover { color: var(--color-secondary); }
+
+    @media (max-width: 768px) {
+      .navbar__toggle { display: block !important; }
+      .header-nav { display: none; width: 100%; flex-direction: column; position: absolute; top: 80px; left: 0; background: #fff; padding: 20px; box-shadow: 0 10px 20px rgba(0,0,0,0.1); }
+      .header-btn { display: none; }
+    }
+
+
+  .contact-header { padding: 80px 5%; background: #fff; }
+  .contact-header h1 { font-size: clamp(3rem, 5vw, 4.5rem); margin-bottom: 60px; }
+  .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 40px; border-top: 1px solid #eaeaea; padding-top: 40px; }
+  .contact-col h4 { font-size: 1.1rem; color: #888; margin-bottom: 15px; font-family: 'DM Sans', sans-serif; font-weight: 500; }
+  .contact-col p, .contact-col a { font-size: 1.1rem; color: var(--color-primary); font-weight: 600; text-decoration: none; display: block; line-height: 1.5; }
+  
+  .contact-form-section {
+    position: relative;
+    padding: 100px 5%;
+    background: url('https://images.unsplash.com/photo-1595180620317-09f193eb7061?q=80&w=1920&auto=format&fit=crop') center/cover;
+    min-height: 800px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+  }
+  .contact-form-box {
+    background: #fff;
+    padding: 60px 50px;
+    width: 100%;
+    max-width: 500px;
+    border-radius: var(--radius-xl);
+    box-shadow: 0 20px 60px rgba(0,0,0,0.1);
+  }
+  .contact-form-box h2 { font-size: 2.5rem; margin-bottom: 30px; line-height: 1.2; }
+  .form-group { margin-bottom: 20px; }
+  .form-control { width: 100%; padding: 15px 20px; border: 1px solid #e0e0e0; border-radius: 8px; font-family: 'DM Sans', sans-serif; font-size: 1rem; box-sizing: border-box;}
+  textarea.form-control { min-height: 150px; resize: none; }
+  .form-check { display: flex; align-items: flex-start; gap: 10px; margin-bottom: 30px; font-size: 0.9rem; color: #888; }
+  .btn-submit { width: 100%; background: var(--color-secondary); color: var(--color-primary); font-size: 1.1rem; padding: 18px; border-radius: 8px; border: none; font-weight: bold; cursor: pointer; }
+  .btn-submit:hover { opacity: 0.9; }
+
+  @media(max-width: 768px) {
+    .contact-form-section { justify-content: center; padding: 50px 5%; }
+    .contact-form-box { padding: 40px 30px; }
+  }
+
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header class="header-main">
+    <a href="../index.html" class="header-logo">
+      <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
+    </a>
+    <button class="navbar__toggle" aria-label="Toggle navigation" style="display: none; background: none; border: none; font-size: 24px; cursor: pointer; color: var(--color-primary);">
+      ☰
+    </button>
+    <ul class="header-nav">
+      <li><a href="../index.html">Home</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="products.html">Products</a></li>
+      <li><a href="industries.html">Industries</a></li>
+      <li><a href="contact.html">Contact Us</a></li>
+    </ul>
+    <a href="contact.html" class="btn btn--dark header-btn">Get in Touch</a>
   </header>
 
-  <main>
-    <!-- ==================== PAGE HEADER ==================== -->
-    <section class="section section--dark text-center" style="padding-top: 120px; padding-bottom: 60px;">
-      <div class="container reveal">
-        <h1>Contact Us</h1>
-        <p class="lead text-white mt-4" style="max-width: 700px; margin-inline: auto;">
-          Whether you are developing new formulations, scaling production, or seeking reliable ingredient partners, we are ready to support your journey.
-        </p>
+
+  <section class="contact-header">
+    <h1>General inquiries</h1>
+    <div class="contact-grid">
+      <div class="contact-col">
+        <h4>General Inquiries</h4>
+        <a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a>
       </div>
-    </section>
-
-    <!-- ==================== CONTACT INFO & FORM ==================== -->
-    <section class="section">
-      <div class="container">
-        <div class="grid grid-2">
-          
-          <!-- Contact Details -->
-          <div class="reveal reveal-right pr-4">
-            <h2 class="mb-5">Get In Touch</h2>
-            
-            <div class="flex-col gap-lg mb-8">
-              
-              <div>
-                <span class="section-label">Email Us</span>
-                <p class="lead"><a href="mailto:marketing.agro@saatvikgroup.com" class="text-accent">marketing.agro@saatvikgroup.com</a></p>
-              </div>
-
-              <div class="card bg-alt" style="border: none; background-color: var(--color-bg-alt);">
-                <div class="card__body">
-                  <h4 class="mb-2">Manufacturing Unit</h4>
-                  <p class="text-light">Saatvik Agro Processors Private Limited<br/>Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh-476444</p>
-                </div>
-              </div>
-
-              <div class="card bg-alt" style="border: none; background-color: var(--color-bg-alt);">
-                <div class="card__body">
-                  <h4 class="mb-2">Corporate Office</h4>
-                  <p class="text-light">Saatvik Agro Processors Private Limited<br/>Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318</p>
-                </div>
-              </div>
-
-            </div>
-          </div>
-
-          <!-- Contact Form -->
-          <div class="card reveal reveal-left delay-200">
-            <div class="card__body p-8" style="padding: var(--space-8);">
-              <h3 class="mb-5">Send us a message</h3>
-              
-              <form class="form" id="contact-form" action="#" method="POST">
-                <div class="form__group">
-                  <label for="name" class="form__label">Name *</label>
-                  <input type="text" id="name" name="name" class="form__input" required placeholder="Your full name" />
-                </div>
-                
-                <div class="form__group">
-                  <label for="email" class="form__label">Email *</label>
-                  <input type="email" id="email" name="email" class="form__input" required placeholder="name@company.com" />
-                </div>
-                
-                <div class="form__group">
-                  <label for="phone" class="form__label">Phone *</label>
-                  <input type="tel" id="phone" name="phone" class="form__input" required placeholder="Your phone number" />
-                </div>
-                
-                <div class="form__group">
-                  <label for="product" class="form__label">Product of Interest</label>
-                  <select id="product" name="product" class="form__select">
-                    <option value="">Select a product...</option>
-                    <option value="Food Grade Starch">Shakti Maize Starch (Food Grade)</option>
-                    <option value="Industrial Starch">Shakti Maize Starch (Industrial)</option>
-                    <option value="Liquid Glucose">Shakti Liquid Glucose</option>
-                    <option value="Maltodex">Shakti Maltodex</option>
-                    <option value="Gluten Meal">Shakti Gluten Meal</option>
-                    <option value="Dry Fibre">Shakti Maize Dry Fibre</option>
-                    <option value="Maize Germ">Shakti Maize Germ</option>
-                  </select>
-                </div>
-
-                <div class="form__group">
-                  <label for="message" class="form__label">Message (Optional)</label>
-                  <textarea id="message" name="message" class="form__textarea" placeholder="How can we help you?"></textarea>
-                </div>
-
-                <button type="submit" class="btn btn--primary mt-4 form__submit">Submit Enquiry</button>
-                
-                <div class="form__status form__status--success mt-4">Thank you! Your message has been sent.</div>
-                <div class="form__status form__status--error mt-4">Oops! There was a problem sending your message.</div>
-              </form>
-            </div>
-          </div>
-
-        </div>
+      <div class="contact-col">
+        <h4>Address</h4>
+        <p>A-404, Shagun Arcade,<br>Vijay Nagar, Indore - 452010</p>
       </div>
-    </section>
-
-  </main>
-
-  <!-- ==================== FOOTER ==================== -->
-  <footer class="footer">
-    <div class="container footer__grid">
-      <!-- Logo & About -->
-      <div>
-        <a href="../index.html" class="footer__logo">
-          <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
-        </a>
-        <p class="footer__tagline">
-          Rooted in purity and strengthened by science, we convert responsibly sourced maize into functional, reliable ingredients that meet the evolving needs of modern manufacturers.
-        </p>
+      <div class="contact-col">
+        <h4>Plant Location</h4>
+        <p>Boregaon Industrial Area,<br>Chhindwara, MP</p>
       </div>
-
-      <!-- Links -->
-      <div>
-        <h4 class="footer__heading">Quick Links</h4>
-        <div class="footer__links">
-          <a href="about.html" class="footer__link">About Saatvik Agro</a>
-          <a href="products.html" class="footer__link">Shakti Ingredient Range</a>
-          <a href="industries.html" class="footer__link">Industries</a>
-          <a href="about.html#manufacturing" class="footer__link">Manufacturing</a>
-        </div>
-      </div>
-
-      <!-- Links Col 2 -->
-      <div>
-        <h4 class="footer__heading">Support</h4>
-        <div class="footer__links">
-          <a href="contact.html" class="footer__link">Contact Us</a>
-          <a href="../assets/brochure.pdf" class="footer__link">Download Catalogue</a>
-        </div>
-      </div>
-
-      <!-- Contact -->
-      <div>
-        <h4 class="footer__heading">Get In Touch</h4>
-        
-        <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
-          <div>
-            <div class="footer__contact-label">Email</div>
-            <div class="footer__contact-text"><a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a></div>
-          </div>
-        </div>
-
-        <div class="footer__contact-item">
-          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
-          <div>
-            <div class="footer__contact-label">Corporate Office</div>
-            <div class="footer__contact-text">Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, UP-201318</div>
-          </div>
-        </div>
+      <div class="contact-col">
+        <h4>Socials</h4>
+        <a href="#">LinkedIn</a>
+        <a href="#">Twitter</a>
       </div>
     </div>
-    
-    <!-- Bottom bar -->
-    <div class="container footer__bottom">
-      <div class="footer__copyright">
-        &copy; 2026 Saatvik Agro Processors Private Limited. All Rights Reserved.
+  </section>
+
+  <section class="contact-form-section">
+    <div class="contact-form-box">
+      <h2>Have questions?<br>Get in touch!</h2>
+      <form>
+        <div class="form-group"><input type="text" class="form-control" placeholder="Name"></div>
+        <div class="form-group"><input type="email" class="form-control" placeholder="Email"></div>
+        <div class="form-group"><input type="text" class="form-control" placeholder="Subject"></div>
+        <div class="form-group"><textarea class="form-control" placeholder="Message"></textarea></div>
+        <div class="form-check">
+          <input type="checkbox" id="terms">
+          <label for="terms">I agree that my submitted data is being collected and stored.</label>
+        </div>
+        <button type="button" class="btn-submit">Send Message</button>
+      </form>
+    </div>
+  </section>
+
+
+  <!-- Footer -->
+  <footer class="footer-soil">
+    <div class="footer-top">
+      <h2>Growing authentic ingredients</h2>
+      <a href="contact.html" class="btn btn--outline" style="border-color: #fff; color: #fff;">Contact Us</a>
+    </div>
+    <div class="footer-links-grid">
+      <div>
+        <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro" style="height: 40px; filter: brightness(0) invert(1); margin-bottom: 20px;" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'">
+        <p>Driven by purity. Guided by science. Built for consistency.</p>
       </div>
-      <div class="footer__bottom-links">
-        <a href="#" class="footer__bottom-link">Privacy Policy</a>
-        <a href="#" class="footer__bottom-link">Terms of Service</a>
+      <div>
+        <h4>Explore</h4>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="products.html">Products</a></li>
+          <li><a href="industries.html">Industries</a></li>
+        </ul>
+      </div>
+      <div>
+        <h4>Contact</h4>
+        <ul>
+          <li>marketing.agro@saatvikgroup.com</li>
+          <li>+91 XXXXX XXXXX</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Address</h4>
+        <ul>
+          <li><strong>Corporate Office:</strong><br>A-404, Shagun Arcade, Vijay Nagar, Indore - 452010</li>
+        </ul>
       </div>
     </div>
   </footer>
 
-  <script type="module" src="../assets/js/main.js"></script>
+  <script>
+    document.querySelector('.navbar__toggle').addEventListener('click', function() {
+      const nav = document.querySelector('.header-nav');
+      if (nav.style.display === 'flex') {
+        nav.style.display = 'none';
+      } else {
+        nav.style.display = 'flex';
+      }
+    });
+  </script>
 </body>
 </html>
