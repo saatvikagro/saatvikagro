@@ -14,11 +14,10 @@
   <!-- Main Stylesheet -->
   <link rel="stylesheet" href="./assets/css/main.css" />
 </head>
-<body>
+<body class="page-home">
 
-  <!-- ==================== HEADER (PARTIAL) ==================== -->
+  <!-- ==================== HEADER ==================== -->
   <header class="navbar navbar--transparent" id="navbar">
-    <!-- Topbar -->
     <div class="navbar__topbar">
       <a href="mailto:marketing.agro@saatvikgroup.com">
         <svg class="navbar__topbar-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
@@ -26,10 +25,9 @@
       </a>
     </div>
     
-    <!-- Main Nav -->
     <div class="navbar__inner">
       <a href="./index.html" class="navbar__logo">
-        <img src="./assets/images/logo/logo.svg" alt="Saatvik Agro Logo" />
+        <img src="./assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/1B3051/FFFFFF?text=Saatvik+Agro'" />
       </a>
       
       <button class="navbar__toggle" aria-expanded="false" aria-label="Toggle navigation">
@@ -52,16 +50,287 @@
   </header>
 
   <main>
-    <!-- Page content will be injected here during Phase 3 -->
+    <!-- ==================== HERO ==================== -->
+    <section class="hero" id="home">
+      <div class="hero__bg">
+        <img src="https://images.unsplash.com/photo-1595180620317-09f193eb7061?q=80&w=2000&auto=format&fit=crop" alt="Maize field" class="hero__bg-img" />
+        <div class="hero__overlay"></div>
+      </div>
+      <div class="container hero__content reveal">
+        <h1 class="hero__title">
+          Driven by purity.<br/>
+          Guided by science.<br/>
+          <span>Built for consistency.</span>
+        </h1>
+        <div class="hero__actions">
+          <a href="./pages/about.html" class="btn btn--primary">About Us</a>
+          <a href="./pages/contact.html" class="btn btn--white">Contact Us</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== ABOUT INTRO ==================== -->
+    <section class="section about-intro" id="about">
+      <div class="container">
+        <div class="about-split">
+          <div class="about-split__content reveal reveal-left">
+            <span class="section-label">About Us</span>
+            <h2 class="about-intro__heading">From grain to greatness, we engineer consistency you can trust.</h2>
+            <p class="lead">Saatvik Agro is the agro-ingredient unit of the Saatvik Group, dedicated to creating high quality maize-based ingredients that power everyday products across food, nutrition, animal feed, and industrial applications.</p>
+            <p>Rooted in purity and strengthened by science, we convert responsibly sourced maize into functional, reliable ingredients that meet the evolving needs of modern manufacturers. Every product we make is guided by a single belief: better ingredients build better outcomes.</p>
+            <div class="mt-4">
+              <a href="./pages/about.html" class="btn btn--secondary">Read Our Story</a>
+            </div>
+          </div>
+          <div class="about-split__image-wrapper reveal reveal-right delay-200">
+            <img src="https://images.unsplash.com/photo-1627920769841-f7614d3b6680?q=80&w=1200&auto=format&fit=crop" alt="Agro processing facility" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== SHAKTI PRODUCTS ==================== -->
+    <section class="section section--alt" id="products">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label">The Shakti Ingredient Range</span>
+          <h2>A unified portfolio of premium maize ingredients, designed for performance across industries.</h2>
+          <p class="mt-2 text-light" style="max-width: 800px;">Shakti is not a single product. It is Saatvik Agro’s ingredient ecosystem. Each Shakti ingredient is crafted with precision, purity, and purpose, ensuring predictable performance across applications.</p>
+        </div>
+
+        <!-- 3 Product Cards Preview -->
+        <div class="grid grid-3">
+          <div class="product-card reveal delay-100">
+            <div class="product-card__image-wrap">
+              <span class="product-card__category">Food Grade</span>
+              <img src="https://images.unsplash.com/photo-1542697204-03222e37cb62?q=80&w=800&auto=format&fit=crop" alt="Starch Powder" class="product-card__image" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Shakti Maize Starch Powder</h3>
+              <p class="product-card__text">A premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications.</p>
+              <div class="product-card__footer">
+                <a href="./pages/products.html#starch-food-grade" class="btn btn--secondary btn--sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card reveal delay-200">
+            <div class="product-card__image-wrap">
+              <span class="product-card__category">Food & Nutrition</span>
+              <img src="https://images.unsplash.com/photo-1615485925600-97237c4fc1ec?q=80&w=800&auto=format&fit=crop" alt="Liquid Glucose" class="product-card__image" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Shakti Liquid Glucose</h3>
+              <p class="product-card__text">High-purity, food-grade glucose syrup engineered for consistent sweetness, smooth texture, and dependable performance.</p>
+              <div class="product-card__footer">
+                <a href="./pages/products.html#liquid-glucose" class="btn btn--secondary btn--sm">View Details</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="product-card reveal delay-300">
+            <div class="product-card__image-wrap">
+              <span class="product-card__category">Animal Nutrition</span>
+              <img src="https://images.unsplash.com/photo-1596701062351-8c2c14d1fdd0?q=80&w=800&auto=format&fit=crop" alt="Gluten Meal" class="product-card__image" />
+            </div>
+            <div class="product-card__body">
+              <h3 class="product-card__title">Shakti Gluten Meal</h3>
+              <p class="product-card__text">High-protein, low-fat maize-based feed ingredient developed to deliver balanced nutrition and consistent performance.</p>
+              <div class="product-card__footer">
+                <a href="./pages/products.html#gluten-meal" class="btn btn--secondary btn--sm">View Details</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <div class="flex-center mt-5 reveal">
+          <a href="./pages/products.html" class="btn btn--primary">View All 7 Products</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== WHY US ==================== -->
+    <section class="section why-us" id="why-us">
+      <div class="container">
+        <div class="section-header reveal">
+          <span class="section-label">Why Saatvik Agro</span>
+          <h2>Manufactured with precision.<br/>Delivered with confidence.</h2>
+        </div>
+
+        <div class="why-us__grid">
+          <div class="feature-card reveal delay-100">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path><polyline points="22 4 12 14.01 9 11.01"></polyline></svg>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Purity You Can Measure</h3>
+              <p class="feature-card__text">Responsibly sourced maize converted into reliable ingredients.</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal delay-200">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Science-led Processing</h3>
+              <p class="feature-card__text">Advanced process controls and quality labs ensure uniformity.</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal delay-300">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="12 2 2 7 12 12 22 7 12 2"></polygon><polyline points="2 17 12 22 22 17"></polyline><polyline points="2 12 12 17 22 12"></polyline></svg>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Consistency at Scale</h3>
+              <p class="feature-card__text">Fully automated manufacturing unit with scalable production capacity.</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal delay-400">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path><line x1="2" y1="12" x2="22" y2="12"></line></svg>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Application-focused Approach</h3>
+              <p class="feature-card__text">Designed for performance across specific food and industrial applications.</p>
+            </div>
+          </div>
+
+          <div class="feature-card reveal delay-500">
+            <div class="feature-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 16V8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16z"></path><polyline points="3.27 6.96 12 12.01 20.73 6.96"></polyline><line x1="12" y1="22.08" x2="12" y2="12"></line></svg>
+            </div>
+            <div class="feature-card__content">
+              <h3 class="feature-card__title">Responsible Manufacturing</h3>
+              <p class="feature-card__text">Ethical sourcing, disciplined processing, and continuous improvement.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== INDUSTRIES ==================== -->
+    <section class="section section--dark" id="industries">
+      <div class="container">
+        <div class="section-header section-header--center reveal">
+          <span class="section-label section-label--light">Industries</span>
+          <h2>Serving Industries That Shape Everyday Life</h2>
+          <p class="mt-2 text-white" style="max-width: 600px;">Our ingredients work silently behind some of the most essential products across industries.</p>
+        </div>
+
+        <div class="grid grid-auto-sm">
+          <div class="industry-card reveal delay-100">
+            <div class="industry-card__icon">
+              <!-- Using placeholders for icons until SVG is sorted -->
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6"></path></svg>
+            </div>
+            <h3 class="industry-card__title">Food & Beverages</h3>
+          </div>
+          <div class="industry-card reveal delay-200">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8h1a4 4 0 0 1 0 8h-1"></path><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"></path><line x1="6" y1="1" x2="6" y2="4"></line><line x1="10" y1="1" x2="10" y2="4"></line><line x1="14" y1="1" x2="14" y2="4"></line></svg>
+            </div>
+            <h3 class="industry-card__title">Confectionery & Bakery</h3>
+          </div>
+          <div class="industry-card reveal delay-300">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path></svg>
+            </div>
+            <h3 class="industry-card__title">Dairy & Nutrition</h3>
+          </div>
+          <div class="industry-card reveal delay-400">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"></circle><line x1="12" y1="16" x2="12" y2="12"></line><line x1="12" y1="8" x2="12.01" y2="8"></line></svg>
+            </div>
+            <h3 class="industry-card__title">Pharmaceuticals & Nutraceuticals</h3>
+          </div>
+          <div class="industry-card reveal delay-500">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"></path><circle cx="12" cy="7" r="4"></circle></svg>
+            </div>
+            <h3 class="industry-card__title">Animal Nutrition</h3>
+          </div>
+          <div class="industry-card reveal delay-600">
+            <div class="industry-card__icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect><rect x="9" y="9" width="6" height="6"></rect><line x1="9" y1="1" x2="9" y2="4"></line><line x1="15" y1="1" x2="15" y2="4"></line><line x1="9" y1="20" x2="9" y2="23"></line><line x1="15" y1="20" x2="15" y2="23"></line><line x1="20" y1="9" x2="23" y2="9"></line><line x1="20" y1="14" x2="23" y2="14"></line><line x1="1" y1="9" x2="4" y2="9"></line><line x1="1" y1="14" x2="4" y2="14"></line></svg>
+            </div>
+            <h3 class="industry-card__title">Industrial Applications</h3>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== VALUES / MANUFACTURING / GLOBAL / PEOPLE ==================== -->
+    <section class="section" id="company">
+      <div class="container">
+        <div class="values-grid">
+          <!-- Values -->
+          <div class="card reveal">
+            <div class="card__body">
+              <span class="card__label">Values</span>
+              <h3 class="card__title">Strong Values. Strong Ingredients.</h3>
+              <p class="card__text">At Saatvik Agro, our values are built on the belief that ingredients matter. What goes into food, feed, and industry must be pure, safe, and responsibly produced. We combine ethical sourcing, disciplined processing, and continuous improvement to ensure that every ingredient reflects integrity and care. Our purpose goes beyond manufacturing. We exist to support healthier products, stronger supply chains, and a better future.</p>
+            </div>
+          </div>
+          
+          <!-- Manufacturing -->
+          <div class="card reveal delay-100">
+            <div class="card__body">
+              <span class="card__label">Manufacturing</span>
+              <h3 class="card__title">Manufactured with Precision. Delivered with Confidence.</h3>
+              <p class="card__text">Our manufacturing operations are designed for consistency, hygiene, and efficiency. From maize selection to final dispatch, every stage is monitored to maintain strict quality benchmarks. Advanced process controls and quality labs ensure uniformity in texture, moisture, granulation, and performance, enabling manufacturers to operate with confidence and predictability.</p>
+              <ul style="margin-top: 1rem; padding-left: 1.5rem; list-style-type: disc; color: var(--color-text-light);">
+                <li>Fully automated manufacturing unit</li>
+                <li>Dedicated quality assurance systems</li>
+                <li>Scalable production capacity</li>
+              </ul>
+            </div>
+          </div>
+
+          <!-- Global & People (Stacked) -->
+          <div class="flex-col gap-lg">
+            <div class="card reveal delay-200">
+              <div class="card__body">
+                <span class="card__label">Reach</span>
+                <h3 class="card__title">Built in India with Global Aspirations</h3>
+                <p class="card__text" style="margin-bottom: 0;">With strategically located manufacturing units and a robust distribution network, Saatvik Agro intends to serve customers across India and International markets. Our scale, logistics discipline, and export readiness allow us to support growing businesses with dependable supply and timely delivery.</p>
+              </div>
+            </div>
+            
+            <div class="card reveal delay-300">
+              <div class="card__body">
+                <span class="card__label">Culture</span>
+                <h3 class="card__title">Powered by People Who Care</h3>
+                <p class="card__text" style="margin-bottom: 0;">Behind every ingredient is a team committed to excellence. At Saatvik Agro, we foster a culture of accountability, collaboration, and continuous learning. Our people drive innovation, uphold quality, and ensure that every customer receives not just a product, but a partnership built on trust.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ==================== CTA ==================== -->
+    <section class="section section--alt">
+      <div class="container flex-center flex-col reveal text-center">
+        <h2 class="mb-4">Let's Build Better Ingredients Together</h2>
+        <p class="lead mb-6" style="max-width: 600px;">Whether you are developing new formulations, scaling production, or seeking reliable ingredient partners, Saatvik Agro is ready to support your journey.</p>
+        <div class="flex gap-md flex-wrap justify-center mt-5">
+          <a href="mailto:marketing.agro@saatvikgroup.com" class="btn btn--primary">Email Us</a>
+          <a href="./assets/brochure.pdf" class="btn btn--secondary">Download Product Catalogue</a>
+        </div>
+      </div>
+    </section>
   </main>
 
-  <!-- ==================== FOOTER (PARTIAL) ==================== -->
+  <!-- ==================== FOOTER ==================== -->
   <footer class="footer">
     <div class="container footer__grid">
       <!-- Logo & About -->
       <div>
         <a href="./index.html" class="footer__logo">
-          <img src="./assets/images/logo/logo.svg" alt="Saatvik Agro Logo" />
+          <img src="./assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
         </a>
         <p class="footer__tagline">
           Rooted in purity and strengthened by science, we convert responsibly sourced maize into functional, reliable ingredients that meet the evolving needs of modern manufacturers.

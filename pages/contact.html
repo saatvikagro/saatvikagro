@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us | Saatvik Agro</title>
+  <meta name="description" content="Get in touch with Saatvik Agro for premium maize-based ingredients. Reach out to our corporate office or manufacturing unit." />
+  
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,400;0,9..40,500;0,9..40,600;0,9..40,700;1,9..40,400&family=Instrument+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  
+  <link rel="stylesheet" href="../assets/css/main.css" />
+</head>
+<body class="page-contact">
+
+  <!-- ==================== HEADER ==================== -->
+  <header class="navbar" id="navbar">
+    <div class="navbar__topbar">
+      <a href="mailto:marketing.agro@saatvikgroup.com">
+        <svg class="navbar__topbar-icon" viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        marketing.agro@saatvikgroup.com
+      </a>
+    </div>
+    
+    <div class="navbar__inner">
+      <a href="../index.html" class="navbar__logo">
+        <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/1B3051/FFFFFF?text=Saatvik+Agro'" />
+      </a>
+      
+      <button class="navbar__toggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+        <span class="navbar__toggle-bar"></span>
+      </button>
+      
+      <nav class="navbar__menu" id="nav-menu">
+        <li><a href="../index.html" class="navbar__link">Home</a></li>
+        <li><a href="about.html" class="navbar__link">About Us</a></li>
+        <li><a href="products.html" class="navbar__link">Products</a></li>
+        <li><a href="industries.html" class="navbar__link">Industries</a></li>
+        <li><a href="contact.html" class="navbar__link active">Contact Us</a></li>
+      </nav>
+      
+      <a href="../assets/brochure.pdf" class="btn btn--primary navbar__cta">Download Brochure</a>
+    </div>
+    <div class="navbar__overlay" id="nav-overlay"></div>
+  </header>
+
+  <main>
+    <!-- ==================== PAGE HEADER ==================== -->
+    <section class="section section--dark text-center" style="padding-top: 120px; padding-bottom: 60px;">
+      <div class="container reveal">
+        <h1>Contact Us</h1>
+        <p class="lead text-white mt-4" style="max-width: 700px; margin-inline: auto;">
+          Whether you are developing new formulations, scaling production, or seeking reliable ingredient partners, we are ready to support your journey.
+        </p>
+      </div>
+    </section>
+
+    <!-- ==================== CONTACT INFO & FORM ==================== -->
+    <section class="section">
+      <div class="container">
+        <div class="grid grid-2">
+          
+          <!-- Contact Details -->
+          <div class="reveal reveal-right pr-4">
+            <h2 class="mb-5">Get In Touch</h2>
+            
+            <div class="flex-col gap-lg mb-8">
+              
+              <div>
+                <span class="section-label">Email Us</span>
+                <p class="lead"><a href="mailto:marketing.agro@saatvikgroup.com" class="text-accent">marketing.agro@saatvikgroup.com</a></p>
+              </div>
+
+              <div class="card bg-alt" style="border: none; background-color: var(--color-bg-alt);">
+                <div class="card__body">
+                  <h4 class="mb-2">Manufacturing Unit</h4>
+                  <p class="text-light">Saatvik Agro Processors Private Limited<br/>Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh-476444</p>
+                </div>
+              </div>
+
+              <div class="card bg-alt" style="border: none; background-color: var(--color-bg-alt);">
+                <div class="card__body">
+                  <h4 class="mb-2">Corporate Office</h4>
+                  <p class="text-light">Saatvik Agro Processors Private Limited<br/>Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318</p>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+          <!-- Contact Form -->
+          <div class="card reveal reveal-left delay-200">
+            <div class="card__body p-8" style="padding: var(--space-8);">
+              <h3 class="mb-5">Send us a message</h3>
+              
+              <form class="form" id="contact-form" action="#" method="POST">
+                <div class="form__group">
+                  <label for="name" class="form__label">Name *</label>
+                  <input type="text" id="name" name="name" class="form__input" required placeholder="Your full name" />
+                </div>
+                
+                <div class="form__group">
+                  <label for="email" class="form__label">Email *</label>
+                  <input type="email" id="email" name="email" class="form__input" required placeholder="name@company.com" />
+                </div>
+                
+                <div class="form__group">
+                  <label for="phone" class="form__label">Phone *</label>
+                  <input type="tel" id="phone" name="phone" class="form__input" required placeholder="Your phone number" />
+                </div>
+                
+                <div class="form__group">
+                  <label for="product" class="form__label">Product of Interest</label>
+                  <select id="product" name="product" class="form__select">
+                    <option value="">Select a product...</option>
+                    <option value="Food Grade Starch">Shakti Maize Starch (Food Grade)</option>
+                    <option value="Industrial Starch">Shakti Maize Starch (Industrial)</option>
+                    <option value="Liquid Glucose">Shakti Liquid Glucose</option>
+                    <option value="Maltodex">Shakti Maltodex</option>
+                    <option value="Gluten Meal">Shakti Gluten Meal</option>
+                    <option value="Dry Fibre">Shakti Maize Dry Fibre</option>
+                    <option value="Maize Germ">Shakti Maize Germ</option>
+                  </select>
+                </div>
+
+                <div class="form__group">
+                  <label for="message" class="form__label">Message (Optional)</label>
+                  <textarea id="message" name="message" class="form__textarea" placeholder="How can we help you?"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn--primary mt-4 form__submit">Submit Enquiry</button>
+                
+                <div class="form__status form__status--success mt-4">Thank you! Your message has been sent.</div>
+                <div class="form__status form__status--error mt-4">Oops! There was a problem sending your message.</div>
+              </form>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==================== FOOTER ==================== -->
+  <footer class="footer">
+    <div class="container footer__grid">
+      <!-- Logo & About -->
+      <div>
+        <a href="../index.html" class="footer__logo">
+          <img src="../assets/images/logo/logo.svg" alt="Saatvik Agro Logo" onerror="this.src='https://placehold.co/200x50/FFFFFF/1B3051?text=Saatvik+Agro'" />
+        </a>
+        <p class="footer__tagline">
+          Rooted in purity and strengthened by science, we convert responsibly sourced maize into functional, reliable ingredients that meet the evolving needs of modern manufacturers.
+        </p>
+      </div>
+
+      <!-- Links -->
+      <div>
+        <h4 class="footer__heading">Quick Links</h4>
+        <div class="footer__links">
+          <a href="about.html" class="footer__link">About Saatvik Agro</a>
+          <a href="products.html" class="footer__link">Shakti Ingredient Range</a>
+          <a href="industries.html" class="footer__link">Industries</a>
+          <a href="about.html#manufacturing" class="footer__link">Manufacturing</a>
+        </div>
+      </div>
+
+      <!-- Links Col 2 -->
+      <div>
+        <h4 class="footer__heading">Support</h4>
+        <div class="footer__links">
+          <a href="contact.html" class="footer__link">Contact Us</a>
+          <a href="../assets/brochure.pdf" class="footer__link">Download Catalogue</a>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div>
+        <h4 class="footer__heading">Get In Touch</h4>
+        
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+          <div>
+            <div class="footer__contact-label">Email</div>
+            <div class="footer__contact-text"><a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a></div>
+          </div>
+        </div>
+
+        <div class="footer__contact-item">
+          <svg class="footer__contact-icon" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+          <div>
+            <div class="footer__contact-label">Corporate Office</div>
+            <div class="footer__contact-text">Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, UP-201318</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom bar -->
+    <div class="container footer__bottom">
+      <div class="footer__copyright">
+        &copy; 2026 Saatvik Agro Processors Private Limited. All Rights Reserved.
+      </div>
+      <div class="footer__bottom-links">
+        <a href="#" class="footer__bottom-link">Privacy Policy</a>
+        <a href="#" class="footer__bottom-link">Terms of Service</a>
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="../assets/js/main.js"></script>
+</body>
+</html>
