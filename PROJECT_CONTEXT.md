@@ -285,4 +285,3 @@ After EVERY task or phase, before stopping:
 3. Record any new decision in **Key Decisions Log**.
 4. Keep **Folder Structure**, **Design System** and **How to Run** accurate.
 5. Add unresolved items to **Known Issues**.
-6. Keep this file concise and factual. No fluff.
