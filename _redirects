@@ -1,0 +1,14 @@
+# Redirects for old WordPress links
+/home /index.html 301
+/about-us /pages/about.html 301
+/about /pages/about.html 301
+/product /pages/products.html 301
+/products /pages/products.html 301
+/industry /pages/industries.html 301
+/industries /pages/industries.html 301
+/contact-us /pages/contact.html 301
+/contact /pages/contact.html 301
+/why-us /pages/about.html 301
+
+# Fallback for 404
+/* /pages/404.html 404

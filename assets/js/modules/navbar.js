@@ -1,39 +1,49 @@
-/**
- * Navbar Module
- * Handles mobile toggle, scroll states, and active links.
- */
-
 export function initNavbar() {
   const navbar = document.getElementById('navbar');
   const toggle = document.querySelector('.navbar__toggle');
   const menu = document.getElementById('nav-menu');
   const overlay = document.getElementById('nav-overlay');
-  
-  if (!navbar || !toggle || !menu || !overlay) return;
 
-  // Scroll state
-  window.addEventListener('scroll', () => {
+  if (!navbar) return;
+
+  // Handle scroll effect for transparency (only on homepage or if it has navbar--transparent)
+  const handleScroll = () => {
     if (window.scrollY > 50) {
-      navbar.classList.add('navbar--scrolled');
       navbar.classList.remove('navbar--transparent');
+      navbar.classList.add('navbar--scrolled');
     } else {
-      navbar.classList.remove('navbar--scrolled');
-      // Only make transparent if it's supposed to be (e.g. on home page)
+      // Re-add transparent class if we are at the top and the body is page-home
       if (document.body.classList.contains('page-home')) {
         navbar.classList.add('navbar--transparent');
       }
+      navbar.classList.remove('navbar--scrolled');
     }
-  }, { passive: true });
-
-  // Mobile menu toggle
-  const toggleMenu = () => {
-    const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
-    toggle.setAttribute('aria-expanded', !isExpanded);
-    menu.classList.toggle('is-open');
-    overlay.classList.toggle('is-visible');
-    document.body.style.overflow = isExpanded ? '' : 'hidden'; // Prevent body scroll
   };
 
-  toggle.addEventListener('click', toggleMenu);
-  overlay.addEventListener('click', toggleMenu);
+  // Initial check
+  handleScroll();
+  window.addEventListener('scroll', handleScroll, { passive: true });
+
+  // Handle mobile menu toggle
+  if (toggle && menu) {
+    const toggleMenu = () => {
+      const isExpanded = toggle.getAttribute('aria-expanded') === 'true';
+      toggle.setAttribute('aria-expanded', !isExpanded);
+      toggle.classList.toggle('is-active');
+      menu.classList.toggle('is-active');
+      
+      if (overlay) {
+        overlay.classList.toggle('is-active');
+      }
+      
+      // Prevent scrolling when menu is open
+      document.body.style.overflow = isExpanded ? '' : 'hidden';
+    };
+
+    toggle.addEventListener('click', toggleMenu);
+    
+    if (overlay) {
+      overlay.addEventListener('click', toggleMenu);
+    }
+  }
 }

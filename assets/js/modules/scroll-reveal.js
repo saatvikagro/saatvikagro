@@ -1,29 +1,25 @@
-/**
- * Scroll Reveal Module
- * Uses IntersectionObserver to reveal elements on scroll.
- */
-
 export function initScrollReveal() {
   const revealElements = document.querySelectorAll('.reveal');
   
   if (revealElements.length === 0) return;
 
-  const observerOptions = {
-    root: null,
-    rootMargin: '0px',
-    threshold: 0.15 // Trigger when 15% visible
-  };
-
-  const observer = new IntersectionObserver((entries, observer) => {
+  const revealCallback = (entries, observer) => {
     entries.forEach(entry => {
       if (entry.isIntersecting) {
         entry.target.classList.add('visible');
-        observer.unobserve(entry.target); // Only reveal once
+        // Unobserve after revealing to prevent repeating animation
+        observer.unobserve(entry.target);
       }
     });
-  }, observerOptions);
+  };
 
-  revealElements.forEach(el => {
-    observer.observe(el);
-  });
+  const revealOptions = {
+    root: null,
+    rootMargin: '0px 0px -50px 0px',
+    threshold: 0.1
+  };
+
+  const revealObserver = new IntersectionObserver(revealCallback, revealOptions);
+
+  revealElements.forEach(el => revealObserver.observe(el));
 }
