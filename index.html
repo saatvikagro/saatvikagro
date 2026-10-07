@@ -105,7 +105,7 @@
       bottom: 0;
       width: 55%;
       height: 100%;
-      background: url('https://images.unsplash.com/photo-1595180620317-09f193eb7061?q=80&w=1200&auto=format&fit=crop') no-repeat;
+      background: url('./assets/images/content/hero.jpg') no-repeat;
       background-size: cover;
       background-position: center;
       z-index: 1;
@@ -198,7 +198,7 @@
     .product-grid-left {
       border-radius: var(--radius-xl);
       overflow: hidden;
-      background: url('https://images.unsplash.com/photo-1500595046743-cd271d694d30?q=80&w=800&auto=format&fit=crop') center/cover;
+      background: url('./assets/images/content/farm1.jpg') center/cover;
       min-height: 500px;
     }
     .product-grid-right {
@@ -226,7 +226,7 @@
     /* Section 4: Full width banner */
     .section-full-img {
       height: 400px;
-      background: url('https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?q=80&w=1920&auto=format&fit=crop') center/cover fixed;
+      background: url('./assets/images/content/factory.jpg') center/cover fixed;
     }
 
     /* Section 5: About Us Dual Layout */
@@ -415,28 +415,28 @@
       <div class="product-grid-left"></div>
       <div class="product-grid-right">
         <div class="product-item">
-          <img src="https://images.unsplash.com/photo-1626074961596-cb407d4c0dcb?q=80&w=800&auto=format&fit=crop" alt="Maltodex">
+          <img src="./assets/images/content/powder.jpg" alt="Maltodex">
           <div class="product-item-content">
             <h3>Shakti Maltodex</h3>
             <p>Premium maltodextrin</p>
           </div>
         </div>
         <div class="product-item">
-          <img src="https://images.unsplash.com/photo-1574323347407-f5e1ad6d020b?q=80&w=800&auto=format&fit=crop" alt="Gluten">
+          <img src="./assets/images/content/gluten.jpg" alt="Gluten">
           <div class="product-item-content">
             <h3>Gluten Meal</h3>
             <p>High protein feed</p>
           </div>
         </div>
         <div class="product-item">
-          <img src="https://images.unsplash.com/photo-1586201375761-83865001e31c?q=80&w=800&auto=format&fit=crop" alt="Fibre">
+          <img src="./assets/images/content/fibre.jpg" alt="Fibre">
           <div class="product-item-content">
             <h3>Dry Fibre</h3>
             <p>Cattle nutrition</p>
           </div>
         </div>
         <div class="product-item">
-          <img src="https://images.unsplash.com/photo-1627997931392-563630f9d997?q=80&w=800&auto=format&fit=crop" alt="Germ">
+          <img src="./assets/images/content/germ.jpg" alt="Germ">
           <div class="product-item-content">
             <h3>Maize Germ</h3>
             <p>Oil extraction ready</p>
@@ -453,8 +453,8 @@
   <section class="section-about-dual">
     <div class="about-dual-grid">
       <div class="about-dual-images">
-        <img src="https://images.unsplash.com/photo-1595878715977-2e8f8df18ea8?q=80&w=800&auto=format&fit=crop" alt="Farmers">
-        <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=800&auto=format&fit=crop" alt="Farming">
+        <img src="./assets/images/content/team1.jpg" alt="Farmers">
+        <img src="./assets/images/content/team2.jpg" alt="Farming">
       </div>
       <div class="about-dual-content">
         <span class="label" style="color: var(--color-secondary); font-weight: 700; text-transform: uppercase; font-size: 12px; letter-spacing: 0.1em; margin-bottom: 15px; display: block;">Our Roots</span>
@@ -521,7 +521,10 @@
     </div>
   </footer>
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
+    // Hamburger Menu
     document.querySelector('.navbar__toggle').addEventListener('click', function() {
       const nav = document.querySelector('.header-nav');
       if (nav.style.display === 'flex') {
@@ -529,6 +532,34 @@
       } else {
         nav.style.display = 'flex';
       }
+    });
+
+    // GSAP Stacking Cards Animation
+    gsap.registerPlugin(ScrollTrigger);
+
+    const banners = gsap.utils.toArray('.banner-row');
+    
+    // Set initial state
+    gsap.set(banners, { transformOrigin: "top center" });
+    
+    banners.forEach((banner, i) => {
+      // Don't animate the last banner since it's the bottom of the stack
+      if (i === banners.length - 1) return;
+      
+      ScrollTrigger.create({
+        trigger: banner,
+        start: "top 100px", // when the top of the card hits 100px from top of viewport
+        endTrigger: ".section-banners", 
+        end: "bottom bottom", 
+        pin: true,
+        pinSpacing: false,
+        animation: gsap.to(banner, {
+          scale: 1 - ((banners.length - i) * 0.05), // Shrink slightly
+          opacity: 1 - ((banners.length - i) * 0.1), // Fade slightly
+          ease: "none"
+        }),
+        scrub: true
+      });
     });
   </script>
 </body>
