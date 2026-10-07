@@ -1,0 +1,32 @@
+[
+  {
+    "id": "food-beverages",
+    "name": "Food and Beverages",
+    "icon": "food"
+  },
+  {
+    "id": "confectionery-bakery",
+    "name": "Confectionery and Bakery",
+    "icon": "bakery"
+  },
+  {
+    "id": "dairy-nutrition",
+    "name": "Dairy and Nutrition",
+    "icon": "dairy"
+  },
+  {
+    "id": "pharma-nutra",
+    "name": "Pharmaceuticals and Nutraceuticals",
+    "icon": "pharma"
+  },
+  {
+    "id": "animal-nutrition",
+    "name": "Animal Nutrition",
+    "icon": "animal"
+  },
+  {
+    "id": "industrial",
+    "name": "Industrial Applications",
+    "icon": "industrial"
+  }
+]

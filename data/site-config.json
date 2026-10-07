@@ -1,0 +1,19 @@
+{
+  "company": {
+    "name": "Saatvik Agro Processors Private Limited",
+    "shortName": "Saatvik Agro",
+    "email": "marketing.agro@saatvikgroup.com",
+    "phone": "1800-547-1151",
+    "whatsapp": "",
+    "linkedin": "https://www.linkedin.com/company/saatvik-agro-processors-private-limited/"
+  },
+  "addresses": {
+    "manufacturing": "Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh-476444",
+    "corporate": "Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318"
+  },
+  "seo": {
+    "titleBase": "Saatvik Agro",
+    "titleSeparator": " | ",
+    "defaultDescription": "Saatvik Agro is the agro-ingredient unit of the Saatvik Group, dedicated to creating high quality maize-based ingredients that power everyday products across food, nutrition, animal feed, and industrial applications."
+  }
+}

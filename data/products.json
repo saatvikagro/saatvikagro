@@ -1,0 +1,51 @@
+[
+  {
+    "id": "starch-food-grade",
+    "name": "Shakti Maize Starch Powder Food Grade",
+    "description": "Shakti Maize Starch Powder is a premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications. Derived from carefully selected maize and refined through precision processing, it delivers reliable texture, clarity, and structure batch after batch.",
+    "category": "Food Grade",
+    "image": "product01.jpg"
+  },
+  {
+    "id": "starch-industrial",
+    "name": "Shakti Maize Starch Powder For Industrial Use",
+    "description": "Shakti Maize Starch Powder – Industrial Use is a high-performance starch engineered to deliver consistent binding, viscosity, and stability across demanding industrial applications. Manufactured under controlled processes, it ensures dependable performance, process efficiency, and uniform results in textiles, paper, adhesives, and allied industries.",
+    "category": "Industrial",
+    "image": "product02.jpg"
+  },
+  {
+    "id": "liquid-glucose",
+    "name": "Shakti Liquid Glucose",
+    "description": "Shakti Liquid Glucose is a high-purity, food-grade glucose syrup engineered for consistent sweetness, smooth texture, and dependable performance across confectionery, dairy, bakery, and beverage applications. Produced through controlled processing and stringent quality systems, it delivers clarity, stability, and Moisture balance batch after batch, supporting efficient and scalable food manufacturing.",
+    "category": "Food Grade",
+    "image": "product03.jpg"
+  },
+  {
+    "id": "maltodex",
+    "name": "Shakti Maltodex LD, SD, HD",
+    "description": "Shakti Maltodex is a versatile maltodextrin ingredient family engineered through controlled hydrolysis to deliver consistent purity, functionality, and performance across food and nutrition applications. Available in Low, Standard, and High dextrose equivalent profiles, it allows formulators to precisely balance body, solubility, sweetness control, and energy release without compromising on quality. With a clean, neutral flavour, excellent dispersibility, and predictable batch-to-batch behaviour, Shakti Maltodex supports applications ranging from beverages and bakery to dairy, confectionery, and specialised nutrition, offering functional choice through science-led precision rather than quality differentiation.",
+    "category": "Food & Nutrition",
+    "image": "product04.jpg"
+  },
+  {
+    "id": "gluten-meal",
+    "name": "Shakti Gluten Meal",
+    "description": "Shakti Gluten Meal is a high-protein, low-fat maize-based feed ingredient developed to deliver balanced nutrition, digestibility, and consistent performance in poultry, cattle, and aquaculture feed formulations. Produced through a refined separation process, it offers a clean, golden appearance, stable nutrient profile, and reliable amino acid and fibre content, supporting efficient digestion, improved feed conversion, muscle development, and overall livestock health. Designed for uniform blending and predictable behaviour, Shakti Gluten Meal provides feed manufacturers with a dependable nutritional foundation built on purity, consistency, and disciplined quality.",
+    "category": "Animal Nutrition",
+    "image": "product05.jpg"
+  },
+  {
+    "id": "dry-fibre",
+    "name": "Shakti Maize Dry Fibre",
+    "description": "Shakti Maize Dry Fibre is a clean, fibre-rich maize ingredient developed to deliver steady energy, digestive support, and consistent nutritional performance in cattle and poultry feed formulations. Produced through a careful separation process that preserves the natural structure and digestibility of maize fibre, it supports gut health, feed efficiency, milk production, and overall livestock resilience. With uniform flake size, stable nutrient composition, and predictable batch behaviour, Shakti Maize Dry Fibre offers feed manufacturers a dependable foundation for balanced and efficient nutrition programs.",
+    "category": "Animal Nutrition",
+    "image": "product06.jpg"
+  },
+  {
+    "id": "maize-germ",
+    "name": "Shakti Maize Germ",
+    "description": "Shakti Maize Germ is a nutrient-dense, oil-rich maize ingredient developed to deliver sustained energy, essential nutrition, and dependable performance across animal nutrition and industrial applications. Naturally high in oil, amino acids, and vital nutrients, it supports healthy growth, improved immunity, and feed efficiency in poultry, cattle, and aquaculture, while also serving as a reliable raw material for oil extraction and cooking-related industrial use. Processed with strict control over granulation, moisture, and nutrient retention, Shakti Maize Germ offers consistent quality, high palatability, and predictable behaviour that manufacturers can trust batch after batch.",
+    "category": "Animal Nutrition & Industrial",
+    "image": "product07.jpg"
+  }
+]
