@@ -24,61 +24,99 @@
       <div class="logo-divider"></div>
       <img src="assets/images/content/shakti-logo.png" alt="Shakti" class="logo-img shakti-logo">
     </div>
-
-    <button class="hamburger">☰</button>
-
     <ul class="nav-links">
-      <li><a href="index.html">Home <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
-      <li><a href="about.html">Pages <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
-      <li><a href="#">Blog <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
-      <li><a href="products.html">Shop <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">Pages</a></li>
+      <li><a href="#">Blog</a></li>
+      <li><a href="products.html">Shop</a></li>
       <li><a href="contact.html">Contact Us</a></li>
     </ul>
 
     <div class="nav-contact">
       <div class="nav-phone">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-          </path>
-        </svg>
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
         555-123-4567
       </div>
       <a href="contact.html" class="btn btn--nav-rect">Get in Touch</a>
     </div>
+    <!-- Hamburger Button (Right) -->
+    <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
   </header>
+
+  <!-- Fullscreen Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">
+        <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+           <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+        </svg>
+    </button>
+    <div class="nav-overlay-content">
+      <nav class="nav-menu-full">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">Pages</a></li>
+          <li><a href="#">Blog</a></li>
+          <li><a href="products.html">Shop</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-phone-full">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+        </svg>
+        555-123-4567
+      </div>
+    </div>
+  </div>
 
   <!-- HERO -->
   <section class="hero">
-    <div class="container hero-content">
-      <div class="hero-left">
+    <!-- Slider Backgrounds -->
+    <div class="hero-slider-bg">
+      <div class="hero-slide-track">
+        <div class="hero-slide" style="background-image: url('assets/images/content/hero-section-1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/content/farm1.jpg');"></div>
+        <div class="hero-slide" style="background-image: url('assets/images/content/factory.jpg');"></div>
+      </div>
+    </div>
+    
+    <!-- Gradient Overlay -->
+    <div class="hero-overlay"></div>
+
+    <div class="container hero-content-wrapper">
+      <div class="hero-center-left">
         <h1>Driven by purity.<br>Guided by science.<br>Built for consistency.</h1>
         <a href="products.html" class="btn btn--hero-orange">Get Started</a>
       </div>
+      
+      <div class="hero-bottom-row">
+        <div class="hero-bottom-text">Start now with<br>pure growth</div>
+        <a href="#section-intro" class="hero-scroll-text">SCROLL DOWN</a>
+      </div>
     </div>
-    <div class="hero-bottom container flex-between">
-      <div class="hero-bottom-text">Start now with<br>pure growth</div>
-      <div class="hero-scroll-text">SCROLL DOWN</div>
-    </div>
-    
+
     <!-- Right side slider indicators -->
     <div class="hero-slider-nav">
-      <div class="slider-dot active"></div>
-      <div class="slider-dot"></div>
-      <div class="slider-dot"></div>
+      <div class="slider-dot active" onclick="goToSlide(0)"></div>
+      <div class="slider-dot" onclick="goToSlide(1)"></div>
+      <div class="slider-dot" onclick="goToSlide(2)"></div>
     </div>
   </section>
 
   <!-- SECTION 1: Intro Grid -->
-  <section class="section-intro container">
+  <section id="section-intro" class="section-intro container">
     <div class="intro-header">
       <div class="intro-title-wrap">
         <span class="intro-label">ABOUT OUR FARM</span>
         <h2>Nourishing lives with pure milk</h2>
       </div>
       <div class="intro-text-wrap">
-        <p>Our cows graze in open pastures, eating fresh grass and herbs. This ensures our milk is not just fresh, but packed with natural goodness.</p>
+        <p>Our cows graze in open pastures, eating fresh grass and herbs. This ensures our milk is not just fresh, but
+          packed with natural goodness.</p>
       </div>
     </div>
 
@@ -120,7 +158,9 @@
         <p>We ensure every drop of milk is purely natural.</p>
       </div>
       <div class="banner-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+        </svg>
       </div>
     </div>
 
@@ -130,7 +170,9 @@
         <p>Committed to eco-friendly farming practices.</p>
       </div>
       <div class="banner-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+        </svg>
       </div>
     </div>
 
@@ -140,7 +182,9 @@
         <p>Supporting our community with every product.</p>
       </div>
       <div class="banner-icon">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+          <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4M7 10l5 5 5-5M12 15V3" />
+        </svg>
       </div>
     </div>
   </section>
@@ -158,28 +202,36 @@
 
         <div class="prod-small-grid">
           <div class="prod-card">
-            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Milk"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img
+                src="https://images.unsplash.com/photo-1550583724-b2692b85b150?q=80&w=600&auto=format&fit=crop"
+                style="mix-blend-mode: normal; border-radius: 0;" alt="Milk"></div>
             <div class="prod-card-content">
               <h3>Fresh Whole Milk</h3>
               <p>1 L - $4.00</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Cheese"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img
+                src="https://images.unsplash.com/photo-1486297678162-eb2a19b0a32d?q=80&w=600&auto=format&fit=crop"
+                style="mix-blend-mode: normal; border-radius: 0;" alt="Cheese"></div>
             <div class="prod-card-content">
               <h3>Artisan Cheddar Cheese</h3>
               <p>200g - $6.50</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Butter"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img
+                src="https://images.unsplash.com/photo-1589985270826-4b7bb135bc9d?q=80&w=600&auto=format&fit=crop"
+                style="mix-blend-mode: normal; border-radius: 0;" alt="Butter"></div>
             <div class="prod-card-content">
               <h3>Farmhouse Butter Block</h3>
               <p>250g - $5.00</p>
             </div>
           </div>
           <div class="prod-card">
-            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600&auto=format&fit=crop" style="mix-blend-mode: normal; border-radius: 0;" alt="Cream"></div>
+            <div class="prod-img-wrap" style="background: transparent; padding: 0;"><img
+                src="https://images.unsplash.com/photo-1563729784474-d77dbb933a9e?q=80&w=600&auto=format&fit=crop"
+                style="mix-blend-mode: normal; border-radius: 0;" alt="Cream"></div>
             <div class="prod-card-content">
               <h3>Pure Natural Fresh Cream</h3>
               <p>500ml - $4.50</p>
@@ -226,13 +278,16 @@
   <section class="section-about container">
     <div class="about-grid">
       <div class="about-images" style="display: flex; gap: 0;">
-        <img src="assets/images/content/team4.jpg" style="width: 45%; object-fit: cover; height: 300px; margin-top: auto;" alt="Farm">
-        <img src="assets/images/content/team1.jpg" style="width: 65%; object-fit: cover; height: 400px; margin-left: -10%; z-index: 2;" alt="Factory">
+        <img src="assets/images/content/team4.jpg"
+          style="width: 45%; object-fit: cover; height: 300px; margin-top: auto;" alt="Farm">
+        <img src="assets/images/content/team1.jpg"
+          style="width: 65%; object-fit: cover; height: 400px; margin-left: -10%; z-index: 2;" alt="Factory">
       </div>
       <div class="about-content" style="padding-left: 40px;">
         <span class="intro-label">KNOW ABOUT US</span>
         <h2>About us</h2>
-        <p>We are a family-owned dairy farm dedicated to providing the freshest, most natural milk and dairy products to our community. Our passion for healthy, happy cows means better milk for you and your family.</p>
+        <p>We are a family-owned dairy farm dedicated to providing the freshest, most natural milk and dairy products to
+          our community. Our passion for healthy, happy cows means better milk for you and your family.</p>
         <p>From our farm directly to your table, we oversee every step to ensure uncompromising quality.</p>
       </div>
     </div>
@@ -245,7 +300,8 @@
         <path fill="#ffffff" d="M0,60 C320,0 420,60 720,30 C1020,0 1120,60 1440,30 L1440,60 L0,60 Z"></path>
       </svg>
     </div>
-    <h2>"Choosing Saatvik for our family's nutrition was the best decision we've made. Every bottle is fresh and full of natural goodness."</h2>
+    <h2>"Choosing Saatvik for our family's nutrition was the best decision we've made. Every bottle is fresh and full of
+      natural goodness."</h2>
     <div style="margin-top: 30px;">
       <img src="assets/images/content/test1.jpg" alt="Client" style="width: 60px; height: 60px; border-radius: 50%;">
       <div style="font-weight: 700; color: var(--color-primary); margin-top: 10px;">Marie Smith</div>
@@ -263,8 +319,10 @@
       <div class="footer-grid">
         <div class="footer-col" style="grid-column: span 2;">
           <h2 style="color: white; font-size: 2rem; margin-bottom: 20px;">Saatvik</h2>
-          <p style="max-width: 300px;">Providing the finest natural dairy products, nurtured with care and delivered fresh.</p>
-          <a href="contact.html" class="btn btn--accent" style="background-color: #F3C319; color: var(--color-primary); margin-top: 20px;">Shop now</a>
+          <p style="max-width: 300px;">Providing the finest natural dairy products, nurtured with care and delivered
+            fresh.</p>
+          <a href="contact.html" class="btn btn--accent"
+            style="background-color: #F3C319; color: var(--color-primary); margin-top: 20px;">Shop now</a>
         </div>
 
         <div class="footer-col">
@@ -286,12 +344,19 @@
             <li>123 Dairy Lane, Countryside</li>
           </ul>
           <div style="display: flex; gap: 15px; margin-top: 20px;">
-            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z"/></svg></a>
-            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/></svg></a>
+            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.675 0h-21.35c-.732 0-1.325.593-1.325 1.325v21.351c0 .731.593 1.324 1.325 1.324h11.495v-9.294h-3.128v-3.622h3.128v-2.671c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12v9.293h6.116c.73 0 1.323-.593 1.323-1.325v-21.35c0-.732-.593-1.325-1.325-1.325z" />
+              </svg></a>
+            <a href="#" style="color: white;"><svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg></a>
           </div>
         </div>
       </div>
-      <div style="margin-top: 60px; font-size: 0.9rem; color: rgba(255,255,255,0.5); text-align: left; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
+      <div
+        style="margin-top: 60px; font-size: 0.9rem; color: rgba(255,255,255,0.5); text-align: left; padding-top: 20px; border-top: 1px solid rgba(255,255,255,0.1);">
         <span>© 2026 Saatvik. All Rights Reserved.</span>
       </div>
     </div>
@@ -300,22 +365,97 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   <script>
-    // Mobile Menu Toggle
-    document.querySelector('.hamburger').addEventListener('click', function () {
-      const nav = document.querySelector('.nav-links');
-      nav.style.display = nav.style.display === 'flex' ? 'none' : 'flex';
+    // Fullscreen Mobile/Desktop Menu Toggle
+    const hamburger = document.getElementById('hamburger-menu');
+    const navOverlay = document.getElementById('nav-overlay');
+    const navClose = document.getElementById('nav-close');
+
+    hamburger.addEventListener('click', () => {
+      navOverlay.classList.add('active');
+    });
+
+    navClose.addEventListener('click', () => {
+      navOverlay.classList.remove('active');
+    });
+
+    document.querySelectorAll('.nav-menu-full a').forEach(link => {
+      link.addEventListener('click', () => {
+        navOverlay.classList.remove('active');
+      });
     });
 
     // Initialize GSAP ScrollTrigger
     gsap.registerPlugin(ScrollTrigger);
 
+    // Hero Slider Logic
+    const slideTrack = document.querySelector('.hero-slide-track');
+    const dots = document.querySelectorAll('.slider-dot');
+    const heroH1 = document.querySelector('.hero-center-left h1');
+    const heroBottomText = document.querySelector('.hero-bottom-text');
+    
+    let currentSlide = 0;
+    const slideCount = dots.length;
+    let slideInterval;
+
+    const slideData = [
+      {
+        h1: "Driven by purity.<br>Guided by science.<br>Built for consistency.",
+        bottom: "Start now with<br>pure growth"
+      },
+      {
+        h1: "Nature's best milk.<br>Fresh from the farm.<br>Delivered to you.",
+        bottom: "Taste the<br>difference today"
+      },
+      {
+        h1: "Sustainable farming.<br>Healthy cows.<br>Premium dairy products.",
+        bottom: "Explore our<br>premium range"
+      }
+    ];
+
+    function goToSlide(index) {
+      if (currentSlide === index && arguments.length > 0) return; // Prevent re-triggering same slide
+
+      dots[currentSlide].classList.remove('active');
+      currentSlide = index;
+      dots[currentSlide].classList.add('active');
+      
+      slideTrack.style.transform = `translateX(-${currentSlide * (100 / slideCount)}%)`;
+      
+      // Update Text with simple fade
+      gsap.to([heroH1, heroBottomText], {
+        opacity: 0,
+        y: -10,
+        duration: 0.3,
+        onComplete: () => {
+          heroH1.innerHTML = slideData[currentSlide].h1;
+          heroBottomText.innerHTML = slideData[currentSlide].bottom;
+          gsap.to([heroH1, heroBottomText], { opacity: 1, y: 0, duration: 0.4, ease: "power2.out" });
+        }
+      });
+      
+      // Reset timer
+      clearInterval(slideInterval);
+      startSlider();
+    }
+
+    function nextSlide() {
+      let next = (currentSlide + 1) % slideCount;
+      goToSlide(next);
+    }
+
+    function startSlider() {
+      slideInterval = setInterval(nextSlide, 4000);
+    }
+    
+    startSlider();
+
     // 1. Hero Animation (Load)
     const heroTl = gsap.timeline();
-    heroTl.from(".hero-left h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
-          .from(".btn--hero-orange", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-          .from(".hero-bottom-text", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-          .from(".hero-scroll-text", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4")
-          .from(".slider-dot", { x: 50, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }, "-=0.8");
+    heroTl.from(".hero-center-left h1", { y: 30, opacity: 0, duration: 1, ease: "power2.out" })
+      .from(".btn--hero-orange", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
+      .from(".hero-bottom-text", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
+      .from(".hero-scroll-text", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
+      .from(".slider-dot", { opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }, "-=0.4");
 
     // 2. Section Titles Fade In
     gsap.utils.toArray('h2').forEach(title => {
@@ -410,4 +550,5 @@
     });
   </script>
 </body>
+
 </html>
