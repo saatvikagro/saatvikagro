@@ -97,7 +97,7 @@ The current https://www.saatvikagro.com/ is a **single HTML page** (not a multi-
 
 ---
 
-## B. Reference Site Analysis (soil.ancorathemes.com/dairy-farm/)
+## B. Reference Site Analysis (soil.Saatvik Agro.com/dairy-farm/)
 
 > INSPIRATION ONLY. No code, images, or fonts will be copied.
 

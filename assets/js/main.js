@@ -40,11 +40,11 @@ if (typeof gsap !== 'undefined') {
         bottom: "Start now with<br>pure growth"
       },
       {
-        h1: "Nature's best milk.<br>Fresh from the farm.<br>Delivered to you.",
-        bottom: "Taste the<br>difference today"
+        h1: "Premium Maize Starch.<br>Engineered for<br>Industrial scale.",
+        bottom: "Experience the<br>difference today"
       },
       {
-        h1: "Sustainable farming.<br>Healthy cows.<br>Premium dairy products.",
+        h1: "Sustainable sourcing.<br>Advanced processing.<br>Reliable ingredients.",
         bottom: "Explore our<br>premium range"
       }
     ];
@@ -83,7 +83,7 @@ if (typeof gsap !== 'undefined') {
     }
 
     function startSlider() {
-      slideInterval = setInterval(nextSlide, 4000);
+      slideInterval = setInterval(nextSlide, 5000);
     }
     
     startSlider();
@@ -92,30 +92,31 @@ if (typeof gsap !== 'undefined') {
   // 1. Hero Animation (Load)
   if (document.querySelector(".hero-center-left h1")) {
     const heroTl = gsap.timeline();
-    heroTl.from(".hero-center-left h1", { y: 30, opacity: 0, duration: 1, ease: "power2.out" })
-      .from(".btn--hero-orange", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
-      .from(".hero-bottom-text", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
-      .from(".hero-scroll-text", { opacity: 0, duration: 0.8, ease: "power2.out" }, "-=0.6")
-      .from(".slider-dot", { opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }, "-=0.4");
+    heroTl.from(".hero-center-left h1", { y: 40, opacity: 0, duration: 1.2, ease: "power3.out" })
+      .from(".btn--hero-orange", { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".hero-bottom-text", { opacity: 0, x: -20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".hero-scroll-text", { opacity: 0, x: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".slider-dot", { opacity: 0, scale: 0.5, duration: 0.6, stagger: 0.1, ease: "back.out(1.5)" }, "-=0.6");
   }
 
   // 2. Section Titles Fade In
-  gsap.utils.toArray('h2').forEach(title => {
+  gsap.utils.toArray('h2, .intro-label').forEach(title => {
     gsap.from(title, {
       scrollTrigger: {
         trigger: title,
         start: "top 85%",
       },
-      y: 40,
+      y: 30,
       opacity: 0,
       duration: 0.8,
-      ease: "power2.out"
+      ease: "power2.out",
+      stagger: 0.1
     });
   });
 
-  // 3. Intro Cards Stagger
-  if (document.querySelector(".intro-card")) {
-    gsap.from(".intro-card", {
+  // 3. Intro Cards Stagger (Why Us)
+  if (document.querySelector(".intro-card-wrap")) {
+    gsap.from(".intro-card-wrap", {
       scrollTrigger: {
         trigger: ".intro-grid",
         start: "top 85%",
@@ -123,41 +124,41 @@ if (typeof gsap !== 'undefined') {
       y: 50,
       opacity: 0,
       duration: 0.8,
-      stagger: 0.2,
-      ease: "power2.out"
+      stagger: 0.15,
+      ease: "power3.out"
     });
   }
 
-  // 4. Banners Slide In (Fixed to use Y axis instead of X to prevent mobile overflow)
-  gsap.utils.toArray('.banner-row').forEach((banner, i) => {
-    gsap.from(banner, {
-      scrollTrigger: {
-        trigger: banner,
-        start: "top 90%",
-      },
-      y: 50, 
-      opacity: 0,
-      duration: 0.8,
-      ease: "power2.out"
-    });
-  });
-
-  // 5. Products Grid Stagger
+  // 4. Products Grid Stagger
   if (document.querySelector(".prod-card")) {
     gsap.from(".prod-card", {
       scrollTrigger: {
         trigger: ".prod-small-grid",
         start: "top 80%",
       },
-      scale: 0.9,
+      scale: 0.95,
+      y: 30,
       opacity: 0,
       duration: 0.6,
-      stagger: 0.15,
-      ease: "back.out(1.2)"
+      stagger: 0.1,
+      ease: "power2.out"
     });
   }
+  
+  if (document.querySelector(".prod-large")) {
+      gsap.from(".prod-large", {
+        scrollTrigger: {
+          trigger: ".prod-grid",
+          start: "top 80%",
+        },
+        x: -40,
+        opacity: 0,
+        duration: 0.8,
+        ease: "power3.out"
+      });
+  }
 
-  // 6. Parallax effect for full width image
+  // 5. Parallax effect for full width image
   if (document.querySelector(".full-img-section")) {
     gsap.to(".full-img-section", {
       scrollTrigger: {
@@ -171,7 +172,7 @@ if (typeof gsap !== 'undefined') {
     });
   }
 
-  // 7. Team Cards Stagger
+  // 6. Team Cards Stagger
   if (document.querySelector(".team-card")) {
     gsap.from(".team-card", {
       scrollTrigger: {
@@ -180,15 +181,15 @@ if (typeof gsap !== 'undefined') {
       },
       y: 40,
       opacity: 0,
-      duration: 0.8,
-      stagger: 0.2,
+      duration: 0.7,
+      stagger: 0.15,
       ease: "power2.out"
     });
   }
 
-  // 8. About Grid Reveal
+  // 7. About Grid Reveal
   if (document.querySelector(".about-grid-wrapper")) {
-    const aboutEls = [".about-text-left", ".about-img-left", ".about-text-mid", ".about-text-right", ".about-img-right"];
+    const aboutEls = [".about-img-left", ".about-text-left", ".about-text-mid", ".about-text-right", ".about-img-right"];
     aboutEls.forEach((el, index) => {
       if(document.querySelector(el)) {
         gsap.from(el, {
@@ -199,10 +200,55 @@ if (typeof gsap !== 'undefined') {
           y: 40,
           opacity: 0,
           duration: 0.8,
-          delay: index * 0.15,
+          delay: index * 0.1,
           ease: "power3.out"
         });
       }
     });
   }
+  
+  // 8. Blog / Industries Cards Stagger
+  if (document.querySelector(".blog-post")) {
+    gsap.from(".blog-post", {
+      scrollTrigger: {
+        trigger: ".blog-posts-grid",
+        start: "top 85%",
+      },
+      y: 40,
+      opacity: 0,
+      duration: 0.8,
+      stagger: 0.2,
+      ease: "power2.out"
+    });
+  }
+  
+  // 9. Yellow Section Reveal
+  if (document.querySelector(".section-yellow-content")) {
+    gsap.from(".section-yellow-content", {
+      scrollTrigger: {
+        trigger: ".section-yellow",
+        start: "top 85%",
+      },
+      y: 30,
+      opacity: 0,
+      scale: 0.98,
+      duration: 0.8,
+      ease: "power3.out"
+    });
+  }
+  
+  // 10. Floating Elements (Milk / Splash Images)
+  gsap.utils.toArray('.left-milk-img, .right-milk-img, .cup-img, .bottle-img, .cheese-img, .intro-jug-img').forEach(img => {
+    gsap.to(img, {
+      scrollTrigger: {
+        trigger: img.parentElement,
+        start: "top bottom",
+        end: "bottom top",
+        scrub: 1
+      },
+      y: -80,
+      rotation: 5,
+      ease: "none"
+    });
+  });
 }

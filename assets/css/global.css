@@ -51,6 +51,7 @@ h5 {
   margin: 0;
   letter-spacing: -0.03em;
   line-height: 1.1;
+  font-weight: 600;
 }
 
 p {
@@ -71,7 +72,7 @@ a {
   padding: 0 32px;
   height: 48px;
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   border-radius: var(--radius-full);
   cursor: pointer;
@@ -347,7 +348,7 @@ a {
 
 .footer-top-text h2 {
   color: #fff;
-  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  font-size: clamp(1.6rem, 3vw, 2.2rem);
   font-weight: 400;
   margin: 0;
   line-height: 1.2;
@@ -379,7 +380,7 @@ a {
   margin-bottom: 40px;
 }
 
-.footer-col-wide .btn--accent {
+.footer-col-wide .btn--accent { transition: all 0.3s ease; 
   background-color: var(--color-secondary);
   color: var(--color-primary);
   font-weight: 600;
@@ -390,7 +391,7 @@ a {
 
 .footer-phone {
   margin-top: 30px;
-  font-size: 1.1rem !important;
+  font-size: 1rem !important;
   color: #fff !important;
   font-weight: 600 !important;
 }
@@ -467,3 +468,18 @@ a {
 
 .section-yellow-content { position: relative; z-index: 2; }
 .footer-logo img { filter: brightness(0) invert(1); height: 40px; object-fit: contain; }
+
+.footer-col-wide .btn--accent:hover {
+  background-color: #fff;
+  color: var(--color-primary) !important;
+}
+
+@media (max-width: 1024px) {
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+  }
+  .footer-col-wide {
+    grid-column: 1 / -1;
+  }
+}
