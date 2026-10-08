@@ -455,22 +455,29 @@ a {
 /* ================= SECTION 1: Intro Grid ================= */
 .section-intro {
   padding: 120px 0;
-  background: #fff;
+  background: #F5F6F1;
+  position: relative;
+  overflow: hidden;
+}
+
+.section-intro .container {
+  position: relative;
 }
 
 .intro-header {
   display: flex;
   justify-content: space-between;
-  align-items: flex-end;
+  align-items: flex-start;
   margin-bottom: 70px;
+  gap: 40px;
 }
 
 .intro-title-wrap {
-  max-width: 500px;
+  flex: 0 0 45%;
 }
 
 .intro-label {
-  color: var(--color-secondary);
+  color: #666;
   text-transform: uppercase;
   font-weight: 700;
   font-size: 12px;
@@ -481,60 +488,82 @@ a {
 
 .intro-title-wrap h2 {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
+  color: #000;
+  font-weight: 500;
 }
 
 .intro-text-wrap {
-  max-width: 450px;
-  color: #777;
+  flex: 0 0 50%;
+  color: #888;
   font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.intro-text-wrap p {
+  margin-bottom: 20px;
 }
 
 .intro-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
+  position: relative;
+  z-index: 2;
+  margin-right: 60px;
+}
+
+.intro-card-wrap {
+  display: flex;
+  flex-direction: column;
 }
 
 .intro-card {
   background: #fff;
-  border-radius: var(--radius-md);
-  padding: 50px 40px;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
-  position: relative;
-  transition: box-shadow 0.3s ease;
-}
-
-.intro-card:hover {
-  box-shadow: 0 15px 50px rgba(0, 0, 0, 0.08);
+  border-radius: 0;
+  padding: 40px;
+  box-shadow: none;
+  margin-bottom: 20px;
+  flex-grow: 1;
 }
 
 .intro-icon {
-  width: 50px;
-  height: 50px;
+  width: 65px;
+  height: 65px;
   margin-bottom: 30px;
-  opacity: 0.8;
 }
 
 .intro-card h3 {
-  font-size: 1.5rem;
+  font-size: 1.3rem;
   margin-bottom: 15px;
+  color: #000;
+  font-weight: 500;
 }
 
 .intro-card p {
-  color: #777;
+  color: #888;
   font-size: 0.95rem;
-  margin-bottom: 30px;
+  margin-bottom: 0;
+  line-height: 1.6;
 }
 
-.btn-circle-small {
+.read-more-link {
+  font-size: 14px;
   font-weight: 700;
-  color: var(--color-primary);
-  text-decoration: underline;
-  text-underline-offset: 4px;
+  color: #000;
+  text-decoration: none;
 }
 
-.btn-circle-small:hover {
-  color: var(--color-secondary);
+.read-more-link:hover {
+  text-decoration: underline;
+}
+
+.intro-jug-img {
+  position: absolute;
+  right: -50px;
+  bottom: -20px;
+  width: 350px;
+  z-index: 1;
+  pointer-events: none;
 }
 
 /* ================= SECTION 2: Stacking Banners ================= */
@@ -889,6 +918,10 @@ a {
   .intro-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .intro-jug-img {
+    opacity: 0.15;
+    right: -120px;
+  }
 
   .prod-grid {
     grid-template-columns: 1fr;
@@ -933,6 +966,11 @@ a {
 
   .intro-grid {
     grid-template-columns: 1fr;
+    margin-right: 0;
+  }
+
+  .intro-jug-img {
+    display: none;
   }
 
   .banner-row {
