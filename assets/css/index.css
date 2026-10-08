@@ -1,4 +1,4 @@
-/* =========================================================
+﻿/* =========================================================
        EXACT SOIL THEME CSS REPLICATION
        ========================================================= */
 :root {
@@ -403,7 +403,7 @@ a {
 
 .hero-slider-nav {
   position: absolute;
-  right: 0;
+  right: -5px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 5;
@@ -936,7 +936,9 @@ a {
   .hamburger {
     display: flex;
   }
-  .nav-links, .nav-contact {
+
+  .nav-links,
+  .nav-contact {
     display: none;
   }
 }
