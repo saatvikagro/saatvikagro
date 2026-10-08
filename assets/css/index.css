@@ -21,7 +21,9 @@
   --font-body: 'DM Sans', sans-serif;
 }
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -509,7 +511,6 @@ a {
   gap: 30px;
   position: relative;
   z-index: 2;
-  margin-right: 60px;
 }
 
 .intro-card-wrap {
@@ -559,62 +560,106 @@ a {
 
 .intro-jug-img {
   position: absolute;
-  right: -50px;
-  bottom: -20px;
-  width: 350px;
+  right: -220px;
+  bottom: -50px;
+  width: 230px;
   z-index: 1;
   pointer-events: none;
+  transform: rotate(340deg);
 }
 
 /* ================= SECTION 2: Stacking Banners ================= */
 .section-banners {
-  padding: 0 5% 120px 5%;
-  display: flex;
-  flex-direction: column;
+  padding: 80px 0 120px 0;
   position: relative;
+  background: #F5F6F1;
+  z-index: 1;
+}
+
+.cheese-img {
+  position: absolute;
+  left: 0;
+  bottom: 20px;
+  width: 180px;
+  z-index: -1;
+  pointer-events: none;
+
 }
 
 /* They stack flush in the image, overlapping each other with no gaps */
 .banner-row {
-  padding: 40px 60px;
-  border-radius: 0;
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
-  margin-bottom: 0;
+  padding: 50px 60px;
+  min-height: 280px;
+  border-radius: 0;
   position: relative;
-  box-shadow: none;
+  z-index: 2;
+  margin-bottom: 20px;
+  gap: 4rem;
+}
+
+.banner-row:last-child {
+  margin-bottom: 0;
 }
 
 .banner-row.bg-white {
   background: #fff;
-  color: var(--color-primary);
+  color: #000;
 }
 
 .banner-row.bg-dark {
-  background: var(--color-primary);
+  background: #0B111A;
   color: #fff;
 }
 
 .banner-row.bg-yellow {
-  background: var(--color-secondary);
-  color: var(--color-primary);
+  background: #EFC00F;
+  color: #000;
 }
 
-.banner-content {
-  max-width: 600px;
+.banner-top,
+.banner-bottom {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.banner-top {
+  align-items: flex-start;
+}
+
+.banner-bottom {
+  align-items: flex-end;
 }
 
 .banner-row h2 {
-  font-size: clamp(2rem, 3.5vw, 3rem);
-  margin-bottom: 10px;
+  font-size: clamp(2rem, 3vw, 2.8rem);
+  font-weight: 500;
+  margin: 0;
   color: inherit;
+  letter-spacing: -0.02em;
+}
+
+.banner-arrow svg {
+  width: 28px;
+  height: 28px;
 }
 
 .banner-row p {
-  font-size: 1.1rem;
-  opacity: 0.8;
+  font-size: 0.9rem;
+  opacity: 0.9;
   margin: 0;
+  max-width: 350px;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.banner-icon-main svg {
+  width: 100px;
+  height: 100px;
+  display: block;
 }
 
 /* ================= SECTION 3: Products Grid ================= */
@@ -918,6 +963,7 @@ a {
   .intro-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+
   .intro-jug-img {
     opacity: 0.15;
     right: -120px;
@@ -973,17 +1019,33 @@ a {
     display: none;
   }
 
-  .banner-row {
-    flex-direction: column;
-    text-align: left;
-    align-items: flex-start;
-    padding: 40px 30px;
+  .section-banners {
+    padding: 60px 5%;
   }
 
-  .banner-row .btn-circle {
-    position: absolute;
-    right: 20px;
-    top: 20px;
+  .cheese-img {
+    display: none;
+  }
+
+  .banner-row {
+    padding: 40px 30px;
+    min-height: auto;
+    gap: 30px;
+  }
+
+  .banner-top,
+  .banner-bottom {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .banner-arrow {
+    display: none;
+  }
+
+  .banner-icon-main {
+    align-self: flex-end;
   }
 
   .team-grid {
