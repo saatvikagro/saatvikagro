@@ -186,18 +186,23 @@ if (typeof gsap !== 'undefined') {
     });
   }
 
-  // 8. About Images Reveal
-  if (document.querySelector(".about-images img")) {
-    gsap.from(".about-images img", {
-      scrollTrigger: {
-        trigger: ".about-images",
-        start: "top 80%",
-      },
-      scale: 0.8,
-      opacity: 0,
-      duration: 1,
-      stagger: 0.2,
-      ease: "power3.out"
+  // 8. About Grid Reveal
+  if (document.querySelector(".about-grid-wrapper")) {
+    const aboutEls = [".about-text-left", ".about-img-left", ".about-text-mid", ".about-text-right", ".about-img-right"];
+    aboutEls.forEach((el, index) => {
+      if(document.querySelector(el)) {
+        gsap.from(el, {
+          scrollTrigger: {
+            trigger: ".about-grid-wrapper",
+            start: "top 80%",
+          },
+          y: 40,
+          opacity: 0,
+          duration: 0.8,
+          delay: index * 0.15,
+          ease: "power3.out"
+        });
+      }
     });
   }
 }
