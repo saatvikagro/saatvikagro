@@ -5,7 +5,7 @@
 /* Footer */
 
 .contact-header {
-  padding: 80px 5%;
+  padding: 80px 0;
   background: #fff;
 }
 
@@ -42,11 +42,10 @@
 
 .contact-form-section {
   position: relative;
-  padding: 100px 5%;
-  background: url('../images/content/hero.jpg') center/cover;
+  padding: 100px 0;
+  background: url('../images/content/contact-background-01.jpg') center/cover no-repeat;
   min-height: 800px;
   display: flex;
-  justify-content: flex-end;
   align-items: center;
 }
 
@@ -114,4 +113,26 @@ textarea.form-control {
       padding: 40px 30px;
     }
 
+}
+
+.contact-form-container {
+  display: flex;
+  justify-content: flex-end;
+  width: 100%;
+}
+
+@media (max-width: 1024px) {
+  .contact-form-container {
+    justify-content: center;
+  }
+}
+@media (max-width: 768px) {
+  .contact-form-section {
+    padding: 60px 0;
+    min-height: auto;
+  }
+  .contact-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
 }
