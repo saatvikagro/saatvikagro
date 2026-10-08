@@ -665,7 +665,7 @@ a {
 /* ================= SECTION 3: Products Grid ================= */
 .section-products {
   padding: 100px 0;
-  background: var(--color-bg-alt);
+  background: #fff;
   text-align: center;
 }
 
@@ -675,7 +675,7 @@ a {
 
 .section-products h2 {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  max-width: 600px;
+  max-width: 900px;
   margin: 0 auto 60px auto;
 }
 
@@ -687,7 +687,7 @@ a {
 }
 
 .prod-large {
-  border-radius: var(--radius-md);
+  border-radius: 0;
   overflow: hidden;
   position: relative;
 }
@@ -702,12 +702,12 @@ a {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr 1fr;
-  gap: 30px;
+  gap: 20px;
 }
 
 .prod-card {
-  background: #fff;
-  border-radius: var(--radius-md);
+  background: transparent;
+  border-radius: 0;
   overflow: hidden;
   position: relative;
   display: flex;
@@ -716,35 +716,64 @@ a {
 
 .prod-img-wrap {
   background: #F4EFE6;
-  height: 200px;
-  padding: 20px;
+  aspect-ratio: 1/1;
+  padding: 0;
   display: flex;
   align-items: center;
   justify-content: center;
+  position: relative;
 }
 
 .prod-img-wrap img {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-sm);
-  mix-blend-mode: multiply;
+  border-radius: 0;
 }
 
 .prod-card-content {
-  padding: 25px;
+  padding: 15px 0 0 0;
   position: relative;
 }
 
 .prod-card h3 {
-  font-size: 1.25rem;
+  font-size: 1rem;
+  font-weight: 500;
   margin-bottom: 5px;
 }
 
 .prod-card p {
-  font-size: 0.95rem;
-  color: #777;
+  font-size: 0.9rem;
+  color: #000;
+  font-weight: 500;
   margin: 0;
+}
+
+.prod-badge {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 4px 8px;
+  font-size: 0.65rem;
+  font-weight: 600;
+  z-index: 2;
+  text-transform: uppercase;
+}
+
+.prod-badge.bg-yellow {
+  background: #EFC00F;
+  color: #000;
+}
+
+.prod-badge.bg-dark {
+  background: #0B111A;
+  color: #fff;
+}
+
+.price-old {
+  text-decoration: line-through;
+  color: #999;
+  margin-right: 5px;
 }
 
 .prod-card .btn-circle {
@@ -776,11 +805,39 @@ a {
 /* ================= SECTION 5: Team/About ================= */
 .section-team {
   padding: 120px 0;
+  background: #F8F7F4;
+  position: relative;
+  overflow: hidden;
+}
+
+.bottle-img {
+    position: absolute;
+    right: -40px;
+    top: 10%;
+    width: 140px;
+    z-index: 1;
+    pointer-events: none;
+    transform: rotate(341deg);
+
+}
+
+.section-team .container {
+  position: relative;
+  z-index: 2;
+}
+
+.section-team .intro-label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
 }
 
 .section-team h2 {
   font-size: clamp(2.5rem, 4vw, 3.5rem);
-  max-width: 500px;
+  max-width: 900px;
   margin-bottom: 60px;
 }
 
@@ -792,81 +849,95 @@ a {
 
 .team-card img {
   width: 100%;
-  aspect-ratio: 3/4;
+  aspect-ratio: 4/5;
   object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-bottom: 20px;
+  border-radius: 0;
+  margin-bottom: 15px;
 }
 
 .team-card h3 {
-  font-size: 1.25rem;
-  margin-bottom: 5px;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 3px;
 }
 
 .team-card p {
-  color: #777;
-  font-size: 0.9rem;
+  color: #999;
+  font-size: 0.85rem;
   margin: 0;
 }
 
-/* ================= SECTION 6: Dual Image About ================= */
+/* ================= SECTION 6: About ================= */
 .section-about {
   padding: 100px 0;
+  background: #fff;
 }
 
-.about-grid {
+.about-grid-wrapper {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
+  grid-template-columns: 4fr 3fr 3fr;
+  gap: 30px;
+  row-gap: 50px;
 }
 
-.about-images {
-  display: flex;
-  gap: 20px;
-  position: relative;
+.about-img-left {
+  grid-column: 1 / 2;
+  height: 350px;
+  align-self: end;
 }
 
-.about-img-1 {
-  width: 45%;
+.about-img-right {
+  grid-column: 2 / 4;
+  height: 550px;
+}
+
+.about-img-left img,
+.about-img-right img {
+  width: 100%;
+  height: 100%;
   object-fit: cover;
-  border-radius: var(--radius-md);
-  margin-top: 10%;
 }
 
-.about-img-2 {
-  width: 55%;
-  object-fit: cover;
-  border-radius: var(--radius-md);
-  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.1);
-  z-index: 2;
-  margin-left: -15%;
+.about-text-left {
+  grid-column: 1 / 2;
+  padding-right: 40px;
 }
 
-/* Exactly reproduces the overlapping images */
-
-.about-content h2 {
-  font-size: 3.5rem;
-  margin-bottom: 30px;
+.about-text-mid {
+  grid-column: 2 / 3;
 }
 
-.about-content p {
+.about-text-right {
+  grid-column: 3 / 4;
+}
+
+.about-text-left .intro-label {
+  display: block;
+  font-size: 0.85rem;
+  letter-spacing: 1px;
+  font-weight: 600;
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.about-text-left h2 {
+  font-size: clamp(2.5rem, 4vw, 3.5rem);
+  margin: 0;
+}
+
+.text-top-border {
+  width: 100%;
+  height: 1px;
+  background: #000;
+  margin-bottom: 25px;
+}
+
+.about-text-mid p,
+.about-text-right p {
   color: #777;
-  font-size: 1.1rem;
-  margin-bottom: 20px;
-}
-
-.signature-wrap {
-  display: flex;
-  align-items: center;
-  gap: 20px;
-  margin-top: 40px;
-}
-
-.signature-wrap img {
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
 }
 
 /* ================= SECTION 7: Yellow Wavy ================= */
@@ -977,18 +1048,28 @@ a {
     min-height: 400px;
   }
 
-  .about-grid {
+  .about-grid-wrapper {
     grid-template-columns: 1fr;
   }
 
-  .about-img-2 {
-    margin-left: 0;
-    width: 100%;
-    margin-top: 20px;
+  .about-img-left,
+  .about-img-right,
+  .about-text-left,
+  .about-text-mid,
+  .about-text-right {
+    grid-column: 1 / -1;
   }
 
-  .about-img-1 {
-    display: none;
+  .about-text-left {
+    padding-right: 0;
+  }
+
+  .about-img-left {
+    height: 300px;
+  }
+
+  .about-img-right {
+    height: 350px;
   }
 }
 
@@ -1056,6 +1137,12 @@ a {
     grid-template-columns: 1fr;
   }
 
+  .prod-small-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 576px) {
   .prod-small-grid {
     grid-template-columns: 1fr;
   }
