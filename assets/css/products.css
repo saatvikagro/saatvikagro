@@ -5,7 +5,7 @@
 /* Footer */
 
 .shop-header {
-  padding: 80px 5% 40px 5%;
+  padding: 80px 0 20px 0;
 }
 
 .shop-header h1 {
@@ -28,7 +28,7 @@
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 40px;
-  padding: 0 5% 100px 5%;
+  padding: 0 0 100px 0;
 }
 
 .shop-card {
@@ -87,4 +87,120 @@
       gap: 15px;
     }
 
+}
+
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: #888;
+  margin-bottom: 20px;
+}
+.breadcrumbs a {
+  color: var(--color-primary);
+  text-decoration: none;
+}
+
+.products-wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  gap: 40px;
+}
+
+.shop-card {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+}
+
+.btn-download {
+  margin-top: 20px;
+  background-color: transparent;
+  border: 1px solid var(--color-secondary);
+  color: var(--color-primary);
+  padding: 12px 20px;
+  font-family: var(--font-body);
+  font-weight: 600;
+  font-size: 14px;
+  cursor: pointer;
+  border-radius: 4px;
+  transition: all 0.3s ease;
+  text-align: center;
+}
+
+.btn-download:hover {
+  background-color: var(--color-secondary);
+  color: #fff;
+}
+
+/* Modal CSS */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #fff;
+  padding: 40px;
+  width: 90%;
+  max-width: 450px;
+  border-radius: var(--radius-lg);
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+}
+
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+}
+
+.modal-box h3 {
+  margin-bottom: 5px;
+  font-size: 1.8rem;
+}
+
+.form-group {
+  margin-bottom: 15px;
+}
+.form-control {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-family: 'DM Sans', sans-serif;
+  font-size: 1rem;
+  box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+  .products-wrapper {
+    grid-template-columns: 1fr;
+  }
 }

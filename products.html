@@ -78,47 +78,93 @@
   </div>
 
   <section class="shop-header">
-    <h1>Our Products</h1>
-    <div class="shop-controls">
-      <span>Showing all 6 results</span>
-      <select style="padding: 10px; border: 1px solid #ddd; border-radius: 4px; font-family: inherit;">
-        <option>Sort by industry</option>
-      </select>
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> / <span>Products</span>
+      </div>
+      <h1>Products</h1>
     </div>
   </section>
 
   <section class="shop-grid">
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/powder.jpg" alt="Food Grade Starch"></div>
-      <h3>Food Grade Starch</h3>
-      <p>Food & Nutrition</p>
-    </a>
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/glucose.jpg" alt="Liquid Glucose"></div>
-      <h3>Liquid Glucose</h3>
-      <p>Confectionery</p>
-    </a>
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/fibre.jpg" alt="Yellow Dextrin"></div>
-      <h3>Yellow Dextrin</h3>
-      <p>Adhesives & Foundry</p>
-    </a>
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/white-dex.jpg" alt="White Dextrin"></div>
-      <h3>White Dextrin</h3>
-      <p>Textile & Paper</p>
-    </a>
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/gluten.jpg" alt="Gluten Meal"></div>
-      <h3>Maize Gluten Meal</h3>
-      <p>Animal Feed</p>
-    </a>
-    <a href="#" class="shop-card">
-      <div class="shop-card__image"><img src="assets/images/content/germ.jpg" alt="Maize Germ"></div>
-      <h3>Maize Germ</h3>
-      <p>Oil Extraction</p>
-    </a>
+    <div class="container">
+      <div class="products-wrapper">
+        
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/powder.jpg" alt="Shakti Maize Starch Powder Food Grade"></div>
+          <h3>Shakti Maize Starch Powder Food Grade</h3>
+          <p>Food & Nutrition</p>
+          <button class="btn-download" data-product="Shakti Maize Starch Powder Food Grade">Download Brochure</button>
+        </div>
+        
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/white-dex.jpg" alt="Shakti Maize Starch Powder For Industrial Use"></div>
+          <h3>Shakti Maize Starch Powder For Industrial Use</h3>
+          <p>Industrial</p>
+          <button class="btn-download" data-product="Shakti Maize Starch Powder For Industrial Use">Download Brochure</button>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/glucose.jpg" alt="Shakti Liquid Glucose"></div>
+          <h3>Shakti Liquid Glucose</h3>
+          <p>Confectionery</p>
+          <button class="btn-download" data-product="Shakti Liquid Glucose">Download Brochure</button>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/powder.jpg" alt="Shakti Maltodex LD, SD, HD"></div>
+          <h3>Shakti Maltodex LD, SD, HD</h3>
+          <p>Food & Nutrition</p>
+          <button class="btn-download" data-product="Shakti Maltodex LD, SD, HD">Download Brochure</button>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/gluten.jpg" alt="Shakti Gluten Meal"></div>
+          <h3>Shakti Gluten Meal</h3>
+          <p>Animal Feed</p>
+          <button class="btn-download" data-product="Shakti Gluten Meal">Download Brochure</button>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/fibre.jpg" alt="Shakti Maize Dry Fibre"></div>
+          <h3>Shakti Maize Dry Fibre</h3>
+          <p>Animal Feed</p>
+          <button class="btn-download" data-product="Shakti Maize Dry Fibre">Download Brochure</button>
+        </div>
+
+        <div class="shop-card">
+          <div class="shop-card__image"><img src="assets/images/content/germ.jpg" alt="Shakti Maize Germ"></div>
+          <h3>Shakti Maize Germ</h3>
+          <p>Oil Extraction</p>
+          <button class="btn-download" data-product="Shakti Maize Germ">Download Brochure</button>
+        </div>
+
+      </div>
+    </div>
   </section>
+
+  <!-- Brochure Modal -->
+  <div class="modal-overlay" id="brochureModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>Download Brochure</h3>
+      <p id="modalProductName" style="font-size:0.9rem; color:#666; margin-bottom:20px; font-weight:600;"></p>
+      <form id="brochureForm">
+        <input type="hidden" id="productInput" name="product">
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Full Name" required>
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" required>
+        </div>
+        <div class="form-group">
+          <input type="tel" class="form-control" placeholder="Phone Number" required>
+        </div>
+        <button type="submit" class="btn btn--accent" style="width: 100%; border:none; border-radius: 4px; font-weight:600;">Download Now</button>
+      </form>
+    </div>
+  </div>
+
 
 
   <!-- Footer -->
@@ -191,6 +237,44 @@
   </footer>
 
   <script src="assets/js/main.js"></script>
+
+  <script>
+    // brochureModalLogic
+    document.addEventListener('DOMContentLoaded', () => {
+      const modal = document.getElementById('brochureModal');
+      const modalClose = document.getElementById('modalClose');
+      const form = document.getElementById('brochureForm');
+      const productInput = document.getElementById('productInput');
+      const productNameDisplay = document.getElementById('modalProductName');
+      
+      document.querySelectorAll('.btn-download').forEach(btn => {
+        btn.addEventListener('click', (e) => {
+          e.preventDefault();
+          const productName = btn.getAttribute('data-product');
+          productInput.value = productName;
+          productNameDisplay.textContent = productName;
+          modal.classList.add('active');
+        });
+      });
+
+      modalClose.addEventListener('click', () => {
+        modal.classList.remove('active');
+      });
+
+      modal.addEventListener('click', (e) => {
+        if(e.target === modal) {
+          modal.classList.remove('active');
+        }
+      });
+
+      form.addEventListener('submit', (e) => {
+        e.preventDefault();
+        alert('Brochure for ' + productInput.value + ' is downloading...');
+        modal.classList.remove('active');
+        form.reset();
+      });
+    });
+  </script>
 </body>
 
 </html>
