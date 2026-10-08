@@ -19,41 +19,54 @@
 
   <!-- NAVBAR -->
   <header class="header flex-between">
-    <a href="index.html" class="logo" style="display: flex; align-items: center; gap: 8px; font-family: var(--font-heading); font-size: 1.5rem; font-weight: 700; color: var(--color-primary);">
-      <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--color-secondary)"><circle cx="12" cy="12" r="12"/></svg>
-      Saatvik
-    </a>
+    <div class="logo-group">
+      <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik Agro" class="logo-img saatvik-logo">
+      <div class="logo-divider"></div>
+      <img src="assets/images/content/shakti-logo.png" alt="Shakti" class="logo-img shakti-logo">
+    </div>
 
     <button class="hamburger">☰</button>
 
     <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="farm.html">Farm</a></li>
-      <li><a href="shop.html">Shop</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="index.html">Home <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="about.html">Pages <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="#">Blog <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="products.html">Shop <svg class="chevron" viewBox="0 0 24 24" width="16" height="16" stroke="currentColor" stroke-width="2" fill="none" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"></polyline></svg></a></li>
+      <li><a href="contact.html">Contact Us</a></li>
     </ul>
 
     <div class="nav-contact">
       <div class="nav-phone">
-        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
           stroke-linecap="round" stroke-linejoin="round">
           <path
             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
           </path>
         </svg>
-        +1 234 567
+        555-123-4567
       </div>
-      <a href="contact.html" class="btn btn--dark">Talk to us</a>
+      <a href="contact.html" class="btn btn--nav-rect">Get in Touch</a>
     </div>
   </header>
 
   <!-- HERO -->
   <section class="hero">
     <div class="container hero-content">
-      <h1>Driven by purity.<br>Guided by science.<br>Built for consistency.</h1>
-      <a href="products.html" class="btn btn--accent" style="background-color: #F18825; color: white; border-radius: 4px; padding: 0 40px;">Explore</a>
-      <div class="hero-bottom-text">High quality maize products<br>for a healthier future</div>
+      <div class="hero-left">
+        <h1>Driven by purity.<br>Guided by science.<br>Built for consistency.</h1>
+        <a href="products.html" class="btn btn--hero-orange">Get Started</a>
+      </div>
+    </div>
+    <div class="hero-bottom container flex-between">
+      <div class="hero-bottom-text">Start now with<br>pure growth</div>
+      <div class="hero-scroll-text">SCROLL DOWN</div>
+    </div>
+    
+    <!-- Right side slider indicators -->
+    <div class="hero-slider-nav">
+      <div class="slider-dot active"></div>
+      <div class="slider-dot"></div>
+      <div class="slider-dot"></div>
     </div>
   </section>
 
@@ -298,9 +311,11 @@
 
     // 1. Hero Animation (Load)
     const heroTl = gsap.timeline();
-    heroTl.from(".hero-content h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
-          .from(".hero-content .btn", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
-          .from(".hero-bottom-text", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6");
+    heroTl.from(".hero-left h1", { y: 50, opacity: 0, duration: 1, ease: "power3.out" })
+          .from(".btn--hero-orange", { y: 30, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+          .from(".hero-bottom-text", { y: 20, opacity: 0, duration: 0.8, ease: "power3.out" }, "-=0.6")
+          .from(".hero-scroll-text", { opacity: 0, duration: 1, ease: "power2.out" }, "-=0.4")
+          .from(".slider-dot", { x: 50, opacity: 0, duration: 0.6, stagger: 0.1, ease: "power2.out" }, "-=0.8");
 
     // 2. Section Titles Fade In
     gsap.utils.toArray('h2').forEach(title => {
