@@ -1,4 +1,4 @@
-﻿/* =========================================================
+/* =========================================================
        EXACT SOIL THEME CSS REPLICATION
        ========================================================= */
 :root {
@@ -19,6 +19,10 @@
 
   --font-heading: 'Instrument Sans', serif;
   --font-body: 'DM Sans', sans-serif;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
 }
 
 html {
@@ -882,29 +886,6 @@ a {
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
-  .hero-image {
-    position: relative;
-    width: 100%;
-    right: 0;
-    bottom: 0;
-    display: block;
-    margin-top: 50px;
-  }
-
-  .hero-image img {
-    border-radius: var(--radius-md);
-    border: none;
-  }
-
-  .hero-content {
-    width: 100%;
-  }
-
-  .hero {
-    flex-direction: column;
-    text-align: left;
-  }
-
   .intro-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -983,6 +964,7 @@ a {
 @media (max-width: 768px) {
   .hero-center-left h1 {
     font-size: 2.5rem;
+    margin-bottom: 20px;
   }
 
   .hero-slider-nav {
@@ -992,7 +974,16 @@ a {
   }
 
   .hero-bottom-text {
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+  }
+
+  .hero-bottom-row {
+    padding-bottom: 20px;
+    align-items: center;
+  }
+
+  .hero-scroll-text {
+    font-size: 10px;
   }
 
   .logo-group {
