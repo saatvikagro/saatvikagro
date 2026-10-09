@@ -1,187 +1,684 @@
-/* Global & Header/Footer CSS from exact match */
+/* =========================================================
+   SOIL / SAATVIK AGRO — ABOUT US PAGE (EXACT CLIENT DESIGN MATCH)
+   Pixel-perfect 1-to-1 replication of the reference screenshot
+   ========================================================= */
 
-/* Navbar */
-
-/* Footer */
-
-/* Reuse about-dual from index but customize */
-.section-about-dual {
-  padding: 100px 5% 50px 5%;
+/* --- FLOATING RIGHT SIDEBAR TAB --- */
+.floating-side-tab {
+  position: fixed;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: #f3c319;
+  border-radius: 8px 0 0 8px;
+  display: flex;
+  flex-direction: column;
+  padding: 12px 10px;
+  gap: 15px;
+  z-index: 999;
+  box-shadow: -2px 4px 15px rgba(0, 0, 0, 0.15);
 }
 
-.about-dual-grid {
+.floating-side-tab a {
+  color: #121a2f;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.floating-side-tab a:hover {
+  transform: scale(1.15);
+}
+
+.floating-side-tab svg {
+  width: 18px;
+  height: 18px;
+}
+
+/* --- SECTION 1: ABOUT US (TOP IMAGES & 3-COL TEXT) --- */
+.section-about-top {
+  padding: 60px 0 80px 0;
+  background-color: #ffffff;
+}
+
+/* Images Row */
+.about-top-images {
   display: grid;
-  grid-template-columns: 1fr 2fr;
-  gap: 50px;
+  grid-template-columns: 3.8fr 6.2fr;
+  gap: 25px;
+  margin-bottom: 50px;
+}
+
+.about-top-img-left {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-top-img-left img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.about-top-img-right {
+  width: 100%;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.about-top-img-right img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+/* Bottom 3-Column Text */
+.about-top-text-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.15fr 1.15fr;
+  gap: 40px;
   align-items: flex-start;
 }
 
-.about-dual-images {
+.about-col-title {
+  padding-right: 20px;
+}
+
+.soil-tag {
+  display: inline-block;
+  color: #37b829;
+  font-family: var(--font-body);
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin-bottom: 12px;
+}
+
+.about-col-title h1,
+.about-col-title h2 {
+  font-size: clamp(2.8rem, 5vw, 4.2rem);
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.05;
+  letter-spacing: -0.03em;
+  font-weight: 600;
+}
+
+.about-col-desc {
+  border-top: 1px solid #1a1a1a;
+  padding-top: 25px;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 160px;
 }
 
-.about-dual-images img:first-child {
-  width: 40%;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  margin-top: 50px;
+.about-col-desc p {
+  color: #555;
+  font-size: 1.02rem;
+  line-height: 1.75;
+  margin: 0;
 }
 
-.about-dual-images img:last-child {
-  width: 60%;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
+.about-col-action {
+  align-self: flex-end;
+  margin-top: 20px;
 }
 
-.about-dual-content h2 {
-  font-size: clamp(2.5rem, 5vw, 4rem);
-  margin: 0 0 30px 0;
+/* Signature Green Circle Button */
+.btn-circle {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background-color: #37b829;
+  color: #ffffff;
+  border-radius: 50%;
+  text-decoration: none;
+  transition: transform 0.3s ease, background-color 0.3s ease;
+  box-shadow: 0 4px 15px rgba(55, 184, 41, 0.35);
+  flex-shrink: 0;
 }
 
-.about-dual-text {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
+.btn-circle:hover {
+  transform: scale(1.08);
+  background-color: #2ea322;
+}
+
+.btn-circle svg {
+  width: 16px;
+  height: 16px;
+  stroke: currentColor;
+  stroke-width: 2.5;
+  fill: none;
+}
+
+/* --- SECTION 2: LOGOS STRIP --- */
+.section-client-logos {
+  padding: 45px 0;
+  border-top: 1px solid #f0f0f0;
+  border-bottom: 1px solid #f0f0f0;
+  background-color: #ffffff;
+}
+
+.logos-strip-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   gap: 30px;
 }
 
-.about-dual-text p {
-  font-size: 1.1rem;
-  line-height: 1.8;
-  color: #666;
-  margin: 0;
-}
-
-/* Logos */
-.about-logos {
+.partner-logo-item {
   display: flex;
-  justify-content: center;
-  gap: 60px;
-  padding: 40px 5%;
   align-items: center;
-  flex-wrap: wrap;
-  border-bottom: 1px solid #eaeaea;
+  gap: 8px;
+  opacity: 0.75;
+  transition: opacity 0.3s ease;
 }
 
-.about-logos img {
-  height: 40px;
-  opacity: 0.5;
-  filter: grayscale(100%);
+.partner-logo-item:hover {
+  opacity: 1;
 }
 
-/* Team Grid */
+.partner-logo-svg {
+  height: 28px;
+  width: auto;
+  fill: currentColor;
+  color: #6a7382;
+}
 
-.team-member img {
+/* --- SECTION 3: DARK AWARDS & TIMELINE TABLE --- */
+.section-awards-table {
+  background-color: #0b111a;
+  padding: 100px 0;
+  color: #ffffff;
+}
+
+.awards-table-wrapper {
   width: 100%;
-  aspect-ratio: 3/4;
-  object-fit: cover;
-  border-radius: var(--radius-lg);
-  margin-bottom: 15px;
 }
 
-.team-member h3 {
-  font-size: 1.25rem;
-  margin: 0 0 5px 0;
+.awards-header-row {
+  display: grid;
+  grid-template-columns: 80px 2.2fr 1.2fr 1.2fr 140px;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  color: rgba(255, 255, 255, 0.5);
+  font-size: 13px;
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
 
-.team-member p {
-  font-size: 0.95rem;
-  color: #888;
-  margin: 0;
+.awards-row {
+  display: grid;
+  grid-template-columns: 80px 2.2fr 1.2fr 1.2fr 140px;
+  align-items: center;
+  padding: 26px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 1.05rem;
+  transition: background-color 0.2s ease;
 }
 
-/* Full Banner */
-.about-banner {
-  height: 500px;
-  background: url('../images/content/farm1.jpg') center/cover;
-  position: relative;
+.awards-row:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.award-col-num {
+  color: rgba(255, 255, 255, 0.4);
+  font-weight: 600;
+  font-family: var(--font-heading);
+}
+
+.award-col-title {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1.15rem;
+}
+
+.award-col-type {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.award-col-project {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.award-col-year-btn {
   display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 15px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+}
+
+.award-col-year-btn .btn-download-inline {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-size: 0.9rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+/* --- SECTION 4: TEAM SECTION --- */
+.section-team-exact {
+  padding: 110px 0;
+  background-color: #ffffff;
+}
+
+.team-header-row {
+  display: flex;
+  justify-content: space-between;
   align-items: flex-end;
-  padding: 5%;
+  margin-bottom: 50px;
 }
 
-.about-banner h2 {
-  font-size: 4rem;
-  color: #fff;
-  max-width: 600px;
+.team-header-left .soil-tag {
+  margin-bottom: 10px;
+}
+
+.team-header-left h2 {
+  font-size: clamp(2.4rem, 4vw, 3.4rem);
+  color: var(--color-primary);
+  line-height: 1.15;
   margin: 0;
-  z-index: 2;
-  position: relative;
+  font-weight: 600;
 }
 
-/* Testimonials */
-.section-testimonials {
-  padding: 100px 5%;
-  background: var(--color-bg-alt);
+.team-header-right {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.section-testimonials h2 {
-  font-size: 3rem;
-  text-align: center;
-  margin-bottom: 60px;
+.team-header-right span {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: #121a2f;
 }
 
-.test-grid {
+.team-cards-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
 
-.test-card {
-  background: #fff;
+.team-exact-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.team-card-photo-wrap {
+  width: 100%;
+  aspect-ratio: 3/4;
+  border-radius: 16px;
+  overflow: hidden;
+  background-color: #f4efe6;
+  margin-bottom: 18px;
+}
+
+.team-card-photo-wrap img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.team-exact-card:hover .team-card-photo-wrap img {
+  transform: scale(1.03);
+}
+
+.team-exact-card h3 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 4px 0;
+}
+
+.team-exact-card p {
+  color: #888;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+/* --- SECTION 5: FULL-WIDTH FARM BANNER --- */
+.section-farm-banner {
+  width: 100%;
+  min-height: 520px;
+  background: url('../images/content/hero-section-1.jpg') center/cover no-repeat;
+  position: relative;
+  display: flex;
+  align-items: flex-end;
+  padding: 60px 0;
+}
+
+.farm-banner-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.1) 0%,
+    rgba(0, 0, 0, 0.3) 50%,
+    rgba(0, 0, 0, 0.75) 100%
+  );
+  z-index: 1;
+}
+
+.farm-banner-content {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.farm-banner-content h2 {
+  font-size: clamp(2.5rem, 5vw, 4.2rem);
+  color: #ffffff;
+  line-height: 1.1;
+  margin: 0;
+  max-width: 650px;
+  font-weight: 600;
+}
+
+.farm-banner-actions {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+.btn--soil-yellow {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 36px;
+  background-color: #f3c319;
+  color: #121a2f;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.btn--soil-yellow:hover {
+  background-color: #e2b312;
+  transform: translateY(-2px);
+}
+
+/* --- SECTION 6: TESTIMONIALS (REAL PEOPLE SPEAK) --- */
+.section-testimonials-exact {
+  padding: 110px 0;
+  background-color: #f8f7f4;
+}
+
+.testimonials-header-exact {
+  margin-bottom: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.testimonials-header-exact .soil-tag {
+  margin-bottom: 10px;
+}
+
+.testimonials-header-exact h2 {
+  font-size: clamp(2.5rem, 4.5vw, 3.8rem);
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.1;
+  font-weight: 600;
+}
+
+.testimonials-grid-exact {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.testimonial-exact-card {
+  background: #ffffff;
   padding: 40px;
-  border-radius: var(--radius-lg);
+  border-radius: 16px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.04);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 300px;
 }
 
-.test-card img {
-  width: 60px;
-  height: 60px;
+.test-user-header {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 22px;
+}
+
+.test-user-header img {
+  width: 52px;
+  height: 52px;
   border-radius: 50%;
-  margin-bottom: 20px;
+  object-fit: cover;
 }
 
-.test-card p {
+.test-user-info h4 {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-primary);
+  margin: 0 0 2px 0;
+}
+
+.test-user-info p {
+  font-size: 0.85rem;
+  color: #888;
+  margin: 0;
+}
+
+.testimonial-exact-card .quote-text {
+  color: #333;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  margin: 0 0 25px 0;
+}
+
+.test-stars-gold {
+  color: #f3c319;
   font-size: 1.1rem;
-  line-height: 1.6;
-  margin-bottom: 20px;
-  color: #444;
+  letter-spacing: 3px;
 }
 
-.test-card .stars {
-  color: var(--color-secondary);
-  letter-spacing: 2px;
+.test-bottom-action {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 35px;
+}
+
+/* --- SECTION 7: NEWSLETTER BANNER --- */
+.section-newsletter-card {
+  padding: 0 0 90px 0;
+  background-color: #f8f7f4;
+}
+
+.newsletter-box {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 50px 60px;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 50px;
+  align-items: center;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  border: 1px solid #ebe5dc;
+}
+
+.newsletter-box h3 {
+  font-size: clamp(1.8rem, 3vw, 2.3rem);
+  font-family: var(--font-heading);
+  color: var(--color-primary);
+  margin: 0;
+  line-height: 1.2;
+  font-weight: 600;
+}
+
+.newsletter-form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.newsletter-input-row {
+  display: flex;
+  gap: 0;
+  width: 100%;
+}
+
+.newsletter-input-row input[type="email"] {
+  flex: 1;
+  height: 52px;
+  padding: 0 20px;
+  border: 1px solid #e0e0e0;
+  border-right: none;
+  border-radius: 4px 0 0 4px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  outline: none;
+}
+
+.newsletter-input-row input[type="email"]:focus {
+  border-color: #f3c319;
+}
+
+.newsletter-input-row button {
+  height: 52px;
+  padding: 0 32px;
+  background-color: #f3c319;
+  color: #121a2f;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 14px;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  border: none;
+  border-radius: 0 4px 4px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.newsletter-input-row button:hover {
+  background-color: #e2b312;
+}
+
+.newsletter-agree-row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  color: #777;
+}
+
+.newsletter-agree-row input[type="checkbox"] {
+  cursor: pointer;
+  accent-color: #f3c319;
+}
+
+/* --- FOOTER OVERRIDES FOR CLIENT REFERENCE MATCH --- */
+.footer-soil-brand {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #ffffff;
+  font-family: var(--font-heading);
+  font-size: 1.6rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.footer-soil-brand svg {
+  width: 24px;
+  height: 24px;
+  color: #37b829;
+}
+
+/* --- RESPONSIVE MEDIA QUERIES --- */
+@media (max-width: 1024px) {
+  .about-top-images {
+    grid-template-columns: 1fr 1fr;
+  }
+  .about-top-text-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .awards-header-row,
+  .awards-row {
+    grid-template-columns: 60px 2fr 1fr 1fr 100px;
+  }
+  .newsletter-box {
+    grid-template-columns: 1fr;
+    gap: 30px;
+    padding: 40px 30px;
+  }
 }
 
 @media (max-width: 768px) {
-  .navbar__toggle {
-      display: block !important;
-    }
-
-  
-
-  
-
-}
-
-@media(max-width: 768px) {
-  .about-dual-grid {
-      grid-template-columns: 1fr;
-    }
-
-  .about-dual-text {
-      grid-template-columns: 1fr;
-    }
-
-  .team-grid {
-      grid-template-columns: 1fr;
-    }
-
-  .test-grid {
-      grid-template-columns: 1fr;
-    }
-
-  .about-banner h2 {
-      font-size: 2.5rem;
-    }
-
+  .about-top-images {
+    grid-template-columns: 1fr;
+  }
+  .about-top-img-left,
+  .about-top-img-right {
+    height: 260px;
+  }
+  .awards-header-row {
+    display: none;
+  }
+  .awards-row {
+    grid-template-columns: 1fr;
+    gap: 10px;
+    padding: 20px 0;
+  }
+  .award-col-year-btn {
+    justify-content: flex-start;
+  }
+  .team-cards-grid,
+  .testimonials-grid-exact {
+    grid-template-columns: 1fr;
+  }
+  .team-header-row,
+  .farm-banner-content,
+  .testimonials-header-exact {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+  .newsletter-input-row {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .newsletter-input-row input[type="email"],
+  .newsletter-input-row button {
+    border-radius: 4px;
+    width: 100%;
+    border-right: 1px solid #e0e0e0;
+  }
+  .logos-strip-container {
+    justify-content: center;
+  }
 }
