@@ -34,7 +34,7 @@
 }
 
 .shop-card__image {
-  background-color: #F4EFE6;
+  /* background-color: #f4efe6; */
   /* Exact beige from ref */
   margin-bottom: 20px;
   aspect-ratio: 1/1;
@@ -66,24 +66,17 @@
 
 @media (max-width: 768px) {
   .navbar__toggle {
-      display: block !important;
-    }
-
-  
-
-  
-
+    display: block !important;
+  }
 }
 
-@media(max-width: 768px) {
+@media (max-width: 768px) {
   .shop-controls {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 15px;
-    }
-
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
 }
-
 
 .breadcrumbs {
   font-size: 0.9rem;
@@ -110,12 +103,12 @@
 .btn-download {
   margin-top: 20px;
   background-color: transparent;
-  border: 1px solid var(--color-secondary);
+  border: 1px solid #a0a0a0;
   color: var(--color-primary);
   padding: 12px 20px;
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   cursor: pointer;
   border-radius: 4px;
   transition: all 0.3s ease;
@@ -123,7 +116,8 @@
 }
 
 .btn-download:hover {
-  background-color: var(--color-secondary);
+  background-color: #ea7124;
+  border: 1px solid #ea7124;
   color: #fff;
 }
 
@@ -189,7 +183,7 @@
   padding: 12px 15px;
   border: 1px solid #e0e0e0;
   border-radius: 4px;
-  font-family: 'DM Sans', sans-serif;
+  font-family: "DM Sans", sans-serif;
   font-size: 1rem;
   box-sizing: border-box;
 }
