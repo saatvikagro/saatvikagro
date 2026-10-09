@@ -2,23 +2,23 @@
        EXACT SOIL THEME CSS REPLICATION
        ========================================================= */
 :root {
-  --color-primary: #121A2F;
+  --color-primary: #121a2f;
   /* Deep Navy/Black */
-  --color-secondary: #F3C319;
+  --color-secondary: #f3c319;
   /* Exact Soil Yellow */
-  --color-accent: #37B829;
+  --color-accent: #37b829;
   /* Exact Soil Green for buttons */
-  --color-bg: #FFFFFF;
-  --color-bg-alt: #F8F8F8;
-  --color-text: #4A505E;
+  --color-bg: #ffffff;
+  --color-bg-alt: #f8f8f8;
+  --color-text: #4a505e;
 
   --radius-sm: 8px;
   --radius-md: 16px;
   --radius-lg: 30px;
   --radius-full: 9999px;
 
-  --font-heading: 'Instrument Sans', serif;
-  --font-body: 'DM Sans', sans-serif;
+  --font-heading: "Instrument Sans", serif;
+  --font-body: "DM Sans", sans-serif;
 }
 
 *,
@@ -101,7 +101,9 @@ a {
   border-radius: 50%;
   box-shadow: 0 4px 15px rgba(55, 184, 41, 0.4);
   cursor: pointer;
-  transition: transform 0.3s ease, background-color 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    background-color 0.3s ease;
 }
 
 .btn-circle:hover {
@@ -301,33 +303,31 @@ a {
 
 @media (max-width: 1100px) {
   .hamburger {
-      display: flex;
-    }
+    display: flex;
+  }
 
   .nav-links,
   .nav-contact {
-      display: none;
-    }
-
+    display: none;
+  }
 }
 
 @media (max-width: 768px) {
   .logo-group {
-      gap: 10px;
-    }
+    gap: 10px;
+  }
 
   .saatvik-logo {
-      height: 30px;
-    }
+    height: 30px;
+  }
 
   .shakti-logo {
-      height: 20px;
-    }
+    height: 20px;
+  }
 
   .logo-divider {
-      margin: 0 10px;
-    }
-
+    margin: 0 10px;
+  }
 }
 
 /* ================= FOOTER ================= */
@@ -380,8 +380,9 @@ a {
   margin-bottom: 40px;
 }
 
-.footer-col-wide .btn--accent { transition: all 0.3s ease; 
-  background-color: var(--color-secondary);
+.footer-col-wide .btn--accent {
+  transition: all 0.3s ease;
+  background-color: #ea7124;
   color: var(--color-primary);
   font-weight: 600;
   padding: 15px 35px;
@@ -448,26 +449,32 @@ a {
 
 @media (max-width: 768px) {
   .footer-top {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 30px;
-    }
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
 
   .footer-grid {
-      grid-template-columns: 1fr;
-      gap: 50px;
-    }
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
 
   .footer-bottom {
-      flex-direction: column;
-      align-items: flex-start;
-      gap: 20px;
-    }
-
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
 }
 
-.section-yellow-content { position: relative; z-index: 2; }
-.footer-logo img { filter: brightness(0) invert(1); height: 40px; object-fit: contain; }
+.section-yellow-content {
+  position: relative;
+  z-index: 2;
+}
+.footer-logo img {
+  filter: brightness(0) invert(1);
+  height: 40px;
+  object-fit: contain;
+}
 
 .footer-col-wide .btn--accent:hover {
   background-color: #fff;
