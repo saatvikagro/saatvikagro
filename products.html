@@ -3,50 +3,78 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products | Saatvik Agro</title>
+    <title>The Shakti Range — Products | Saatvik Agro</title>
+    <meta
+      name="description"
+      content="Explore the complete Shakti ingredient range by Saatvik Agro: food-grade maize starch, liquid glucose syrup, maltodextrin (LD/SD/HD), and high-protein feed derivatives."
+    />
+
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
       rel="stylesheet"
     />
+
     <link rel="stylesheet" href="assets/css/global.css" />
     <link rel="stylesheet" href="assets/css/products.css" />
+    <link rel="icon" type="image/png" href="assets/images/content/saatvik-agro-logo.png" />
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+      href="https://wa.me/919591033188?text=Hello%20Saatvik%20Agro%20Team,%20I%20would%20like%20to%20inquire%20about%20your%20products."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <div class="whatsapp-pulse"></div>
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
+      </svg>
+      <span>Chat with Us</span>
+    </a>
+
     <!-- NAVBAR -->
     <header class="header flex-between">
       <div class="logo-group">
-        <img
-          src="assets/images/content/saatvik-agro-logo.png"
-          alt="Saatvik Agro"
-          class="logo-img saatvik-logo"
-        />
-        <div class="logo-divider"></div>
-        <img
-          src="assets/images/content/shakti-logo.png"
-          alt="Shakti"
-          class="logo-img shakti-logo"
-        />
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img
+            src="assets/images/content/saatvik-agro-logo.png"
+            alt="Saatvik Agro"
+            class="logo-img saatvik-logo"
+          />
+          <div class="logo-divider"></div>
+          <img
+            src="assets/images/content/shakti-logo.png"
+            alt="Shakti"
+            class="logo-img shakti-logo"
+          />
+        </a>
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About Us</a></li>
-        <li><a href="products.html">Products</a></li>
+        <li><a href="products.html" class="active">Products</a></li>
         <li><a href="industries.html">Industries</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
       </ul>
 
       <div class="nav-contact">
-        <div class="nav-phone">
+        <a href="tel:+919591033188" class="nav-phone" title="Toll Free Call">
           <svg
-            width="20"
-            height="20"
+            width="18"
+            height="18"
             viewBox="0 0 24 24"
             fill="none"
             stroke="currentColor"
-            stroke-width="1.5"
+            stroke-width="1.8"
             stroke-linecap="round"
             stroke-linejoin="round"
           >
@@ -54,11 +82,12 @@
               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
             ></path>
           </svg>
-          555-123-4567
-        </div>
-        <a href="contact.html" class="btn btn--nav-rect">Get in Touch</a>
+          +91-9591033188
+        </a>
+        <a href="contact.html" class="btn btn--nav-rect">Enquire Now</a>
       </div>
-      <!-- Hamburger Button (Right) -->
+
+      <!-- Hamburger Button (Mobile) -->
       <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
         <svg
           width="32"
@@ -102,6 +131,9 @@
             <li><a href="about.html">About Us</a></li>
             <li><a href="products.html">Products</a></li>
             <li><a href="industries.html">Industries</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
           </ul>
         </nav>
         <div class="nav-phone-full">
@@ -117,154 +149,432 @@
               d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
             ></path>
           </svg>
-          555-123-4567
+          <a href="tel:+919591033188" style="color: inherit; text-decoration: none;">+91-9591033188</a>
         </div>
       </div>
     </div>
 
-    <section class="shop-header">
+    <!-- HERO / BREADCRUMBS -->
+    <section class="products-hero-section">
       <div class="container">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> / <span>Products</span>
+        <div class="page-breadcrumbs">
+          <a href="index.html">Home</a> / <span>Products Portfolio</span>
         </div>
-        <h1>Products</h1>
+        <h1>
+          The Shakti Ingredient Range
+        </h1>
+        <p class="products-hero-desc">
+          A unified portfolio of premium maize ingredients, designed for predictable performance, purity, and consistency across industries.
+        </p>
+
+        <!-- About Shakti Range Intro Box (Requested in Brief Page 10) -->
+        <div class="shakti-intro-card">
+          <img src="assets/images/content/shakti-logo.png" alt="Shakti" class="shakti-intro-logo" />
+          <div class="shakti-intro-text">
+            <p>
+              <strong>Shakti is not a single product.</strong> It is Saatvik Agro's unified ingredient ecosystem. Each Shakti ingredient is crafted with precision, purity, and purpose, ensuring repeatable batch behaviour across food, nutrition, feed, and industrial manufacturing.
+            </p>
+          </div>
+        </div>
       </div>
     </section>
 
-    <section class="shop-section">
-      <div class="container">
-        <div class="products-wrapper">
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Maize-Starch-Powder-Food-Grade.webp"
-                alt="Shakti Maize Starch Powder Food Grade"
-              />
+    <!-- FILTER TABS (Requested in Brief Page 10: Food Grade, Industrial Grade, Animal Nutrition) -->
+    <div class="container">
+      <div class="filter-tabs-wrapper">
+        <button class="filter-btn active" data-filter="all">
+          All Products <span class="filter-count">7</span>
+        </button>
+        <button class="filter-btn" data-filter="food-grade">
+          Food Grade <span class="filter-count">3</span>
+        </button>
+        <button class="filter-btn" data-filter="industrial-grade">
+          Industrial Grade <span class="filter-count">1</span>
+        </button>
+        <button class="filter-btn" data-filter="animal-nutrition">
+          Animal Nutrition <span class="filter-count">3</span>
+        </button>
+      </div>
+
+      <!-- PRODUCTS GRID -->
+      <div class="products-wrapper" id="productsGrid">
+        <!-- Product 1: Maize Starch Food Grade -->
+        <div class="product-b2b-card" data-category="food-grade">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-food">Food Grade</span>
+            <img
+              src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp"
+              alt="Shakti Maize Starch Powder Food Grade"
+            />
+          </div>
+          <div class="product-b2b-card__body">
+            <h3>Shakti Maize Starch Powder</h3>
+            <div class="product-subtitle">Food-grade starch for texture, stability, and process performance.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">50 KG & 1000 KG</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Thickening & Binding</span>
+              </div>
             </div>
-            <h3>Shakti Maize Starch Powder Food Grade</h3>
-            <p>Food & Nutrition</p>
-            <button
-              class="btn-download"
-              data-product="Shakti Maize Starch Powder Food Grade"
-            >
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> High-purity maize starch</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reliable thickening</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Texture & body support</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Batch consistency</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Bakery</span>
+                <span class="app-tag">Instant Foods</span>
+                <span class="app-tag">Dairy</span>
+                <span class="app-tag">Snacks & Sauces</span>
+                <span class="app-tag">Natural Colors</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Maize Starch Powder Food Grade">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
+        </div>
 
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
-                alt="Shakti Maize Starch Powder For Industrial Use"
-              />
-            </div>
-            <h3>Shakti Maize Starch Powder For Industrial Use</h3>
-            <p>Industrial</p>
-            <button
-              class="btn-download"
-              data-product="Shakti Maize Starch Powder For Industrial Use"
-            >
-              Download Brochure
-            </button>
+        <!-- Product 2: Liquid Glucose -->
+        <div class="product-b2b-card" data-category="food-grade">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-food">Food Grade</span>
+            <img
+              src="assets/images/products/Shakti-Maize-Starch-Powder-Food-Grade.webp"
+              alt="Shakti Liquid Glucose"
+            />
           </div>
-
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
-                alt="Shakti Liquid Glucose"
-              />
-            </div>
+          <div class="product-b2b-card__body">
             <h3>Shakti Liquid Glucose</h3>
-            <p>Confectionery</p>
-            <button class="btn-download" data-product="Shakti Liquid Glucose">
+            <div class="product-subtitle">Functional syrup ingredient for sweetness, body, and process stability.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">300 KG Barrel</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Sweetness & Body</span>
+              </div>
+            </div>
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Consistent syrup quality</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Crystallization control</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Texture & mouthfeel aid</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Bulk barrel handling</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Confectionery</span>
+                <span class="app-tag">Ice Cream</span>
+                <span class="app-tag">Bakery</span>
+                <span class="app-tag">Beverages</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Liquid Glucose">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
+        </div>
 
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Maltodex-LD-SD-HD.webp"
-                alt="Shakti Maltodex LD, SD, HD"
-              />
+        <!-- Product 3: Maltodex LD, SD, HD -->
+        <div class="product-b2b-card" data-category="food-grade">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-food">Food Grade</span>
+            <img
+              src="assets/images/products/Shakti-Maltodex-LD-SD-HD.webp"
+              alt="Shakti Maltodex LD, SD, HD"
+            />
+          </div>
+          <div class="product-b2b-card__body">
+            <h3>Shakti Maltodex (LD, SD, HD)</h3>
+            <div class="product-subtitle">Versatile maltodextrin for formulation balance, bulking, and energy release.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">25 KG Bag</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Process Efficiency</span>
+              </div>
             </div>
-            <h3>Shakti Maltodex LD, SD, HD</h3>
-            <p>Food & Nutrition</p>
-            <button
-              class="btn-download"
-              data-product="Shakti Maltodex LD, SD, HD"
-            >
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Low / Std / High DE</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Smooth dispersion</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Dry blend integration</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Neutral taste carrier</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Food Processing</span>
+                <span class="app-tag">Premixes</span>
+                <span class="app-tag">Instant Mixes</span>
+                <span class="app-tag">Pharma</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Maltodex LD, SD, HD">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
+        </div>
 
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Gluten-Meal.webp"
-                alt="Shakti Gluten Meal"
-              />
+        <!-- Product 4: Maize Starch Industrial Use -->
+        <div class="product-b2b-card" data-category="industrial-grade">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-industrial">Industrial</span>
+            <img
+              src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
+              alt="Shakti Maize Starch Powder For Industrial Use"
+            />
+          </div>
+          <div class="product-b2b-card__body">
+            <h3>Shakti Starch (Industrial Use)</h3>
+            <div class="product-subtitle">Industrial starch solution for binding, adhesion, and process runnability.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">50 KG & 1000 KG</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Binding & Adhesion</span>
+              </div>
             </div>
-            <h3>Shakti Gluten Meal</h3>
-            <p>Animal Feed</p>
-            <button class="btn-download" data-product="Shakti Gluten Meal">
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> High binding strength</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Adhesion performance</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Formulation stability</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Repeatable supply</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Paper & Packaging</span>
+                <span class="app-tag">Textiles</span>
+                <span class="app-tag">Adhesives</span>
+                <span class="app-tag">Corrugation</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Maize Starch Powder For Industrial Use">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
+        </div>
 
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/ShaktiMaizeDryFibre.webp"
-                alt="Shakti Maize Dry Fibre"
-              />
+        <!-- Product 5: Maize Gluten Meal -->
+        <div class="product-b2b-card" data-category="animal-nutrition">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-feed">Animal Nutrition</span>
+            <img
+              src="assets/images/products/Shakti-Gluten-Meal.webp"
+              alt="Shakti Maize Gluten Meal"
+            />
+          </div>
+          <div class="product-b2b-card__body">
+            <h3>Shakti Maize Gluten Meal</h3>
+            <div class="product-subtitle">Protein-rich maize derivative for balanced animal feed and nutrition.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">50 KG Bag</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Protein Support (60%+)</span>
+              </div>
             </div>
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> High-protein fraction</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Feed nutrition support</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Stable B2B sourcing</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Bulk-friendly handling</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Poultry Feed</span>
+                <span class="app-tag">Cattle Feed</span>
+                <span class="app-tag">Aquaculture</span>
+                <span class="app-tag">Compound Feed</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Gluten Meal">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+              Download Brochure
+            </button>
+          </div>
+        </div>
+
+        <!-- Product 6: Maize Dry Fibre -->
+        <div class="product-b2b-card" data-category="animal-nutrition">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-feed">Animal Nutrition</span>
+            <img
+              src="assets/images/products/ShaktiMaizeDryFibre.webp"
+              alt="Shakti Maize Dry Fibre"
+            />
+          </div>
+          <div class="product-b2b-card__body">
             <h3>Shakti Maize Dry Fibre</h3>
-            <p>Animal Feed</p>
-            <button class="btn-download" data-product="Shakti Maize Dry Fibre">
+            <div class="product-subtitle">Value-added dietary maize fibre for ruminant and poultry feed.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">50 KG Bag</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Function</span>
+                <span class="spec-val">Dietary Digestibility</span>
+              </div>
+            </div>
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> High-fibre fraction</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Ruminant digestive aid</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Value-added co-product</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Reliable bulk supply</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Cattle Feed</span>
+                <span class="app-tag">Poultry Feed</span>
+                <span class="app-tag">Feed Premix</span>
+                <span class="app-tag">Animal Nutrition</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Maize Dry Fibre">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
+        </div>
 
-          <div class="shop-card">
-            <div class="shop-card__image">
-              <img
-                src="assets/images/products/Shakti-Maize-Germ.webp"
-                alt="Shakti Maize Germ"
-              />
-            </div>
+        <!-- Product 7: Maize Germ -->
+        <div class="product-b2b-card" data-category="animal-nutrition">
+          <div class="product-b2b-card__image">
+            <span class="product-card-badge badge-feed">Animal Nutrition</span>
+            <img
+              src="assets/images/products/Shakti-Maize-Germ.webp"
+              alt="Shakti Maize Germ"
+            />
+          </div>
+          <div class="product-b2b-card__body">
             <h3>Shakti Maize Germ</h3>
-            <p>Oil Extraction</p>
-            <button class="btn-download" data-product="Shakti Maize Germ">
+            <div class="product-subtitle">Nutrient-dense, oil-rich kernel fraction for feed and oil extraction.</div>
+            
+            <div class="product-specs-box">
+              <div class="spec-item">
+                <span class="spec-label">Pack Size</span>
+                <span class="spec-val">50 KG Bag</span>
+              </div>
+              <div class="spec-item">
+                <span class="spec-label">Use</span>
+                <span class="spec-val">Oil / Feed Chain</span>
+              </div>
+            </div>
+
+            <div class="product-features-wrap">
+              <div class="product-features-title">Key Features</div>
+              <ul class="product-features-list">
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> High natural oil content</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Oil extraction support</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Bulk storage friendly</li>
+                <li><svg viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" clip-rule="evenodd"/></svg> Consistent granulation</li>
+              </ul>
+            </div>
+
+            <div class="product-apps-wrap">
+              <div class="spec-label">Applications</div>
+              <div class="apps-tags-list">
+                <span class="app-tag">Corn Oil Extraction</span>
+                <span class="app-tag">Cattle Feed</span>
+                <span class="app-tag">Feed Processing</span>
+                <span class="app-tag">Value Chain</span>
+              </div>
+            </div>
+
+            <button class="btn-download-brochure" data-product="Shakti Maize Germ">
+              <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
               Download Brochure
             </button>
           </div>
         </div>
       </div>
-    </section>
+    </div>
 
-    <!-- Brochure Modal -->
+    <!-- BROCHURE MODAL -->
     <div class="modal-overlay" id="brochureModal">
       <div class="modal-box">
         <button class="modal-close" id="modalClose">&times;</button>
-        <h3>Download Brochure</h3>
-        <p
-          id="modalProductName"
-          style="
-            font-size: 0.9rem;
-            color: #666;
-            margin-bottom: 20px;
-            font-weight: 600;
-          "
-        ></p>
-        <form id="brochureForm">
+        <span style="color: #ea7124; font-size: 0.8rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; display: block; margin-bottom: 6px;">
+          Product Dossier & Technical Specs
+        </span>
+        <h3 style="margin-bottom: 6px; font-size: 1.6rem; color: #121a2f;">Download Product Brochure</h3>
+        <p id="modalProductName" style="font-size: 0.95rem; color: #ea7124; margin-bottom: 24px; font-weight: 600;"></p>
+        
+        <form id="brochureForm" class="modal-form">
           <input type="hidden" id="productInput" name="product" />
           <div class="form-group">
             <input
               type="text"
               class="form-control"
-              placeholder="Full Name"
+              placeholder="Your Full Name *"
               required
             />
           </div>
@@ -272,7 +582,7 @@
             <input
               type="email"
               class="form-control"
-              placeholder="Email Address"
+              placeholder="Work Email Address *"
               required
             />
           </div>
@@ -280,27 +590,31 @@
             <input
               type="tel"
               class="form-control"
-              placeholder="Phone Number"
+              placeholder="Phone / WhatsApp Number *"
               required
+            />
+          </div>
+          <div class="form-group">
+            <input
+              type="text"
+              class="form-control"
+              placeholder="Company / Organization Name"
             />
           </div>
           <button
             type="submit"
-            class="btn btn--accent"
-            style="
-              width: 100%;
-              border: none;
-              border-radius: 4px;
-              font-weight: 600;
-            "
+            class="btn"
+            style="width: 100%; background: #ea7124; color: #fff; font-weight: 700; font-size: 15px; border-radius: 6px; height: 48px; border: none; cursor: pointer; transition: background 0.2s ease;"
           >
-            Download Now
+            Instant Download &rarr;
           </button>
         </form>
+        <div id="downloadSuccess" style="display: none; margin-top: 15px; background: #e6ffed; border: 1px solid #b7eb8f; color: #135200; padding: 12px; border-radius: 6px; font-size: 0.9rem; text-align: center;">
+          ✓ Thank you! Your brochure download has started. Our sales desk will follow up shortly.
+        </div>
       </div>
     </div>
 
-    <!-- Footer -->
     <!-- FOOTER -->
     <footer class="footer">
       <div class="container">
@@ -308,138 +622,135 @@
           <div class="footer-logo">
             <img
               src="assets/images/content/saatvik-agro-logo.png"
-              alt="Saatvik"
+              alt="Saatvik Agro"
             />
           </div>
           <div class="footer-top-text">
-            <h2>Growing soil and food<br />organically</h2>
+            <h2>Nourishing Growth, Naturally.<br />Engineered for Consistency.</h2>
           </div>
         </div>
 
         <div class="footer-grid">
           <div class="footer-col footer-col-wide">
+            <h4>About Saatvik Agro</h4>
             <p>
-              Saatvik Agro is the agro-ingredient unit of the Saatvik Group,
-              dedicated to creating high quality maize-based ingredients that
-              power everyday products.
+              Saatvik Agro Processors Private Limited is the agro-ingredient unit of the Saatvik Group, transforming responsibly sourced maize into dependable, high-purity ingredients.
             </p>
-            <a href="contact.html" class="btn btn--accent">Get in Touch</a>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn--accent">Get in Touch</a>
+              <a href="https://wa.me/919591033188" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25d366; color: #fff; font-weight: 600; padding: 15px 25px;">WhatsApp Us</a>
+            </div>
           </div>
 
           <div class="footer-col">
-            <h4>Office</h4>
+            <h4>Corporate Office</h4>
             <p>
-              Germany &mdash;<br />785 15h Street, Office 47<br />Berlin, De
-              81566
+              Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318
             </p>
-            <p>&bull; info@email.com</p>
-            <h4 class="footer-phone">+1 840 841 25 69</h4>
+            <p style="margin-top: 15px;">
+              <strong>Email:</strong><br />
+              <a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a>
+            </p>
+            <h4 class="footer-phone">
+              <a href="tel:+919591033188" style="color: inherit; text-decoration: none;">+91-9591033188</a>
+            </h4>
           </div>
 
           <div class="footer-col">
-            <h4>Links</h4>
+            <h4>Manufacturing Plant</h4>
+            <p>
+              Plot No. 32, 33, 40 & 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh - 476444
+            </p>
+            <p style="margin-top: 15px;">
+              <strong>Capacity:</strong><br />500 TPD (Scalable to 1200 TPD)
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
             <ul>
               <li><a href="index.html">&bull; Home</a></li>
               <li><a href="about.html">&bull; About Us</a></li>
               <li><a href="products.html">&bull; Products</a></li>
               <li><a href="industries.html">&bull; Industries</a></li>
+              <li><a href="media.html">&bull; Media Gallery</a></li>
+              <li><a href="career.html">&bull; Career</a></li>
+              <li><a href="contact.html">&bull; Contact Us</a></li>
             </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Get in Touch</h4>
-            <div class="footer-socials">
-              <a href="#" aria-label="Facebook"
-                ><svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z"
-                  /></svg
-              ></a>
-              <a href="#" aria-label="Behance"
-                ><svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M8.228 15.01h-2.12v-2.317h2.164c1.11 0 1.637.525 1.637 1.157 0 .616-.496 1.16-1.681 1.16zm-2.12-5.467h1.996c1.025 0 1.488.461 1.488 1.05 0 .548-.44 1.05-1.383 1.05h-2.101v-2.1zM10.82 12c.708-.432 1.144-1.155 1.144-2.062 0-1.764-1.28-2.613-3.23-2.613H4v10.15h4.945c2.193 0 3.513-1.007 3.513-2.835C12.458 13.313 11.758 12.35 10.82 12zm7.126 1.157c-.126-1.258-1.077-1.764-2.101-1.764-1.127 0-1.968.647-2.072 1.764h4.173zM15.82 9.475h2.89v-1.158h-2.89v1.158zm4.129 4.894c.05-1.996-1.28-3.465-3.155-3.465-1.944 0-3.327 1.469-3.327 3.507 0 2.143 1.408 3.53 3.393 3.53 1.576 0 2.766-.78 3.126-2.186h-1.61c-.247.625-.86.924-1.503.924-1.18 0-1.792-.767-1.848-1.793h4.924v-.517z"
-                  /></svg
-              ></a>
-              <a href="#" aria-label="Instagram"
-                ><svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"
-                  /></svg
-              ></a>
-              <a href="#" aria-label="Dribbble"
-                ><svg
-                  width="28"
-                  height="28"
-                  viewBox="0 0 24 24"
-                  fill="currentColor"
-                >
-                  <path
-                    d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.143 5.485c1.47 1.637 2.378 3.82 2.457 6.196-.457-.143-3.626-1.127-7.234-.582-.47-1.189-1.01-2.433-1.611-3.616 3.197-1.417 5.76-1.791 6.388-1.998zm-6.273 1.947c.563 1.135 1.077 2.327 1.528 3.473-3.923 1.258-7.915 1.218-8.995 1.196.48-2.615 1.997-4.887 4.095-6.305 1.272.766 2.476 1.64 3.372 1.636zm-8.672 5.253c1.332.03 5.74.12 10.021-1.31 1.107 2.923 1.621 5.867 1.745 6.643-1.57.943-3.42 1.502-5.412 1.502-3.155 0-5.969-1.475-7.794-3.76 1.848-.28 4.417-1.106 6.326-2.903-.787-1.285-1.554-2.607-2.222-3.87-1.844.757-3.992 2.463-4.631 3.036-.02-.122-.033-.248-.033-.374 0-1.168.225-2.296.626-3.342 1.165-.89 3.064-2.316 4.966-3.238.163.633.266 1.341.343 2.016-1.397.77-2.656 1.867-2.656 1.867zm12.392 6.551c-.198-.948-.826-4.045-2.023-7.14 3.18-.727 6.136.216 6.58.384-.572 2.991-2.215 5.512-4.557 6.756z"
-                  /></svg
-              ></a>
-            </div>
           </div>
         </div>
 
         <div class="footer-bottom">
-          <div class="footer-copy">&copy; 2026. All Rights Reserved.</div>
-          <div class="footer-credit">Site by Saatvik Agro.</div>
+          <div class="footer-copy">&copy; 2026 Saatvik Agro Processors Private Limited. All Rights Reserved.</div>
+          <div class="footer-credit">Unit of Saatvik Group &bull; Built with Pride.</div>
         </div>
       </div>
     </footer>
 
     <script src="assets/js/main.js"></script>
-
     <script>
-      // brochureModalLogic
-      document.addEventListener("DOMContentLoaded", () => {
-        const modal = document.getElementById("brochureModal");
-        const modalClose = document.getElementById("modalClose");
-        const form = document.getElementById("brochureForm");
-        const productInput = document.getElementById("productInput");
-        const productNameDisplay = document.getElementById("modalProductName");
+      // Products Category Filter JS
+      document.addEventListener('DOMContentLoaded', () => {
+        const filterBtns = document.querySelectorAll('.filter-btn');
+        const productCards = document.querySelectorAll('.product-b2b-card');
 
-        document.querySelectorAll(".btn-download").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const productName = btn.getAttribute("data-product");
-            productInput.value = productName;
-            productNameDisplay.textContent = productName;
-            modal.classList.add("active");
+        filterBtns.forEach(btn => {
+          btn.addEventListener('click', () => {
+            filterBtns.forEach(b => b.classList.remove('active'));
+            btn.classList.add('active');
+
+            const filterValue = btn.getAttribute('data-filter');
+
+            productCards.forEach(card => {
+              if (filterValue === 'all' || card.getAttribute('data-category') === filterValue) {
+                card.style.display = 'flex';
+              } else {
+                card.style.display = 'none';
+              }
+            });
           });
         });
 
-        modalClose.addEventListener("click", () => {
-          modal.classList.remove("active");
+        // Brochure Modal Trigger
+        const modal = document.getElementById('brochureModal');
+        const modalClose = document.getElementById('modalClose');
+        const modalProductName = document.getElementById('modalProductName');
+        const productInput = document.getElementById('productInput');
+        const brochureForm = document.getElementById('brochureForm');
+        const downloadSuccess = document.getElementById('downloadSuccess');
+
+        document.querySelectorAll('.btn-download-brochure').forEach(btn => {
+          btn.addEventListener('click', (e) => {
+            e.preventDefault();
+            const prodName = btn.getAttribute('data-product');
+            modalProductName.textContent = prodName;
+            productInput.value = prodName;
+            modal.classList.add('active');
+          });
         });
 
-        modal.addEventListener("click", (e) => {
+        modalClose.addEventListener('click', () => {
+          modal.classList.remove('active');
+          downloadSuccess.style.display = 'none';
+          brochureForm.reset();
+        });
+
+        modal.addEventListener('click', (e) => {
           if (e.target === modal) {
-            modal.classList.remove("active");
+            modal.classList.remove('active');
+            downloadSuccess.style.display = 'none';
+            brochureForm.reset();
           }
         });
 
-        form.addEventListener("submit", (e) => {
+        brochureForm.addEventListener('submit', (e) => {
           e.preventDefault();
-          alert("Brochure for " + productInput.value + " is downloading...");
-          modal.classList.remove("active");
-          form.reset();
+          downloadSuccess.style.display = 'block';
+          setTimeout(() => {
+            modal.classList.remove('active');
+            downloadSuccess.style.display = 'none';
+            brochureForm.reset();
+          }, 3000);
         });
       });
     </script>

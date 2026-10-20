@@ -1,32 +1,57 @@
 [
   {
     "id": "food-beverages",
-    "name": "Food and Beverages",
-    "icon": "food"
+    "name": "Food & Beverages",
+    "icon": "food",
+    "description": "Functional starch and glucose ingredients providing texture, clarity, stability, and mouthfeel across everyday food formulations."
   },
   {
     "id": "confectionery-bakery",
-    "name": "Confectionery and Bakery",
-    "icon": "bakery"
+    "name": "Confectionery & Bakery",
+    "icon": "bakery",
+    "description": "High-purity liquid glucose and starch syrups preventing crystallization, controlling sweetness, and enhancing crumb structure."
   },
   {
     "id": "dairy-nutrition",
-    "name": "Dairy and Nutrition",
-    "icon": "dairy"
+    "name": "Dairy & Nutrition",
+    "icon": "dairy",
+    "description": "Specialized maltodextrins and starch derivatives that support creaminess, bulking, and balanced energy release."
   },
   {
     "id": "pharma-nutra",
-    "name": "Pharmaceuticals and Nutraceuticals",
-    "icon": "pharma"
+    "name": "Pharma & Nutraceuticals",
+    "icon": "pharma",
+    "description": "Premium carrier, binder, and excipient starch and maltodextrin solutions conforming to rigorous pharmacopeia standards."
   },
   {
     "id": "animal-nutrition",
     "name": "Animal Nutrition",
-    "icon": "animal"
+    "icon": "animal",
+    "description": "High-protein gluten meal, digestible dry fibre, and nutrient-dense germ powering poultry, cattle, and aquaculture feeds."
   },
   {
-    "id": "industrial",
+    "id": "industrial-apps",
     "name": "Industrial Applications",
-    "icon": "industrial"
+    "icon": "industrial",
+    "description": "Engineered starches delivering superior bonding, adhesion, and film-forming capabilities for heavy-duty industrial processes."
+  },
+  {
+    "id": "pulp-paper",
+    "name": "Pulp & Paper Industry",
+    "icon": "paper",
+    "description": "Optimized wet-end and surface-sizing starches providing internal strength, surface smoothness, and runnability."
+  },
+  {
+    "id": "textile-industries",
+    "name": "Textile Industries",
+    "icon": "textile",
+    "description": "High-viscosity maize starch formulations engineered for textile sizing, yarn protection, and fabric finishing."
+  },
+  {
+    "id": "oil-and-gas",
+    "name": "Oil & Gas",
+    "icon": "oil",
+    "description": "High-performance modified starch derivatives serving as fluid-loss reducers and viscosity stabilizers in drilling fluids."
   }
 ]
+

@@ -1,200 +1,408 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Industries We Serve | Saatvik Agro — Tailored Maize Derivative Solutions</title>
+    <meta
+      name="description"
+      content="Discover the 9 major industries powered by Saatvik Agro's Shakti ingredients: Food & Beverages, Confectionery, Dairy, Pharma, Animal Feed, Industrial, Paper, Textiles, and Oil & Gas."
+    />
 
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Industries | Saatvik Agro</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
-    rel="stylesheet">
-  <link rel="stylesheet" href="assets/css/global.css">
-  <link rel="stylesheet" href="assets/css/industries.css">
-</head>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:wght@400;500;600;700&family=DM+Sans:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
 
-<body>
-  <!-- Header -->
-  <!-- NAVBAR -->
-  <header class="header flex-between">
-    <div class="logo-group">
-      <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik Agro" class="logo-img saatvik-logo">
-      <div class="logo-divider"></div>
-      <img src="assets/images/content/shakti-logo.png" alt="Shakti" class="logo-img shakti-logo">
-    </div>
-    <ul class="nav-links">
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About Us</a></li>
-      <li><a href="products.html">Products</a></li>
-      <li><a href="industries.html">Industries</a></li>
-    </ul>
+    <link rel="stylesheet" href="assets/css/global.css" />
+    <link rel="stylesheet" href="assets/css/industries.css" />
+    <link rel="icon" type="image/png" href="assets/images/content/saatvik-agro-logo.png" />
+  </head>
 
-    <div class="nav-contact">
-      <div class="nav-phone">
-        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
-          stroke-linecap="round" stroke-linejoin="round">
-          <path
-            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-          </path>
-        </svg>
-        555-123-4567
-      </div>
-      <a href="contact.html" class="btn btn--nav-rect">Get in Touch</a>
-    </div>
-    <!-- Hamburger Button (Right) -->
-    <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
-      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+  <body>
+    <!-- FLOATING WHATSAPP BUTTON -->
+    <a
+      href="https://wa.me/919591033188?text=Hello%20Saatvik%20Agro%20Team,%20I%20would%20like%20to%20discuss%20ingredients%20for%20our%20industry%20sector."
+      class="whatsapp-float"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Chat on WhatsApp"
+    >
+      <div class="whatsapp-pulse"></div>
+      <svg viewBox="0 0 24 24">
+        <path
+          d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"
+        />
       </svg>
-    </button>
-  </header>
+      <span>Chat with Us</span>
+    </a>
 
-  <!-- Fullscreen Nav Overlay -->
-  <div class="nav-overlay" id="nav-overlay">
-    <button class="nav-close" id="nav-close" aria-label="Close menu">
-      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
-      </svg>
-    </button>
-    <div class="nav-overlay-content">
-      <nav class="nav-menu-full">
-        <ul>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About Us</a></li>
-          <li><a href="products.html">Products</a></li>
-          <li><a href="industries.html">Industries</a></li>
-        </ul>
-      </nav>
-      <div class="nav-phone-full">
-        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+    <!-- NAVBAR -->
+    <header class="header flex-between">
+      <div class="logo-group">
+        <a href="index.html" style="display: flex; align-items: center; text-decoration: none;">
+          <img
+            src="assets/images/content/saatvik-agro-logo.png"
+            alt="Saatvik Agro"
+            class="logo-img saatvik-logo"
+          />
+          <div class="logo-divider"></div>
+          <img
+            src="assets/images/content/shakti-logo.png"
+            alt="Shakti"
+            class="logo-img shakti-logo"
+          />
+        </a>
+      </div>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="products.html">Products</a></li>
+        <li><a href="industries.html" class="active">Industries</a></li>
+        <li><a href="media.html">Media</a></li>
+        <li><a href="career.html">Career</a></li>
+        <li><a href="contact.html">Contact Us</a></li>
+      </ul>
+
+      <div class="nav-contact">
+        <a href="tel:+919591033188" class="nav-phone" title="Toll Free Call">
+          <svg
+            width="18"
+            height="18"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="1.8"
+            stroke-linecap="round"
+            stroke-linejoin="round"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+          +91-9591033188
+        </a>
+        <a href="contact.html" class="btn btn--nav-rect">Enquire Now</a>
+      </div>
+
+      <!-- Hamburger Button (Mobile) -->
+      <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+        <svg
+          width="32"
+          height="32"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
           <path
-            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
-          </path>
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M4 6h16M4 12h16M4 18h16"
+          ></path>
         </svg>
-        555-123-4567
-      </div>
-    </div>
-  </div>
+      </button>
+    </header>
 
-  <section class="ind-header">
-    <h1>Industries We Serve</h1>
-    <p>Our premium maize derivatives are engineered to empower diverse industrial applications worldwide.</p>
-  </section>
-
-  <section class="ind-grid">
-    <div class="ind-card">
-      <img src="assets/images/content/food.jpg" alt="Food">
-      <div class="ind-card-content">
-        <h3>Food & Nutrition</h3>
-        <p>From bakery products to beverages, our food-grade starch and liquid glucose provide texture, sweetness, and
-          stability.</p>
-        <a href="products.html" class="btn btn--outline"
-          style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
-      </div>
-    </div>
-    <div class="ind-card">
-      <img src="assets/images/content/paper.jpg" alt="Paper">
-      <div class="ind-card-content">
-        <h3>Paper & Packaging</h3>
-        <p>High-strength industrial starches and dextrins designed specifically for corrugation, sizing, and paper
-          binding.</p>
-        <a href="products.html" class="btn btn--outline"
-          style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
-      </div>
-    </div>
-    <div class="ind-card">
-      <img src="assets/images/content/germ.jpg" alt="Animal Feed">
-      <div class="ind-card-content">
-        <h3>Animal Feed</h3>
-        <p>Nutrient-rich maize gluten and fibre offering high protein and digestibility for cattle and poultry
-          nutrition.</p>
-        <a href="products.html" class="btn btn--outline"
-          style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
-      </div>
-    </div>
-    <div class="ind-card">
-      <img src="assets/images/content/pharma.jpg" alt="Pharma">
-      <div class="ind-card-content">
-        <h3>Pharmaceuticals</h3>
-        <p>Pure, safe, and consistent starch powders and syrups used as binders and fillers in medicinal tablets.</p>
-        <a href="products.html" class="btn btn--outline"
-          style="align-self: flex-start; height: 40px; padding: 0 20px;">View Products</a>
-      </div>
-    </div>
-  </section>
-
-
-  <!-- Footer -->
-  <!-- FOOTER -->
-  <footer class="footer">
-    <div class="container">
-
-      <div class="footer-top">
-        <div class="footer-logo">
-          <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik">
-        </div>
-        <div class="footer-top-text">
-          <h2>Growing soil and food<br>organically</h2>
+    <!-- Fullscreen Nav Overlay -->
+    <div class="nav-overlay" id="nav-overlay">
+      <button class="nav-close" id="nav-close" aria-label="Close menu">
+        <svg
+          width="32"
+          height="32"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            stroke-linecap="round"
+            stroke-linejoin="round"
+            d="M6 18L18 6M6 6l12 12"
+          ></path>
+        </svg>
+      </button>
+      <div class="nav-overlay-content">
+        <nav class="nav-menu-full">
+          <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="products.html">Products</a></li>
+            <li><a href="industries.html">Industries</a></li>
+            <li><a href="media.html">Media</a></li>
+            <li><a href="career.html">Career</a></li>
+            <li><a href="contact.html">Contact Us</a></li>
+          </ul>
+        </nav>
+        <div class="nav-phone-full">
+          <svg
+            width="24"
+            height="24"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+            ></path>
+          </svg>
+          <a href="tel:+919591033188" style="color: inherit; text-decoration: none;">+91-9591033188</a>
         </div>
       </div>
+    </div>
 
-      <div class="footer-grid">
-        <div class="footer-col footer-col-wide">
-          <p>Saatvik Agro is the agro-ingredient unit of the Saatvik Group, dedicated to creating high quality
-            maize-based ingredients that power everyday products.</p>
-          <a href="contact.html" class="btn btn--accent">Get in Touch</a>
+    <!-- HERO (MATCHING CLIENT APPROVED SIMPLE DESIGN) -->
+    <section class="ind-hero-banner">
+      <div class="container">
+        <h1>Industries We Serve</h1>
+        <p>Our premium maize derivatives are engineered to empower diverse industrial applications worldwide.</p>
+      </div>
+    </section>
+
+    <!-- 9 INDUSTRIES GRID (Corporate Presentation Page 22) -->
+    <section class="ind-section-wrap">
+      <div class="container">
+        <div class="ind-grid-9">
+          <!-- 1. Food & Beverages -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8h1a4 4 0 0 1 0 8h-1"/><path d="M2 8h16v9a4 4 0 0 1-4 4H6a4 4 0 0 1-4-4V8z"/><line x1="6" y1="1" x2="6" y2="4"/><line x1="10" y1="1" x2="10" y2="4"/><line x1="14" y1="1" x2="14" y2="4"/></svg>
+              </div>
+              <h3>Food & Beverages</h3>
+              <p>Functional starch and glucose ingredients providing texture, clarity, stability, and mouthfeel across everyday food formulations, instant mixes, and beverage premixes.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maize Starch Powder (Food Grade), Liquid Glucose</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 2. Confectionery & Bakery -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 21v-8a2 2 0 0 0-2-2H6a2 2 0 0 0-2 2v8"/><path d="M4 16s.5-1 2-1 2.5 2 4 2 2.5-2 4-2 2.5 2 4 2 2-1 2-1"/><path d="M2 21h20"/></svg>
+              </div>
+              <h3>Confectionery & Bakery</h3>
+              <p>High-purity liquid glucose and starch syrups preventing crystallization, controlling sweetness, and enhancing crumb structure in premium confectionery and bakery goods.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Liquid Glucose, Shakti Maltodex SD</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 3. Dairy & Nutrition -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M8 2h8l1 6H7l1-6z"/><path d="M7 8v12a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V8"/></svg>
+              </div>
+              <h3>Dairy & Nutrition</h3>
+              <p>Specialized maltodextrins and starch derivatives that support creaminess, bulking, balanced energy release, and mouthfeel in yogurt, ice cream, and nutritional blends.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maltodex LD, SD & HD Profiles</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 4. Pharma & Nutraceuticals -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2" ry="2"/><line x1="12" y1="8" x2="12" y2="16"/><line x1="8" y1="12" x2="16" y2="12"/></svg>
+              </div>
+              <h3>Pharma & Nutraceuticals</h3>
+              <p>Pure, neutral-taste carrier, binder, and excipient starch and maltodextrin solutions conforming to rigorous pharmacopeia standards for solid dosage and nutraceutical powders.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maize Starch Food Grade, Shakti Maltodex LD</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 5. Animal Nutrition -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M8 14s1.5 2 4 2 4-2 4-2"/><line x1="9" y1="9" x2="9.01" y2="9"/><line x1="15" y1="9" x2="15.01" y2="9"/></svg>
+              </div>
+              <h3>Animal Nutrition</h3>
+              <p>High-protein gluten meal (60%+), digestible dry fibre flakes, and oil-rich germ fraction delivering balanced amino acids and gut health for poultry, cattle, and aquaculture.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Gluten Meal, Maize Dry Fibre, Maize Germ</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 6. Industrial Applications -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>
+              </div>
+              <h3>Industrial Applications</h3>
+              <p>Engineered starches delivering superior bonding, adhesion, and film-forming capabilities for heavy-duty adhesive, chemical, and building material manufacturing.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maize Starch Powder (Industrial Use)</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 7. Pulp & Paper Industry -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+              </div>
+              <h3>Pulp & Paper Industry</h3>
+              <p>Optimized wet-end and surface-sizing starches providing internal strength, surface smoothness, and high-speed corrugation runnability for packaging manufacturers.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maize Starch Powder (Industrial Use)</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 8. Textile Industries -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18"/><path d="M9 21V9"/></svg>
+              </div>
+              <h3>Textile Industries</h3>
+              <p>High-viscosity maize starch formulations engineered for textile sizing, yarn protection during weaving, and smooth, consistent fabric finishing.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Maize Starch Powder (Industrial Use)</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+
+          <!-- 9. Oil and Gas -->
+          <div class="ind-card-full">
+            <div class="ind-card-body">
+              <div class="ind-card-header-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2.69l5.66 5.66a8 8 0 1 1-11.31 0z"/></svg>
+              </div>
+              <h3>Oil & Gas Drilling</h3>
+              <p>High-performance starch derivatives serving as fluid-loss reducers, filtration controllers, and thermal viscosity stabilizers in specialized drilling fluids.</p>
+              
+              <div class="ind-recommended-box">
+                <span class="ind-recommended-lbl">Recommended Shakti Ingredients</span>
+                <span class="ind-recommended-val">Shakti Industrial Grade Derivatives</span>
+              </div>
+
+              <a href="products.html" class="btn-ind-explore">View Relevant Products &rarr;</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-logo">
+            <img
+              src="assets/images/content/saatvik-agro-logo.png"
+              alt="Saatvik Agro"
+            />
+          </div>
+          <div class="footer-top-text">
+            <h2>Nourishing Growth, Naturally.<br />Engineered for Consistency.</h2>
+          </div>
         </div>
 
-        <div class="footer-col">
-          <h4>Office</h4>
-          <p>Germany &mdash;<br>785 15h Street, Office 47<br>Berlin, De 81566</p>
-          <p>&bull; info@email.com</p>
-          <h4 class="footer-phone">+1 840 841 25 69</h4>
-        </div>
+        <div class="footer-grid">
+          <div class="footer-col footer-col-wide">
+            <h4>About Saatvik Agro</h4>
+            <p>
+              Saatvik Agro Processors Private Limited is the agro-ingredient unit of the Saatvik Group, transforming responsibly sourced maize into dependable, high-purity ingredients.
+            </p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+              <a href="contact.html" class="btn btn--accent">Get in Touch</a>
+              <a href="https://wa.me/919591033188" target="_blank" rel="noopener noreferrer" class="btn" style="background: #25d366; color: #fff; font-weight: 600; padding: 15px 25px;">WhatsApp Us</a>
+            </div>
+          </div>
 
-        <div class="footer-col">
-          <h4>Links</h4>
+          <div class="footer-col">
+            <h4>Corporate Office</h4>
+            <p>
+              Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318
+            </p>
+            <p style="margin-top: 15px;">
+              <strong>Email:</strong><br />
+              <a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a>
+            </p>
+            <h4 class="footer-phone">
+              <a href="tel:+919591033188" style="color: inherit; text-decoration: none;">+91-9591033188</a>
+            </h4>
+          </div>
+
+          <div class="footer-col">
+            <h4>Manufacturing Plant</h4>
+            <p>
+              Plot No. 32, 33, 40 & 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh - 476444
+            </p>
+            <p style="margin-top: 15px;">
+              <strong>Capacity:</strong><br />500 TPD (Scalable to 1200 TPD)
+            </p>
+          </div>
+
+          <div class="footer-col">
+            <h4>Quick Links</h4>
             <ul>
               <li><a href="index.html">&bull; Home</a></li>
               <li><a href="about.html">&bull; About Us</a></li>
               <li><a href="products.html">&bull; Products</a></li>
               <li><a href="industries.html">&bull; Industries</a></li>
+              <li><a href="media.html">&bull; Media Gallery</a></li>
+              <li><a href="career.html">&bull; Career</a></li>
+              <li><a href="contact.html">&bull; Contact Us</a></li>
             </ul>
-        </div>
-
-        <div class="footer-col">
-          <h4>Get in Touch</h4>
-          <div class="footer-socials">
-            <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
-              </svg></a>
-            <a href="#" aria-label="Behance"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M8.228 15.01h-2.12v-2.317h2.164c1.11 0 1.637.525 1.637 1.157 0 .616-.496 1.16-1.681 1.16zm-2.12-5.467h1.996c1.025 0 1.488.461 1.488 1.05 0 .548-.44 1.05-1.383 1.05h-2.101v-2.1zM10.82 12c.708-.432 1.144-1.155 1.144-2.062 0-1.764-1.28-2.613-3.23-2.613H4v10.15h4.945c2.193 0 3.513-1.007 3.513-2.835C12.458 13.313 11.758 12.35 10.82 12zm7.126 1.157c-.126-1.258-1.077-1.764-2.101-1.764-1.127 0-1.968.647-2.072 1.764h4.173zM15.82 9.475h2.89v-1.158h-2.89v1.158zm4.129 4.894c.05-1.996-1.28-3.465-3.155-3.465-1.944 0-3.327 1.469-3.327 3.507 0 2.143 1.408 3.53 3.393 3.53 1.576 0 2.766-.78 3.126-2.186h-1.61c-.247.625-.86.924-1.503.924-1.18 0-1.792-.767-1.848-1.793h4.924v-.517z" />
-              </svg></a>
-            <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-              </svg></a>
-            <a href="#" aria-label="Dribbble"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                <path
-                  d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm7.143 5.485c1.47 1.637 2.378 3.82 2.457 6.196-.457-.143-3.626-1.127-7.234-.582-.47-1.189-1.01-2.433-1.611-3.616 3.197-1.417 5.76-1.791 6.388-1.998zm-6.273 1.947c.563 1.135 1.077 2.327 1.528 3.473-3.923 1.258-7.915 1.218-8.995 1.196.48-2.615 1.997-4.887 4.095-6.305 1.272.766 2.476 1.64 3.372 1.636zm-8.672 5.253c1.332.03 5.74.12 10.021-1.31 1.107 2.923 1.621 5.867 1.745 6.643-1.57.943-3.42 1.502-5.412 1.502-3.155 0-5.969-1.475-7.794-3.76 1.848-.28 4.417-1.106 6.326-2.903-.787-1.285-1.554-2.607-2.222-3.87-1.844.757-3.992 2.463-4.631 3.036-.02-.122-.033-.248-.033-.374 0-1.168.225-2.296.626-3.342 1.165-.89 3.064-2.316 4.966-3.238.163.633.266 1.341.343 2.016-1.397.77-2.656 1.867-2.656 1.867zm12.392 6.551c-.198-.948-.826-4.045-2.023-7.14 3.18-.727 6.136.216 6.58.384-.572 2.991-2.215 5.512-4.557 6.756z" />
-              </svg></a>
           </div>
         </div>
+
+        <div class="footer-bottom">
+          <div class="footer-copy">&copy; 2026 Saatvik Agro Processors Private Limited. All Rights Reserved.</div>
+          <div class="footer-credit">Unit of Saatvik Group &bull; Built with Pride.</div>
+        </div>
       </div>
+    </footer>
 
-      <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026. All Rights Reserved.</div>
-        <div class="footer-credit">Site by Saatvik Agro.</div>
-      </div>
-
-    </div>
-  </footer>
-
-  <script src="assets/js/main.js"></script>
-</body>
-
+    <script src="assets/js/main.js"></script>
+  </body>
 </html>

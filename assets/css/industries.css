@@ -1,82 +1,152 @@
-/* Global & Header/Footer CSS from exact match */
+/* ================= INDUSTRIES PAGE STYLES ================= */
 
-/* Navbar */
-
-/* Footer */
-
-.ind-header {
-  padding: 80px 5% 40px 5%;
+.ind-hero-banner {
+  background: #ffffff;
+  padding: 80px 20px 35px 20px;
   text-align: center;
+  position: relative;
+  border-bottom: 1px solid #f1f5f9;
 }
 
-.ind-header h1 {
-  font-size: clamp(3rem, 5vw, 4.5rem);
-  margin-bottom: 20px;
+.ind-hero-banner h1 {
+  font-family: var(--font-heading);
+  font-size: clamp(2.8rem, 4.8vw, 4rem);
+  font-weight: 700;
+  color: #121a2f;
+  margin-bottom: 18px;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
 }
 
-.ind-header p {
-  font-size: 1.2rem;
-  color: #666;
-  max-width: 700px;
+.ind-hero-banner p {
+  color: #64748b;
+  font-size: clamp(1.05rem, 1.3vw, 1.2rem);
+  max-width: 720px;
   margin: 0 auto;
+  line-height: 1.65;
 }
 
-.ind-grid {
+.ind-section-wrap {
+  padding: 60px 0 100px 0;
+}
+
+.ind-grid-9 {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
-  gap: 40px;
-  padding: 50px 5% 100px 5%;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
 }
 
-.ind-card {
-  background: #fff;
-  border-radius: var(--radius-xl);
+.ind-card-full {
+  background: #ffffff;
+  border: 1px solid #eef2f6;
+  border-radius: 18px;
   overflow: hidden;
-  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.06);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03);
   display: flex;
   flex-direction: column;
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
 }
 
-.ind-card img {
-  width: 100%;
-  height: 250px;
-  object-fit: cover;
+.ind-card-full:hover {
+  transform: translateY(-7px);
+  border-color: #ea7124;
+  box-shadow: 0 20px 45px rgba(18, 26, 47, 0.09);
 }
 
-.ind-card-content {
-  padding: 40px;
-  flex: 1;
+.ind-card-header-icon {
+  width: 54px;
+  height: 54px;
+  border-radius: 12px;
+  background: #fdf5ef;
+  color: #ea7124;
   display: flex;
-  flex-direction: column;
-}
-
-.ind-card h3 {
-  font-size: 2rem;
-  margin-bottom: 15px;
-}
-
-.ind-card p {
-  font-size: 1.05rem;
-  color: #666;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 20px;
-  line-height: 1.6;
-  flex: 1;
 }
 
-@media (max-width: 768px) {
-  .navbar__toggle {
-      display: block !important;
-    }
-
-  
-
-  
-
+.ind-card-header-icon svg {
+  width: 28px;
+  height: 28px;
 }
 
-@media(max-width: 768px) {
-  .ind-grid {
-      grid-template-columns: 1fr;
-    }
+.ind-card-body {
+  padding: 35px 30px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
 
+.ind-card-body h3 {
+  font-size: 1.35rem;
+  color: var(--color-primary);
+  margin-bottom: 12px;
+  font-weight: 700;
+}
+
+.ind-card-body p {
+  color: #5a6270;
+  font-size: 0.95rem;
+  line-height: 1.65;
+  margin-bottom: 22px;
+  flex-grow: 1;
+}
+
+.ind-recommended-box {
+  background: #f8fafc;
+  border-radius: 10px;
+  padding: 12px 16px;
+  margin-bottom: 22px;
+  border-left: 3px solid #ea7124;
+}
+
+.ind-recommended-lbl {
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #718096;
+  font-weight: 700;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.ind-recommended-val {
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--color-primary);
+}
+
+.btn-ind-explore {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  height: 42px;
+  padding: 0 20px;
+  border: 1.5px solid #ea7124;
+  color: #ea7124;
+  border-radius: 6px;
+  font-weight: 600;
+  font-size: 13.5px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  align-self: flex-start;
+}
+
+.ind-card-full:hover .btn-ind-explore {
+  background: #ea7124;
+  color: #fff;
+}
+
+@media (max-width: 1024px) {
+  .ind-grid-9 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 650px) {
+  .ind-grid-9 {
+    grid-template-columns: 1fr;
+  }
 }
