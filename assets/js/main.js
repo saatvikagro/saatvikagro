@@ -91,16 +91,12 @@ if (typeof gsap !== 'undefined') {
 
   // 1. Hero Animation (Load)
   if (document.querySelector(".hero-center-left h1")) {
-    const heroTl = gsap.timeline({ defaults: { ease: "power3.out" } });
-    heroTl
-      .from(".hero-badge", { y: -20, opacity: 0, duration: 0.8 }, "+=0.1")
-      .from(".hero-center-left h1", { y: 35, opacity: 0, duration: 1 }, "-=0.5")
-      .from(".hero-description", { y: 25, opacity: 0, duration: 0.8 }, "-=0.7")
-      .from(".hero-cta-group", { y: 20, opacity: 0, duration: 0.7 }, "-=0.6")
-      .from(".hero-about-box", { y: 30, opacity: 0, duration: 0.85 }, "-=0.5")
-      .from(".hero-bottom-text", { x: -25, opacity: 0, duration: 0.7 }, "-=0.6")
-      .from(".hero-scroll-text", { x: 25, opacity: 0, duration: 0.7 }, "-=0.7")
-      .from(".hero-slider-nav", { x: 30, opacity: 0, duration: 0.8 }, "-=0.7");
+    const heroTl = gsap.timeline();
+    heroTl.from(".hero-center-left h1", { y: 40, opacity: 0, duration: 1.2, ease: "power3.out" })
+      .from(".btn--hero-orange", { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".hero-bottom-text", { opacity: 0, x: -20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".hero-scroll-text", { opacity: 0, x: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".slider-dot", { opacity: 0, scale: 0.5, duration: 0.6, stagger: 0.1, ease: "back.out(1.5)" }, "-=0.6");
   }
 
   // 2. Section Titles Fade In
@@ -123,15 +119,13 @@ if (typeof gsap !== 'undefined') {
     gsap.from(".intro-card-wrap", {
       scrollTrigger: {
         trigger: ".intro-grid",
-        start: "top 95%",
-        once: true
+        start: "top 85%",
       },
-      y: 30,
+      y: 50,
       opacity: 0,
-      duration: 0.6,
-      stagger: 0.1,
-      ease: "power2.out",
-      clearProps: "all"
+      duration: 0.8,
+      stagger: 0.15,
+      ease: "power3.out"
     });
   }
 
@@ -140,16 +134,14 @@ if (typeof gsap !== 'undefined') {
     gsap.from(".prod-card", {
       scrollTrigger: {
         trigger: ".prod-small-grid",
-        start: "top 95%",
-        once: true
+        start: "top 80%",
       },
-      scale: 0.98,
-      y: 20,
+      scale: 0.95,
+      y: 30,
       opacity: 0,
-      duration: 0.5,
-      stagger: 0.08,
-      ease: "power2.out",
-      clearProps: "all"
+      duration: 0.6,
+      stagger: 0.1,
+      ease: "power2.out"
     });
   }
   
@@ -157,14 +149,12 @@ if (typeof gsap !== 'undefined') {
       gsap.from(".prod-large", {
         scrollTrigger: {
           trigger: ".prod-grid",
-          start: "top 95%",
-          once: true
+          start: "top 80%",
         },
-        x: -25,
+        x: -40,
         opacity: 0,
-        duration: 0.6,
-        ease: "power2.out",
-        clearProps: "all"
+        duration: 0.8,
+        ease: "power3.out"
       });
   }
 
@@ -261,6 +251,4 @@ if (typeof gsap !== 'undefined') {
       ease: "none"
     });
   });
-
-  ScrollTrigger.refresh();
 }

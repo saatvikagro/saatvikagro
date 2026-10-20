@@ -3,7 +3,7 @@
 A modern, fast, static website for **Saatvik Agro**, rebuilt from WordPress to plain HTML, CSS and JavaScript.
 
 - **Live site (old, WordPress):** https://www.saatvikagro.com/
-- **Status:** ✅ Ready for Client Review (Client Brief & B2B Presentation Implemented)
+- **Status:** 🚧 In development
 
 ---
 
@@ -24,23 +24,22 @@ A modern, fast, static website for **Saatvik Agro**, rebuilt from WordPress to p
 
 ## 🌱 Overview
 
-This project is a complete revamp of the Saatvik Agro website, executed based on client feedback and presentation assets:
+This project is a complete revamp of the Saatvik Agro website. The goals are:
 
-- Plain HTML5, CSS3, vanilla JS (no heavy frameworks, lightning fast)
-- Rebuilt with 6 core pages requested in client updation brief
-- Full B2B corporate accuracy (Morena manufacturing plant, 500 TPD scalable to 1200 TPD, 7 Shakti products, 9 industries, 6 certifications)
-- Verified contact info (Toll-free `+91-9591033188`, direct WhatsApp integration, Corporate Office in Greater Noida West)
+- Move away from WordPress to a lightweight static site
+- Improve speed, SEO and mobile experience
+- Keep all original content from the client's current website
+- Maintain a clean, professional and scalable code structure
 
-**Pages Delivered:**
+**Pages (planned):**
 
-- `index.html` (Home / Landing Page)
-- `about.html` (About Us)
-- `products.html` (Products & Interactive Brochure Modal)
-- `industries.html` (9 Industries We Serve)
-- `media.html` (Creative Gallery with Lightbox)
-- `career.html` (Careers, Culture & Job Application Modal)
-- `contact.html` (Contact Us & B2B Inquiry Form)
-- `404.html` (Custom 404 Page)
+- Home
+- About Us
+- Products
+- Gallery
+- Blog / News (if applicable)
+- Contact Us
+- 404 Page
 
 ---
 
@@ -172,20 +171,16 @@ Basic flow:
 
 ---
 
-## 📝 Implementation Status
+## 📝 Pending Items / TODO
 
-- [x] Confirmed and verified all real client content from B2B Presentation & RFP Brief
-- [x] Co-branded dual logo (Saatvik Agro + Shakti) and official brand colors
-- [x] High-performance product images and complete Shakti 7-product technical portfolio
-- [x] Verified corporate office (Greater Noida) & manufacturing plant (Morena) addresses
-- [x] Active toll-free phone (`+91-9591033188`) and direct WhatsApp Sales Desk integration
-- [x] 6 official certifications including FSSAI central license `11425995000205`
-- [x] Interactive career page with open jobs, culture spotlight, and candidate application modal
-- [x] Media gallery with category filtering and full-screen lightbox viewer
-- [x] Dedicated Industries page covering all 9 B2B industrial applications
-- [x] SEO foundation: `sitemap.xml`, `robots.txt`, `404.html`, meta descriptions, and favicons on all pages
+- [ ] Confirm final content with client
+- [ ] Get high-resolution logo and brand colors
+- [ ] Collect product images and details
+- [ ] Confirm contact details and map location
+- [ ] Decide hosting and domain setup
+- [ ] Set up redirects from old WordPress URLs (to protect SEO)
 
-See `docs/CLIENT_CHANGES_IMPLEMENTATION.md` for the complete audit log.
+See `docs/CONTENT_TODO.md` for the full list.
 
 ---
 
