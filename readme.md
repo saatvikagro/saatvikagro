@@ -1,9 +1,10 @@
 # Saatvik Agro Website
 
-A modern, fast, static website for **Saatvik Agro**, rebuilt from WordPress to plain HTML, CSS and JavaScript.
+A modern, ultra-fast, static website for **Saatvik Agro** (agro-ingredient unit of Saatvik Group), built with pure semantic HTML5, Vanilla CSS3, and ES6 JavaScript.
 
-- **Live site (old, WordPress):** https://www.saatvikagro.com/
-- **Status:** 🚧 In development
+- **Client:** Saatvik Agro Processors Private Limited
+- **Brand / Range:** Shakti Agro Ingredients
+- **Status:** 🚀 In Client Review & Polish
 
 ---
 
@@ -12,183 +13,148 @@ A modern, fast, static website for **Saatvik Agro**, rebuilt from WordPress to p
 1. [Overview](#-overview)
 2. [Tech Stack](#-tech-stack)
 3. [Folder Structure](#-folder-structure)
-4. [Getting Started](#-getting-started)
-5. [Environment Variables](#-environment-variables)
-6. [How to Edit Content](#-how-to-edit-content)
-7. [How to Add a New Page](#-how-to-add-a-new-page)
-8. [Deployment](#-deployment)
-9. [Pending Items / TODO](#-pending-items--todo)
+4. [Active Pages](#-active-pages)
+5. [Design System & Styling Rules](#-design-system--styling-rules)
+6. [Getting Started](#-getting-started)
+7. [Environment Variables](#-environment-variables)
+8. [How to Edit Content](#-how-to-edit-content)
+9. [Deployment](#-deployment)
 10. [Credits](#-credits)
 
 ---
 
 ## 🌱 Overview
 
-This project is a complete revamp of the Saatvik Agro website. The goals are:
+This project is a complete revamp and expansion of the Saatvik Agro website into a multi-page static site. Key objectives:
 
-- Move away from WordPress to a lightweight static site
-- Improve speed, SEO and mobile experience
-- Keep all original content from the client's current website
-- Maintain a clean, professional and scalable code structure
-
-**Pages (planned):**
-
-- Home
-- About Us
-- Products
-- Gallery
-- Blog / News (if applicable)
-- Contact Us
-- 404 Page
+- Lightweight, fast static architecture without WordPress or heavy framework overhead
+- High SEO score, semantic markup, and mobile-first responsiveness
+- Faithful integration of all real Saatvik Agro content, products, certifications, and facility details
+- **Sharp Brutalist Aesthetic:** Strict client requirement — all corners, buttons, cards, badges, and boxes have zero border radius (`border-radius: 0`)
+- Dedicated product architecture with an archive grid, mobile category dropdown, and dynamic single product view
 
 ---
 
 ## 🛠 Tech Stack
 
-| Area            | Technology                                    |
-| --------------- | --------------------------------------------- |
-| Markup          | HTML5 (semantic)                              |
-| Styling         | CSS3 (BEM naming, CSS variables)              |
-| Scripting       | Vanilla JavaScript (ES6 modules)              |
-| Dev tooling     | Node.js, live-server / Vite, Prettier, ESLint |
-| Version control | Git + GitHub                                  |
-| Hosting         | _To be decided (Netlify / Vercel / cPanel)_   |
+| Area | Technology |
+|---|---|
+| Markup | HTML5 (Semantic, SEO-optimized) |
+| Styling | Vanilla CSS3 (CSS Variables, Flexbox, CSS Grid, Sharp 0-radius theme) |
+| Scripting | Vanilla JavaScript (ES6 Modules, dynamic product loading) |
+| Assets | WebP optimized product images, inline SVG certification badges |
+| Version control | Git + GitHub (`main` branch) |
+| Hosting | Static hosting ready (Netlify / Vercel / Cloudflare Pages / cPanel) |
 
 ---
 
 ## 📁 Folder Structure
 
 ```
-saatvik-agro/
-├── README.md
-├── .gitignore
-├── .env.example
-├── .editorconfig
-├── package.json
-├── index.html
-├── pages/            # Inner pages (about, products, contact, etc.)
-├── partials/         # Reusable parts (header, footer)
+saatvikagro/
+├── index.html              # Home page (Hero, What We Offer, Shakti Range, Facility, Certifications, News)
+├── about.html              # About Us (Story, Mission/Vision, Facility, Certifications, Values, Team)
+├── products.html           # Products Archive (Category filter tabs + mobile dropdown, 7 Shakti products)
+├── product-single.html     # Single Product Detail (Dynamic query ?id=..., specifications, applications)
+├── industries.html         # Industries Served (Food, Feed, Paper, Pharma, etc.)
+├── contact.html            # Contact Us (Corporate & Plant addresses, inquiry form, interactive map)
+├── media.html              # Media Gallery (Factory, farmlands, processing photos with lightbox)
+├── readme.md               # Main project documentation
+├── PROJECT_CONTEXT.md      # Comprehensive project status, history, and single source of truth
 ├── assets/
 │   ├── css/
-│   │   ├── base/         # reset, variables, typography
-│   │   ├── components/   # buttons, cards, navbar, forms, footer
-│   │   ├── sections/     # hero, about, products, testimonials...
-│   │   ├── pages/        # page-specific styles
-│   │   └── main.css      # imports everything
+│   │   ├── global.css      # Core variables, reset, navbar, footer, buttons, utilities
+│   │   ├── index.css       # Home page specific styling
+│   │   ├── about.css       # About page styling & responsive rules
+│   │   ├── products.css    # Product archive grid & category filter styling
+│   │   ├── product-single.css # Single product detail styling
+│   │   ├── contact.css     # Contact form & location layout
+│   │   ├── media.css       # Media gallery & lightbox styling
+│   │   └── industries.css  # Industries page layout
 │   ├── js/
-│   │   ├── modules/      # navbar, slider, counter, form, animations
-│   │   ├── utils/
-│   │   └── main.js
-│   ├── images/           # logo, hero, products, gallery, icons
-│   └── fonts/
-├── data/             # JSON content (products, testimonials, site config)
-└── docs/             # Design system, deployment notes, content TODO
+│   │   ├── main.js         # Navigation, mobile menu toggle, header effects
+│   │   ├── products-data.js # Central data source for all 7 Shakti products
+│   │   └── product-single.js # Dynamic product loader & category navigation
+│   └── images/
+│       ├── hero-modules.mp4 # Hero background video
+│       ├── content/        # Logos, facility, team, and content graphics
+│       └── products/       # Transparent high-res WebP product images
+├── data/
+│   ├── products.json       # Product JSON specification
+│   ├── industries.json     # Industries JSON data
+│   └── site-config.json    # Site configuration & metadata
+└── docs/
+    ├── DESIGN_SYSTEM.md    # Tokens, typography, colors, zero-radius design rules
+    ├── CONTENT_TODO.md     # Client content tracker & status
+    └── PHASE1_ANALYSIS.md  # Initial site audit & architectural analysis
 ```
 
-> ℹ️ This structure may be refined as development progresses.
+---
+
+## 📄 Active Pages
+
+1. **Home (`index.html`):** Video hero, "What We Offer" banner cards, Shakti ingredient portfolio, manufacturing metrics, vector certifications, and industrial news.
+2. **About Us (`about.html`):** Corporate journey, mission & vision, 500 TPD Morena manufacturing scale, ISO/Halal/FSSAI badges, core company values table, and executive team showcase.
+3. **Products Archive (`products.html`):** Complete showcase of all 7 Shakti ingredients with desktop filter tabs, mobile select dropdown, and direct links to details.
+4. **Product Single (`product-single.html`):** Dynamic product viewer driven by `products-data.js`, showing detailed descriptions, key specifications, and target industry tags.
+5. **Industries (`industries.html`):** Deep dive into Food & Nutrition, Animal Feed, Paper & Packaging, and Pharmaceuticals.
+6. **Contact Us (`contact.html`):** Direct contact channels, inquiry form, corporate office (Greater Noida), and manufacturing plant (Morena, MP) details.
+7. **Media Gallery (`media.html`):** High-resolution photo gallery featuring plant operations, farmlands, and refining facilities with interactive lightbox.
+
+---
+
+## 🎨 Design System & Styling Rules
+
+- **Zero Border-Radius:** Strict brutalist requirement — `border-radius: 0` on all cards, buttons, images, inputs, and dropdowns.
+- **Brand Colors:**
+  - Primary Navy: `#1B3051` / `#121a2f`
+  - Secondary Orange: `#ea7124` / `#EC8026`
+  - Accent Yellow: `#f3c319` / `#F5A623`
+  - Brand Green: `#37b829`
+- **Typography:**
+  - Headings: `Instrument Sans` / `Outfit` / `DM Sans`
+  - Body: `DM Sans`
+- **Mobile First & Responsive:** Optimized across mobile (<576px), tablet (768px), and desktop (1024px+).
 
 ---
 
 ## 🚀 Getting Started
 
-### Prerequisites
+### Local Development
 
-- [Node.js](https://nodejs.org/) (LTS version)
-- [Git](https://git-scm.com/)
-
-### Installation
-
-```bash
-# 1. Clone the repository
-git clone <repository-url>
-cd saatvik-agro
-
-# 2. Install dev dependencies
-npm install
-
-# 3. Create your environment file
-cp .env.example .env
-
-# 4. Start the local development server
-npm run dev
-```
-
-Open the URL shown in the terminal (usually `http://localhost:3000` or `http://localhost:5173`).
-
-### Useful Commands
-
-| Command          | What it does                              |
-| ---------------- | ----------------------------------------- |
-| `npm run dev`    | Starts local server with live reload      |
-| `npm run build`  | Creates production-ready files (minified) |
-| `npm run format` | Formats code with Prettier                |
-| `npm run lint`   | Checks code for errors                    |
-
----
-
-## 🔐 Environment Variables
-
-Copy `.env.example` to `.env` and fill in the values. **Never commit `.env` to Git.**
-
-| Variable                | Description                                              |
-| ----------------------- | -------------------------------------------------------- |
-| `SITE_URL`              | Final website URL                                        |
-| `CONTACT_FORM_ENDPOINT` | Form service URL (Formspree / Web3Forms / Netlify Forms) |
-| `GOOGLE_MAPS_API_KEY`   | Google Maps key (if used)                                |
-| `GA_MEASUREMENT_ID`     | Google Analytics ID (if used)                            |
+1. Open the project folder in VS Code or your preferred editor.
+2. Run using **Live Server** extension or any local static server:
+   ```bash
+   npx serve .
+   ```
+   Or open `index.html` directly in any modern browser.
 
 ---
 
 ## ✏️ How to Edit Content
 
-- **Text and layout:** edit the relevant `.html` file inside `index.html` or `pages/`
-- **Products, testimonials, site info:** edit the JSON files inside `data/`
-- **Images:** add to `assets/images/<category>/` (use optimized `.webp` where possible, and always add `alt` text)
-- **Colors, fonts, spacing:** change the variables in `assets/css/base/variables.css`
-
----
-
-## ➕ How to Add a New Page
-
-1. Create a new file in `pages/` (e.g. `pages/certifications.html`)
-2. Copy the structure of an existing page (head, header, footer)
-3. Add page-specific styles in `assets/css/pages/certifications.css` and import it in `main.css`
-4. Add the link to the navigation in `partials/header.html`
-5. Add the page to `sitemap.xml`
+- **Products:** Edit `assets/js/products-data.js` to update product names, descriptions, or specs.
+- **Page Content:** Edit the relevant `.html` file directly.
+- **Styles:** Common styles are in `assets/css/global.css`; page-specific styles are in `assets/css/<page>.css`.
+- **Product Images:** Place clean `.webp` assets in `assets/images/products/`.
 
 ---
 
 ## 🌐 Deployment
 
-_Detailed steps will be added in `docs/DEPLOYMENT.md`._
+The site is 100% static with zero build steps required:
 
-Basic flow:
-
-1. Run `npm run build`
-2. Upload the output to the hosting platform (Netlify / Vercel / cPanel)
-3. Add environment variables on the hosting dashboard
-4. Connect the domain and enable HTTPS
-
----
-
-## 📝 Pending Items / TODO
-
-- [ ] Confirm final content with client
-- [ ] Get high-resolution logo and brand colors
-- [ ] Collect product images and details
-- [ ] Confirm contact details and map location
-- [ ] Decide hosting and domain setup
-- [ ] Set up redirects from old WordPress URLs (to protect SEO)
-
-See `docs/CONTENT_TODO.md` for the full list.
+1. Connect the GitHub repository to **Netlify**, **Vercel**, or **GitHub Pages**.
+2. Set publish directory to the repository root `/`.
+3. Build command: None required.
 
 ---
 
 ## 👤 Credits
 
+- **Client:** Saatvik Agro Processors Private Limited
+- **Brand Range:** Shakti Agro Ingredients
 - **Developer:** Priyanshu Paliwal
-- **Client:** Saatvik Agro
-- **Design inspiration:** Ancora Themes (Soil, Dairy Farm demo). Layout reference only.
 
 ---
 
