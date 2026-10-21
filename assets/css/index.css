@@ -90,7 +90,7 @@
   font-family: var(--font-body);
   font-weight: 600;
   font-size: 15px;
-  border-radius: 4px;
+  border-radius: 0;
   border: none;
   cursor: pointer;
   transition:
@@ -269,7 +269,7 @@
 
 .intro-card {
   background: #fff;
-  border-radius: 4px;
+  border-radius: 0;
   padding: 28px 24px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
   margin-bottom: 0;
@@ -368,6 +368,10 @@
   position: relative;
   background: #f5f6f1;
   z-index: 1;
+}
+
+.banners-header {
+  margin-bottom: 50px;
 }
 
 .cheese-img {
@@ -863,7 +867,7 @@
 .testimonial-avatar {
   width: 60px;
   height: 60px;
-  border-radius: 50%;
+  border-radius: 0;
   object-fit: cover;
   margin-bottom: 5px;
 }
@@ -946,7 +950,7 @@
   display: flex;
   flex-direction: column;
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 0;
   transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
@@ -961,7 +965,7 @@
 .post-img-wrap {
   width: 100%;
   margin-bottom: 18px;
-  border-radius: 6px;
+  border-radius: 0;
   overflow: hidden;
   aspect-ratio: 16 / 11;
   background-color: #f0f2f5;
@@ -1088,13 +1092,25 @@
   text-align: center;
 }
 
+.certifications-header {
+  text-align: center;
+  margin-bottom: 45px;
+}
+
+.certifications-header .intro-label {
+  display: inline-block;
+  margin-bottom: 12px;
+}
+
 .certifications-title {
-  font-size: 1.45rem;
-  font-weight: 700;
-  letter-spacing: 0.06em;
-  color: #040509;
-  text-transform: uppercase;
-  margin-bottom: 35px;
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  letter-spacing: -0.03em;
+  color: #000;
+  line-height: 1.2;
+  margin: 0;
+  text-transform: none;
 }
 
 .certifications-grid {
@@ -1106,7 +1122,7 @@
 
 .cert-card {
   background: #ffffff;
-  border-radius: 6px;
+  border-radius: 0;
   border: 1px solid rgba(0, 0, 0, 0.05);
   padding: 22px 20px;
   min-height: 95px;
@@ -1159,9 +1175,12 @@
     padding: 14px 10px;
   }
 
+  .certifications-header {
+    margin-bottom: 25px;
+  }
+
   .certifications-title {
-    font-size: 1.2rem;
-    margin-bottom: 22px;
+    font-size: clamp(1.6rem, 5vw, 2rem);
   }
 }
 

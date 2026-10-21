@@ -65,7 +65,7 @@
 /* Media Card (Rectangle 3:2 Ratio, No Names/Titles) */
 .media-card {
   position: relative;
-  border-radius: 8px;
+  border-radius: 0;
   overflow: hidden;
   background-color: #f5f6f8;
   aspect-ratio: 3 / 2;
@@ -114,7 +114,7 @@
   height: 42px;
   background-color: #ffffff;
   color: #121a2f;
-  border-radius: 50%;
+  border-radius: 0;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -166,7 +166,7 @@
   max-width: 100%;
   max-height: 85vh;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 0;
   box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
 }
 

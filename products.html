@@ -134,13 +134,43 @@
 
     <section class="shop-section">
       <div class="container">
-        <!-- 4 Category Filter Tabs -->
+        <!-- 4 Category Filter Tabs & Mobile Dropdown -->
         <div class="product-tabs-wrapper">
+          <!-- Desktop Tabs (Visible > 768px) -->
           <div class="product-tabs" id="productTabs">
             <button class="tab-btn active" data-category="ALL">All</button>
             <button class="tab-btn" data-category="FOOD GRADE">FOOD GRADE</button>
             <button class="tab-btn" data-category="INDUSTRIAL GRADE">INDUSTRIAL GRADE</button>
             <button class="tab-btn" data-category="ANIMAL NUTRITION">ANIMAL NUTRITION</button>
+          </div>
+
+          <!-- Mobile Dropdown Filter (Visible <= 768px) -->
+          <div class="product-mobile-dropdown" id="productMobileDropdown">
+            <button type="button" class="mobile-dropdown-btn" id="mobileDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
+              <span class="mobile-dropdown-label">Category:</span>
+              <span class="mobile-dropdown-current" id="dropdownCurrentText">All Products</span>
+              <svg class="mobile-dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mobile-dropdown-menu" id="mobileDropdownMenu" role="listbox">
+              <div class="mobile-dropdown-item active" data-category="ALL" role="option">
+                <span>All Products</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="FOOD GRADE" role="option">
+                <span>Food Grade</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="INDUSTRIAL GRADE" role="option">
+                <span>Industrial Grade</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="ANIMAL NUTRITION" role="option">
+                <span>Animal Nutrition</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -156,18 +186,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">FOOD GRADE</span>
             <h3><a href="product-single.html?id=starch-food-grade">Shakti Maize Starch Powder Food Grade</a></h3>
-            <p>Food-grade starch for texture, stability, and process performance.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=starch-food-grade" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Maize Starch Powder Food Grade"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 2. Liquid Glucose -->
@@ -180,18 +199,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">FOOD GRADE</span>
             <h3><a href="product-single.html?id=liquid-glucose">Shakti Liquid Glucose</a></h3>
-            <p>High-purity glucose syrup for sweetness, texture, and moisture balance.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=liquid-glucose" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Liquid Glucose"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 3. Maltodex (LD, SD, HD) -->
@@ -204,18 +212,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">FOOD GRADE</span>
             <h3><a href="product-single.html?id=maltodex">Shakti Maltodex LD, SD, HD</a></h3>
-            <p>Versatile spray-dried carbohydrate family for body, bulking, and energy release.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=maltodex" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Maltodex LD, SD, HD"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 4. Dextrose Monohydrate -->
@@ -228,18 +225,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">FOOD GRADE</span>
             <h3><a href="product-single.html?id=dextrose-food-grade">Shakti Dextrose Monohydrate</a></h3>
-            <p>High-purity crystalline dextrose for instant energy, clean sweetness, and fermentation.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=dextrose-food-grade" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Dextrose Monohydrate"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 5. Maize Starch Powder - Industrial Use -->
@@ -248,22 +234,11 @@
               <div class="shop-card__image">
                 <img
                   src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
-                  alt="Shakti Maize Starch Powder For Industrial Use"
+                  alt="Shakti Maize Starch Powder Industrial Use"
                 />
               </div>
             </a>
-            <span class="shop-card-category">INDUSTRIAL GRADE</span>
             <h3><a href="product-single.html?id=starch-industrial">Shakti Maize Starch Powder Industrial Use</a></h3>
-            <p>Industrial starch solution for binding, adhesion, and process stability.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=starch-industrial" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Maize Starch Powder For Industrial Use"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 6. Modified Industrial Starch -->
@@ -276,18 +251,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">INDUSTRIAL GRADE</span>
             <h3><a href="product-single.html?id=modified-starch-industrial">Shakti Modified Industrial Starch</a></h3>
-            <p>Engineered modified starches for high-speed corrugation, paper sizing, and textile sizing.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=modified-starch-industrial" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Modified Industrial Starch"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 7. Shakti Gluten Meal -->
@@ -300,18 +264,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">ANIMAL NUTRITION</span>
             <h3><a href="product-single.html?id=gluten-meal">Shakti Enriched Maize Gluten Meal</a></h3>
-            <p>High-protein concentrate (60% min protein) for livestock, poultry, and aquaculture diets.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=gluten-meal" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Gluten Meal"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 8. Shakti Maize Dry Fibre -->
@@ -324,18 +277,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">ANIMAL NUTRITION</span>
             <h3><a href="product-single.html?id=dry-fibre">Shakti Maize Dry Fibre</a></h3>
-            <p>Clean, fibre-rich maize ingredient delivering steady energy and rumen function support.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=dry-fibre" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Maize Dry Fibre"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
 
           <!-- 9. Shakti Maize Germ -->
@@ -348,18 +290,7 @@
                 />
               </div>
             </a>
-            <span class="shop-card-category">ANIMAL NUTRITION</span>
             <h3><a href="product-single.html?id=maize-germ">Shakti Pure Maize Germ</a></h3>
-            <p>Nutrient-dense, oil-rich maize germ for edible oil extraction and high-calorie feed.</p>
-            <div class="shop-card-actions">
-              <a href="product-single.html?id=maize-germ" class="btn-card-details">View Details</a>
-              <button
-                class="btn-card-brochure btn-download"
-                data-product="Shakti Maize Germ"
-              >
-                Brochure
-              </button>
-            </div>
           </div>
         </div>
       </div>
@@ -411,7 +342,7 @@
             style="
               width: 100%;
               border: none;
-              border-radius: 4px;
+              border-radius: 0;
               font-weight: 600;
             "
           >
@@ -491,27 +422,85 @@
 
     <script>
       document.addEventListener("DOMContentLoaded", () => {
-        // 1. Category Tab Filtering Logic
+        // 1. Category Filter Logic (Desktop Tabs + Mobile Dropdown)
         const tabBtns = document.querySelectorAll("#productTabs .tab-btn");
         const productCards = document.querySelectorAll("#productsGrid .shop-card");
+        const mobileDropdown = document.getElementById("productMobileDropdown");
+        const mobileDropdownBtn = document.getElementById("mobileDropdownBtn");
+        const dropdownCurrentText = document.getElementById("dropdownCurrentText");
+        const mobileDropdownItems = document.querySelectorAll(".mobile-dropdown-item");
 
+        function filterProducts(category, displayText) {
+          // Sync desktop tab active states
+          tabBtns.forEach((b) => {
+            if (b.getAttribute("data-category") === category) {
+              b.classList.add("active");
+            } else {
+              b.classList.remove("active");
+            }
+          });
+
+          // Sync mobile dropdown item active states
+          mobileDropdownItems.forEach((item) => {
+            if (item.getAttribute("data-category") === category) {
+              item.classList.add("active");
+            } else {
+              item.classList.remove("active");
+            }
+          });
+
+          // Update mobile button display text
+          if (dropdownCurrentText) {
+            dropdownCurrentText.textContent = displayText || (category === "ALL" ? "All Products" : category);
+          }
+
+          // Filter product cards
+          productCards.forEach((card) => {
+            const cardCategory = card.getAttribute("data-category");
+            if (category === "ALL" || cardCategory === category) {
+              card.classList.remove("hidden");
+            } else {
+              card.classList.add("hidden");
+            }
+          });
+        }
+
+        // Desktop tabs event
         tabBtns.forEach((btn) => {
           btn.addEventListener("click", () => {
-            tabBtns.forEach((b) => b.classList.remove("active"));
-            btn.classList.add("active");
-
-            const selectedCategory = btn.getAttribute("data-category");
-
-            productCards.forEach((card) => {
-              const cardCategory = card.getAttribute("data-category");
-              if (selectedCategory === "ALL" || cardCategory === selectedCategory) {
-                card.classList.remove("hidden");
-              } else {
-                card.classList.add("hidden");
-              }
-            });
+            const category = btn.getAttribute("data-category");
+            const text = btn.textContent.trim();
+            filterProducts(category, text === "All" ? "All Products" : text);
           });
         });
+
+        // Mobile dropdown toggle & selection
+        if (mobileDropdownBtn && mobileDropdown) {
+          mobileDropdownBtn.addEventListener("click", (e) => {
+            e.stopPropagation();
+            const isOpen = mobileDropdown.classList.toggle("open");
+            mobileDropdownBtn.setAttribute("aria-expanded", isOpen);
+          });
+
+          mobileDropdownItems.forEach((item) => {
+            item.addEventListener("click", () => {
+              const category = item.getAttribute("data-category");
+              const textSpan = item.querySelector("span");
+              const text = textSpan ? textSpan.textContent.trim() : item.textContent.trim();
+              filterProducts(category, text);
+              mobileDropdown.classList.remove("open");
+              mobileDropdownBtn.setAttribute("aria-expanded", "false");
+            });
+          });
+
+          // Close dropdown on outside click
+          document.addEventListener("click", (e) => {
+            if (!mobileDropdown.contains(e.target)) {
+              mobileDropdown.classList.remove("open");
+              mobileDropdownBtn.setAttribute("aria-expanded", "false");
+            }
+          });
+        }
 
         // 2. Brochure Modal Logic
         const modal = document.getElementById("brochureModal");
