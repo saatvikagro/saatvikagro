@@ -128,6 +128,23 @@
   margin: 0;
 }
 
+.vision-mission-title {
+  font-family: var(--font-heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin: 0 0 12px 0;
+}
+
+.vision-title {
+  color: #ea7124;
+}
+
+.mission-title {
+  color: #121a2f;
+}
+
 .about-col-action {
   align-self: flex-end;
   margin-top: 20px;
@@ -210,7 +227,8 @@
 
 .awards-header-row {
   display: grid;
-  grid-template-columns: 80px 2.2fr 1.2fr 1.2fr 140px;
+  grid-template-columns: 80px 260px 1fr;
+  gap: 25px;
   padding-bottom: 20px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.15);
   color: rgba(255, 255, 255, 0.5);
@@ -222,7 +240,8 @@
 
 .awards-row {
   display: grid;
-  grid-template-columns: 80px 2.2fr 1.2fr 1.2fr 140px;
+  grid-template-columns: 80px 260px 1fr;
+  gap: 25px;
   align-items: center;
   padding: 26px 0;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
@@ -235,37 +254,25 @@
 }
 
 .award-col-num {
-  color: rgba(255, 255, 255, 0.4);
-  font-weight: 600;
+  color: #ea7124;
+  font-weight: 700;
   font-family: var(--font-heading);
+  font-size: 1.15rem;
 }
 
 .award-col-title {
   color: #ffffff;
-  font-weight: 600;
+  font-weight: 700;
   font-size: 1.15rem;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
 }
 
-.award-col-type {
-  color: rgba(255, 255, 255, 0.7);
+.award-col-content {
+  color: rgba(255, 255, 255, 0.75);
+  font-size: 0.98rem;
+  line-height: 1.65;
 }
-
-.award-col-project {
-  color: rgba(255, 255, 255, 0.7);
-}
-
-.award-col-year-btn {
-  display: flex;
-  align-items: center;
-  justify-content: flex-end;
-  gap: 15px;
-  color: rgba(255, 255, 255, 0.6);
-  font-weight: 600;
-}
-
-.award-col-year-btn .btn-download-inline {
-  display: inline-flex;
-  align-items: center;
   gap: 8px;
   color: #ffffff;
   font-size: 0.9rem;
@@ -629,7 +636,8 @@
   }
   .awards-header-row,
   .awards-row {
-    grid-template-columns: 60px 2fr 1fr 1fr 100px;
+    grid-template-columns: 60px 200px 1fr;
+    gap: 20px;
   }
   .newsletter-box {
     grid-template-columns: 1fr;
@@ -650,12 +658,13 @@
     display: none;
   }
   .awards-row {
-    grid-template-columns: 1fr;
-    gap: 10px;
+    grid-template-columns: 45px 1fr;
+    gap: 8px 15px;
     padding: 20px 0;
+    align-items: flex-start;
   }
-  .award-col-year-btn {
-    justify-content: flex-start;
+  .award-col-content {
+    grid-column: 2 / -1;
   }
   .team-cards-grid,
   .testimonials-grid-exact {
@@ -682,3 +691,253 @@
     justify-content: center;
   }
 }
+
+/* =========================================================
+   SECTION: STATE-OF-THE-ART MANUFACTURING FACILITY
+   ========================================================= */
+.section-facility {
+  padding: 100px 0;
+  background-color: #ffffff;
+  position: relative;
+  overflow: hidden;
+  border-top: 1px solid #edf0f5;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.section-facility .container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Facility Header */
+.facility-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin-bottom: 50px;
+  gap: 20px;
+}
+
+.facility-kicker {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 8px;
+}
+
+.facility-heading {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  color: #121a2f;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-transform: uppercase;
+  line-height: 1.15;
+}
+
+.facility-header-logo img {
+  max-height: 44px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* Facility Main Grid */
+.facility-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 55px;
+  align-items: center;
+}
+
+/* Facility Media (Photo) */
+.facility-media {
+  position: relative;
+}
+
+.facility-img-wrapper {
+  position: relative;
+  border-radius: 14px;
+  overflow: hidden;
+  box-shadow: 0 16px 40px rgba(18, 26, 47, 0.10);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  background: #ffffff;
+  aspect-ratio: 1 / 1;
+  width: 100%;
+  max-width: 540px;
+  margin: 0 auto;
+  transition: transform 0.4s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.4s ease;
+}
+
+.facility-img-wrapper:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 22px 48px rgba(18, 26, 47, 0.15);
+}
+
+.facility-img {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+/* Facility Stats (2x2 Grid) */
+.facility-stats-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 45px 35px;
+}
+
+.stat-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.stat-number {
+  font-size: clamp(2rem, 3.2vw, 2.75rem);
+  font-weight: 800;
+  color: #ea7124;
+  margin: 0 0 10px 0;
+  line-height: 1.1;
+  font-family: var(--font-heading);
+  letter-spacing: -0.01em;
+}
+
+.stat-desc {
+  font-size: 1.02rem;
+  color: #444444;
+  line-height: 1.5;
+  font-weight: 500;
+  margin: 0;
+}
+
+/* Underline bar for 500 TPD & 1200 TPD matching slide */
+.stat-bar {
+  width: 48px;
+  height: 4px;
+  background-color: #121a2f;
+  border-radius: 2px;
+  margin-top: 16px;
+}
+
+/* Facility Responsive Rules */
+@media (max-width: 992px) {
+  .section-facility {
+    padding: 70px 0;
+  }
+  .facility-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .facility-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+}
+
+@media (max-width: 576px) {
+  .facility-stats-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+  .stat-number {
+    font-size: 2rem;
+  }
+}
+
+/* =========================================================
+   CERTIFICATIONS SECTION (ABOUT US PAGE)
+   ========================================================= */
+.section-certifications {
+  padding: 80px 0;
+  background-color: #f8f9fb;
+  position: relative;
+  z-index: 2;
+  border-bottom: 1px solid #edf0f5;
+}
+
+.certifications-box {
+  background: transparent;
+  border-radius: 0;
+  padding: 0;
+  box-shadow: none;
+  text-align: center;
+}
+
+.certifications-title {
+  font-size: 1.45rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: #121a2f;
+  text-transform: uppercase;
+  margin-bottom: 35px;
+}
+
+.certifications-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  align-items: center;
+}
+
+.cert-card {
+  background: #ffffff;
+  border-radius: 6px;
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  padding: 22px 20px;
+  min-height: 95px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.3s cubic-bezier(0.16, 1, 0.3, 1),
+    box-shadow 0.3s ease;
+  cursor: pointer;
+}
+
+.cert-card:hover {
+  transform: translateY(-4px);
+  background: #ffffff;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.09);
+}
+
+.cert-card svg {
+  max-width: 100%;
+  height: 52px;
+  width: auto;
+  display: block;
+}
+
+@media (max-width: 992px) {
+  .section-certifications {
+    padding: 60px 0;
+  }
+  .certifications-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .section-certifications {
+    padding: 50px 0;
+  }
+  .certifications-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+  .cert-card {
+    min-height: 75px;
+    padding: 14px 10px;
+  }
+  .certifications-title {
+    font-size: 1.2rem;
+    margin-bottom: 22px;
+  }
+}
+
+

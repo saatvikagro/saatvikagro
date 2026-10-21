@@ -383,11 +383,18 @@ a {
 .footer-col-wide .btn--accent {
   transition: all 0.3s ease;
   background-color: #ea7124;
-  color: var(--color-primary);
+  color: #ffffff !important;
   font-weight: 600;
-  padding: 15px 35px;
-  display: inline-block;
+  font-size: 14px;
+  padding: 0 32px;
+  height: 46px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 4px !important;
   text-decoration: none;
+  font-family: var(--font-body);
+  letter-spacing: 0.3px;
 }
 
 .footer-phone {

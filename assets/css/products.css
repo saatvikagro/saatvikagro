@@ -28,97 +28,182 @@
   padding: 0 0 100px 0;
 }
 
-.shop-card {
-  text-decoration: none;
-  display: block;
-}
-
-.shop-card__image {
-  /* background-color: #f4efe6; */
-  /* Exact beige from ref */
-  margin-bottom: 20px;
-  aspect-ratio: 1/1;
+/* =========================================================
+   CATEGORY FILTER TABS (All, FOOD GRADE, INDUSTRIAL GRADE, ANIMAL NUTRITION)
+   ========================================================= */
+.product-tabs-wrapper {
+  margin-bottom: 45px;
   display: flex;
-  align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
-.shop-card__image img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  mix-blend-mode: multiply;
+.product-tabs {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #f1f3f6;
+  padding: 6px;
+  border-radius: 50px;
+  box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.05);
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
-.shop-card h3 {
-  font-size: 1.15rem;
-  font-weight: 500;
-  margin: 0 0 5px 0;
-  color: var(--color-primary);
+.tab-btn {
+  background: transparent;
+  border: none;
+  padding: 10px 24px;
+  border-radius: 50px;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  font-weight: 700;
+  color: #555555;
+  cursor: pointer;
+  letter-spacing: 0.4px;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
-.shop-card p {
-  font-size: 1rem;
-  color: #666;
-  margin: 0;
+.tab-btn:hover {
+  color: #121a2f;
 }
 
-@media (max-width: 768px) {
-  .navbar__toggle {
-    display: block !important;
-  }
-}
-
-@media (max-width: 768px) {
-  .shop-controls {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 15px;
-  }
-}
-
-.breadcrumbs {
-  font-size: 0.9rem;
-  color: #888;
-  margin-bottom: 20px;
-}
-.breadcrumbs a {
-  color: var(--color-primary);
-  text-decoration: none;
+.tab-btn.active {
+  background-color: #ea7124;
+  color: #ffffff;
+  box-shadow: 0 4px 14px rgba(234, 113, 36, 0.3);
 }
 
 .products-wrapper {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-  gap: 40px;
+  gap: 35px;
 }
 
 .shop-card {
   position: relative;
   display: flex;
   flex-direction: column;
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 24px;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(0, 0, 0, 0.05);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.3s ease, opacity 0.3s ease;
 }
 
-.btn-download {
-  margin-top: 20px;
-  background-color: transparent;
-  border: 1px solid #a0a0a0;
-  color: var(--color-primary);
-  padding: 12px 20px;
-  font-family: var(--font-body);
+.shop-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.08);
+}
+
+.shop-card.hidden {
+  display: none !important;
+}
+
+.shop-card__image-link {
+  display: block;
+  text-decoration: none;
+}
+
+.shop-card__image {
+  background-color: #f7f8fa;
+  border-radius: 6px;
+  margin-bottom: 18px;
+  height: 240px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 20px;
+}
+
+.shop-card__image img {
+  max-width: 90%;
+  max-height: 200px;
+  object-fit: contain;
+  mix-blend-mode: multiply;
+  transition: transform 0.4s ease;
+}
+
+.shop-card:hover .shop-card__image img {
+  transform: scale(1.06);
+}
+
+.shop-card-category {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.shop-card h3 {
+  font-size: 1.15rem;
   font-weight: 600;
-  font-size: 15px;
-  cursor: pointer;
-  border-radius: 4px;
-  transition: all 0.3s ease;
-  text-align: center;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
 }
 
-.btn-download:hover {
+.shop-card h3 a {
+  color: var(--color-primary);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.shop-card h3 a:hover {
+  color: #ea7124;
+}
+
+.shop-card p {
+  font-size: 0.88rem;
+  color: #666;
+  margin: 0 0 20px 0;
+  line-height: 1.5;
+  flex-grow: 1;
+}
+
+.shop-card-actions {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-card-details {
+  flex: 1;
+  text-align: center;
+  background-color: #121a2f;
+  color: #ffffff;
+  padding: 11px 16px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: 4px;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-card-details:hover {
   background-color: #ea7124;
-  border: 1px solid #ea7124;
-  color: #fff;
+}
+
+.btn-card-brochure {
+  background-color: transparent;
+  border: 1px solid #c8c8c8;
+  color: #333333;
+  padding: 10px 14px;
+  font-size: 0.86rem;
+  font-weight: 600;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.btn-card-brochure:hover {
+  border-color: #ea7124;
+  color: #ea7124;
 }
 
 /* Modal CSS */

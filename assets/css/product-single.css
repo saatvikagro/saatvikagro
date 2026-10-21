@@ -1,0 +1,578 @@
+/* =========================================================
+   SINGLE PRODUCT PAGE STYLES (MATCHING REFERENCE SLIDES)
+   ========================================================= */
+
+/* Breadcrumb Bar */
+.single-breadcrumb-section {
+  padding: 30px 0 10px 0;
+  background-color: #f8f9fa;
+}
+
+.breadcrumbs {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.breadcrumbs a {
+  color: #121a2f;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.breadcrumbs a:hover {
+  color: #f18825;
+}
+
+.breadcrumb-active {
+  color: #f18825;
+  font-weight: 600;
+}
+
+/* Main Section */
+.single-product-main {
+  padding: 30px 0 80px 0;
+  background-color: #f8f9fa;
+}
+
+.product-layout-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* =========================================================
+   LEFT COLUMN: Product Presentation Card (Slide 1 & 2 Style)
+   ========================================================= */
+.product-presentation-card {
+  background: #0d2238;
+  border-radius: 8px;
+  border-left: 6px solid #f18825;
+  padding: 40px 35px 30px 35px;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  overflow: hidden;
+  box-shadow: 0 12px 35px rgba(13, 34, 56, 0.15);
+}
+
+.pres-header {
+  margin-bottom: 25px;
+}
+
+.pres-badge {
+  display: inline-block;
+  background: rgba(241, 136, 37, 0.2);
+  color: #f18825;
+  font-size: 0.72rem;
+  font-weight: 800;
+  letter-spacing: 1.2px;
+  padding: 4px 12px;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  text-transform: uppercase;
+}
+
+.pres-title {
+  color: #ffffff;
+  font-size: clamp(1.4rem, 2.2vw, 1.9rem);
+  font-weight: 700;
+  line-height: 1.25;
+  letter-spacing: -0.02em;
+  margin: 0 0 10px 0;
+  text-transform: uppercase;
+}
+
+.pres-subtitle {
+  color: #a4b8cd;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin: 0;
+}
+
+.pres-image-showcase {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 30px 20px;
+  margin: 20px 0 25px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 380px;
+  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.04);
+}
+
+.pres-image-showcase img {
+  max-width: 90%;
+  max-height: 340px;
+  object-fit: contain;
+  filter: drop-shadow(0 15px 25px rgba(0, 0, 0, 0.12));
+  transition: transform 0.4s ease;
+}
+
+.product-presentation-card:hover .pres-image-showcase img {
+  transform: scale(1.03);
+}
+
+.pres-footer {
+  border-top: 1px solid rgba(255, 255, 255, 0.15);
+  padding-top: 15px;
+}
+
+.pres-brand-tag {
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.75rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+}
+
+/* =========================================================
+   RIGHT COLUMN: Specs & Features Card
+   ========================================================= */
+.product-specs-card {
+  background: #ffffff;
+  border-radius: 8px;
+  padding: 40px 38px;
+  box-shadow: 0 4px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* Top 3 Metrics Row */
+.specs-metrics-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #f0f0f0;
+  padding-bottom: 25px;
+  margin-bottom: 25px;
+  gap: 15px;
+}
+
+.metric-item {
+  flex: 1;
+}
+
+.metric-label {
+  display: block;
+  font-size: 0.75rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1px;
+  margin-bottom: 6px;
+  text-transform: uppercase;
+}
+
+.metric-val {
+  font-size: 1.15rem;
+  font-weight: 800;
+  color: #121a2f;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.metric-divider {
+  width: 1px;
+  height: 40px;
+  background-color: #eaeaea;
+  flex-shrink: 0;
+}
+
+/* Product Info & CTA Button */
+.product-info-block {
+  margin-bottom: 30px;
+}
+
+.product-full-desc {
+  color: #555555;
+  font-size: 0.96rem;
+  line-height: 1.7;
+  margin-bottom: 25px;
+}
+
+/* Orange Pill CTA Button (Slide 3) */
+.btn--brochure-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  background-color: #ea7124;
+  color: #ffffff;
+  padding: 14px 32px;
+  border-radius: 50px;
+  border: none;
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 6px 18px rgba(234, 113, 36, 0.3);
+}
+
+.btn--brochure-orange:hover {
+  background-color: #d15a12;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(234, 113, 36, 0.4);
+}
+
+.btn--brochure-orange svg {
+  transition: transform 0.3s ease;
+}
+
+.btn--brochure-orange:hover svg {
+  transform: translateX(4px);
+}
+
+/* Specs Sections: Key Features & Applications */
+.specs-section {
+  margin-top: 30px;
+  padding-top: 25px;
+  border-top: 1px solid #f0f0f0;
+}
+
+.section-tag-label {
+  display: block;
+  font-size: 0.8rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1px;
+  margin-bottom: 16px;
+  text-transform: uppercase;
+}
+
+/* Key Features (6 Grid Items matching Slide 1 & 2) */
+.features-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px 20px;
+}
+
+.feature-item {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.feature-check-box {
+  width: 26px;
+  height: 26px;
+  background-color: #0d2238;
+  border-radius: 4px;
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.feature-text {
+  font-size: 0.92rem;
+  font-weight: 700;
+  color: #222222;
+  line-height: 1.3;
+}
+
+/* Applications Tags (Orange Rounded Pills matching Slide 1 & 2) */
+.applications-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.app-tag-pill {
+  display: inline-block;
+  background-color: #ea7124;
+  color: #ffffff;
+  padding: 8px 18px;
+  border-radius: 6px;
+  font-size: 0.86rem;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  transition: background-color 0.2s ease, transform 0.2s ease;
+}
+
+.app-tag-pill:hover {
+  background-color: #d15a12;
+  transform: translateY(-1px);
+}
+
+/* =========================================================
+   RELATED PRODUCTS SECTION
+   ========================================================= */
+.section-related-products {
+  padding: 80px 0;
+  background-color: #ffffff;
+  border-top: 1px solid #eaeaea;
+}
+
+.related-header {
+  margin-bottom: 45px;
+}
+
+.related-header h2 {
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  font-weight: 600;
+  color: #121a2f;
+  margin: 5px 0 0 0;
+}
+
+.related-products-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.related-products-grid .shop-card {
+  background: #f8f9fa;
+  border-radius: 8px;
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.related-products-grid .shop-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.related-products-grid .shop-card__image {
+  background: #ffffff;
+  border-radius: 6px;
+  height: 220px;
+  margin-bottom: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 15px;
+}
+
+.related-products-grid .shop-card__image img {
+  max-width: 100%;
+  max-height: 190px;
+  object-fit: contain;
+}
+
+.shop-card-category {
+  font-size: 0.72rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 6px;
+  display: block;
+}
+
+.related-products-grid .shop-card h3 {
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin: 0 0 8px 0;
+  line-height: 1.3;
+}
+
+.related-products-grid .shop-card h3 a {
+  color: #121a2f;
+  text-decoration: none;
+}
+
+.related-products-grid .shop-card h3 a:hover {
+  color: #ea7124;
+}
+
+.related-products-grid .shop-card p {
+  color: #777;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  margin-bottom: 18px;
+  flex-grow: 1;
+}
+
+.card-action-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: auto;
+}
+
+.btn-view-details {
+  flex: 1;
+  text-align: center;
+  background-color: #121a2f;
+  color: #ffffff;
+  padding: 10px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.2s ease;
+}
+
+.btn-view-details:hover {
+  background-color: #ea7124;
+}
+
+.btn-download-trigger {
+  background-color: transparent;
+  border: 1px solid #ccc;
+  color: #444;
+  padding: 9px 14px;
+  border-radius: 4px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-download-trigger:hover {
+  border-color: #ea7124;
+  color: #ea7124;
+}
+
+/* =========================================================
+   BROCHURE MODAL
+   ========================================================= */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 99999;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: 40px;
+  width: 90%;
+  max-width: 480px;
+  border-radius: 12px;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.25);
+}
+
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 15px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 28px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #000;
+}
+
+.modal-box h3 {
+  margin: 0 0 8px 0;
+  font-size: 1.6rem;
+  color: #121a2f;
+}
+
+.modal-product-name {
+  font-size: 0.95rem;
+  color: #ea7124;
+  margin-bottom: 22px;
+  font-weight: 700;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid #dcdcdc;
+  border-radius: 6px;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  box-sizing: border-box;
+  outline: none;
+  transition: border-color 0.2s ease;
+}
+
+.form-control:focus {
+  border-color: #ea7124;
+}
+
+.btn--modal-download {
+  width: 100%;
+  height: 48px;
+  background-color: #ea7124;
+  color: #ffffff;
+  border: none;
+  border-radius: 6px;
+  font-size: 1rem;
+  font-weight: 700;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: 10px;
+}
+
+.btn--modal-download:hover {
+  background-color: #d15a12;
+}
+
+/* =========================================================
+   RESPONSIVE BREAKPOINTS
+   ========================================================= */
+@media (max-width: 992px) {
+  .product-layout-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .related-products-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px) {
+  .specs-metrics-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 15px;
+  }
+
+  .metric-divider {
+    display: none;
+  }
+
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .related-products-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .product-presentation-card {
+    padding: 25px 20px;
+  }
+
+  .product-specs-card {
+    padding: 30px 20px;
+  }
+}

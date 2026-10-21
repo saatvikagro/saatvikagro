@@ -1,0 +1,220 @@
+/* =========================================================
+   MEDIA GALLERY PAGE STYLES (MATCHING SAATVIK AGRO DESIGN)
+   ========================================================= */
+
+/* Header / Title Section */
+.media-header-section {
+  padding: 85px 0 45px 0;
+  background-color: #ffffff;
+}
+
+.media-header-grid {
+  display: grid;
+  grid-template-columns: 1.25fr 1fr;
+  gap: 50px;
+  align-items: flex-start;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 35px;
+}
+
+.media-header-left {
+  display: flex;
+  flex-direction: column;
+}
+
+.media-kicker {
+  font-size: 0.82rem;
+  font-weight: 800;
+  color: #ea7124;
+  letter-spacing: 1.5px;
+  text-transform: uppercase;
+  margin-bottom: 10px;
+  display: block;
+}
+
+.media-header-left h1 {
+  font-size: clamp(3.2rem, 5.5vw, 5rem);
+  font-weight: 700;
+  line-height: 1.05;
+  color: #121a2f;
+  letter-spacing: -0.03em;
+  margin: 0;
+  font-family: var(--font-heading);
+}
+
+.media-header-right p {
+  color: #555555;
+  font-size: 1.05rem;
+  line-height: 1.75;
+  margin: 0;
+  padding-top: 28px;
+}
+
+/* Gallery Grid Section */
+.media-gallery-section {
+  padding: 40px 0 110px 0;
+  background-color: #ffffff;
+}
+
+.media-gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+/* Media Card (Rectangle 3:2 Ratio, No Names/Titles) */
+.media-card {
+  position: relative;
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: #f5f6f8;
+  aspect-ratio: 3 / 2;
+  box-shadow: 0 4px 18px rgba(0, 0, 0, 0.05);
+  border: 1px solid rgba(0, 0, 0, 0.06);
+  cursor: pointer;
+  transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1), box-shadow 0.35s ease;
+}
+
+.media-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 35px rgba(0, 0, 0, 0.12);
+}
+
+.media-card img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.media-card:hover img {
+  transform: scale(1.06);
+}
+
+/* Subtle Hover Overlay */
+.media-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(13, 34, 56, 0.6) 0%, rgba(13, 34, 56, 0.1) 60%, transparent 100%);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+  display: flex;
+  align-items: flex-end;
+  justify-content: flex-end;
+  padding: 20px;
+}
+
+.media-card:hover .media-card-overlay {
+  opacity: 1;
+}
+
+.media-zoom-icon {
+  width: 42px;
+  height: 42px;
+  background-color: #ffffff;
+  color: #121a2f;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+  transform: translateY(8px);
+  transition: transform 0.3s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.media-card:hover .media-zoom-icon {
+  transform: translateY(0);
+}
+
+.media-card:hover .media-zoom-icon:hover {
+  background-color: #ea7124;
+  color: #ffffff;
+}
+
+/* Lightbox Modal */
+.lightbox-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 16, 28, 0.94);
+  backdrop-filter: blur(8px);
+  z-index: 999999;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 20px;
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.lightbox-modal.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.lightbox-img-wrap {
+  max-width: 90vw;
+  max-height: 85vh;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-img {
+  max-width: 100%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 25px;
+  right: 30px;
+  background: transparent;
+  border: none;
+  color: #ffffff;
+  font-size: 36px;
+  cursor: pointer;
+  line-height: 1;
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lightbox-close:hover {
+  color: #ea7124;
+  transform: scale(1.1);
+}
+
+/* Media Queries */
+@media (max-width: 1024px) {
+  .media-gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 25px;
+  }
+}
+
+@media (max-width: 850px) {
+  .media-header-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+  .media-header-right p {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 576px) {
+  .media-header-section {
+    padding: 50px 0 25px 0;
+  }
+  .media-gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .media-card {
+    aspect-ratio: 16 / 10;
+  }
+}

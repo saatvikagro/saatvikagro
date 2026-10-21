@@ -1,0 +1,344 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title id="pageTitle">Product Details | Saatvik Agro</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;600;700&display=swap"
+    rel="stylesheet"
+  />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/product-single.css" />
+</head>
+
+<body>
+  <!-- NAVBAR -->
+  <header class="header flex-between">
+    <div class="logo-group">
+      <a href="index.html" style="display:flex;align-items:center;">
+        <img
+          src="assets/images/content/saatvik-agro-logo.png"
+          alt="Saatvik Agro"
+          class="logo-img saatvik-logo"
+        />
+        <div class="logo-divider"></div>
+        <img
+          src="assets/images/content/shakti-logo.png"
+          alt="Shakti"
+          class="logo-img shakti-logo"
+        />
+      </a>
+    </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Product</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="media.html">Media</a></li>
+    </ul>
+
+    <div class="nav-contact">
+      <div class="nav-phone">
+        <svg
+          width="20"
+          height="20"
+          viewBox="0 0 24 24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="1.5"
+          stroke-linecap="round"
+          stroke-linejoin="round"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          ></path>
+        </svg>
+        555-123-4567
+      </div>
+      <a href="contact.html" class="btn btn--nav-rect">Contact Us</a>
+    </div>
+
+    <!-- Hamburger Button (Mobile) -->
+    <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+      <svg
+        width="32"
+        height="32"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M4 6h16M4 12h16M4 18h16"
+        ></path>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Fullscreen Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">
+      <svg
+        width="32"
+        height="32"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        viewBox="0 0 24 24"
+      >
+        <path
+          stroke-linecap="round"
+          stroke-linejoin="round"
+          d="M6 18L18 6M6 6l12 12"
+        ></path>
+      </svg>
+    </button>
+    <div class="nav-overlay-content">
+      <nav class="nav-menu-full">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <div class="nav-phone-full">
+        <svg
+          width="24"
+          height="24"
+          fill="none"
+          stroke="currentColor"
+          stroke-width="2"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
+          ></path>
+        </svg>
+        555-123-4567
+      </div>
+    </div>
+  </div>
+
+  <!-- BREADCRUMBS -->
+  <section class="single-breadcrumb-section">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> / 
+        <a href="products.html">Products</a> / 
+        <span id="breadcrumbCategory">Food Grade</span> / 
+        <span class="breadcrumb-active" id="breadcrumbTitle">Product Details</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- MAIN PRODUCT DETAILS SECTION -->
+  <section class="single-product-main">
+    <div class="container">
+      <div class="product-layout-grid">
+        
+        <!-- LEFT COLUMN: Product Presentation Banner -->
+        <div class="product-presentation-card">
+          <div class="pres-header">
+            <span class="pres-badge" id="productCategoryBadge">FOOD GRADE</span>
+            <h1 class="pres-title" id="productTitle">MAIZE STARCH POWDER | FOOD GRADE</h1>
+            <p class="pres-subtitle" id="productSubtitle">Food-grade starch for texture, stability, and process performance.</p>
+          </div>
+
+          <div class="pres-image-showcase">
+            <img id="productImage" src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp" alt="Product Packaging" />
+          </div>
+
+          <div class="pres-footer">
+            <span class="pres-brand-tag">SHAKTI PRODUCT RANGE</span>
+          </div>
+        </div>
+
+        <!-- RIGHT COLUMN: Specs & Features Details -->
+        <div class="product-specs-card">
+          
+          <!-- Top 3 Metrics Row -->
+          <div class="specs-metrics-row">
+            <div class="metric-item">
+              <span class="metric-label">GRADE</span>
+              <h4 class="metric-val" id="specGrade">Food Grade</h4>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-label">PACK SIZE</span>
+              <h4 class="metric-val" id="specPackSize">50 KG & 1000 KG</h4>
+            </div>
+            <div class="metric-divider"></div>
+            <div class="metric-item">
+              <span class="metric-label">FUNCTION</span>
+              <h4 class="metric-val" id="specFunction">Thickening & Binding</h4>
+            </div>
+          </div>
+
+          <!-- Description Section -->
+          <div class="product-info-block">
+            <p class="product-full-desc" id="productDescription">
+              Shakti Maize Starch Powder is a premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications. Derived from carefully selected maize and refined through precision processing, it delivers reliable texture, clarity, and structure batch after batch.
+            </p>
+            
+            <!-- Download Brochure CTA Button -->
+            <button class="btn btn--brochure-orange" id="downloadBrochureBtn">
+              <span>Download the Brochure</span>
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2">
+                <path d="M5 12h14M12 5l7 7-7 7" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg>
+            </button>
+          </div>
+
+          <!-- KEY FEATURES Section -->
+          <div class="specs-section">
+            <span class="section-tag-label">KEY FEATURES</span>
+            <div class="features-grid" id="featuresGrid">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+          <!-- APPLICATIONS Section -->
+          <div class="specs-section">
+            <span class="section-tag-label">APPLICATIONS</span>
+            <div class="applications-tags" id="appsPills">
+              <!-- Dynamically populated -->
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- RELATED PRODUCTS SECTION -->
+  <section class="section-related-products">
+    <div class="container">
+      <div class="related-header">
+        <span class="intro-label">EXPLORE RANGE</span>
+        <h2>Other Products You May Like</h2>
+      </div>
+
+      <div class="related-products-grid" id="relatedProductsGrid">
+        <!-- Dynamically populated with 3 other products -->
+      </div>
+    </div>
+  </section>
+
+  <!-- BROCHURE MODAL -->
+  <div class="modal-overlay" id="brochureModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>Download Brochure</h3>
+      <p id="modalProductName" class="modal-product-name"></p>
+      
+      <form id="brochureForm">
+        <input type="hidden" id="productInput" name="product" />
+        <div class="form-group">
+          <input
+            type="text"
+            class="form-control"
+            placeholder="Full Name"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="email"
+            class="form-control"
+            placeholder="Email Address"
+            required
+          />
+        </div>
+        <div class="form-group">
+          <input
+            type="tel"
+            class="form-control"
+            placeholder="Phone Number"
+            required
+          />
+        </div>
+        <button type="submit" class="btn btn--modal-download">
+          Download Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik" />
+        </div>
+        <div class="footer-top-text">
+          <h2>Growing soil and food<br />organically</h2>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <p>
+            Saatvik Agro is the agro-ingredient unit of the Saatvik Group,
+            dedicated to creating high quality maize-based ingredients that
+            power everyday products.
+          </p>
+          <a href="contact.html" class="btn btn--accent">Contact Us</a>
+        </div>
+
+        <div class="footer-col">
+          <h4>Office</h4>
+          <p>
+            Germany &mdash;<br />785 15h Street, Office 47<br />Berlin, De
+            81566
+          </p>
+          <p>&bull; info@email.com</p>
+          <h4 class="footer-phone">+1 840 841 25 69</h4>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">&bull; Home</a></li>
+            <li><a href="about.html">&bull; About Us</a></li>
+            <li><a href="products.html">&bull; Products</a></li>
+            <li><a href="industries.html">&bull; Industries</a></li>
+            <li><a href="media.html">&bull; Media</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026. All Rights Reserved.</div>
+        <div class="footer-credit">Site by Saatvik Agro.</div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="assets/js/products-data.js"></script>
+  <script src="assets/js/product-single.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
