@@ -2,30 +2,27 @@
 // SINGLE PRODUCT DYNAMIC ENGINE
 // =========================================================
 document.addEventListener("DOMContentLoaded", () => {
-  // 1. Get Product ID from URL Parameter
+  // 1. Get Product ID from URL Parameter (defaults to starch-food-grade)
   const urlParams = new URLSearchParams(window.location.search);
   const productId = urlParams.get("id") || "starch-food-grade";
 
   // 2. Fetch Product from SAATVIK_PRODUCTS store
   const product = getProductById(productId);
 
-  // 3. Populate Page Metadata & Header
+  // 3. Populate Page Metadata & Breadcrumbs
   document.title = `${product.name} | Saatvik Agro`;
   
   const breadcrumbCategory = document.getElementById("breadcrumbCategory");
+  const breadcrumbCategoryLink = document.getElementById("breadcrumbCategoryLink");
   const breadcrumbTitle = document.getElementById("breadcrumbTitle");
+  const productTitle = document.getElementById("productTitle");
+  
   if (breadcrumbCategory) breadcrumbCategory.textContent = product.category;
   if (breadcrumbTitle) breadcrumbTitle.textContent = product.name;
+  if (productTitle) productTitle.textContent = product.name;
 
-  // 4. Populate Left Showcase Card
-  const categoryBadge = document.getElementById("productCategoryBadge");
-  const productTitle = document.getElementById("productTitle");
-  const productSubtitle = document.getElementById("productSubtitle");
+  // 4. Populate Product Image & Zoom
   const productImage = document.getElementById("productImage");
-
-  if (categoryBadge) categoryBadge.textContent = product.category;
-  if (productTitle) productTitle.textContent = product.title;
-  if (productSubtitle) productSubtitle.textContent = product.subtitle;
   if (productImage) {
     productImage.src = product.image;
     productImage.alt = product.name;
@@ -33,64 +30,83 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // 5. Populate Specs & Description
   const specGrade = document.getElementById("specGrade");
+  const specForm = document.getElementById("specForm");
   const specPackSize = document.getElementById("specPackSize");
   const specFunction = document.getElementById("specFunction");
   const productDescription = document.getElementById("productDescription");
 
-  if (specGrade) specGrade.textContent = product.grade;
-  if (specPackSize) specPackSize.textContent = product.packSize;
-  if (specFunction) specFunction.textContent = product.function;
+  if (specGrade) specGrade.textContent = product.grade || "Food Grade";
+  if (specForm) specForm.textContent = product.form || "Powder";
+  if (specPackSize) specPackSize.textContent = product.packFormat || product.packSize || "";
+  if (specFunction) specFunction.textContent = product.function || "";
   if (productDescription) productDescription.textContent = product.description;
 
-  // 6. Populate Key Features Grid (matching Slide 1 & 2 [✓])
+  // 6. Populate Key Features (2-column grid with gray circular bullet dots)
   const featuresGrid = document.getElementById("featuresGrid");
   if (featuresGrid && product.features) {
     featuresGrid.innerHTML = product.features.map(feat => `
-      <div class="feature-item">
-        <div class="feature-check-box">
-          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3.5" stroke-linecap="round" stroke-linejoin="round">
-            <polyline points="20 6 9 17 4 12"></polyline>
-          </svg>
-        </div>
+      <div class="feature-bullet-item">
+        <span class="feature-bullet-dot"></span>
         <span class="feature-text">${feat}</span>
       </div>
     `).join("");
   }
 
-  // 7. Populate Applications Tags (orange pills)
+  // 7. Populate Applications (gray rectangular tags matching Image 1)
   const appsPills = document.getElementById("appsPills");
   if (appsPills && product.applications) {
     appsPills.innerHTML = product.applications.map(app => `
-      <span class="app-tag-pill">${app}</span>
+      <span class="app-gray-tag">${app}</span>
     `).join("");
   }
 
-  // 8. Populate Related Products Grid (3 items from same or other categories)
+  // 8. Populate Related Products Grid
   const relatedGrid = document.getElementById("relatedProductsGrid");
   if (relatedGrid) {
-    const otherProducts = SAATVIK_PRODUCTS
-      .filter(p => p.id !== product.id)
-      .slice(0, 3);
+    let otherProducts = SAATVIK_PRODUCTS.filter(p => p.id !== product.id);
+    const sameCat = otherProducts.filter(p => p.category === product.category);
+    const diffCat = otherProducts.filter(p => p.category !== product.category);
+    const selected = [...sameCat, ...diffCat].slice(0, 3);
 
-    relatedGrid.innerHTML = otherProducts.map(rel => `
-      <div class="shop-card">
-        <a href="product-single.html?id=${rel.id}" class="shop-card__image-link">
-          <div class="shop-card__image">
-            <img src="${rel.image}" alt="${rel.name}">
-          </div>
+    relatedGrid.innerHTML = selected.map(rel => `
+      <div class="clean-related-card">
+        <a href="product-single.html?id=${rel.id}" class="clean-related-img-box">
+          <img src="${rel.image}" alt="${rel.name}">
         </a>
-        <span class="shop-card-category">${rel.category}</span>
-        <h3><a href="product-single.html?id=${rel.id}">${rel.name}</a></h3>
-        <p>${rel.subtitle}</p>
-        <div class="card-action-row">
-          <a href="product-single.html?id=${rel.id}" class="btn-view-details">View Details</a>
-          <button class="btn-download-trigger" data-product="${rel.name}">Brochure</button>
-        </div>
+        <span class="clean-related-cat">${rel.category}</span>
+        <h3 class="clean-related-title">
+          <a href="product-single.html?id=${rel.id}">${rel.name}</a>
+        </h3>
       </div>
     `).join("");
   }
 
-  // 9. Brochure Download Modal Engine
+  // 9. Photo Zoom Lightbox Engine
+  const zoomBtn = document.getElementById("productZoomBtn");
+  const lightbox = document.getElementById("imageLightbox");
+  const lightboxImg = document.getElementById("lightboxImg");
+  const lightboxClose = document.getElementById("lightboxClose");
+
+  if (zoomBtn && lightbox && lightboxImg) {
+    zoomBtn.addEventListener("click", () => {
+      lightboxImg.src = productImage.src;
+      lightbox.classList.add("active");
+    });
+
+    if (lightboxClose) {
+      lightboxClose.addEventListener("click", () => {
+        lightbox.classList.remove("active");
+      });
+    }
+
+    lightbox.addEventListener("click", (e) => {
+      if (e.target === lightbox) {
+        lightbox.classList.remove("active");
+      }
+    });
+  }
+
+  // 10. Brochure Download Modal Engine
   const modal = document.getElementById("brochureModal");
   const modalClose = document.getElementById("modalClose");
   const modalTitle = document.getElementById("modalProductName");
@@ -126,15 +142,7 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 
-  // Also bind brochure buttons in related cards
-  document.addEventListener("click", (e) => {
-    if (e.target && e.target.classList.contains("btn-download-trigger")) {
-      const pName = e.target.getAttribute("data-product");
-      openBrochureModal(pName);
-    }
-  });
-
-  // Handle Form Submission with instant user feedback
+  // Handle Form Submission with instant feedback
   if (brochureForm) {
     brochureForm.addEventListener("submit", (e) => {
       e.preventDefault();
@@ -149,10 +157,10 @@ document.addEventListener("DOMContentLoaded", () => {
         closeBrochureModal();
         brochureForm.reset();
         if (submitBtn) {
-          submitBtn.textContent = "Download Now";
-          submitBtn.style.backgroundColor = "";
+          submitBtn.textContent = "Download Brochure";
+          submitBtn.style.backgroundColor = "#ea7124";
         }
-      }, 800);
+      }, 700);
     });
   }
 });

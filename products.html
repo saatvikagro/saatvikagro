@@ -1,547 +1,483 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Products | Saatvik Agro</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="assets/css/global.css" />
-    <link rel="stylesheet" href="assets/css/products.css" />
-  </head>
 
-  <body>
-    <!-- Header -->
-    <!-- NAVBAR -->
-    <header class="header flex-between">
-      <div class="logo-group">
-        <img
-          src="assets/images/content/saatvik-agro-logo.png"
-          alt="Saatvik Agro"
-          class="logo-img saatvik-logo"
-        />
-        <div class="logo-divider"></div>
-        <img
-          src="assets/images/content/shakti-logo.png"
-          alt="Shakti"
-          class="logo-img shakti-logo"
-        />
-      </div>
-      <ul class="nav-links">
-        <li><a href="index.html">Home</a></li>
-        <li><a href="products.html" style="color: var(--color-primary); font-weight: 700;">Product</a></li>
-        <li><a href="about.html">About Us</a></li>
-        <li><a href="media.html">Media</a></li>
-      </ul>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Products | Saatvik Agro</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/content/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/content/favicon.png" />
 
-      <div class="nav-contact">
-        <div class="nav-phone">
-          <svg
-            width="20"
-            height="20"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.5"
-            stroke-linecap="round"
-            stroke-linejoin="round"
-          >
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-            ></path>
-          </svg>
-          555-123-4567
-        </div>
-        <a href="contact.html" class="btn btn--nav-rect">Contact Us</a>
-      </div>
-      <!-- Hamburger Button (Right) -->
-      <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
-        <svg
-          width="32"
-          height="32"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M4 6h16M4 12h16M4 18h16"
-          ></path>
-        </svg>
-      </button>
-    </header>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="assets/css/global.css" />
+  <link rel="stylesheet" href="assets/css/products.css" />
+</head>
 
-    <!-- Fullscreen Nav Overlay -->
-    <div class="nav-overlay" id="nav-overlay">
-      <button class="nav-close" id="nav-close" aria-label="Close menu">
-        <svg
-          width="32"
-          height="32"
-          fill="none"
-          stroke="currentColor"
-          stroke-width="2"
-          viewBox="0 0 24 24"
-        >
-          <path
-            stroke-linecap="round"
-            stroke-linejoin="round"
-            d="M6 18L18 6M6 6l12 12"
-          ></path>
-        </svg>
-      </button>
-      <div class="nav-overlay-content">
-        <nav class="nav-menu-full">
-          <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="products.html">Product</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="media.html">Media</a></li>
-            <li><a href="contact.html">Contact Us</a></li>
-          </ul>
-        </nav>
-        <div class="nav-phone-full">
-          <svg
-            width="24"
-            height="24"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="2"
-            viewBox="0 0 24 24"
-          >
-            <path
-              d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"
-            ></path>
-          </svg>
-          555-123-4567
-        </div>
-      </div>
+<body>
+  <!-- Header -->
+  <!-- NAVBAR -->
+  <header class="header flex-between">
+    <div class="logo-group">
+      <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik Agro" class="logo-img saatvik-logo" />
+      <div class="logo-divider"></div>
+      <img src="assets/images/content/shakti-logo.png" alt="Shakti" class="logo-img shakti-logo" />
     </div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="products.html" class="active">Product</a></li>
+      <li><a href="about.html">About Us</a></li>
+      <li><a href="media.html">Media</a></li>
+    </ul>
 
-    <section class="shop-header">
-      <div class="container">
-        <div class="breadcrumbs">
-          <a href="index.html">Home</a> / <span>Products</span>
-        </div>
-        <h1>Products</h1>
+    <div class="nav-contact">
+      <a href="tel:+91 95910 33188" class="nav-phone">
+        <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
+          stroke-linecap="round" stroke-linejoin="round">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        +91 95910 33188
+      </a>
+      <a href="contact.html" class="btn btn--nav-rect">Contact Us</a>
+    </div>
+    <!-- Hamburger Button (Right) -->
+    <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
+      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"></path>
+      </svg>
+    </button>
+  </header>
+
+  <!-- Fullscreen Nav Overlay -->
+  <div class="nav-overlay" id="nav-overlay">
+    <button class="nav-close" id="nav-close" aria-label="Close menu">
+      <svg width="32" height="32" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"></path>
+      </svg>
+    </button>
+    <div class="nav-overlay-content">
+      <nav class="nav-menu-full">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="products.html">Product</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="media.html">Media</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </nav>
+      <a href="tel:+91 95910 33188" class="nav-phone-full">
+        <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+          <path
+            d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+          </path>
+        </svg>
+        +91 95910 33188
+      </a>
+    </div>
+  </div>
+
+  <section class="shop-header">
+    <div class="container">
+      <div class="breadcrumbs">
+        <a href="index.html">Home</a> / <span>Products</span>
       </div>
-    </section>
+      <h1>Products</h1>
+    </div>
+  </section>
 
-    <section class="shop-section">
-      <div class="container">
-        <!-- 4 Category Filter Tabs & Mobile Dropdown -->
-        <div class="product-tabs-wrapper">
-          <!-- Desktop Tabs (Visible > 768px) -->
-          <div class="product-tabs" id="productTabs">
-            <button class="tab-btn active" data-category="ALL">All</button>
-            <button class="tab-btn" data-category="FOOD GRADE">FOOD GRADE</button>
-            <button class="tab-btn" data-category="INDUSTRIAL GRADE">INDUSTRIAL GRADE</button>
-            <button class="tab-btn" data-category="ANIMAL NUTRITION">ANIMAL NUTRITION</button>
-          </div>
+  <section class="shop-section">
+    <div class="container">
+      <!-- 4 Category Filter Tabs & Mobile Dropdown -->
+      <div class="product-tabs-wrapper">
+        <!-- Desktop Tabs (Visible > 768px) -->
+        <div class="product-tabs" id="productTabs">
+          <button class="tab-btn active" data-category="ALL">All</button>
+          <button class="tab-btn" data-category="FOOD GRADE">FOOD GRADE</button>
+          <button class="tab-btn" data-category="INDUSTRIAL GRADE">INDUSTRIAL GRADE</button>
+          <button class="tab-btn" data-category="ANIMAL NUTRITION">ANIMAL NUTRITION</button>
+        </div>
 
-          <!-- Mobile Dropdown Filter (Visible <= 768px) -->
-          <div class="product-mobile-dropdown" id="productMobileDropdown">
-            <button type="button" class="mobile-dropdown-btn" id="mobileDropdownBtn" aria-haspopup="listbox" aria-expanded="false">
-              <span class="mobile-dropdown-label">Category:</span>
-              <span class="mobile-dropdown-current" id="dropdownCurrentText">All Products</span>
-              <svg class="mobile-dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+        <!-- Mobile Dropdown Filter (Visible <= 768px) -->
+        <div class="product-mobile-dropdown" id="productMobileDropdown">
+          <button type="button" class="mobile-dropdown-btn" id="mobileDropdownBtn" aria-haspopup="listbox"
+            aria-expanded="false">
+            <span class="mobile-dropdown-label">Category:</span>
+            <span class="mobile-dropdown-current" id="dropdownCurrentText">All Products</span>
+            <svg class="mobile-dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+              stroke="currentColor" stroke-width="2">
+              <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+            </svg>
+          </button>
+          <div class="mobile-dropdown-menu" id="mobileDropdownMenu" role="listbox">
+            <div class="mobile-dropdown-item active" data-category="ALL" role="option">
+              <span>All Products</span>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
               </svg>
-            </button>
-            <div class="mobile-dropdown-menu" id="mobileDropdownMenu" role="listbox">
-              <div class="mobile-dropdown-item active" data-category="ALL" role="option">
-                <span>All Products</span>
-                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="mobile-dropdown-item" data-category="FOOD GRADE" role="option">
-                <span>Food Grade</span>
-                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="mobile-dropdown-item" data-category="INDUSTRIAL GRADE" role="option">
-                <span>Industrial Grade</span>
-                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
-              <div class="mobile-dropdown-item" data-category="ANIMAL NUTRITION" role="option">
-                <span>Animal Nutrition</span>
-                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124" stroke-width="2.5"><path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round"/></svg>
-              </div>
+            </div>
+            <div class="mobile-dropdown-item" data-category="FOOD GRADE" role="option">
+              <span>Food Grade</span>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="mobile-dropdown-item" data-category="INDUSTRIAL GRADE" role="option">
+              <span>Industrial Grade</span>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </div>
+            <div class="mobile-dropdown-item" data-category="ANIMAL NUTRITION" role="option">
+              <span>Animal Nutrition</span>
+              <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                stroke-width="2.5">
+                <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
             </div>
           </div>
         </div>
+      </div>
 
-        <!-- 9 Products Grid -->
-        <div class="products-wrapper" id="productsGrid">
-          <!-- 1. Maize Starch Powder - Food Grade -->
-          <div class="shop-card" data-category="FOOD GRADE">
-            <a href="product-single.html?id=starch-food-grade" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp"
-                  alt="Shakti Maize Starch Powder Food Grade"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=starch-food-grade">Shakti Maize Starch Powder Food Grade</a></h3>
-          </div>
+      <!-- 9 Products Grid -->
+      <div class="products-wrapper" id="productsGrid">
+        <!-- 1. Food Grade Maize Starch -->
+        <div class="shop-card" data-category="FOOD GRADE">
+          <a href="product-single.html?id=starch-food-grade" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp"
+                alt="Food Grade Maize Starch" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=starch-food-grade">Food Grade Maize Starch</a></h3>
+        </div>
 
-          <!-- 2. Liquid Glucose -->
-          <div class="shop-card" data-category="FOOD GRADE">
-            <a href="product-single.html?id=liquid-glucose" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Starch-Powder-Food-Grade.webp"
-                  alt="Shakti Liquid Glucose"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=liquid-glucose">Shakti Liquid Glucose</a></h3>
-          </div>
+        <!-- 2. Liquid Glucose -->
+        <div class="shop-card" data-category="FOOD GRADE">
+          <a href="product-single.html?id=liquid-glucose" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maize-Starch-Powder-Food-Grade.webp"
+                alt="Liquid Glucose" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=liquid-glucose">Liquid Glucose</a></h3>
+        </div>
 
-          <!-- 3. Maltodex (LD, SD, HD) -->
-          <div class="shop-card" data-category="FOOD GRADE">
-            <a href="product-single.html?id=maltodex" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/ShaktiMaizeDryFibre.webp"
-                  alt="Shakti Maltodex LD, SD, HD"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=maltodex">Shakti Maltodex LD, SD, HD</a></h3>
-          </div>
+        <!-- 3. Maltodex SD -->
+        <div class="shop-card" data-category="FOOD GRADE">
+          <a href="product-single.html?id=maltodex-sd" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maltodex-SD.png" alt="Maltodex SD" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=maltodex-sd">Maltodex SD</a></h3>
+        </div>
 
-          <!-- 4. Dextrose Monohydrate -->
-          <div class="shop-card" data-category="FOOD GRADE">
-            <a href="product-single.html?id=dextrose-food-grade" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp"
-                  alt="Shakti Dextrose Monohydrate"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=dextrose-food-grade">Shakti Dextrose Monohydrate</a></h3>
-          </div>
+        <!-- 4. Maltodex HD -->
+        <div class="shop-card" data-category="FOOD GRADE">
+          <a href="product-single.html?id=maltodex-hd" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maltodex-HD.png" alt="Maltodex HD" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=maltodex-hd">Maltodex HD</a></h3>
+        </div>
 
-          <!-- 5. Maize Starch Powder - Industrial Use -->
-          <div class="shop-card" data-category="INDUSTRIAL GRADE">
-            <a href="product-single.html?id=starch-industrial" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
-                  alt="Shakti Maize Starch Powder Industrial Use"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=starch-industrial">Shakti Maize Starch Powder Industrial Use</a></h3>
-          </div>
+        <!-- 5. Maltodex LD -->
+        <div class="shop-card" data-category="FOOD GRADE">
+          <a href="product-single.html?id=maltodex-ld" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maltodex-LD.png" alt="Maltodex LD" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=maltodex-ld">Maltodex LD</a></h3>
+        </div>
 
-          <!-- 6. Modified Industrial Starch -->
-          <div class="shop-card" data-category="INDUSTRIAL GRADE">
-            <a href="product-single.html?id=modified-starch-industrial" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
-                  alt="Shakti Modified Industrial Starch"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=modified-starch-industrial">Shakti Modified Industrial Starch</a></h3>
-          </div>
+        <!-- 6. Industrial Maize Starch -->
+        <div class="shop-card" data-category="INDUSTRIAL GRADE">
+          <a href="product-single.html?id=starch-industrial" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp"
+                alt="Industrial Maize Starch" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=starch-industrial">Industrial Maize Starch</a></h3>
+        </div>
 
-          <!-- 7. Shakti Gluten Meal -->
-          <div class="shop-card" data-category="ANIMAL NUTRITION">
-            <a href="product-single.html?id=gluten-meal" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Gluten-Meal.webp"
-                  alt="Shakti Gluten Meal"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=gluten-meal">Shakti Enriched Maize Gluten Meal</a></h3>
-          </div>
+        <!-- 7. Maize Dry Fibre -->
+        <div class="shop-card" data-category="ANIMAL NUTRITION">
+          <a href="product-single.html?id=dry-fibre" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/ShaktiMaizeDryFibre.webp" alt="Maize Dry Fibre" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=dry-fibre">Maize Dry Fibre</a></h3>
+        </div>
 
-          <!-- 8. Shakti Maize Dry Fibre -->
-          <div class="shop-card" data-category="ANIMAL NUTRITION">
-            <a href="product-single.html?id=dry-fibre" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maize-Germ.webp"
-                  alt="Shakti Maize Dry Fibre"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=dry-fibre">Shakti Maize Dry Fibre</a></h3>
-          </div>
+        <!-- 8. Maize Gluten Meal -->
+        <div class="shop-card" data-category="ANIMAL NUTRITION">
+          <a href="product-single.html?id=gluten-meal" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Gluten-Meal.webp" alt="Maize Gluten Meal" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=gluten-meal">Maize Gluten Meal</a></h3>
+        </div>
 
-          <!-- 9. Shakti Maize Germ -->
-          <div class="shop-card" data-category="ANIMAL NUTRITION">
-            <a href="product-single.html?id=maize-germ" class="shop-card__image-link">
-              <div class="shop-card__image">
-                <img
-                  src="assets/images/products/Shakti-Maltodex-LD-SD-HD.webp"
-                  alt="Shakti Maize Germ"
-                />
-              </div>
-            </a>
-            <h3><a href="product-single.html?id=maize-germ">Shakti Pure Maize Germ</a></h3>
-          </div>
+        <!-- 9. Maize Germ -->
+        <div class="shop-card" data-category="ANIMAL NUTRITION">
+          <a href="product-single.html?id=maize-germ" class="shop-card__image-link">
+            <div class="shop-card__image">
+              <img src="assets/images/products/Shakti-Maize-Germ.webp" alt="Maize Germ" />
+            </div>
+          </a>
+          <h3><a href="product-single.html?id=maize-germ">Maize Germ</a></h3>
         </div>
       </div>
-    </section>
+    </div>
+  </section>
 
-    <!-- Brochure Modal -->
-    <div class="modal-overlay" id="brochureModal">
-      <div class="modal-box">
-        <button class="modal-close" id="modalClose">&times;</button>
-        <h3>Download Brochure</h3>
-        <p
-          id="modalProductName"
-          style="
+  <!-- Brochure Modal -->
+  <div class="modal-overlay" id="brochureModal">
+    <div class="modal-box">
+      <button class="modal-close" id="modalClose">&times;</button>
+      <h3>Download Brochure</h3>
+      <p id="modalProductName" style="
             font-size: 0.9rem;
             color: #666;
             margin-bottom: 20px;
             font-weight: 600;
-          "
-        ></p>
-        <form id="brochureForm">
-          <input type="hidden" id="productInput" name="product" />
-          <div class="form-group">
-            <input
-              type="text"
-              class="form-control"
-              placeholder="Full Name"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="email"
-              class="form-control"
-              placeholder="Email Address"
-              required
-            />
-          </div>
-          <div class="form-group">
-            <input
-              type="tel"
-              class="form-control"
-              placeholder="Phone Number"
-              required
-            />
-          </div>
-          <button
-            type="submit"
-            class="btn btn--accent"
-            style="
+          "></p>
+      <form id="brochureForm">
+        <input type="hidden" id="productInput" name="product" />
+        <div class="form-group">
+          <input type="text" class="form-control" placeholder="Full Name" required />
+        </div>
+        <div class="form-group">
+          <input type="email" class="form-control" placeholder="Email Address" required />
+        </div>
+        <div class="form-group">
+          <input type="tel" class="form-control" placeholder="Phone Number" required />
+        </div>
+        <button type="submit" class="btn btn--accent" style="
               width: 100%;
               border: none;
               border-radius: 0;
               font-weight: 600;
-            "
-          >
-            Download Now
-          </button>
-        </form>
+            ">
+          Download Now
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Footer -->
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-top">
+        <div class="footer-logo">
+          <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik" />
+        </div>
+        <div class="footer-top-text">
+          <h2>Growing soil and food<br />organically</h2>
+        </div>
+      </div>
+
+      <div class="footer-grid">
+        <div class="footer-col footer-col-wide">
+          <p>
+            Saatvik Agro is the agro-ingredient unit of the Saatvik Group,
+            dedicated to creating high quality maize-based ingredients that
+            power everyday products.
+          </p>
+          <a href="contact.html" class="btn btn--accent">Contact Us</a>
+        </div>
+
+        <div class="footer-col footer-col-address">
+          <h4>Corporate Office</h4>
+          <p>
+            Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318
+          </p>
+          <h4 class="footer-subheading">Manufacturing Unit</h4>
+          <p>
+            Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh - 476444
+          </p>
+          <p><a href="mailto:marketing.agro@saatvikgroup.com" class="footer-email">&bull;
+              marketing.agro@saatvikgroup.com</a></p>
+          <h4 class="footer-phone"><a href="tel:+91 95910 33188">+91 95910 33188</a></h4>
+        </div>
+
+        <div class="footer-col">
+          <h4>Links</h4>
+          <ul>
+            <li><a href="index.html">&bull; Home</a></li>
+            <li><a href="about.html">&bull; About Us</a></li>
+            <li><a href="products.html">&bull; Products</a></li>
+            <li><a href="media.html">&bull; Media</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-col">
+          <h4>Get in Touch</h4>
+          <div class="footer-socials">
+            <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
+              </svg></a>
+            <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
+                <path
+                  d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+              </svg></a>
+          </div>
+        </div>
+      </div>
+
+      <div class="footer-bottom">
+        <div class="footer-copy">&copy; 2026 Saatvik Agro Processors Pvt. Ltd. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <span class="divider">|</span>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
+        <div class="footer-credit">Site by Saatvik Agro.</div>
       </div>
     </div>
+  </footer>
 
-    <!-- Footer -->
-    <!-- FOOTER -->
-    <footer class="footer">
-      <div class="container">
-        <div class="footer-top">
-          <div class="footer-logo">
-            <img src="assets/images/content/saatvik-agro-logo.png" alt="Saatvik" />
-          </div>
-          <div class="footer-top-text">
-            <h2>Growing soil and food<br />organically</h2>
-          </div>
-        </div>
+  <script src="assets/js/main.js"></script>
 
-        <div class="footer-grid">
-          <div class="footer-col footer-col-wide">
-            <p>
-              Saatvik Agro is the agro-ingredient unit of the Saatvik Group,
-              dedicated to creating high quality maize-based ingredients that
-              power everyday products.
-            </p>
-            <a href="contact.html" class="btn btn--accent">Contact Us</a>
-          </div>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      // 1. Category Filter Logic (Desktop Tabs + Mobile Dropdown)
+      const tabBtns = document.querySelectorAll("#productTabs .tab-btn");
+      const productCards = document.querySelectorAll("#productsGrid .shop-card");
+      const mobileDropdown = document.getElementById("productMobileDropdown");
+      const mobileDropdownBtn = document.getElementById("mobileDropdownBtn");
+      const dropdownCurrentText = document.getElementById("dropdownCurrentText");
+      const mobileDropdownItems = document.querySelectorAll(".mobile-dropdown-item");
 
-          <div class="footer-col">
-            <h4>Office</h4>
-            <p>
-              Germany &mdash;<br />785 15h Street, Office 47<br />Berlin, De
-              81566
-            </p>
-            <p>&bull; info@email.com</p>
-            <h4 class="footer-phone">+1 840 841 25 69</h4>
-          </div>
-
-          <div class="footer-col">
-            <h4>Links</h4>
-            <ul>
-              <li><a href="index.html">&bull; Home</a></li>
-              <li><a href="about.html">&bull; About Us</a></li>
-              <li><a href="products.html">&bull; Products</a></li>
-              <li><a href="industries.html">&bull; Industries</a></li>
-              <li><a href="media.html">&bull; Media</a></li>
-            </ul>
-          </div>
-
-          <div class="footer-col">
-            <h4>Get in Touch</h4>
-            <div class="footer-socials">
-              <a href="#" aria-label="Facebook"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M22.675 0h-21.35C.593 0 0 .593 0 1.325v21.351C0 23.407.593 24 1.325 24H12.82v-9.294H9.692v-3.622h3.128V8.413c0-3.1 1.893-4.788 4.659-4.788 1.325 0 2.463.099 2.795.143v3.24l-1.918.001c-1.504 0-1.795.715-1.795 1.763v2.313h3.587l-.467 3.622h-3.12V24h6.116c.73 0 1.323-.593 1.323-1.325V1.325C24 .593 23.407 0 22.675 0z" />
-                </svg></a>
-              <a href="#" aria-label="Instagram"><svg width="28" height="28" viewBox="0 0 24 24" fill="currentColor">
-                  <path
-                    d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
-                </svg></a>
-            </div>
-          </div>
-        </div>
-
-        <div class="footer-bottom">
-          <div class="footer-copy">&copy; 2026. All Rights Reserved.</div>
-          <div class="footer-credit">Site by Saatvik Agro.</div>
-        </div>
-      </div>
-    </footer>
-
-    <script src="assets/js/main.js"></script>
-
-    <script>
-      document.addEventListener("DOMContentLoaded", () => {
-        // 1. Category Filter Logic (Desktop Tabs + Mobile Dropdown)
-        const tabBtns = document.querySelectorAll("#productTabs .tab-btn");
-        const productCards = document.querySelectorAll("#productsGrid .shop-card");
-        const mobileDropdown = document.getElementById("productMobileDropdown");
-        const mobileDropdownBtn = document.getElementById("mobileDropdownBtn");
-        const dropdownCurrentText = document.getElementById("dropdownCurrentText");
-        const mobileDropdownItems = document.querySelectorAll(".mobile-dropdown-item");
-
-        function filterProducts(category, displayText) {
-          // Sync desktop tab active states
-          tabBtns.forEach((b) => {
-            if (b.getAttribute("data-category") === category) {
-              b.classList.add("active");
-            } else {
-              b.classList.remove("active");
-            }
-          });
-
-          // Sync mobile dropdown item active states
-          mobileDropdownItems.forEach((item) => {
-            if (item.getAttribute("data-category") === category) {
-              item.classList.add("active");
-            } else {
-              item.classList.remove("active");
-            }
-          });
-
-          // Update mobile button display text
-          if (dropdownCurrentText) {
-            dropdownCurrentText.textContent = displayText || (category === "ALL" ? "All Products" : category);
+      function filterProducts(category, displayText) {
+        // Sync desktop tab active states
+        tabBtns.forEach((b) => {
+          if (b.getAttribute("data-category") === category) {
+            b.classList.add("active");
+          } else {
+            b.classList.remove("active");
           }
-
-          // Filter product cards
-          productCards.forEach((card) => {
-            const cardCategory = card.getAttribute("data-category");
-            if (category === "ALL" || cardCategory === category) {
-              card.classList.remove("hidden");
-            } else {
-              card.classList.add("hidden");
-            }
-          });
-        }
-
-        // Desktop tabs event
-        tabBtns.forEach((btn) => {
-          btn.addEventListener("click", () => {
-            const category = btn.getAttribute("data-category");
-            const text = btn.textContent.trim();
-            filterProducts(category, text === "All" ? "All Products" : text);
-          });
         });
 
-        // Mobile dropdown toggle & selection
-        if (mobileDropdownBtn && mobileDropdown) {
-          mobileDropdownBtn.addEventListener("click", (e) => {
-            e.stopPropagation();
-            const isOpen = mobileDropdown.classList.toggle("open");
-            mobileDropdownBtn.setAttribute("aria-expanded", isOpen);
-          });
-
-          mobileDropdownItems.forEach((item) => {
-            item.addEventListener("click", () => {
-              const category = item.getAttribute("data-category");
-              const textSpan = item.querySelector("span");
-              const text = textSpan ? textSpan.textContent.trim() : item.textContent.trim();
-              filterProducts(category, text);
-              mobileDropdown.classList.remove("open");
-              mobileDropdownBtn.setAttribute("aria-expanded", "false");
-            });
-          });
-
-          // Close dropdown on outside click
-          document.addEventListener("click", (e) => {
-            if (!mobileDropdown.contains(e.target)) {
-              mobileDropdown.classList.remove("open");
-              mobileDropdownBtn.setAttribute("aria-expanded", "false");
-            }
-          });
-        }
-
-        // 2. Brochure Modal Logic
-        const modal = document.getElementById("brochureModal");
-        const modalClose = document.getElementById("modalClose");
-        const form = document.getElementById("brochureForm");
-        const productInput = document.getElementById("productInput");
-        const productNameDisplay = document.getElementById("modalProductName");
-
-        document.querySelectorAll(".btn-download").forEach((btn) => {
-          btn.addEventListener("click", (e) => {
-            e.preventDefault();
-            const productName = btn.getAttribute("data-product");
-            if (productInput) productInput.value = productName;
-            if (productNameDisplay) productNameDisplay.textContent = productName;
-            if (modal) modal.classList.add("active");
-          });
+        // Sync mobile dropdown item active states
+        mobileDropdownItems.forEach((item) => {
+          if (item.getAttribute("data-category") === category) {
+            item.classList.add("active");
+          } else {
+            item.classList.remove("active");
+          }
         });
 
-        if (modalClose && modal) {
-          modalClose.addEventListener("click", () => {
-            modal.classList.remove("active");
-          });
+        // Update mobile button display text
+        if (dropdownCurrentText) {
+          dropdownCurrentText.textContent = displayText || (category === "ALL" ? "All Products" : category);
         }
 
-        if (modal) {
-          modal.addEventListener("click", (e) => {
-            if (e.target === modal) {
-              modal.classList.remove("active");
-            }
-          });
-        }
+        // Filter product cards
+        productCards.forEach((card) => {
+          const cardCategory = card.getAttribute("data-category");
+          if (category === "ALL" || cardCategory === category) {
+            card.classList.remove("hidden");
+          } else {
+            card.classList.add("hidden");
+          }
+        });
+      }
 
-        if (form) {
-          form.addEventListener("submit", (e) => {
-            e.preventDefault();
-            alert("Brochure for " + (productInput ? productInput.value : "Product") + " is downloading...");
-            if (modal) modal.classList.remove("active");
-            form.reset();
-          });
-        }
+      // Desktop tabs event
+      tabBtns.forEach((btn) => {
+        btn.addEventListener("click", () => {
+          const category = btn.getAttribute("data-category");
+          const text = btn.textContent.trim();
+          filterProducts(category, text === "All" ? "All Products" : text);
+        });
       });
-    </script>
-  </body>
+
+      // Mobile dropdown toggle & selection
+      if (mobileDropdownBtn && mobileDropdown) {
+        mobileDropdownBtn.addEventListener("click", (e) => {
+          e.stopPropagation();
+          const isOpen = mobileDropdown.classList.toggle("open");
+          mobileDropdownBtn.setAttribute("aria-expanded", isOpen);
+        });
+
+        mobileDropdownItems.forEach((item) => {
+          item.addEventListener("click", () => {
+            const category = item.getAttribute("data-category");
+            const textSpan = item.querySelector("span");
+            const text = textSpan ? textSpan.textContent.trim() : item.textContent.trim();
+            filterProducts(category, text);
+            mobileDropdown.classList.remove("open");
+            mobileDropdownBtn.setAttribute("aria-expanded", "false");
+          });
+        });
+
+        // Close dropdown on outside click
+        document.addEventListener("click", (e) => {
+          if (!mobileDropdown.contains(e.target)) {
+            mobileDropdown.classList.remove("open");
+            mobileDropdownBtn.setAttribute("aria-expanded", "false");
+          }
+        });
+      }
+
+      // 2. Brochure Modal Logic
+      const modal = document.getElementById("brochureModal");
+      const modalClose = document.getElementById("modalClose");
+      const form = document.getElementById("brochureForm");
+      const productInput = document.getElementById("productInput");
+      const productNameDisplay = document.getElementById("modalProductName");
+
+      document.querySelectorAll(".btn-download").forEach((btn) => {
+        btn.addEventListener("click", (e) => {
+          e.preventDefault();
+          const productName = btn.getAttribute("data-product");
+          if (productInput) productInput.value = productName;
+          if (productNameDisplay) productNameDisplay.textContent = productName;
+          if (modal) modal.classList.add("active");
+        });
+      });
+
+      if (modalClose && modal) {
+        modalClose.addEventListener("click", () => {
+          modal.classList.remove("active");
+        });
+      }
+
+      if (modal) {
+        modal.addEventListener("click", (e) => {
+          if (e.target === modal) {
+            modal.classList.remove("active");
+          }
+        });
+      }
+
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          alert("Brochure for " + (productInput ? productInput.value : "Product") + " is downloading...");
+          if (modal) modal.classList.remove("active");
+          form.reset();
+        });
+      }
+    });
+  </script>
+</body>
+
 </html>

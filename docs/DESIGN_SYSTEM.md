@@ -141,7 +141,7 @@ All buttons feature sharp 0-radius corners, strong hover transitions, and clean 
 | `.btn--soil-yellow` | `#f3c319` | `#121a2f` | none | Secondary action, hero buttons |
 | `.btn--dark` | `#121a2f` | `#ffffff` | none | Navigation actions, contact button |
 | `.btn--outline` | transparent | `#121a2f` | `1px solid #121a2f` | Tertiary link buttons |
-| `.btn-circle` | `#37b829` | `#ffffff` | none | Action icon square (44x44px, sharp) |
+| `.btn-circle` | `#EA7124` | `#ffffff` | none | Action icon square (44x44px, sharp) |
 
 ---
 

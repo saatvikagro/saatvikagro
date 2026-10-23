@@ -2,217 +2,288 @@
 // SAATVIK AGRO - PRODUCTS DATA STORE (9 PRODUCTS)
 // =========================================================
 const SAATVIK_PRODUCTS = [
-  // 1. Maize Starch Powder - Food Grade
+  // 1. Food Grade Maize Starch
   {
     id: "starch-food-grade",
     category: "FOOD GRADE",
-    title: "MAIZE STARCH POWDER | FOOD GRADE",
-    name: "Shakti Maize Starch Powder Food Grade",
-    subtitle: "Food-grade starch for texture, stability, and process performance.",
-    description: "Shakti Maize Starch Powder is a premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications. Derived from carefully selected maize and refined through precision processing, it delivers reliable texture, clarity, and structure batch after batch.",
+    title: "FOOD GRADE MAIZE STARCH",
+    name: "Food Grade Maize Starch",
+    subtitle: "A maize starch ingredient for manufacturers seeking texture, body and binding in suitable food formulations.",
+    description: "A maize starch ingredient for manufacturers seeking texture, body and binding in suitable food formulations.",
     image: "assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp",
     grade: "Food Grade",
-    packSize: "50 KG & 1000 KG",
-    function: "Thickening & Binding",
+    packFormat: "50 kg and 1,000 kg",
+    packSize: "50 kg and 1,000 kg",
+    form: "Powder",
+    function: "Thickening and binding",
     features: [
-      "High-purity maize starch",
+      "High purity maize starch",
       "Texture and body support",
-      "Reliable Thickening",
+      "Reliable thickening",
       "Binding support",
       "Batch consistency",
       "Neutral base ingredient"
     ],
-    applications: ["Bakery", "Instant Foods", "Dairy", "Snacks & Sauces", "Natural colors"]
+    applications: [
+      "Bakery",
+      "Instant foods",
+      "Dairy",
+      "Snacks",
+      "Sauces",
+      "Natural colour systems"
+    ]
   },
 
   // 2. Liquid Glucose
   {
     id: "liquid-glucose",
     category: "FOOD GRADE",
-    title: "LIQUID GLUCOSE | FOOD GRADE",
-    name: "Shakti Liquid Glucose",
-    subtitle: "High-purity glucose syrup engineered for sweetness balance and moisture retention.",
-    description: "Shakti Liquid Glucose is an aqueous solution of nutritive saccharides obtained by the controlled enzymatic hydrolysis of high-purity maize starch. Produced through stringently monitored refining and vacuum concentration, it delivers consistent clarity, viscosity, anti-crystallization properties, and moisture balance batch after batch.",
+    title: "LIQUID GLUCOSE",
+    name: "Liquid Glucose",
+    subtitle: "A functional glucose syrup for sweetness, body and texture in confectionery, ice cream, bakery and beverage formulations.",
+    description: "A functional glucose syrup for sweetness, body and texture in confectionery, ice cream, bakery and beverage formulations.",
     image: "assets/images/products/Shakti-Maize-Starch-Powder-Food-Grade.webp",
     grade: "Food Grade",
-    packSize: "50 KG & 300 KG Drums",
-    function: "Sweetening & Anti-Crystallization",
+    packFormat: "300 kg",
+    packSize: "300 kg",
+    form: "Syrup",
+    function: "Sweetness and body",
     features: [
-      "Clear & transparent viscosity",
-      "Controlled DE specification",
-      "Prevents sugar crystallization",
-      "Superior moisture retention",
-      "Enhances food gloss & sheen",
-      "Neutral sweetness profile"
+      "Consistent syrup quality",
+      "Sweetness and body",
+      "Texture and mouthfeel",
+      "Crystallisation control",
+      "Barrel handling",
+      "Manufacturing consistency"
     ],
-    applications: ["Confectionery & Candies", "Bakery Glazes", "Jams & Jellies", "Ice Creams & Dairy", "Pharmaceutical Syrups"]
+    applications: [
+      "Confectionery",
+      "Ice cream",
+      "Bakery",
+      "Beverages"
+    ]
   },
 
-  // 3. Maltodex (LD, SD, HD)
+  // 3. Maltodex SD
   {
-    id: "maltodex",
+    id: "maltodex-sd",
     category: "FOOD GRADE",
-    title: "MALTODEXTRIN POWDER | LD, SD, HD",
-    name: "Shakti Maltodex LD, SD, HD",
-    subtitle: "Versatile spray-dried carbohydrate family for body, bulking, and energy release.",
-    description: "Shakti Maltodex is an easily digestible, spray-dried carbohydrate powder manufactured from refined maize starch. Available in Low Density (LD), Standard Density (SD), and High Density (HD) profiles, it allows formulators to balance body, solubility, and sweetness control with predictable batch-to-batch behaviour.",
-    image: "assets/images/products/ShaktiMaizeDryFibre.webp",
+    title: "MALTODEX SD",
+    name: "Maltodex SD",
+    subtitle: "A versatile maltodextrin variant for food processing, premixes, instant mixes and suitable ingredient systems.",
+    description: "A versatile maltodextrin variant for food processing, premixes, instant mixes and suitable ingredient systems.",
+    image: "assets/images/products/Shakti-Maltodex-SD.png",
     grade: "Food Grade",
-    packSize: "25 KG & 50 KG",
-    function: "Bulking & Carrier Agent",
+    packFormat: "25 kg",
+    packSize: "25 kg",
+    form: "Powder",
+    function: "Formulation support",
     features: [
-      "Easily soluble powder",
-      "Low sweetness profile",
-      "Superior carrier for spray drying",
-      "Smooth mouthfeel & body",
-      "High digestive tolerance",
-      "Non-hygroscopic stability"
+      "Formulation support",
+      "Smooth dispersion",
+      "Dry blend integration",
+      "Powder consistency",
+      "Scalable processing",
+      "Procurement support"
     ],
-    applications: ["Infant Nutrition", "Dairy Whitener", "Flavors & Seasonings", "Energy Drinks", "Specialised Nutrition"]
+    applications: [
+      "Food processing",
+      "Premixes",
+      "Instant mixes",
+      "Ingredient systems"
+    ]
   },
 
-  // 4. Dextrose Monohydrate (Food Grade)
+  // 4. Maltodex HD
   {
-    id: "dextrose-food-grade",
+    id: "maltodex-hd",
     category: "FOOD GRADE",
-    title: "DEXTROSE MONOHYDRATE | FOOD GRADE",
-    name: "Shakti Dextrose Monohydrate",
-    subtitle: "High-purity crystalline dextrose for instant energy, clean sweetness, and fermentation.",
-    description: "Shakti Dextrose Monohydrate is a purified, crystallized D-glucose containing one molecule of water of crystallization. Refined through precision enzymatic conversion, it provides clean, natural sweetness, instant solubility, and optimal fermentation yields.",
-    image: "assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use-2.webp",
+    title: "MALTODEX HD",
+    name: "Maltodex HD",
+    subtitle: "A maltodextrin variant for food processing, beverage premixes and dry blends. Discuss the specification around your formulation.",
+    description: "A maltodextrin variant for food processing, beverage premixes and dry blends. Discuss the specification around your formulation.",
+    image: "assets/images/products/Shakti-Maltodex-HD.png",
     grade: "Food Grade",
-    packSize: "25 KG & 50 KG",
-    function: "Direct Sweetening & Energy",
+    packFormat: "25 kg",
+    packSize: "25 kg",
+    form: "Powder",
+    function: "Formulation support",
     features: [
-      "High purity crystalline sugar (>99.5%)",
-      "Instant water solubility",
-      "Pleasant cooling sensation",
-      "Rapid energy bioavailability",
-      "Optimal fermentation substrate",
-      "Controlled color development"
+      "Controlled powder format",
+      "Dispersion support",
+      "Dry mix compatibility",
+      "Process consistency",
+      "Neutral taste support",
+      "Business pack format"
     ],
-    applications: ["Sports & Energy Drinks", "Bakery Fermentation", "Confectionery", "Canned Foods", "Oral Rehydration"]
+    applications: [
+      "Food processing",
+      "Beverage premixes",
+      "Dry blends"
+    ]
   },
 
-  // 5. Maize Starch Powder - Industrial Use
+  // 5. Maltodex LD
+  {
+    id: "maltodex-ld",
+    category: "FOOD GRADE",
+    title: "MALTODEX LD",
+    name: "Maltodex LD",
+    subtitle: "A maltodextrin variant for blending, carrier and bulking requirements in suitable dry ingredient systems.",
+    description: "A maltodextrin variant for blending, carrier and bulking requirements in suitable dry ingredient systems.",
+    image: "assets/images/products/Shakti-Maltodex-LD.png",
+    grade: "Food Grade",
+    packFormat: "25 kg",
+    packSize: "25 kg",
+    form: "Powder",
+    function: "Carrier and dry mix use",
+    features: [
+      "Blending performance",
+      "Carrier and bulking support",
+      "Dry mix stability",
+      "Powder flow support",
+      "Formulation flexibility",
+      "Batch consistency"
+    ],
+    applications: [
+      "Nutrition mixes",
+      "Seasonings",
+      "Beverage premixes",
+      "Bakery blends",
+      "Coffee ingredient systems"
+    ]
+  },
+
+  // 6. Industrial Maize Starch
   {
     id: "starch-industrial",
     category: "INDUSTRIAL GRADE",
-    title: "MAIZE STARCH POWDER | INDUSTRIAL USE",
-    name: "Shakti Maize Starch Powder For Industrial Use",
-    subtitle: "Industrial starch solution for binding, adhesion, and process use.",
-    description: "Shakti Maize Starch Powder – Industrial Use is a high-performance starch engineered to deliver consistent binding, viscosity, and stability across demanding industrial applications. Manufactured under controlled processes, it ensures dependable performance, process efficiency, and uniform results in paper, packaging, adhesives, and textiles.",
+    title: "INDUSTRIAL MAIZE STARCH",
+    name: "Industrial Maize Starch",
+    subtitle: "Industrial maize starch for binding, adhesion and process requirements in paper, textiles, adhesives and corrugation.",
+    description: "Industrial maize starch for binding, adhesion and process requirements in paper, textiles, adhesives and corrugation.",
     image: "assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp",
-    grade: "Industrial Use",
-    packSize: "50 KG & 1000 KG",
-    function: "Binding & Adhesion",
+    grade: "Industrial Grade",
+    packFormat: "50 kg and 1,000 kg",
+    packSize: "50 kg and 1,000 kg",
+    form: "Powder",
+    function: "Binding and adhesion",
     features: [
-      "Industrial-grade starch",
-      "Binding strength support",
+      "Industrial starch grade",
+      "Binding support",
       "Adhesion performance",
       "Process stability",
       "Formulation compatibility",
-      "Repeatable supply quality"
+      "Consistent supply quality"
     ],
-    applications: ["Paper", "Textile", "Adhesives", "Corrugation"]
+    applications: [
+      "Paper",
+      "Textiles",
+      "Adhesives",
+      "Corrugation"
+    ]
   },
 
-  // 6. Modified Industrial Starch
-  {
-    id: "modified-starch-industrial",
-    category: "INDUSTRIAL GRADE",
-    title: "MODIFIED INDUSTRIAL STARCH | HIGH TENSILE",
-    name: "Shakti Modified Industrial Starch",
-    subtitle: "Engineered modified starches for high-speed corrugation, paper sizing, and textile sizing.",
-    description: "Shakti Modified Industrial Starch is chemically and physically treated to meet demanding industrial speeds and shear conditions. Delivers high paste stability, low retrogradation, and exceptional surface adhesion in paper mills, corrugated box production, and textile sizing.",
-    image: "assets/images/products/Shakti-Maize-Starch-Powder-For-Industrial-Use.webp",
-    grade: "Industrial Use",
-    packSize: "50 KG & 1000 KG",
-    function: "High-Strength Sizing & Binding",
-    features: [
-      "Superior paste stability",
-      "Fast drying adhesion",
-      "High tensile surface sizing",
-      "Low viscosity at high solids",
-      "Eco-friendly & biodegradable",
-      "High machine speed tolerance"
-    ],
-    applications: ["Corrugated Packaging", "Paper Surface Sizing", "Textile Warp Sizing", "Gypsum Board Core", "Foundry Core Binder"]
-  },
-
-  // 7. Shakti Gluten Meal
-  {
-    id: "gluten-meal",
-    category: "ANIMAL NUTRITION",
-    title: "CORN GLUTEN MEAL 60% | FEED GRADE",
-    name: "Shakti Gluten Meal",
-    subtitle: "High-protein concentrate (60% min protein) for livestock, poultry, and aquaculture diets.",
-    description: "Shakti Gluten Meal is a high-protein, low-fat maize-based feed ingredient developed to deliver balanced nutrition, digestibility, and consistent performance in poultry, cattle, and aquaculture feed formulations. Produced through a refined separation process, it offers a clean, golden appearance, stable nutrient profile, and reliable amino acid and fibre content.",
-    image: "assets/images/products/Shakti-Gluten-Meal.webp",
-    grade: "Feed Grade",
-    packSize: "50 KG Bags",
-    function: "High-Protein Feed Nutrition",
-    features: [
-      "Min 60% crude protein",
-      "Rich in natural xanthophylls",
-      "High methionine content",
-      "Excellent digestibility",
-      "Low ash content",
-      "Premium golden appearance"
-    ],
-    applications: ["Poultry Feed", "Aqua Feed", "Cattle Feed", "Pet Food"]
-  },
-
-  // 8. Shakti Maize Dry Fibre
+  // 7. Maize Dry Fibre
   {
     id: "dry-fibre",
     category: "ANIMAL NUTRITION",
-    title: "MAIZE DRY FIBRE | NUTRITIONAL FEED",
-    name: "Shakti Maize Dry Fibre",
-    subtitle: "Clean, fibre-rich maize ingredient delivering steady energy and rumen function support.",
-    description: "Shakti Maize Dry Fibre is a clean, fibre-rich maize ingredient developed to deliver steady energy, digestive support, and consistent nutritional performance in cattle and poultry feed formulations. Produced through a careful separation process that preserves natural digestibility, it supports gut health, milk production, and overall livestock resilience.",
-    image: "assets/images/products/Shakti-Maize-Germ.webp",
-    grade: "Feed Grade",
-    packSize: "40 KG & 50 KG Bags",
-    function: "Rumen Health & Fiber Source",
+    title: "MAIZE DRY FIBRE",
+    name: "Maize Dry Fibre",
+    subtitle: "A fibre rich maize fraction for cattle feed, poultry feed, feed premixes and animal nutrition applications.",
+    description: "A fibre rich maize fraction for cattle feed, poultry feed, feed premixes and animal nutrition applications.",
+    image: "assets/images/products/ShaktiMaizeDryFibre.webp",
+    grade: "Animal Nutrition",
+    packFormat: "50 kg",
+    packSize: "50 kg",
+    form: "Dry fibre",
+    function: "Feed formulation support",
     features: [
-      "High neutral detergent fiber",
-      "Balanced energy & protein",
-      "Enhanced feed palatability",
-      "Excellent natural pellet binder",
-      "Cost-effective ruminant ration",
-      "Dust-free processing"
+      "Maize fibre fraction",
+      "Feed formulation support",
+      "Bulk handling",
+      "Useful maize co product",
+      "Volume supply",
+      "Business pack format"
     ],
-    applications: ["Dairy Cattle Feed", "Ruminant Nutrition", "Pellet Formulations", "Bulk Feed Mixes"]
+    applications: [
+      "Cattle feed",
+      "Poultry feed",
+      "Feed premixes",
+      "Animal nutrition"
+    ]
   },
 
-  // 9. Shakti Maize Germ
+  // 8. Maize Gluten Meal
+  {
+    id: "gluten-meal",
+    category: "ANIMAL NUTRITION",
+    title: "MAIZE GLUTEN MEAL",
+    name: "Maize Gluten Meal",
+    subtitle: "A protein rich maize derivative for poultry, cattle, aquaculture and compound feed formulations.",
+    description: "A protein rich maize derivative for poultry, cattle, aquaculture and compound feed formulations.",
+    image: "assets/images/products/Shakti-Gluten-Meal.webp",
+    grade: "Animal Nutrition",
+    packFormat: "50 kg",
+    packSize: "50 kg",
+    form: "Meal",
+    function: "Protein contribution",
+    features: [
+      "Protein rich maize fraction",
+      "Feed nutrition support",
+      "Consistent quality",
+      "Bulk handling",
+      "Corn milling co product",
+      "Business sourcing"
+    ],
+    applications: [
+      "Poultry feed",
+      "Cattle feed",
+      "Aquaculture feed",
+      "Compound feed"
+    ]
+  },
+
+  // 9. Maize Germ
   {
     id: "maize-germ",
     category: "ANIMAL NUTRITION",
-    title: "PURE MAIZE GERM | HIGH OIL CONTENT",
-    name: "Shakti Maize Germ",
-    subtitle: "Nutrient-dense, oil-rich maize germ for edible oil extraction and high-calorie feed.",
-    description: "Shakti Maize Germ is a nutrient-dense, oil-rich maize ingredient developed to deliver sustained energy, essential fatty acids, and dependable performance across animal nutrition and industrial applications. Naturally high in oil (45-50%), amino acids, and vital nutrients, it supports healthy growth, improved immunity, and feed efficiency in livestock.",
-    image: "assets/images/products/Shakti-Maltodex-LD-SD-HD.webp",
-    grade: "Feed / Oil Grade",
-    packSize: "50 KG Bags & Bulk",
-    function: "Oil Extraction & Caloric Density",
+    title: "MAIZE GERM",
+    name: "Maize Germ",
+    subtitle: "A maize kernel fraction for downstream oil extraction, feed processing and the wider maize value chain.",
+    description: "A maize kernel fraction for downstream oil extraction, feed processing and the wider maize value chain.",
+    image: "assets/images/products/Shakti-Maize-Germ.webp",
+    grade: "Animal Nutrition",
+    packFormat: "50 kg",
+    packSize: "50 kg",
+    form: "Germ",
+    function: "Oil extraction and feed use",
     features: [
-      "High oil content (45-50%)",
-      "Rich in polyunsaturated fats",
-      "Natural Vitamin E content",
-      "Clean separation from grain",
-      "Low free fatty acid (FFA)",
-      "Excellent storage stability"
+      "Valuable kernel fraction",
+      "Oil extraction use",
+      "Feed ingredient potential",
+      "Maize processing co product",
+      "Bulk storage format",
+      "50 kg pack"
     ],
-    applications: ["Corn Oil Milling", "High-Energy Dairy Rations", "Broiler Feeds", "Feed Compounders"]
+    applications: [
+      "Oil extraction",
+      "Cattle feed",
+      "Feed processing",
+      "The maize value chain"
+    ]
   }
 ];
 
-// Helper to get product by ID
+// Helper to get product by ID (with aliases for backward compatibility)
 function getProductById(id) {
   if (!id) return SAATVIK_PRODUCTS[0];
-  const found = SAATVIK_PRODUCTS.find(p => p.id === id);
+  const aliases = {
+    "maltodex": "maltodex-sd",
+    "dextrose-food-grade": "starch-food-grade",
+    "modified-starch-industrial": "starch-industrial"
+  };
+  const targetId = aliases[id] || id;
+  const found = SAATVIK_PRODUCTS.find(p => p.id === targetId);
   return found || SAATVIK_PRODUCTS[0];
 }

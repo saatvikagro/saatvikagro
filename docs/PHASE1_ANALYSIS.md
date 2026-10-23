@@ -7,37 +7,38 @@
 ## A. Client Site Crawl — Content Inventory
 
 ### Important Discovery
+
 The current https://www.saatvikagro.com/ is a **single HTML page** (not a multi-page WordPress site). All sections are anchor-linked on one page. The new static site will expand this into a proper multi-page structure.
 
 ---
 
 ### A1. Navigation Menu (Current Site)
 
-| # | Label | Anchor | New Page |
-|---|-------|--------|----------|
-| 1 | Home | `#` | `index.html` |
-| 2 | About Us | `#aboutus` | `pages/about.html` |
-| 3 | Product | `#product` | `pages/products.html` |
-| 4 | Why Us | `#whyus` | `index.html#why-us` |
-| 5 | Industry | `#industry` | `pages/industries.html` |
-| 6 | Contact Us | `#contactus` | `pages/contact.html` |
+| #   | Label      | Anchor       | New Page                |
+| --- | ---------- | ------------ | ----------------------- |
+| 1   | Home       | `#`          | `index.html`            |
+| 2   | About Us   | `#aboutus`   | `pages/about.html`      |
+| 3   | Product    | `#product`   | `pages/products.html`   |
+| 4   | Why Us     | `#whyus`     | `index.html#why-us`     |
+| 5   | Industry   | `#industry`  | `pages/industries.html` |
+| 6   | Contact Us | `#contactus` | `pages/contact.html`    |
 
 ---
 
 ### A2. Page Sections Inventory (Top to Bottom)
 
-| # | Section | Content Found |
-|---|---------|---------------|
-| 1 | Top Bar | Email: marketing.agro@saatvikgroup.com · LinkedIn link |
-| 2 | Header/Nav | Logo (img/logo.svg) · Hamburger nav · Sticky |
-| 3 | Hero/Banner | BG: img/banner.jpg · H1: "Driven by purity. Guided by science. Built for consistency." · 2 CTAs |
-| 4 | About (#aboutus) | BG: img/agro-bg.jpg (full-height) · H2: "From grain to greatness..." · 2 paragraphs |
-| 5 | Shakti Intro | BG: img/org-bg.jpg · H2: THE SHAKTI INGREDIENT RANGE · tagline + body |
-| 6 | Products (#product) | Product cards: image + title + description + Download Brochure popup |
-| 7 | Why Us (#whyus) | [TODO: confirm with client — section exists in nav, content needs browser verification] |
-| 8 | Industry (#industry) | [TODO: confirm with client] |
-| 9 | Contact (#contactus) | [TODO: confirm with client — form, address, map] |
-| 10 | Footer | [TODO: confirm with client] |
+| #   | Section              | Content Found                                                                                   |
+| --- | -------------------- | ----------------------------------------------------------------------------------------------- |
+| 1   | Top Bar              | Email: marketing.agro@saatvikgroup.com · LinkedIn link                                          |
+| 2   | Header/Nav           | Logo (img/logo.svg) · Hamburger nav · Sticky                                                    |
+| 3   | Hero/Banner          | BG: img/banner.jpg · H1: "Driven by purity. Guided by science. Built for consistency." · 2 CTAs |
+| 4   | About (#aboutus)     | BG: img/agro-bg.jpg (full-height) · H2: "From grain to greatness..." · 2 paragraphs             |
+| 5   | Shakti Intro         | BG: img/org-bg.jpg · H2: THE SHAKTI INGREDIENT RANGE · tagline + body                           |
+| 6   | Products (#product)  | Product cards: image + title + description + Download Brochure popup                            |
+| 7   | Why Us (#whyus)      | [TODO: confirm with client — section exists in nav, content needs browser verification]         |
+| 8   | Industry (#industry) | [TODO: confirm with client]                                                                     |
+| 9   | Contact (#contactus) | [TODO: confirm with client — form, address, map]                                                |
+| 10  | Footer               | [TODO: confirm with client]                                                                     |
 
 ---
 
@@ -63,37 +64,37 @@ The current https://www.saatvikagro.com/ is a **single HTML page** (not a multi-
 
 ### A5. Products (Confirmed from HTML)
 
-| # | Product Name | Description Excerpt | Has Brochure? |
-|---|-------------|---------------------|---------------|
-| 1 | Shakti Maize Starch Powder Food Grade | Premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications. | Yes (lead-capture popup) |
-| 2+ | [TODO: more products] | HTML was truncated. Additional products with product02.jpg, product03.jpg etc. likely exist. | TBD |
+| #   | Product Name                          | Description Excerpt                                                                                                                                   | Has Brochure?            |
+| --- | ------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------ |
+| 1   | Shakti Maize Starch Powder Food Grade | Premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications. | Yes (lead-capture popup) |
+| 2+  | [TODO: more products]                 | HTML was truncated. Additional products with product02.jpg, product03.jpg etc. likely exist.                                                          | TBD                      |
 
 ---
 
 ### A6. Contact Info (Confirmed)
 
-| Field | Value |
-|-------|-------|
-| Email | marketing.agro@saatvikgroup.com |
-| LinkedIn | https://www.linkedin.com/company/saatvik-agro-processors-private-limited/ |
-| Phone | [TODO: 1800-547-1151 was commented out — may be inactive] |
-| Address | [TODO: confirm with client] |
-| Google Maps | [TODO: confirm with client] |
+| Field       | Value                                                                     |
+| ----------- | ------------------------------------------------------------------------- |
+| Email       | marketing.agro@saatvikgroup.com                                           |
+| LinkedIn    | https://www.linkedin.com/company/saatvik-agro-processors-private-limited/ |
+| Phone       | [TODO: +91 95910 33188 was commented out — may be inactive]               |
+| Address     | [TODO: confirm with client]                                               |
+| Google Maps | [TODO: confirm with client]                                               |
 
 ---
 
 ### A7. Images Referenced in Source
 
-| Image File | Usage |
-|-----------|-------|
-| img/logo.svg | Header logo |
-| img/favicon.jpg | Favicon |
-| img/banner.jpg | Hero background |
-| img/agro-bg.jpg | About section background |
-| img/org-bg.jpg | Shakti/Products section bg |
-| img/heading.svg | Decorative heading ornament |
-| img/down-icon.svg | Button arrow icon |
-| img/product01.jpg | Product 1 image |
+| Image File        | Usage                       |
+| ----------------- | --------------------------- |
+| img/logo.svg      | Header logo                 |
+| img/favicon.jpg   | Favicon                     |
+| img/banner.jpg    | Hero background             |
+| img/agro-bg.jpg   | About section background    |
+| img/org-bg.jpg    | Shakti/Products section bg  |
+| img/heading.svg   | Decorative heading ornament |
+| img/down-icon.svg | Button arrow icon           |
+| img/product01.jpg | Product 1 image             |
 
 ---
 
@@ -117,23 +118,23 @@ The current https://www.saatvikagro.com/ is a **single HTML page** (not a multi-
 
 ### B2. Reference Site Colors (from CSS)
 
-| Role | Hex | Usage |
-|------|-----|-------|
-| Background | #FFFFFF | Page bg |
-| Background Alt | #F6F7F1 | Alternate section bg (cream) |
-| Border | #E5E7DE | Dividers |
-| Title/Text | #040509 | Headings |
-| Meta | #ACAFB2 | Date, captions |
-| Accent/Link | #EABE0D | Highlights (golden yellow) |
-| Hover | #FFBF00 | Hover states (amber) |
-| CTA Button | #a31f1f | Primary action button (deep red) |
+| Role           | Hex     | Usage                            |
+| -------------- | ------- | -------------------------------- |
+| Background     | #FFFFFF | Page bg                          |
+| Background Alt | #F6F7F1 | Alternate section bg (cream)     |
+| Border         | #E5E7DE | Dividers                         |
+| Title/Text     | #040509 | Headings                         |
+| Meta           | #ACAFB2 | Date, captions                   |
+| Accent/Link    | #EABE0D | Highlights (golden yellow)       |
+| Hover          | #FFBF00 | Hover states (amber)             |
+| CTA Button     | #a31f1f | Primary action button (deep red) |
 
 ### B3. Reference Site Fonts
 
-| Role | Family |
-|------|--------|
+| Role        | Family                         |
+| ----------- | ------------------------------ |
 | Headings H1 | Instrument Sans (Google Fonts) |
-| Body/Para | DM Sans (Google Fonts) |
+| Body/Para   | DM Sans (Google Fonts)         |
 
 ### B4. Key Design Patterns
 
@@ -153,82 +154,82 @@ Brand identity: maize/agro industry = warm amber + deep navy authority, clean mo
 
 ### C1. Color Palette
 
-| Token | Value | Usage |
-|-------|-------|-------|
-| --color-primary | #1B3051 | Dark navy — primary brand |
-| --color-primary-dark | #0F1E35 | Darker navy for hovers |
-| --color-secondary | #EC8026 | Warm orange — CTAs, highlights |
-| --color-secondary-dark | #C96818 | Darker orange for hover |
-| --color-accent | #F5A623 | Golden amber — decorative |
-| --color-bg | #FFFFFF | Page background |
-| --color-bg-alt | #F7F5F0 | Off-white/cream sections |
-| --color-bg-dark | #0F1E35 | Dark sections, footer |
-| --color-text | #1A1A2E | Primary body text |
-| --color-text-light | #5C6070 | Meta, captions |
-| --color-text-white | #FFFFFF | On dark backgrounds |
-| --color-border | #E8E4DC | Dividers (warm tone) |
-| --color-success | #2D7A4F | Form success |
-| --color-error | #C62828 | Form error |
+| Token                  | Value   | Usage                          |
+| ---------------------- | ------- | ------------------------------ |
+| --color-primary        | #1B3051 | Dark navy — primary brand      |
+| --color-primary-dark   | #0F1E35 | Darker navy for hovers         |
+| --color-secondary      | #EC8026 | Warm orange — CTAs, highlights |
+| --color-secondary-dark | #C96818 | Darker orange for hover        |
+| --color-accent         | #F5A623 | Golden amber — decorative      |
+| --color-bg             | #FFFFFF | Page background                |
+| --color-bg-alt         | #F7F5F0 | Off-white/cream sections       |
+| --color-bg-dark        | #0F1E35 | Dark sections, footer          |
+| --color-text           | #1A1A2E | Primary body text              |
+| --color-text-light     | #5C6070 | Meta, captions                 |
+| --color-text-white     | #FFFFFF | On dark backgrounds            |
+| --color-border         | #E8E4DC | Dividers (warm tone)           |
+| --color-success        | #2D7A4F | Form success                   |
+| --color-error          | #C62828 | Form error                     |
 
 ### C2. Typography
 
-| Token | Value | Notes |
-|-------|-------|-------|
-| --font-heading | 'Instrument Sans', sans-serif | Google Fonts, free, modern |
-| --font-body | 'DM Sans', sans-serif | Google Fonts, excellent legibility |
-| --font-size-base | 17px | Body text |
-| --font-size-sm | 14px | Caption, meta |
-| --font-size-lg | 20px | Lead paragraphs |
-| --font-size-xl | clamp(2rem, 4vw, 3rem) | H2 headings |
-| --font-size-hero | clamp(2.5rem, 6vw, 5rem) | Hero H1 |
-| --font-weight-regular | 400 | Body |
-| --font-weight-semibold | 600 | Subheadings |
-| --font-weight-bold | 700 | Main headings |
+| Token                  | Value                         | Notes                              |
+| ---------------------- | ----------------------------- | ---------------------------------- |
+| --font-heading         | 'Instrument Sans', sans-serif | Google Fonts, free, modern         |
+| --font-body            | 'DM Sans', sans-serif         | Google Fonts, excellent legibility |
+| --font-size-base       | 17px                          | Body text                          |
+| --font-size-sm         | 14px                          | Caption, meta                      |
+| --font-size-lg         | 20px                          | Lead paragraphs                    |
+| --font-size-xl         | clamp(2rem, 4vw, 3rem)        | H2 headings                        |
+| --font-size-hero       | clamp(2.5rem, 6vw, 5rem)      | Hero H1                            |
+| --font-weight-regular  | 400                           | Body                               |
+| --font-weight-semibold | 600                           | Subheadings                        |
+| --font-weight-bold     | 700                           | Main headings                      |
 
 > Decision: Replace Bahnschrift (Windows-only proprietary) with Instrument Sans + DM Sans.
 
 ### C3. Spacing Scale
 
-| Token | Value |
-|-------|-------|
-| --space-xs | 0.5rem / 8px |
-| --space-sm | 1rem / 16px |
-| --space-md | 1.5rem / 24px |
-| --space-lg | 2.5rem / 40px |
-| --space-xl | 4rem / 64px |
-| --space-2xl | 6rem / 96px |
-| --space-3xl | 8rem / 128px |
-| --container-max | 1280px |
+| Token               | Value                    |
+| ------------------- | ------------------------ |
+| --space-xs          | 0.5rem / 8px             |
+| --space-sm          | 1rem / 16px              |
+| --space-md          | 1.5rem / 24px            |
+| --space-lg          | 2.5rem / 40px            |
+| --space-xl          | 4rem / 64px              |
+| --space-2xl         | 6rem / 96px              |
+| --space-3xl         | 8rem / 128px             |
+| --container-max     | 1280px                   |
 | --container-padding | clamp(1rem, 5vw, 2.5rem) |
 
 ### C4. Breakpoints
 
-| Name | Value |
-|------|-------|
-| Mobile | 360px (base/default) |
-| Tablet | 768px |
-| Desktop | 1024px |
-| Wide | 1440px |
+| Name    | Value                |
+| ------- | -------------------- |
+| Mobile  | 360px (base/default) |
+| Tablet  | 768px                |
+| Desktop | 1024px               |
+| Wide    | 1440px               |
 
 ### C5. Border Radius and Shadows
 
-| Token | Value |
-|-------|-------|
-| --radius-sm | 4px |
-| --radius-md | 8px |
-| --radius-lg | 16px |
-| --radius-pill | 50px |
-| --shadow-sm | 0 2px 8px rgba(27,48,81,0.08) |
-| --shadow-md | 0 4px 20px rgba(27,48,81,0.12) |
-| --shadow-lg | 0 8px 40px rgba(27,48,81,0.16) |
+| Token         | Value                          |
+| ------------- | ------------------------------ |
+| --radius-sm   | 4px                            |
+| --radius-md   | 8px                            |
+| --radius-lg   | 16px                           |
+| --radius-pill | 50px                           |
+| --shadow-sm   | 0 2px 8px rgba(27,48,81,0.08)  |
+| --shadow-md   | 0 4px 20px rgba(27,48,81,0.12) |
+| --shadow-lg   | 0 8px 40px rgba(27,48,81,0.16) |
 
 ### C6. Button Styles
 
-| Type | Background | Text | Radius | Padding |
-|------|-----------|------|--------|---------|
-| Primary (CTA) | #EC8026 | #fff | 8px | 14px 28px |
-| Secondary (outline) | transparent | #1B3051 | 8px | 14px 28px + 2px border |
-| Dark | #1B3051 | #fff | 8px | 14px 28px |
+| Type                | Background  | Text    | Radius | Padding                |
+| ------------------- | ----------- | ------- | ------ | ---------------------- |
+| Primary (CTA)       | #EC8026     | #fff    | 8px    | 14px 28px              |
+| Secondary (outline) | transparent | #1B3051 | 8px    | 14px 28px + 2px border |
+| Dark                | #1B3051     | #fff    | 8px    | 14px 28px              |
 
 ---
 
@@ -344,7 +345,7 @@ saatvik-agro/
 3. **Product detail pages:** Single products.html with anchor sections per product — sufficient for current product count, easier to maintain.
 4. **Industries page:** Nav had Industry anchor. Building a full page for SEO depth.
 5. **Blog/Gallery:** Not on client site. Excluded from scope.
-6. **Phone number:** 1800-547-1151 was commented out in source HTML. Treated as inactive. Flagged in CONTENT_TODO.
+6. **Phone number:** +91 95910 33188 was commented out in source HTML. Treated as inactive. Flagged in CONTENT_TODO.
 7. **Brochure lead form:** Current PHP backend (save-lead.php) replaced with Formspree/Web3Forms in new site.
 8. **More products:** HTML was truncated at product 1. Likely 3-6 products total (product02.jpg etc.). All captured in Phase 3 via browser.
 9. **Contact/address/map:** Not visible in extracted HTML. Flagged in CONTENT_TODO for client confirmation.
@@ -364,4 +365,3 @@ As development advanced through Phases 2, 3, 4, and 5, several initial assumptio
 5. **Responsive Mobile Category Dropdown:** The products archive (`products.html`) was enhanced with a touch-friendly `<select>` dropdown synced with desktop category tabs.
 6. **Vector Trust Marks:** Clean inline SVG representations for Halal India, ISO 9001:2015, FSSAI, and ISO 22000:2005 were built to eliminate blurry raster badges.
 7. **Asset Purge:** Verified and purged unused placeholder images (`fibre.jpg`, `hero.jpg`, `powder.jpg`) while safeguarding all active and gallery media.
-

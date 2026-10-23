@@ -1,0 +1,8 @@
+in# robots.txt for Saatvik Agro Processors Private Limited
+# https://www.saatvikagro.com
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://www.saatvikagro.com/sitemap.xml

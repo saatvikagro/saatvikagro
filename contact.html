@@ -5,6 +5,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Contact Us | Saatvik Agro</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/content/favicon.png" />
+  <link rel="apple-touch-icon" href="assets/images/content/favicon.png" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link
@@ -31,16 +35,17 @@
     </ul>
 
     <div class="nav-contact">
-      <div class="nav-phone">
+      <a href="tel:+91 95910 33188" class="nav-phone">
         <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"
           stroke-linecap="round" stroke-linejoin="round">
           <path
             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
           </path>
         </svg>
-        555-123-4567
-      </div>
-      <a href="contact.html" class="btn btn--nav-rect" style="background-color: var(--color-primary); color: #fff;">Contact Us</a>
+        +91 95910 33188
+      </a>
+      <a href="contact.html" class="btn btn--nav-rect"
+        style="background-color: var(--color-primary); color: #fff;">Contact Us</a>
     </div>
     <!-- Hamburger Button (Right) -->
     <button class="hamburger" id="hamburger-menu" aria-label="Open menu">
@@ -67,14 +72,14 @@
           <li><a href="contact.html">Contact Us</a></li>
         </ul>
       </nav>
-      <div class="nav-phone-full">
+      <a href="tel:+91 95910 33188" class="nav-phone-full">
         <svg width="24" height="24" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
           <path
             d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
           </path>
         </svg>
-        555-123-4567
-      </div>
+        +91 95910 33188
+      </a>
     </div>
   </div>
 
@@ -83,21 +88,25 @@
       <h1>General inquiries</h1>
       <div class="contact-grid">
         <div class="contact-col">
-          <h4>General Inquiries</h4>
-          <a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a>
+          <h4>Corporate Office</h4>
+          <p>Saatvik Agro Processors Private Limite Unit 1418 - 1419, <br> Tower A, Grandthum, Plot No 7, <br> Techzone
+            4,
+            Greater Noida West,<br>Uttar Pradesh - 201318</p>
         </div>
         <div class="contact-col">
-          <h4>Address</h4>
-          <p>A-404, Shagun Arcade,<br>Vijay Nagar, Indore - 452010</p>
-        </div>
-        <div class="contact-col">
-          <h4>Plant Location</h4>
-          <p>Boregaon Industrial Area,<br>Chhindwara, MP</p>
+          <h4>Marketed & Manufactured by</h4>
+          <p>Saatvik Agro Processors Private Limited Plot No. 32, 33, <br> 40 AND 41, Sector-H,Sitapur,<br> MPIDC, Phase
+            2, Morena, Banmore, Madhya Pradesh - 476444</p>
         </div>
         <div class="contact-col">
           <h4>Socials</h4>
           <a href="#">LinkedIn</a>
           <a href="#">Twitter</a>
+        </div>
+        <div class="contact-col">
+          <h4>General Inquiries</h4>
+          <a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a>
+          <p style="margin-top: 10px;"><a href="tel:+91 95910 33188">+91 95910 33188</a></p>
         </div>
       </div>
     </div>
@@ -108,134 +117,82 @@
       <div class="contact-form-box">
         <h2>Have questions?<br>Get in touch!</h2>
         <form class="contact-custom-form" id="contactForm">
-          <!-- Row 1: Name & Phone Number -->
+          <!-- Row 1: Full Name & Company -->
           <div class="form-row">
             <div class="form-field">
-              <input type="text" id="contact-name" name="name" class="underline-input" placeholder="Name" required />
+              <label for="contact-name" class="field-label">Full Name *</label>
+              <input type="text" id="contact-name" name="fullName" class="form-input" placeholder="Your full name" required />
             </div>
             <div class="form-field">
-              <input type="tel" id="contact-phone" name="phone" class="underline-input" placeholder="Phone Number" />
+              <label for="contact-company" class="field-label">Company *</label>
+              <input type="text" id="contact-company" name="company" class="form-input" placeholder="Company name" required />
             </div>
           </div>
 
-          <!-- Row 2: Company Name & COMPANY (Distributor / Manufacturer) -->
+          <!-- Row 2: Email & Phone Number -->
           <div class="form-row">
             <div class="form-field">
-              <input type="text" id="contact-company" name="company" class="underline-input" placeholder="Company Name" />
+              <label for="contact-email" class="field-label">Email *</label>
+              <input type="email" id="contact-email" name="email" class="form-input" placeholder="Email address" required />
             </div>
-            <div class="form-field company-radio-field">
-              <span class="field-label-bold">COMPANY</span>
-              <div class="radio-options">
-                <label class="radio-label">
-                  <input type="radio" name="company_type" value="Distributor" checked />
-                  <span>Distributor</span>
-                </label>
-                <label class="radio-label">
-                  <input type="radio" name="company_type" value="Manufacturer" />
-                  <span>Manufacturer</span>
-                </label>
-              </div>
+            <div class="form-field">
+              <label for="contact-phone" class="field-label">Phone Number *</label>
+              <input type="tel" id="contact-phone" name="phone" class="form-input" placeholder="Include country code" required />
             </div>
           </div>
 
-          <!-- Row 3: Country & Designation -->
+          <!-- Row 3: Location & Requirement -->
           <div class="form-row">
             <div class="form-field">
-              <input type="text" id="contact-country" name="country" class="underline-input" placeholder="Country" />
+              <label for="contact-location" class="field-label">Location *</label>
+              <input type="text" id="contact-location" name="location" class="form-input" placeholder="City, state and country" required />
             </div>
             <div class="form-field">
-              <input type="text" id="contact-designation" name="designation" class="underline-input" placeholder="Designation" />
+              <label for="contact-requirement" class="field-label">Requirement *</label>
+              <select id="contact-requirement" name="requirement" class="form-select" required>
+                <option value="" disabled selected>Select product or Not Sure Yet</option>
+                <option value="Food Grade Maize Starch">Food Grade Maize Starch</option>
+                <option value="Liquid Glucose">Liquid Glucose</option>
+                <option value="Maltodex SD">Maltodex SD</option>
+                <option value="Maltodex HD">Maltodex HD</option>
+                <option value="Maltodex LD">Maltodex LD</option>
+                <option value="Industrial Maize Starch">Industrial Maize Starch</option>
+                <option value="Maize Dry Fibre">Maize Dry Fibre</option>
+                <option value="Maize Gluten Meal">Maize Gluten Meal</option>
+                <option value="Maize Germ">Maize Germ</option>
+                <option value="Not Sure Yet">Not Sure Yet</option>
+              </select>
             </div>
           </div>
 
-          <!-- Row 4: E-Mail & Website -->
+          <!-- Row 4: Quantity in Tonnes & Message -->
           <div class="form-row">
             <div class="form-field">
-              <input type="email" id="contact-email" name="email" class="underline-input" placeholder="E-Mail" required />
+              <label for="contact-quantity" class="field-label">Quantity in Tonnes</label>
+              <input type="text" id="contact-quantity" name="quantity" class="form-input" placeholder="Estimated quantity" />
             </div>
             <div class="form-field">
-              <input type="url" id="contact-website" name="website" class="underline-input" placeholder="Website" />
+              <label for="contact-message" class="field-label">Message *</label>
+              <textarea id="contact-message" name="message" class="form-textarea" placeholder="Application, specification or question" rows="3" required></textarea>
             </div>
           </div>
 
-          <!-- Row 5: Message -->
-          <div class="form-row full-width">
-            <div class="form-field">
-              <textarea id="contact-message" name="message" class="underline-textarea" placeholder="Message" rows="2"></textarea>
-            </div>
-          </div>
-
-          <!-- Row 6: Categories / Interests Checkboxes -->
-          <div class="interests-grid">
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="General Enquiry" checked />
-              <span>General Enquiry</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Food ingredients" />
-              <span>Food ingredients</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Industrial Application" />
-              <span>Industrial Application</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Textile" />
-              <span>Textile</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Pharmaceutical excipients" />
-              <span>Pharmaceutical excipients</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Paper & Board" />
-              <span>Paper & Board</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Animal Nutrition" />
-              <span>Animal Nutrition</span>
-            </label>
-            <label class="interest-check">
-              <input type="checkbox" name="interest" value="Others" />
-              <span>Others</span>
+          <!-- Privacy Policy Checkbox -->
+          <div class="privacy-checkbox-wrap">
+            <label class="privacy-checkbox-label">
+              <input type="checkbox" id="contact-privacy" name="privacy" required />
+              <span>I have read the Privacy Policy and understand that these details will be used to respond to my enquiry.</span>
             </label>
           </div>
 
-          <!-- Row 7: Captcha Section -->
-          <div class="captcha-section">
-            <!-- Mock reCAPTCHA Box -->
-            <div class="recaptcha-box">
-              <label class="recaptcha-checkbox-label">
-                <input type="checkbox" id="recaptcha-check" required />
-                <span class="recaptcha-text">I'm not a robot</span>
-              </label>
-              <div class="recaptcha-logo-wrap">
-                <svg width="26" height="26" viewBox="0 0 48 48" fill="none">
-                  <path d="M24 4C12.95 4 4 12.95 4 24C4 35.05 12.95 44 24 44C35.05 44 44 35.05 44 24C44 12.95 35.05 4 24 4ZM24 40C15.16 40 8 32.84 8 24C8 15.16 15.16 8 24 8C32.84 8 40 15.16 40 24C40 32.84 32.84 40 24 40Z" fill="#4285F4"/>
-                  <path d="M22 14L16 20L22 26V21C26.42 21 30 24.58 30 29C30 30.58 29.54 32.05 28.75 33.3L31.7 36.25C33.74 34.21 35 31.26 35 28C35 21.92 30.08 17 24 17V14H22Z" fill="#1A73E8"/>
-                  <path d="M26 34L32 28L26 22V27C21.58 27 18 23.42 18 19C18 17.42 18.46 15.95 19.25 14.7L16.3 11.75C14.26 13.79 13 16.74 13 20C13 26.08 17.92 31 24 31V34H26Z" fill="#4285F4"/>
-                </svg>
-                <span class="recaptcha-brand">reCAPTCHA</span>
-              </div>
-            </div>
-
-            <!-- Math Captcha -->
-            <div class="math-captcha-row">
-              <div class="math-challenge">
-                <span class="math-noise">8 + 4 = ?</span>
-              </div>
-              <div class="math-input-field">
-                <input type="text" id="math-answer" placeholder="Enter Answer" class="underline-input" />
-              </div>
-            </div>
-          </div>
-
-          <!-- Row 8: Action Buttons (Send Message & WhatsApp) -->
+          <!-- Action Buttons (Send Message & WhatsApp) -->
           <div class="form-actions">
             <button type="submit" class="btn btn--submit-full">Send Message</button>
-            <a href="https://wa.me/919999999999" target="_blank" rel="noopener noreferrer" class="btn btn--whatsapp-full">
+            <a href="https://wa.me/919591033188" target="_blank" rel="noopener noreferrer"
+              class="btn btn--whatsapp-full">
               <svg width="22" height="22" viewBox="0 0 24 24" fill="currentColor">
-                <path d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.838.497 3.565 1.365 5.064L2.05 22l5.086-1.306A9.97 9.97 0 0 0 12.03 22c5.535 0 10.03-4.496 10.03-10.031C22.062 6.496 17.566 2 12.031 2zm0 18.344a8.277 8.277 0 0 1-4.223-1.154l-.303-.18-3.136.806.837-3.037-.197-.319a8.267 8.267 0 0 1-1.272-4.429c0-4.577 3.725-8.303 8.302-8.303 4.577 0 8.303 3.726 8.303 8.303 0 4.578-3.726 8.313-8.308 8.313zm4.551-6.223c-.249-.125-1.474-.727-1.703-.81-.229-.083-.396-.125-.562.125-.166.25-.645.81-.79 1.018-.146.208-.291.229-.541.104-.25-.125-1.055-.389-2.01-1.24a7.488 7.488 0 0 1-1.389-1.724c-.146-.25-.015-.385.109-.509.112-.112.25-.291.375-.437.125-.146.166-.25.25-.416.083-.166.042-.312-.021-.437-.062-.125-.562-1.352-.77-1.851-.203-.487-.41-.421-.563-.429l-.479-.008c-.166 0-.437.062-.666.312-.229.25-.874.853-.874 2.08s.895 2.413 1.02 2.58c.125.166 1.761 2.689 4.267 3.771.596.257 1.061.41 1.424.526.599.191 1.144.164 1.575.1.48-.072 1.474-.603 1.682-1.185.208-.583.208-1.082.146-1.186-.063-.104-.229-.166-.479-.291z"/>
+                <path
+                  d="M12.031 2C6.496 2 2 6.496 2 12.031c0 1.838.497 3.565 1.365 5.064L2.05 22l5.086-1.306A9.97 9.97 0 0 0 12.03 22c5.535 0 10.03-4.496 10.03-10.031C22.062 6.496 17.566 2 12.031 2zm0 18.344a8.277 8.277 0 0 1-4.223-1.154l-.303-.18-3.136.806.837-3.037-.197-.319a8.267 8.267 0 0 1-1.272-4.429c0-4.577 3.725-8.303 8.302-8.303 4.577 0 8.303 3.726 8.303 8.303 0 4.578-3.726 8.313-8.308 8.313zm4.551-6.223c-.249-.125-1.474-.727-1.703-.81-.229-.083-.396-.125-.562.125-.166.25-.645.81-.79 1.018-.146.208-.291.229-.541.104-.25-.125-1.055-.389-2.01-1.24a7.488 7.488 0 0 1-1.389-1.724c-.146-.25-.015-.385.109-.509.112-.112.25-.291.375-.437.125-.146.166-.25.25-.416.083-.166.042-.312-.021-.437-.062-.125-.562-1.352-.77-1.851-.203-.487-.41-.421-.563-.429l-.479-.008c-.166 0-.437.062-.666.312-.229.25-.874.853-.874 2.08s.895 2.413 1.02 2.58c.125.166 1.761 2.689 4.267 3.771.596.257 1.061.41 1.424.526.599.191 1.144.164 1.575.1.48-.072 1.474-.603 1.682-1.185.208-.583.208-1.082.146-1.186-.063-.104-.229-.166-.479-.291z" />
               </svg>
               <span>Connect on WhatsApp</span>
             </a>
@@ -268,14 +225,18 @@
           <a href="contact.html" class="btn btn--accent">Contact Us</a>
         </div>
 
-        <div class="footer-col">
-          <h4>Office</h4>
+        <div class="footer-col footer-col-address">
+          <h4>Corporate Office</h4>
           <p>
-            Germany &mdash;<br />785 15h Street, Office 47<br />Berlin, De
-            81566
+            Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318
           </p>
-          <p>&bull; info@email.com</p>
-          <h4 class="footer-phone">+1 840 841 25 69</h4>
+          <h4 class="footer-subheading">Manufacturing Unit</h4>
+          <p>
+            Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh - 476444
+          </p>
+          <p><a href="mailto:marketing.agro@saatvikgroup.com" class="footer-email">&bull;
+              marketing.agro@saatvikgroup.com</a></p>
+          <h4 class="footer-phone"><a href="tel:+91 95910 33188">+91 95910 33188</a></h4>
         </div>
 
         <div class="footer-col">
@@ -284,7 +245,6 @@
             <li><a href="index.html">&bull; Home</a></li>
             <li><a href="about.html">&bull; About Us</a></li>
             <li><a href="products.html">&bull; Products</a></li>
-            <li><a href="industries.html">&bull; Industries</a></li>
             <li><a href="media.html">&bull; Media</a></li>
           </ul>
         </div>
@@ -305,13 +265,31 @@
       </div>
 
       <div class="footer-bottom">
-        <div class="footer-copy">&copy; 2026. All Rights Reserved.</div>
+        <div class="footer-copy">&copy; 2026 Saatvik Agro Processors Pvt. Ltd. All Rights Reserved.</div>
+        <div class="footer-legal-links">
+          <a href="terms-conditions.html">Terms &amp; Conditions</a>
+          <span class="divider">|</span>
+          <a href="privacy-policy.html">Privacy Policy</a>
+        </div>
         <div class="footer-credit">Site by Saatvik Agro.</div>
       </div>
     </div>
   </footer>
 
   <script src="assets/js/main.js"></script>
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const form = document.getElementById("contactForm");
+      if (form) {
+        form.addEventListener("submit", (e) => {
+          e.preventDefault();
+          const name = document.getElementById("contact-name")?.value || "there";
+          alert(`Thank you, ${name}! Your enquiry has been received. Our team will get back to you shortly.`);
+          form.reset();
+        });
+      }
+    });
+  </script>
 </body>
 
 </html>

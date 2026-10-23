@@ -6,34 +6,34 @@
 
 ## 1. Resolved Items ✅
 
-| # | Item | Status | Details |
-|---|---|---|---|
-| 1 | Full product list (7 Shakti products) | ✅ Resolved | All 7 products configured in `assets/js/products-data.js` & `data/products.json` |
-| 2 | High-res product images (all 7) | ✅ Resolved | Optimized `.webp` assets in `assets/images/products/` |
-| 3 | Single Product Detail page | ✅ Resolved | Built `product-single.html` with dynamic specification loader |
-| 4 | Certifications trust marks | ✅ Resolved | High-fidelity inline vector SVGs for Halal India, ISO 9001:2015, FSSAI, and ISO 22000 |
-| 5 | Hero H1 & Video | ✅ Resolved | H1: "Driven by purity. Guided by science. Built for consistency." + `hero-modules.mp4` |
-| 6 | About section full text | ✅ Resolved | Authentic story, mission, vision, and infrastructure metrics |
-| 7 | Manufacturing scale metrics | ✅ Resolved | 500 TPD initial, 1200 TPD scalable capacity at Morena, MP |
-| 8 | Values table | ✅ Resolved | Customer First, Innovation, Quality, Excellence, Integrity, Collaboration |
-| 9 | Industries served | ✅ Resolved | Food & Nutrition, Animal Feed, Paper & Packaging, Pharmaceuticals |
-| 10 | Media Gallery | ✅ Resolved | `media.html` with interactive lightbox and real plant photos |
-| 11 | Team section | ✅ Resolved | Marcus Lee, Jorge Alvarez, Elena Ramirez with proper balanced padding |
-| 12 | Corporate & Plant Addresses | ✅ Resolved | Verified Morena (MP) plant and Greater Noida (UP) corporate addresses |
-| 13 | Email channels | ✅ Resolved | `marketing.agro@saatvikgroup.com` |
-| 14 | Unused asset purge | ✅ Resolved | Safely removed unreferenced images (`fibre.jpg`, `hero.jpg`, `powder.jpg`) |
+| #   | Item                                  | Status      | Details                                                                                |
+| --- | ------------------------------------- | ----------- | -------------------------------------------------------------------------------------- |
+| 1   | Full product list (7 Shakti products) | ✅ Resolved | All 7 products configured in `assets/js/products-data.js` & `data/products.json`       |
+| 2   | High-res product images (all 7)       | ✅ Resolved | Optimized `.webp` assets in `assets/images/products/`                                  |
+| 3   | Single Product Detail page            | ✅ Resolved | Built `product-single.html` with dynamic specification loader                          |
+| 4   | Certifications trust marks            | ✅ Resolved | High-fidelity inline vector SVGs for Halal India, ISO 9001:2015, FSSAI, and ISO 22000  |
+| 5   | Hero H1 & Video                       | ✅ Resolved | H1: "Driven by purity. Guided by science. Built for consistency." + `hero-modules.mp4` |
+| 6   | About section full text               | ✅ Resolved | Authentic story, mission, vision, and infrastructure metrics                           |
+| 7   | Manufacturing scale metrics           | ✅ Resolved | 500 TPD initial, 1200 TPD scalable capacity at Morena, MP                              |
+| 8   | Values table                          | ✅ Resolved | Customer First, Innovation, Quality, Excellence, Integrity, Collaboration              |
+| 9   | Industries served                     | ✅ Resolved | Food & Nutrition, Animal Feed, Paper & Packaging, Pharmaceuticals                      |
+| 10  | Media Gallery                         | ✅ Resolved | `media.html` with interactive lightbox and real plant photos                           |
+| 11  | Team section                          | ✅ Resolved | Marcus Lee, Jorge Alvarez, Elena Ramirez with proper balanced padding                  |
+| 12  | Corporate & Plant Addresses           | ✅ Resolved | Verified Morena (MP) plant and Greater Noida (UP) corporate addresses                  |
+| 13  | Email channels                        | ✅ Resolved | `marketing.agro@saatvikgroup.com`                                                      |
+| 14  | Unused asset purge                    | ✅ Resolved | Safely removed unreferenced images (`fibre.jpg`, `hero.jpg`, `powder.jpg`)             |
 
 ---
 
 ## 2. Pending Client Confirmations (Action Required from Client)
 
-| # | Item | Purpose | Current Status |
-|---|---|---|---|
-| 1 | Official Phone Number | Header & footer contact number | Currently showing display placeholder `555-123-4567`. Client to provide official toll-free or desk number. |
-| 2 | WhatsApp Inquiry Number | Click-to-chat button (if desired) | [TODO: Confirm if client wants direct WhatsApp button] |
-| 3 | Contact Form Service Endpoint | Live form submissions | Inquiry form in `contact.html` is ready for Formspree / Web3Forms / custom webhook URL. |
-| 4 | Product Brochure Download PDFs | Brochure download triggers | Client to provide final high-res downloadable PDF brochures for each product. |
-| 5 | Google Analytics 4 ID | Traffic tracking | Ready to add tag upon client providing measurement ID (`G-XXXXXXXXXX`). |
+| #   | Item                           | Purpose                           | Current Status                                                                          |
+| --- | ------------------------------ | --------------------------------- | --------------------------------------------------------------------------------------- |
+| 1   | Official Phone Number          | Header & footer contact number    | Confirmed and integrated: `+91 95910 33188` (toll-free across entire website).          |
+| 2   | WhatsApp Inquiry Number        | Click-to-chat button (if desired) | [TODO: Confirm if client wants direct WhatsApp button]                                  |
+| 3   | Contact Form Service Endpoint  | Live form submissions             | Inquiry form in `contact.html` is ready for Formspree / Web3Forms / custom webhook URL. |
+| 4   | Product Brochure Download PDFs | Brochure download triggers        | Client to provide final high-res downloadable PDF brochures for each product.           |
+| 5   | Google Analytics 4 ID          | Traffic tracking                  | Ready to add tag upon client providing measurement ID (`G-XXXXXXXXXX`).                 |
 
 ---
 

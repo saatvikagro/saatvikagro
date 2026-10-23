@@ -93,7 +93,7 @@ if (typeof gsap !== 'undefined') {
   if (document.querySelector(".hero-center-left h1")) {
     const heroTl = gsap.timeline();
     heroTl.from(".hero-center-left h1", { y: 40, opacity: 0, duration: 1.2, ease: "power3.out" })
-      .from(".btn--hero-orange", { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
+      .from(".hero-btn-group", { opacity: 0, y: 20, duration: 0.8, ease: "power2.out" }, "-=0.8")
       .from(".hero-bottom-text", { opacity: 0, x: -20, duration: 0.8, ease: "power2.out" }, "-=0.8")
       .from(".hero-scroll-text", { opacity: 0, x: 20, duration: 0.8, ease: "power2.out" }, "-=0.8");
     if (document.querySelector(".slider-dot")) {
@@ -254,3 +254,18 @@ if (typeof gsap !== 'undefined') {
     });
   });
 }
+
+// Automatically highlight active nav link on current page
+(function initActiveNav() {
+  const currentPath = window.location.pathname.split('/').pop() || 'index.html';
+  document.querySelectorAll('.nav-links a, .nav-menu-full a').forEach(link => {
+    const href = link.getAttribute('href');
+    if (
+      href === currentPath ||
+      (currentPath === '' && href === 'index.html') ||
+      (currentPath === 'product-single.html' && href === 'products.html')
+    ) {
+      link.classList.add('active');
+    }
+  });
+})();
