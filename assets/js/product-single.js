@@ -141,26 +141,4 @@ document.addEventListener("DOMContentLoaded", () => {
       if (e.target === modal) closeBrochureModal();
     });
   }
-
-  // Handle Form Submission with instant feedback
-  if (brochureForm) {
-    brochureForm.addEventListener("submit", (e) => {
-      e.preventDefault();
-      const submitBtn = brochureForm.querySelector('button[type="submit"]');
-      if (submitBtn) {
-        submitBtn.textContent = "Downloading Brochure...";
-        submitBtn.style.backgroundColor = "#28a745";
-      }
-
-      setTimeout(() => {
-        alert(`Thank you! The brochure for ${productInput.value || product.name} is downloading.`);
-        closeBrochureModal();
-        brochureForm.reset();
-        if (submitBtn) {
-          submitBtn.textContent = "Download Brochure";
-          submitBtn.style.backgroundColor = "#ea7124";
-        }
-      }, 700);
-    });
-  }
 });

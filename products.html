@@ -258,22 +258,26 @@
           "></p>
       <form id="brochureForm">
         <input type="hidden" id="productInput" name="product" />
+        <div id="brochureAlert" class="form-alert"></div>
         <div class="form-group">
-          <input type="text" class="form-control" placeholder="Full Name" required />
+          <input type="text" name="fullName" class="form-control" placeholder="Full Name" required />
         </div>
         <div class="form-group">
-          <input type="email" class="form-control" placeholder="Email Address" required />
+          <input type="email" name="email" class="form-control" placeholder="Email Address" required />
         </div>
         <div class="form-group">
-          <input type="tel" class="form-control" placeholder="Phone Number" required />
+          <input type="tel" name="phone" class="form-control" placeholder="Phone Number" required />
         </div>
-        <button type="submit" class="btn btn--accent" style="
+        <button type="submit" class="btn btn--accent" id="brochureSubmitBtn" style="
               width: 100%;
               border: none;
               border-radius: 0;
               font-weight: 600;
             ">
-          Download Now
+          <span class="btn-text">Download Now</span>
+          <span class="btn-loader" style="display: none;">
+            <span class="btn-spinner"></span> Submitting...
+          </span>
         </button>
       </form>
     </div>
@@ -467,17 +471,9 @@
           }
         });
       }
-
-      if (form) {
-        form.addEventListener("submit", (e) => {
-          e.preventDefault();
-          alert("Brochure for " + (productInput ? productInput.value : "Product") + " is downloading...");
-          if (modal) modal.classList.remove("active");
-          form.reset();
-        });
-      }
     });
   </script>
+  <script src="assets/js/form-handler.js"></script>
 </body>
 
 </html>
