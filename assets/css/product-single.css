@@ -110,7 +110,7 @@
 .product-title {
   font-size: 2.2rem;
   font-weight: 500;
-  color: #0f172a;
+  color: #000000;
   margin: 0 0 12px 0;
   line-height: 1.25;
 }
@@ -135,13 +135,13 @@
   color: #ea7124;
   letter-spacing: 1.2px;
   margin-bottom: 6px;
-  text-transform: uppercase;
+
 }
 
 .metric-val {
   font-size: 1.22rem;
-  font-weight: 600;
-  color: #0f172a;
+  font-weight: 500;
+  color: #000000;
   margin: 0;
   line-height: 1.25;
   letter-spacing: -0.01em;
@@ -213,7 +213,7 @@
   color: #ea7124;
   letter-spacing: 1.2px;
   margin-bottom: 16px;
-  text-transform: uppercase;
+
 }
 
 /* Features List with Gray Circular Bullet Dots */
@@ -229,7 +229,7 @@
   gap: 12px;
   font-size: 0.94rem;
   font-weight: 600;
-  color: #0f172a;
+  color: #000000;
   line-height: 1.35;
 }
 
@@ -287,14 +287,14 @@
   font-weight: 600;
   letter-spacing: 1.5px;
   color: #6b7280;
-  text-transform: uppercase;
+
   margin-bottom: 8px;
 }
 
 .related-header h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
   font-weight: 600;
-  color: #0f172a;
+  color: #000000;
   margin: 0;
   letter-spacing: -0.02em;
 }
@@ -342,7 +342,7 @@
   font-weight: 600;
   letter-spacing: 1px;
   color: #ea7124;
-  text-transform: uppercase;
+
   margin-bottom: 6px;
 }
 
@@ -354,7 +354,7 @@
 }
 
 .clean-related-title a {
-  color: #0f172a;
+  color: #000000;
   text-decoration: none;
   transition: color 0.2s ease;
 }

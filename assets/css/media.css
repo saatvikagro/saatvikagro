@@ -27,7 +27,7 @@
   font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+
   margin-bottom: 10px;
   display: block;
 }
@@ -125,7 +125,7 @@
   font-size: 0.82rem;
   font-weight: 600;
   color: #888888;
-  text-transform: uppercase;
+
   letter-spacing: 0.8px;
   margin-right: 8px;
   flex-shrink: 0;

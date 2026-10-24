@@ -15,7 +15,7 @@
   font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+
   margin-bottom: 12px;
   display: block;
   font-family: var(--font-body);
@@ -74,7 +74,7 @@
 .legal-toc-title {
   font-size: 0.9rem;
   font-weight: 600;
-  text-transform: uppercase;
+
   letter-spacing: 1px;
   color: #0f2744;
   margin: 0 0 16px 0;
@@ -261,7 +261,7 @@
 .legal-contact-col h5 {
   font-size: 0.85rem;
   color: #ea7124;
-  text-transform: uppercase;
+
   letter-spacing: 1px;
   margin: 0 0 8px 0;
 }

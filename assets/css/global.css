@@ -59,7 +59,7 @@ h6 {
 
 .intro-label {
   color: #666;
-  text-transform: uppercase;
+
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -550,6 +550,7 @@ a {
   position: relative;
   z-index: 2;
 }
+
 .footer-logo img {
   filter: brightness(0) invert(1);
   height: 40px;
@@ -566,6 +567,7 @@ a {
     grid-template-columns: 1fr 1fr;
     gap: 40px;
   }
+
   .footer-col-wide {
     grid-column: 1 / -1;
   }

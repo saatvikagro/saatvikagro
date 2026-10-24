@@ -161,7 +161,7 @@
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
-  text-transform: uppercase;
+
   text-decoration: none;
 }
 
@@ -280,7 +280,7 @@
 
 .intro-label {
   color: #666;
-  text-transform: uppercase;
+
   font-weight: 600;
   font-size: 12px;
   letter-spacing: 0.1em;
@@ -689,7 +689,7 @@
   font-size: 0.65rem;
   font-weight: 600;
   z-index: 2;
-  text-transform: uppercase;
+
 }
 
 .prod-badge.bg-yellow {
@@ -784,7 +784,7 @@
   font-size: 0.85rem;
   letter-spacing: 1px;
   font-weight: 600;
-  text-transform: uppercase;
+
   margin-bottom: 15px;
 }
 
@@ -875,7 +875,7 @@
   font-size: 0.85rem;
   letter-spacing: 1px;
   font-weight: 600;
-  text-transform: uppercase;
+
   margin-bottom: 15px;
 }
 
@@ -1021,7 +1021,7 @@
   font-size: 0.85rem;
   letter-spacing: 1px;
   font-weight: 600;
-  text-transform: uppercase;
+
   margin-bottom: 15px;
 }
 
@@ -1100,7 +1100,7 @@
   font-size: 0.72rem;
   font-weight: 600;
   color: #f18825;
-  text-transform: uppercase;
+
   letter-spacing: 1px;
   margin-bottom: 8px;
 }

@@ -50,7 +50,7 @@
 .article-top-badge {
   font-size: 0.76rem;
   letter-spacing: 1px;
-  text-transform: uppercase;
+
   color: rgba(255, 255, 255, 0.7);
   font-weight: 600;
 }
@@ -72,7 +72,7 @@
   font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
-  text-transform: uppercase;
+
   margin-bottom: 14px;
   display: inline-block;
   font-family: var(--font-body);
@@ -265,7 +265,7 @@
 
 .article-nav-label {
   font-size: 0.78rem;
-  text-transform: uppercase;
+
   letter-spacing: 1px;
   color: #ea7124;
   font-weight: 600;
