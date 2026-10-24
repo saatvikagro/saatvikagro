@@ -80,7 +80,7 @@
 
 .article-title {
   font-size: clamp(2.4rem, 4.8vw, 3.6rem);
-  font-weight: 600;
+  font-weight: 500;
   line-height: 1.15;
   color: #000000;
   letter-spacing: -0.03em;
@@ -92,7 +92,7 @@
   display: flex;
   align-items: center;
   gap: 20px;
-  color: #64748b;
+  color: #888888;
   font-size: 0.92rem;
   margin-bottom: 30px;
   padding-bottom: 20px;
@@ -357,7 +357,7 @@
 
 .article-related-content p {
   font-size: 0.92rem;
-  color: #64748b;
+  color: #888888;
   margin: 0 0 14px 0;
   line-height: 1.55;
   flex-grow: 1;

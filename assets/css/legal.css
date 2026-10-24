@@ -34,7 +34,7 @@
   display: flex;
   flex-wrap: wrap;
   gap: 24px;
-  color: #64748b;
+  color: #888888;
   font-size: 0.95rem;
   font-family: var(--font-body);
 }
