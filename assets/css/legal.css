@@ -12,7 +12,7 @@
 
 .legal-hero-kicker {
   font-size: 0.85rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -23,7 +23,7 @@
 
 .legal-hero h1 {
   font-size: clamp(2.6rem, 5vw, 4rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.1;
   color: #121a2f;
   margin: 0 0 16px 0;
@@ -73,7 +73,7 @@
 
 .legal-toc-title {
   font-size: 0.9rem;
-  font-weight: 800;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #0f2744;
@@ -135,7 +135,7 @@
 
 .legal-block h2 {
   font-size: 1.65rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f2744;
   margin: 0 0 16px 0;
   font-family: var(--font-heading);
@@ -184,7 +184,7 @@
 
 .legal-callout h4 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #9a3412;
   margin: 0 0 8px 0;
   font-family: var(--font-heading);
@@ -293,15 +293,19 @@
   .legal-hero {
     padding: 60px 0 35px 0;
   }
+
   .legal-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .legal-toc {
     position: relative;
     top: 0;
-    display: none; /* Mobile navigation simplified */
+    display: none;
+    /* Mobile navigation simplified */
   }
+
   .legal-contact-details {
     grid-template-columns: 1fr;
     gap: 20px;

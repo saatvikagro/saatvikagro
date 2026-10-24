@@ -69,7 +69,7 @@
 /* Kicker & Heading */
 .article-kicker {
   font-size: 0.88rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -80,9 +80,9 @@
 
 .article-title {
   font-size: clamp(2.4rem, 4.8vw, 3.6rem);
-  font-weight: 700;
+  font-weight: 600;
   line-height: 1.15;
-  color: #0f2744;
+  color: #000000;
   letter-spacing: -0.03em;
   margin: 0 0 20px 0;
   font-family: var(--font-heading);
@@ -147,7 +147,7 @@
 
 .article-block h2 {
   font-size: 1.55rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f2744;
   margin: 0 0 12px 0;
   font-family: var(--font-heading);
@@ -172,7 +172,7 @@
 
 .article-keypoints h4 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f2744;
   margin: 0 0 14px 0;
   font-family: var(--font-heading);
@@ -203,7 +203,7 @@
 
 .article-cta-text h3 {
   font-size: 1.5rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ffffff;
   margin: 0 0 8px 0;
   font-family: var(--font-heading);
@@ -219,7 +219,7 @@
 .article-cta-btn {
   background-color: #ea7124;
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 0.95rem;
   padding: 14px 28px;
   text-decoration: none;
@@ -268,13 +268,13 @@
   text-transform: uppercase;
   letter-spacing: 1px;
   color: #ea7124;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 6px;
 }
 
 .article-nav-card h4 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f2744;
   margin: 0;
   line-height: 1.35;
@@ -295,7 +295,7 @@
 .article-related-header h3 {
   font-size: 1.6rem;
   color: #0f2744;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--font-heading);
   margin: 0;
 }
@@ -348,7 +348,7 @@
 
 .article-related-content h4 {
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f2744;
   margin: 0 0 8px 0;
   line-height: 1.35;
@@ -365,7 +365,7 @@
 
 .article-related-link {
   font-size: 0.88rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #ea7124;
   display: inline-flex;
   align-items: center;
@@ -377,14 +377,17 @@
   .article-section {
     padding: 40px 0 70px 0;
   }
+
   .article-cta-card {
     flex-direction: column;
     align-items: flex-start;
     padding: 30px;
   }
+
   .article-nav-wrap {
     grid-template-columns: 1fr;
   }
+
   .article-related-grid {
     grid-template-columns: 1fr;
   }

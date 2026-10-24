@@ -109,7 +109,7 @@
 
 .product-title {
   font-size: 2.2rem;
-  font-weight: 700;
+  font-weight: 500;
   color: #0f172a;
   margin: 0 0 12px 0;
   line-height: 1.25;
@@ -131,7 +131,7 @@
 .metric-label {
   display: block;
   font-size: 11.5px;
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.2px;
   margin-bottom: 6px;
@@ -140,7 +140,7 @@
 
 .metric-val {
   font-size: 1.22rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   margin: 0;
   line-height: 1.25;
@@ -179,18 +179,18 @@
   padding: 14px 30px;
   border-radius: 0 !important;
   border: none;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 15px;
   cursor: pointer;
   transition: all 0.25s ease;
-  box-shadow: 0 10px 24px rgba(234, 113, 36, 0.4);
+  /* box-shadow: 0 10px 24px rgba(234, 113, 36, 0.4); */
   text-transform: none;
 }
 
 .btn--brochure-orange:hover {
   background-color: #d66219;
   transform: translateY(-2px);
-  box-shadow: 0 12px 28px rgba(234, 113, 36, 0.5);
+  /* box-shadow: 0 12px 28px rgba(234, 113, 36, 0.5); */
 }
 
 .btn--brochure-orange svg {
@@ -209,7 +209,7 @@
 .section-tag-label {
   display: block;
   font-size: 12px;
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.2px;
   margin-bottom: 16px;
@@ -228,7 +228,7 @@
   align-items: flex-start;
   gap: 12px;
   font-size: 0.94rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0f172a;
   line-height: 1.35;
 }
@@ -258,8 +258,8 @@
 
 .app-gray-tag {
   display: inline-block;
-  background-color: #cbd5e1;
-  color: #374151;
+  background-color: #d9d9d9;
+  color: #6b6b6b;
   font-size: 13px;
   font-weight: 600;
   padding: 9px 18px;
@@ -284,7 +284,7 @@
 .explore-range-label {
   display: block;
   font-size: 11px;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: 1.5px;
   color: #6b7280;
   text-transform: uppercase;
@@ -293,7 +293,7 @@
 
 .related-header h2 {
   font-size: clamp(2rem, 3vw, 2.5rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #0f172a;
   margin: 0;
   letter-spacing: -0.02em;
@@ -339,7 +339,7 @@
 
 .clean-related-cat {
   font-size: 11px;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: 1px;
   color: #ea7124;
   text-transform: uppercase;
@@ -348,7 +348,7 @@
 
 .clean-related-title {
   font-size: 1.25rem;
-  font-weight: 800;
+  font-weight: 600;
   line-height: 1.35;
   margin: 0;
 }
@@ -476,7 +476,7 @@
   font-size: 0.95rem;
   color: #ea7124;
   margin-bottom: 22px;
-  font-weight: 700;
+  font-weight: 600;
 }
 
 .form-group {
@@ -507,7 +507,7 @@
   border: none;
   border-radius: 0;
   font-size: 1rem;
-  font-weight: 700;
+  font-weight: 600;
   cursor: pointer;
   transition: background-color 0.3s ease;
   margin-top: 10px;

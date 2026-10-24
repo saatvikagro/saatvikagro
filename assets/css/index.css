@@ -38,17 +38,15 @@
 .hero-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    90deg,
-    rgba(0, 0, 0, 0.6) 0%,
-    rgba(13, 13, 13, 0.475) 25%,
-    rgba(36, 36, 36, 0.35) 50%,
-    rgba(55, 55, 55, 0.2875) 62.5%,
-    rgba(85, 85, 85, 0.225) 75%,
-    rgba(137, 137, 137, 0.1625) 87.5%,
-    rgba(182, 182, 182, 0.13125) 93.75%,
-    rgba(255, 255, 255, 0.1) 100%
-  );
+  background: linear-gradient(90deg,
+      rgba(0, 0, 0, 0.6) 0%,
+      rgba(13, 13, 13, 0.475) 25%,
+      rgba(36, 36, 36, 0.35) 50%,
+      rgba(55, 55, 55, 0.2875) 62.5%,
+      rgba(85, 85, 85, 0.225) 75%,
+      rgba(137, 137, 137, 0.1625) 87.5%,
+      rgba(182, 182, 182, 0.13125) 93.75%,
+      rgba(255, 255, 255, 0.1) 100%);
   z-index: 1;
 }
 
@@ -369,7 +367,7 @@
 
 .intro-card p {
   font-size: 0.88rem;
-  color: #556987;
+  color: #888888;
   line-height: 1.45;
   margin: 0;
   font-weight: 400;
@@ -1100,7 +1098,7 @@
 .post-category {
   display: block;
   font-size: 0.72rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #f18825;
   text-transform: uppercase;
   letter-spacing: 1px;
@@ -1284,7 +1282,7 @@
 .cert-card h3 {
   font-family: var(--font-heading, inherit);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0b2540;
   line-height: 1.35;
   margin: 0 0 6px 0;
@@ -1292,7 +1290,7 @@
 
 .cert-card p {
   font-size: 0.9rem;
-  color: #556987;
+  color: #888888;
   line-height: 1.45;
   margin: 0;
   font-weight: 400;
@@ -1340,4 +1338,3 @@
     font-size: clamp(1.6rem, 5vw, 2rem);
   }
 }
-

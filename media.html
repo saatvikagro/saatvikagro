@@ -115,14 +115,65 @@
     <!-- Photo Gallery Grid Section with Category Filter Tabs -->
     <section class="media-gallery-section">
       <div class="container">
-        <!-- Filter Tabs -->
+        <!-- Filter Tabs & Mobile Dropdown -->
         <div class="media-tabs-wrapper">
+          <!-- Desktop Tabs (Visible > 768px) -->
           <div class="media-tabs" id="mediaTabs">
             <button class="media-tab-btn active" data-category="ALL">All</button>
             <button class="media-tab-btn" data-category="Manufacturing">Manufacturing</button>
             <button class="media-tab-btn" data-category="Products">Products</button>
             <button class="media-tab-btn" data-category="People">People</button>
             <button class="media-tab-btn" data-category="Community">Community</button>
+          </div>
+
+          <!-- Mobile Dropdown Filter (Visible <= 768px) -->
+          <div class="media-mobile-dropdown" id="mediaMobileDropdown">
+            <button type="button" class="mobile-dropdown-btn" id="mediaDropdownBtn" aria-haspopup="listbox"
+              aria-expanded="false">
+              <span class="mobile-dropdown-label">Category:</span>
+              <span class="mobile-dropdown-current" id="mediaDropdownCurrentText">All Media</span>
+              <svg class="mobile-dropdown-chevron" width="18" height="18" viewBox="0 0 24 24" fill="none"
+                stroke="currentColor" stroke-width="2">
+                <path d="M6 9l6 6 6-6" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+            <div class="mobile-dropdown-menu" id="mediaDropdownMenu" role="listbox">
+              <div class="mobile-dropdown-item active" data-category="ALL" role="option">
+                <span>All Media</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                  stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="Manufacturing" role="option">
+                <span>Manufacturing</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                  stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="Products" role="option">
+                <span>Products</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                  stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="People" role="option">
+                <span>People</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                  stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+              <div class="mobile-dropdown-item" data-category="Community" role="option">
+                <span>Community</span>
+                <svg class="check-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="#ea7124"
+                  stroke-width="2.5">
+                  <path d="M20 6L9 17l-5-5" stroke-linecap="round" stroke-linejoin="round" />
+                </svg>
+              </div>
+            </div>
           </div>
         </div>
 
@@ -422,33 +473,86 @@
 
   <!-- Gallery Filter & Lightbox Script -->
   <script>
-    // Tab Filtering Logic
+    // Tab & Mobile Dropdown Filtering Logic
     document.addEventListener('DOMContentLoaded', function () {
       const tabBtns = document.querySelectorAll('.media-tab-btn');
       const cards = document.querySelectorAll('.media-card');
+      const mobileDropdown = document.getElementById('mediaMobileDropdown');
+      const mobileDropdownBtn = document.getElementById('mediaDropdownBtn');
+      const dropdownCurrentText = document.getElementById('mediaDropdownCurrentText');
+      const mobileDropdownItems = document.querySelectorAll('#mediaMobileDropdown .mobile-dropdown-item');
 
+      function filterMedia(category, displayText) {
+        // Sync desktop tab active states
+        tabBtns.forEach(function (b) {
+          if (b.getAttribute('data-category') === category) {
+            b.classList.add('active');
+          } else {
+            b.classList.remove('active');
+          }
+        });
+
+        // Sync mobile dropdown item active states
+        mobileDropdownItems.forEach(function (item) {
+          if (item.getAttribute('data-category') === category) {
+            item.classList.add('active');
+          } else {
+            item.classList.remove('active');
+          }
+        });
+
+        // Update mobile button display text
+        if (dropdownCurrentText) {
+          dropdownCurrentText.textContent = displayText || (category === 'ALL' ? 'All Media' : category);
+        }
+
+        // Filter media cards
+        cards.forEach(function (card) {
+          const cardCategory = card.getAttribute('data-category');
+          if (category === 'ALL' || cardCategory === category) {
+            card.classList.remove('hidden');
+          } else {
+            card.classList.add('hidden');
+          }
+        });
+      }
+
+      // Desktop tabs click
       tabBtns.forEach(function (btn) {
         btn.addEventListener('click', function () {
-          // Remove active from all tabs
-          tabBtns.forEach(function (b) {
-            b.classList.remove('active');
-          });
-          // Add active to clicked tab
-          this.classList.add('active');
-
-          var selectedCategory = this.getAttribute('data-category');
-
-          // Filter media cards
-          cards.forEach(function (card) {
-            var cardCategory = card.getAttribute('data-category');
-            if (selectedCategory === 'ALL' || cardCategory === selectedCategory) {
-              card.classList.remove('hidden');
-            } else {
-              card.classList.add('hidden');
-            }
-          });
+          const category = this.getAttribute('data-category');
+          const text = this.textContent.trim();
+          filterMedia(category, text === 'All' ? 'All Media' : text);
         });
       });
+
+      // Mobile dropdown toggle & selection
+      if (mobileDropdownBtn && mobileDropdown) {
+        mobileDropdownBtn.addEventListener('click', function (e) {
+          e.stopPropagation();
+          const isOpen = mobileDropdown.classList.toggle('open');
+          mobileDropdownBtn.setAttribute('aria-expanded', isOpen);
+        });
+
+        mobileDropdownItems.forEach(function (item) {
+          item.addEventListener('click', function () {
+            const category = this.getAttribute('data-category');
+            const textSpan = this.querySelector('span');
+            const text = textSpan ? textSpan.textContent.trim() : this.textContent.trim();
+            filterMedia(category, text);
+            mobileDropdown.classList.remove('open');
+            mobileDropdownBtn.setAttribute('aria-expanded', 'false');
+          });
+        });
+
+        // Close dropdown on outside click
+        document.addEventListener('click', function (e) {
+          if (!mobileDropdown.contains(e.target)) {
+            mobileDropdown.classList.remove('open');
+            mobileDropdownBtn.setAttribute('aria-expanded', 'false');
+          }
+        });
+      }
     });
 
     // Lightbox Logic

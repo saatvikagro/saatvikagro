@@ -92,10 +92,10 @@
 
 .soil-tag {
   display: inline-block;
-  color: #37b829;
+  color: #ea7124;
   font-family: var(--font-body);
   font-size: 13px;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.1em;
   margin-bottom: 12px;
@@ -109,7 +109,7 @@
   margin: 0;
   line-height: 1.05;
   letter-spacing: -0.03em;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .about-col-desc {
@@ -131,7 +131,7 @@
 .vision-mission-title {
   font-family: var(--font-heading);
   font-size: 1.25rem;
-  font-weight: 700;
+  font-weight: 600;
   text-transform: uppercase;
   letter-spacing: 0.05em;
   margin: 0 0 12px 0;
@@ -162,7 +162,7 @@
   border-radius: 0;
   text-decoration: none;
   transition: transform 0.3s ease, background-color 0.3s ease;
-  box-shadow: 0 4px 15px rgba(234, 113, 36, 0.35);
+  /* box-shadow: 0 4px 15px rgba(234, 113, 36, 0.35); */
   flex-shrink: 0;
 }
 
@@ -255,14 +255,14 @@
 
 .award-col-num {
   color: #ea7124;
-  font-weight: 700;
+  font-weight: 600;
   font-family: var(--font-heading);
   font-size: 1.15rem;
 }
 
 .award-col-title {
   color: #ffffff;
-  font-weight: 700;
+  font-weight: 600;
   font-size: 1.15rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -370,12 +370,10 @@
 .farm-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    180deg,
-    rgba(0, 0, 0, 0.1) 0%,
-    rgba(0, 0, 0, 0.3) 50%,
-    rgba(0, 0, 0, 0.75) 100%
-  );
+  background: linear-gradient(180deg,
+      rgba(0, 0, 0, 0.1) 0%,
+      rgba(0, 0, 0, 0.3) 50%,
+      rgba(0, 0, 0, 0.75) 100%);
   z-index: 1;
 }
 
@@ -411,7 +409,7 @@
   background-color: #f3c319;
   color: #121a2f;
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.08em;
@@ -483,7 +481,7 @@
 
 .test-user-info h4 {
   font-size: 1.05rem;
-  font-weight: 700;
+  font-weight: 600;
   color: var(--color-primary);
   margin: 0 0 2px 0;
 }
@@ -574,7 +572,7 @@
   background-color: #f3c319;
   color: #121a2f;
   font-family: var(--font-body);
-  font-weight: 700;
+  font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
   letter-spacing: 0.06em;
@@ -609,7 +607,7 @@
   color: #ffffff;
   font-family: var(--font-heading);
   font-size: 1.6rem;
-  font-weight: 700;
+  font-weight: 600;
   margin-bottom: 20px;
 }
 
@@ -624,18 +622,22 @@
   .about-top-images {
     grid-template-columns: 1fr 1fr;
   }
+
   .about-top-text-grid {
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .awards-header-row,
   .awards-row {
     grid-template-columns: 60px 200px 1fr;
     gap: 20px;
   }
+
   .section-team-exact {
     padding: 100px 0 110px 0;
   }
+
   .newsletter-box {
     grid-template-columns: 1fr;
     gap: 30px;
@@ -647,29 +649,36 @@
   .section-team-exact {
     padding: 70px 0 85px 0;
   }
+
   .about-top-images {
     grid-template-columns: 1fr;
   }
+
   .about-top-img-left,
   .about-top-img-right {
     height: 260px;
   }
+
   .awards-header-row {
     display: none;
   }
+
   .awards-row {
     grid-template-columns: 45px 1fr;
     gap: 8px 15px;
     padding: 20px 0;
     align-items: flex-start;
   }
+
   .award-col-content {
     grid-column: 2 / -1;
   }
+
   .team-cards-grid,
   .testimonials-grid-exact {
     grid-template-columns: 1fr;
   }
+
   .team-header-row,
   .farm-banner-content,
   .testimonials-header-exact {
@@ -677,16 +686,19 @@
     align-items: flex-start;
     gap: 20px;
   }
+
   .newsletter-input-row {
     flex-direction: column;
     gap: 10px;
   }
+
   .newsletter-input-row input[type="email"],
   .newsletter-input-row button {
     border-radius: 0;
     width: 100%;
     border-right: 1px solid #e0e0e0;
   }
+
   .logos-strip-container {
     justify-content: center;
   }
@@ -721,7 +733,7 @@
 .facility-kicker {
   display: block;
   font-size: 0.8rem;
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   letter-spacing: 1.5px;
   text-transform: uppercase;
@@ -730,11 +742,11 @@
 
 .facility-heading {
   font-size: clamp(1.6rem, 2.8vw, 2.4rem);
-  font-weight: 700;
+  font-weight: 600;
   color: #121a2f;
-  letter-spacing: -0.02em;
+  /* letter-spacing: -0.02em; */
   margin: 0;
-  text-transform: uppercase;
+  /* text-transform: uppercase; */
   line-height: 1.15;
 }
 
@@ -797,7 +809,7 @@
 
 .stat-number {
   font-size: clamp(2rem, 3.2vw, 2.75rem);
-  font-weight: 800;
+  font-weight: 600;
   color: #ea7124;
   margin: 0 0 10px 0;
   line-height: 1.1;
@@ -827,10 +839,12 @@
   .section-facility {
     padding: 70px 0;
   }
+
   .facility-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
+
   .facility-header {
     flex-direction: column;
     align-items: flex-start;
@@ -843,6 +857,7 @@
     grid-template-columns: 1fr;
     gap: 30px;
   }
+
   .stat-number {
     font-size: 2rem;
   }
@@ -946,7 +961,7 @@
 .cert-card h3 {
   font-family: var(--font-heading, inherit);
   font-size: 1.15rem;
-  font-weight: 700;
+  font-weight: 600;
   color: #0b2540;
   line-height: 1.35;
   margin: 0 0 6px 0;
@@ -954,7 +969,7 @@
 
 .cert-card p {
   font-size: 0.9rem;
-  color: #556987;
+  color: #888888;
   line-height: 1.45;
   margin: 0;
   font-weight: 400;
@@ -964,6 +979,7 @@
   .section-certifications {
     padding: 60px 0;
   }
+
   .certifications-grid {
     grid-template-columns: repeat(2, 1fr);
     gap: 22px 18px;
@@ -974,26 +990,30 @@
   .section-certifications {
     padding: 50px 0;
   }
+
   .certifications-grid {
     grid-template-columns: 1fr;
     gap: 16px;
   }
+
   .cert-card {
     padding: 26px 18px;
   }
+
   .cert-img-wrap {
     height: 75px;
     margin-bottom: 14px;
   }
+
   .cert-img-wrap img {
     max-height: 70px;
   }
+
   .certifications-header {
     margin-bottom: 25px;
   }
+
   .certifications-title {
     font-size: clamp(1.6rem, 5vw, 2rem);
   }
 }
-
-

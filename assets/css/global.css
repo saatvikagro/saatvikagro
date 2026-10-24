@@ -52,9 +52,9 @@ h6 {
   font-family: var(--font-heading);
   color: var(--color-primary);
   margin: 0;
-  letter-spacing: -0.03em;
+  /* letter-spacing: -0.03em; */
   line-height: 1.1;
-  font-weight: 600;
+  font-weight: 500;
 }
 
 .intro-label {
@@ -113,7 +113,7 @@ a {
   background-color: #EA7124;
   color: #fff;
   border-radius: 0;
-  box-shadow: 0 4px 15px rgba(234, 113, 36, 0.35);
+  /* box-shadow: 0 4px 15px rgba(234, 113, 36, 0.35); */
   cursor: pointer;
   transition:
     transform 0.3s ease,
