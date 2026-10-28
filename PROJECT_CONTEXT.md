@@ -40,12 +40,12 @@
 | 2     | Project setup (folder structure, configs, README)                     | ✅ Done                 |
 | 3     | Build all core pages & components                                     | ✅ Done                 |
 | 4     | SEO, performance, responsive QA, zero border-radius enforcement       | ✅ Done                 |
-| 5     | Client review, final polish, unused assets cleanup, and documentation | 🟨 In Progress (Active) |
+| 5     | Client review, final polish, unused assets cleanup, and documentation | ✅ Done                 |
 
 **Status legend:** ⬜ Not started · 🟨 In progress · ✅ Done
 
-**Last updated:** 2026-10-23 by Antigravity AI
-**Last completed task:** Added Terms & Conditions and Privacy Policy pages; created sitemap.xml and robots.txt; integrated official favicon across all HTML pages; created Article Single page system for News & Articles; cleaned footer links; audited and removed 10 unused image assets with 100% active asset utilization.
+**Last updated:** 2026-10-28 by Antigravity AI
+**Last completed task:** Complete image and repository audit: removed 118 MB unreferenced raw dump folder (`Saatvik Agro Shakti Products/`), deleted 11 unused/superseded media assets (`.webp` products, legacy `.jpg` and `.mp4`), leaving exactly 39 high-resolution, active production assets with 0 broken references across all 28 code files. Updated `.gitignore`.
 **NEXT TASK TO DO:** Final client sign-off and production deployment.
 
 ---
@@ -178,7 +178,8 @@ npx serve .
 ### Contact & Company Details
 
 - **Email:** marketing.agro@saatvikgroup.com
-- **LinkedIn:** https://www.linkedin.com/company/saatvik-agro-processors-private-limited/
+- **Instagram:** https://www.instagram.com/saatvikagro/
+- **LinkedIn:** https://www.linkedin.com/company/saatvik-agro-processors-private-limited/posts/?viewAsMember=true
 - **Phone:** +91 95910 33188 (Official Toll-Free Number)
 - **Manufacturing Address:** Saatvik Agro Processors Private Limited, Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh-476444
 - **Corporate Office:** Saatvik Agro Processors Private Limited, Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh-201318

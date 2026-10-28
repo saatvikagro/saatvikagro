@@ -29,3 +29,9 @@ Thumbs.db
 
 # OS
 .DS_Store
+
+# Raw Client Assets / Deliverables
+Saatvik Agro Shakti Products/
+*.psd
+*.ai
+

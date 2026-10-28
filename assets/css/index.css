@@ -468,6 +468,17 @@
   box-shadow: 0 -10px 30px rgba(0, 0, 0, 0.08), 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: transform 0.25s ease, box-shadow 0.25s ease;
   will-change: transform, top;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.banner-row:hover {
+  text-decoration: none;
+}
+
+.banner-row:focus-visible {
+  outline: 2px solid #ea7124;
+  outline-offset: 4px;
 }
 
 .banner-row.bg-white,

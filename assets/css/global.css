@@ -52,7 +52,7 @@ h6 {
   font-family: var(--font-heading);
   color: var(--color-primary);
   margin: 0;
-  /* letter-spacing: -0.03em; */
+  /* letter-spacing: -0.03em;fron */
   line-height: 1.1;
   font-weight: 500;
 }
@@ -196,21 +196,26 @@ a {
 .logo-group {
   display: flex;
   align-items: center;
+  text-decoration: none;
 }
 
 .saatvik-logo {
-  height: 40px;
+  height: auto;
+  width: 200px;
+  display: block;
 }
 
 .shakti-logo {
-  height: 30px;
+  height: auto;
+  width: 180px;
+  display: block;
 }
 
 .logo-divider {
   width: 1px;
   height: 35px;
   background-color: #dcdcdc;
-  margin: 0 20px;
+  margin: 0 8px;
 }
 
 .nav-links {
@@ -384,14 +389,15 @@ a {
   }
 
   .saatvik-logo {
-    height: 30px;
+    height: 34px;
   }
 
   .shakti-logo {
-    height: 20px;
+    height: 28px;
   }
 
   .logo-divider {
+    height: 28px;
     margin: 0 10px;
   }
 }
@@ -588,8 +594,10 @@ a {
 
 .footer-logo img {
   filter: brightness(0) invert(1);
-  height: 40px;
+  height: 48px;
+  width: auto;
   object-fit: contain;
+  display: block;
 }
 
 .footer-col-wide .btn--accent:hover {
