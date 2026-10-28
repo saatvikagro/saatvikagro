@@ -1,15 +1,15 @@
 # Design System — Saatvik Agro
 
-> Created: 2026-10-07 | Updated: 2026-10-21 (Phase 5 Client Review & Brutalist Polish)
+> Created: 2026-10-07 | Updated: 2026-10-28 (Phase 5 Client Review & Brutalist Finalization)
 
 ---
 
 ## 1. Brand Overview
 
 - **Client:** Saatvik Agro Processors Private Limited (Agro-ingredient unit of Saatvik Group)
-- **Product Range:** Shakti Maize Ingredients (Food-Grade Starch, Industrial Starch, Liquid Glucose, Maltodextrin, Gluten Meal, Dry Fibre, Maize Germ)
+- **Product Range:** Shakti Maize Ingredients (9 products: Food-Grade Starch, Industrial Starch, Liquid Glucose, Maltodex SD, HD, LD, Gluten Meal, Dry Fiber, Maize Germ)
 - **Brand Personality:** Scientific precision, purity, consistency, and B2B industrial scale.
-- **Visual Style:** High-contrast, clean architectural lines, and **sharp corners (`border-radius: 0`)**.
+- **Visual Style:** High-contrast, clean architectural lines, and **strict sharp corners (`border-radius: 0`)**.
 
 ---
 
@@ -18,28 +18,28 @@
 ```css
 :root {
   /* Primary brand colors */
-  --color-primary:       #121a2f;  /* Deep navy / dark slate — authority, trust */
-  --color-primary-dark:  #0b111a;  /* Dark background for values table & contrast rows */
-  --color-secondary:     #ea7124;  /* Warm energetic orange — brand badges, CTAs */
-  --color-secondary-dark: #d25f17; /* Hover state for secondary */
-  --color-accent:        #f3c319;  /* Golden amber / corn yellow — highlights, side tab */
-  --color-green:         #37b829;  /* Growth green — tags, circular arrow buttons */
+  --color-primary:        #121a2f;  /* Deep navy / dark slate — authority, trust */
+  --color-primary-dark:   #0b111a;  /* Dark background for values table & contrast rows */
+  --color-secondary:      #ea7124;  /* Warm energetic orange — brand badges, CTAs */
+  --color-secondary-dark: #d25f17;  /* Hover state for secondary */
+  --color-accent:         #f3c319;  /* Golden amber / corn yellow — highlights, side tab */
+  --color-green:          #37b829;  /* Growth green — tags, circular arrow buttons */
 
   /* Background colors */
-  --color-bg:            #ffffff;  /* Primary page background */
-  --color-bg-alt:        #f8f9fb;  /* Clean light gray/cream — alternate sections */
-  --color-bg-dark:       #121a2f;  /* Footer & dark hero containers */
-  --color-bg-overlay:    rgba(18, 26, 47, 0.7); /* Hero video overlay */
+  --color-bg:             #ffffff;  /* Primary page background */
+  --color-bg-alt:         #f8f9fb;  /* Clean light gray/cream — alternate sections */
+  --color-bg-dark:        #121a2f;  /* Footer & dark hero containers */
+  --color-bg-overlay:     rgba(18, 26, 47, 0.7); /* Hero video overlay */
 
   /* Text colors */
-  --color-text:          #2b3342;  /* Primary body text */
-  --color-text-muted:    #6a7382;  /* Secondary text, metadata */
-  --color-text-white:    #ffffff;  /* Text on dark surfaces */
-  --color-heading:       #121a2f;  /* Section headings */
+  --color-text:           #2b3342;  /* Primary body text */
+  --color-text-muted:     #6a7382;  /* Secondary text, metadata */
+  --color-text-white:     #ffffff;  /* Text on dark surfaces */
+  --color-heading:        #121a2f;  /* Section headings */
 
   /* Borders & Dividers */
-  --color-border:        #e5e8ee;  /* Subtle dividers */
-  --color-border-dark:   rgba(255, 255, 255, 0.12); /* Dividers on dark rows */
+  --color-border:         #e5e8ee;  /* Subtle dividers */
+  --color-border-dark:    rgba(255, 255, 255, 0.12); /* Dividers on dark rows */
 }
 ```
 
@@ -102,7 +102,7 @@
 
 ## 5. Border Radius (Strict Brutalist Architecture)
 
-> **IMPORTANT REQUIREMENT:** As explicitly instructed by the client, the website strictly adheres to a **zero border-radius policy**. No curved borders or rounded pill shapes are allowed on buttons, cards, boxes, inputs, or image wrappers.
+> **MANDATORY POLICY:** As explicitly instructed by the client, the website strictly adheres to a **zero border-radius policy**. No curved borders or rounded pill shapes are permitted on buttons, cards, boxes, inputs, modals, or image wrappers.
 
 ```css
 :root {
@@ -123,6 +123,7 @@ textarea,
 .product-card,
 .cert-card,
 .stat-card,
+.modal-content,
 .team-card-photo-wrap,
 .floating-side-tab {
   border-radius: 0 !important;
@@ -149,14 +150,24 @@ All buttons feature sharp 0-radius corners, strong hover transitions, and clean 
 
 ### 7.1 Products Archive Grid & Filter
 - **Desktop Filter Tabs:** Clean text buttons with an orange underline indicator for the active category.
-- **Mobile Filter Dropdown:** Sharp custom `<select>` menu (`.products-mobile-select`) syncing seamlessly with desktop tabs on smaller viewports.
-- **Transparent Product Presentation:** Product image renders cleanly without heavy container borders, focusing directly on the packaging artwork.
+- **Mobile Filter Dropdown:** Sharp custom `<select>` menu (`.products-mobile-select`) synced in real-time with desktop tabs.
+- **Dynamic URL Parameter:** Supports direct query filtering (e.g. `products.html?category=food-grade`).
 
-### 7.2 Certifications Showcase
+### 7.2 Product Detail Viewer (`product-single.html`)
+- **Packaging Presentation:** Transparent high-resolution PNG mockups centered inside a neutral brutalist frame (`.product-main-photo-wrap`).
+- **Aspect Ratio & Containment:** Strict `object-fit: contain;` with `padding: 24px;` prevents image clipping and excessive zooming.
+- **Interactive Brochure Modal:** Sharp modal window (`.modal-backdrop` and `.modal-content`) capturing buyer intent directly to Google Sheets.
+
+### 7.3 Form System & Interactive Loaders
+- **Brutalist Inputs:** Sharp 1px solid borders (`border-radius: 0`) with subtle outline transitions on focus.
+- **Submit Loading State:** Animated circular CSS spinner (`.btn-spinner`) with disabled button state during asynchronous Google Apps Script dispatch.
+- **Banner Notifications:** Inline success and error alerts confirming submission without full-page reloads.
+
+### 7.4 Certifications Showcase
 - Vector-rendered SVG trust marks for **Halal India**, **ISO 9001:2015**, **FSSAI**, and **ISO 22000:2005 (FSMS)**.
-- Sharp white cards with subtle hover lift and shadow elevation.
+- Sharp white cards with subtle hover lift and clean typography.
 
-### 7.3 Floating Side Bar
+### 7.5 Floating Side Bar
 - Fixed right-hand quick access bar (`.floating-side-tab`) with sharp corners and icons for fast navigation.
 
 ---
@@ -177,6 +188,7 @@ All buttons feature sharp 0-radius corners, strong hover transitions, and clean 
 
 | Date | Change | By |
 |---|---|---|
+| 2026-10-28 | Documented dynamic category URL linking, transparent PNG product presentations, submit button loaders, and single product zoom containment | Antigravity AI |
 | 2026-10-21 | Enforced strict zero border-radius (`border-radius: 0`) site-wide; documented mobile category dropdown and SVG cert badges | Antigravity AI |
 | 2026-10-08 | Refactored global typography, aligned real Saatvik Agro color palette, removed legacy dairy tokens | Antigravity AI |
 | 2026-10-07 | Initial design system created | Claude Sonnet 4.6 |

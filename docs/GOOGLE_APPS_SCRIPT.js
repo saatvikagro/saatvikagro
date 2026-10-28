@@ -1,14 +1,14 @@
 /**
  * =========================================================================
  * Saatvik Agro - Google Sheets Lead Capture Engine
- * Spreadsheet: "Website Leads"
+ * Spreadsheet: "Website Leads" (or your preferred Sheet name)
  * =========================================================================
  * Supported Tabs:
  *   1. "Contact-Us"
  *   2. "Products-Download"
  *
  * HOW TO DEPLOY:
- *   1. In your Google Sheet ("Website Leads"), click: Extensions > Apps Script
+ *   1. In your Google Sheet, click: Extensions > Apps Script
  *   2. Paste this entire code into the editor (replace existing Code.gs content)
  *   3. Click "Save" (Ctrl + S)
  *   4. Click "Deploy" > "New deployment"
@@ -19,12 +19,21 @@
  *      - Who has access: "Anyone" (CRITICAL: Do NOT choose "Only myself")
  *   7. Click "Deploy" and Authorize access with your Google account.
  *   8. Copy the "Web app URL" (ends in /exec)
- *   9. Paste this URL into: assets/js/form-handler.js (line 15: GOOGLE_SCRIPT_URL)
+ *   9. Paste this URL into your frontend configuration:
+ *      assets/js/form-handler.js (GOOGLE_SCRIPT_URL constant)
+ *
+ * SPREADSHEET TABS & HEADERS TO CREATE:
+ *   Tab 1: "Contact-Us"
+ *   Headers: Timestamp | Full Name | Company | Email | Phone Number | Location | Requirement | Quantity (Tonnes) | Message
+ *
+ *   Tab 2: "Products-Download"
+ *   Headers: Timestamp | Product Name | Full Name | Email | Phone Number
+ * =========================================================================
  */
 
 function doPost(e) {
   var lock = LockService.getScriptLock();
-  // Try to acquire lock for up to 10 seconds to handle concurrent submissions safely
+  // Acquire lock for up to 10 seconds to handle concurrent submissions safely
   lock.tryLock(10000);
 
   try {
@@ -39,7 +48,7 @@ function doPost(e) {
     }
 
     var sheetName = data.sheetName;
-    // Auto-detect sheet name if not explicitly passed
+    // Auto-detect target sheet name if not explicitly passed
     if (!sheetName) {
       if (data.product || data.productName) {
         sheetName = "Products-Download";
@@ -53,7 +62,7 @@ function doPost(e) {
       return ContentService
         .createTextOutput(JSON.stringify({
           result: "error",
-          error: "Tab '" + sheetName + "' not found in spreadsheet."
+          error: "Tab '" + sheetName + "' not found in spreadsheet. Please create it."
         }))
         .setMimeType(ContentService.MimeType.JSON);
     }

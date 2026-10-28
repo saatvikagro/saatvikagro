@@ -1,84 +1,96 @@
-# Content TODO — Saatvik Agro Website Revamp
+# Content Status & Verification — Saatvik Agro Website
 
-> Updated: 2026-10-21 | Phase 5 — Client Review & Content Verification
+> Last Updated: 2026-10-28 | Phase 5 — Client Review, Asset Optimization & Production Readiness
 
 ---
 
-## 1. Resolved Items ✅
+## 1. Resolved & Verified Items ✅
 
-| #   | Item                                  | Status      | Details                                                                                |
-| --- | ------------------------------------- | ----------- | -------------------------------------------------------------------------------------- |
-| 1   | Full product list (7 Shakti products) | ✅ Resolved | All 7 products configured in `assets/js/products-data.js` & `data/products.json`       |
-| 2   | High-res product images (all 7)       | ✅ Resolved | Optimized `.webp` assets in `assets/images/products/`                                  |
-| 3   | Single Product Detail page            | ✅ Resolved | Built `product-single.html` with dynamic specification loader                          |
-| 4   | Certifications trust marks            | ✅ Resolved | High-fidelity inline vector SVGs for Halal India, ISO 9001:2015, FSSAI, and ISO 22000  |
-| 5   | Hero H1 & Video                       | ✅ Resolved | H1: "Driven by purity. Guided by science. Built for consistency." + `hero-modules.mp4` |
-| 6   | About section full text               | ✅ Resolved | Authentic story, mission, vision, and infrastructure metrics                           |
-| 7   | Manufacturing scale metrics           | ✅ Resolved | 500 TPD initial, 1200 TPD scalable capacity at Morena, MP                              |
-| 8   | Values table                          | ✅ Resolved | Customer First, Innovation, Quality, Excellence, Integrity, Collaboration              |
-| 9   | Industries served                     | ✅ Resolved | Food & Nutrition, Animal Feed, Paper & Packaging, Pharmaceuticals                      |
-| 10  | Media Gallery                         | ✅ Resolved | `media.html` with interactive lightbox and real plant photos                           |
-| 11  | Team section                          | ✅ Resolved | Marcus Lee, Jorge Alvarez, Elena Ramirez with proper balanced padding                  |
-| 12  | Corporate & Plant Addresses           | ✅ Resolved | Verified Morena (MP) plant and Greater Noida (UP) corporate addresses                  |
-| 13  | Email channels                        | ✅ Resolved | `marketing.agro@saatvikgroup.com`                                                      |
-| 14  | Unused asset purge                    | ✅ Resolved | Safely removed unreferenced images (`fibre.jpg`, `hero.jpg`, `powder.jpg`)             |
+| # | Item | Status | Details |
+|---|---|---|---|
+| 1 | **Full Product Portfolio (9 Shakti Products)** | ✅ Resolved | All 9 products configured with full specifications, applications, and categories in `assets/js/products-data.js` & `data/products.json` |
+| 2 | **High-Resolution Packaging Mockups** | ✅ Resolved | Clean, transparent 1200x1200px PNG packaging assets in `assets/images/products/` |
+| 3 | **Dynamic Single Product Detail View** | ✅ Resolved | Built `product-single.html` with query-driven loader (`?id=...`), technical specs, applications, packaging, and brochure modal |
+| 4 | **Category Filter & URL Linking** | ✅ Resolved | "What We Offer" cards on Home link directly to `products.html?category=...`, auto-syncing desktop category tabs and mobile dropdown |
+| 5 | **Header Brand Logos** | ✅ Resolved | High-res Saatvik Agro & Shakti logos with transparent borders tight-cropped for sharp header display; clickable to Home across all 9 pages |
+| 6 | **Footer Social Channels** | ✅ Resolved | Official Instagram (`@saatvikagro`) and LinkedIn company page linked with `target="_blank"` |
+| 7 | **Official Phone Number** | ✅ Resolved | Toll-free support number `+91 95910 33188` integrated across headers and footers |
+| 8 | **Lead Capture Engine (Google Sheets)** | ✅ Resolved | Serverless dual-channel integration (`docs/GOOGLE_APPS_SCRIPT.js` & `assets/js/form-handler.js`) writing to `"Contact-Us"` and `"Products-Download"` tabs with interactive button loader |
+| 9 | **Certifications Trust Marks** | ✅ Resolved | High-fidelity compliance marks for Halal India, ISO 9001:2015, FSSAI, and ISO 22000:2005 |
+| 10 | **Hero Ambient Video & Messaging** | ✅ Resolved | Headline: *"Driven by purity. Guided by science. Built for consistency."* + optimized video backdrop |
+| 11 | **About Section & Corn Visuals** | ✅ Resolved | Authentic story, mission, vision, 500 TPD Morena plant metrics, corn-focused photography, and facility overview |
+| 12 | **Client Content Staging** | ✅ Resolved | News & Articles section on Home and Team section on About cleanly commented out per client direction until final copy and photos are finalized |
+| 13 | **Media Gallery** | ✅ Resolved | `media.html` with category filter tabs and authentic plant and process photography |
+| 14 | **Corporate & Plant Addresses** | ✅ Resolved | Verified Morena (MP) plant and Greater Noida (UP) corporate addresses integrated into Contact page and footers |
+| 15 | **Legal Compliance Pages** | ✅ Resolved | Full Terms & Conditions (`terms-conditions.html`) and DPDPA-compliant Privacy Policy (`privacy-policy.html`) active and linked |
+| 16 | **Repository Asset Purge & Audit** | ✅ Resolved | Removed 118 MB unreferenced client dump folder and 11 unused legacy assets; 39 active production assets verified with 0 broken links |
 
 ---
 
 ## 2. Pending Client Confirmations (Action Required from Client)
 
-| #   | Item                           | Purpose                           | Current Status                                                                          |
-| --- | ------------------------------ | --------------------------------- | --------------------------------------------------------------------------------------- |
-| 1   | Official Phone Number          | Header & footer contact number    | Confirmed and integrated: `+91 95910 33188` (toll-free across entire website).          |
-| 2   | WhatsApp Inquiry Number        | Click-to-chat button (if desired) | [TODO: Confirm if client wants direct WhatsApp button]                                  |
-| 3   | Contact Form Service Endpoint  | Live form submissions             | Inquiry form in `contact.html` is ready for Formspree / Web3Forms / custom webhook URL. |
-| 4   | Product Brochure Download PDFs | Brochure download triggers        | Client to provide final high-res downloadable PDF brochures for each product.           |
-| 5   | Google Analytics 4 ID          | Traffic tracking                  | Ready to add tag upon client providing measurement ID (`G-XXXXXXXXXX`).                 |
+| # | Item | Purpose | Current Status |
+|---|---|---|---|
+| 1 | **Google Analytics 4 Measurement ID** | Traffic tracking | Ready to add tag upon client providing measurement ID (`G-XXXXXXXXXX`). |
+| 2 | **WhatsApp Quick Contact** | Direct chat button | Optional feature; ready to activate if client requests direct WhatsApp routing. |
+| 3 | **Product Brochure Download PDFs** | Direct file download | Brochure inquiry form captures leads in Google Sheets; client can link direct PDF download links if desired. |
 
 ---
 
-## 3. Confirmed Product Reference (Shakti Range)
+## 3. Confirmed Product Reference (Shakti Range — 9 Products)
 
 1. **Shakti Maize Starch Powder Food Grade**
-   - Category: Food & Nutrition
-   - Description: Premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications.
-   - Applications: Confectionery, bakery, soups, sauces, noodle binding.
+   - **Category:** Food & Nutrition
+   - **Description:** Premium food-grade starch engineered for consistency, stability, and superior functional performance across diverse food and industrial applications.
+   - **Applications:** Confectionery, bakery, soups, sauces, noodle binding, dairy products.
 
 2. **Shakti Maize Starch Powder For Industrial Use**
-   - Category: Industrial Applications
-   - Description: High-performance starch engineered to deliver consistent binding, viscosity, and stability across demanding industrial applications.
-   - Applications: Corrugation, paper sizing, textile finishing, adhesives.
+   - **Category:** Industrial Grade
+   - **Description:** High-performance industrial starch engineered to deliver dependable viscosity, tensile strength, and binding performance.
+   - **Applications:** Paper sizing, corrugation, textile sizing, adhesives, packaging boards.
 
 3. **Shakti Liquid Glucose**
-   - Category: Food & Nutrition
-   - Description: High-purity, food-grade glucose syrup engineered for consistent sweetness, smooth texture, and dependable moisture balance.
-   - Applications: Confectionery, dairy, bakery, beverages, pharmaceutical syrups.
+   - **Category:** Food & Nutrition
+   - **Description:** High-purity, food-grade glucose syrup engineered for controlled sweetness, crystal inhibition, and dependable moisture retention.
+   - **Applications:** Confectionery, bakery, jams, dairy, pharmaceuticals, beverages.
 
-4. **Shakti Maltodex LD, SD, HD**
-   - Category: Food & Nutrition / Pharma
-   - Description: Versatile maltodextrin family in Low, Standard, and High dextrose equivalent profiles for precision body, solubility, and energy release.
-   - Applications: Infant nutrition, sports beverages, flavor carrier, pharmaceutical excipients.
+4. **Shakti Maltodex SD (Standard DE)**
+   - **Category:** Food & Nutrition
+   - **Description:** Medium dextrose equivalent maltodextrin providing balanced solubility, body building, and clean carrier functionality.
+   - **Applications:** Dairy formulations, sports nutrition, flavor encapsulation, dry mixes.
 
-5. **Shakti Gluten Meal**
-   - Category: Animal Nutrition
-   - Description: High-protein (60%+), low-fat maize-based feed ingredient delivering balanced nutrition and high digestibility.
-   - Applications: Poultry feed, cattle ration, aquaculture feed.
+5. **Shakti Maltodex HD (High DE)**
+   - **Category:** Food & Nutrition
+   - **Description:** High dextrose equivalent profile engineered for rapid solubility, gentle sweetness, and high carbohydrate energy bioavailability.
+   - **Applications:** Energy beverages, infant nutrition, rehydration formulas, confectionery.
 
-6. **Shakti Maize Dry Fibre**
-   - Category: Animal Nutrition
-   - Description: Clean, fibre-rich maize ingredient developed to deliver steady energy and digestive support.
-   - Applications: Ruminant feed, cattle feed pellets, poultry mash.
+6. **Shakti Maltodex LD (Low DE)**
+   - **Category:** Food & Nutrition
+   - **Description:** Low dextrose equivalent variant engineered for exceptional viscosity building, low hygroscopicity, and smooth mouthfeel.
+   - **Applications:** Meal replacement powders, dairy thickener, spray-drying aid, fat replacer.
 
-7. **Shakti Maize Germ**
-   - Category: Animal Nutrition / Oil
-   - Description: Nutrient-dense, oil-rich maize ingredient naturally high in corn oil, amino acids, and essential fatty acids.
-   - Applications: Animal nutrition, corn oil extraction, livestock feeds.
+7. **Shakti Maize Dry Fiber**
+   - **Category:** Animal Nutrition
+   - **Description:** Clean, fiber-dense maize co-product delivering steady digestive fiber and energy balance.
+   - **Applications:** Cattle feed pellets, ruminant nutrition, poultry mash blends.
+
+8. **Shakti Gluten Meal**
+   - **Category:** Animal Nutrition
+   - **Description:** High-protein (60%+), low-ash maize protein ingredient with high digestibility and essential amino acids.
+   - **Applications:** Poultry feed, aquafeed (fish and shrimp), livestock diets.
+
+9. **Shakti Maize Germ**
+   - **Category:** Animal Nutrition / Extraction
+   - **Description:** Nutrient-rich germ separated during wet milling, naturally rich in corn oil and essential fatty acids.
+   - **Applications:** Corn oil extraction, cattle feeds, high-energy animal rations.
 
 ---
 
-## 4. Contact Information
+## 4. Official Contact Channels
 
 - **Email:** `marketing.agro@saatvikgroup.com`
+- **Phone:** `+91 95910 33188` (Toll-Free)
+- **Instagram:** `https://www.instagram.com/saatvikagro/`
 - **LinkedIn:** `https://www.linkedin.com/company/saatvik-agro-processors-private-limited/`
 - **Plant Address:** Saatvik Agro Processors Private Limited, Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh - 476444
 - **Corporate Office:** Saatvik Agro Processors Private Limited, Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh - 201318

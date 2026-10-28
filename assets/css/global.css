@@ -426,9 +426,9 @@ a {
   line-height: 1.2;
 }
 
-.footer-logo {
+/* .footer-logo {
   display: none;
-}
+} */
 
 .footer-grid {
   display: grid;
