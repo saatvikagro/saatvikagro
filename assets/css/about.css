@@ -4,7 +4,7 @@
    ========================================================= */
 
 /* --- FLOATING RIGHT SIDEBAR TAB --- */
-.floating-side-tab {
+/* .floating-side-tab {
   position: fixed;
   right: 0;
   top: 50%;
@@ -34,7 +34,7 @@
 .floating-side-tab svg {
   width: 18px;
   height: 18px;
-}
+} */
 
 /* --- SECTION 1: ABOUT US (TOP IMAGES & 3-COL TEXT) --- */
 .section-about-top {
