@@ -389,16 +389,16 @@ a {
   }
 
   .saatvik-logo {
-    height: 34px;
+    width: 160px;
   }
 
   .shakti-logo {
-    height: 28px;
+    width: 140px;
   }
 
   .logo-divider {
     height: 28px;
-    margin: 0 10px;
+    margin: 0 5px;
   }
 }
 
@@ -424,6 +424,10 @@ a {
   font-weight: 400;
   margin: 0;
   line-height: 1.2;
+}
+
+.footer-logo {
+  display: none;
 }
 
 .footer-grid {
