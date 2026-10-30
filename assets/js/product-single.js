@@ -111,13 +111,19 @@ document.addEventListener("DOMContentLoaded", () => {
   const modalClose = document.getElementById("modalClose");
   const modalTitle = document.getElementById("modalProductName");
   const productInput = document.getElementById("productInput");
+  const brochurePdfInput = document.getElementById("brochurePdfInput");
   const downloadBtn = document.getElementById("downloadBrochureBtn");
   const brochureForm = document.getElementById("brochureForm");
 
   function openBrochureModal(prodName) {
     if (!modal) return;
-    if (modalTitle) modalTitle.textContent = prodName || product.name;
-    if (productInput) productInput.value = prodName || product.name;
+    const targetProduct = (prodName && SAATVIK_PRODUCTS.find(p => p.name === prodName || p.title === prodName || p.id === prodName)) || product;
+    const displayName = (targetProduct && targetProduct.name) || prodName || product.name;
+    const brochurePath = (targetProduct && targetProduct.brochure) || product.brochure || "";
+
+    if (modalTitle) modalTitle.textContent = displayName;
+    if (productInput) productInput.value = displayName;
+    if (brochurePdfInput) brochurePdfInput.value = brochurePath;
     modal.classList.add("active");
   }
 

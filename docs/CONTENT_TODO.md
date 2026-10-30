@@ -24,6 +24,7 @@
 | 14 | **Corporate & Plant Addresses** | ✅ Resolved | Verified Morena (MP) plant and Greater Noida (UP) corporate addresses integrated into Contact page and footers |
 | 15 | **Legal Compliance Pages** | ✅ Resolved | Full Terms & Conditions (`terms-conditions.html`) and DPDPA-compliant Privacy Policy (`privacy-policy.html`) active and linked |
 | 16 | **Repository Asset Purge & Audit** | ✅ Resolved | Removed 118 MB unreferenced client dump folder and 11 unused legacy assets; 39 active production assets verified with 0 broken links |
+| 17 | **Product Brochure PDF Downloads** | ✅ Resolved | All 7 client PDFs in `assets/brochure/` mapped to the 9 Shakti products (Maltodex HD, SD, LD mapped to shared PDF); automated browser download on lead form submission |
 
 ---
 
@@ -33,7 +34,6 @@
 |---|---|---|---|
 | 1 | **Google Analytics 4 Measurement ID** | Traffic tracking | Ready to add tag upon client providing measurement ID (`G-XXXXXXXXXX`). |
 | 2 | **WhatsApp Quick Contact** | Direct chat button | Optional feature; ready to activate if client requests direct WhatsApp routing. |
-| 3 | **Product Brochure Download PDFs** | Direct file download | Brochure inquiry form captures leads in Google Sheets; client can link direct PDF download links if desired. |
 
 ---
 

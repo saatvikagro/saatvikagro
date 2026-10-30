@@ -256,6 +256,7 @@
           "></p>
       <form id="brochureForm">
         <input type="hidden" id="productInput" name="product" />
+        <input type="hidden" id="brochurePdfInput" name="brochurePdf" />
         <div id="brochureAlert" class="form-alert"></div>
         <div class="form-group">
           <input type="text" name="fullName" class="form-control" placeholder="Full Name" required />
@@ -527,12 +528,14 @@
       const form = document.getElementById("brochureForm");
       const productInput = document.getElementById("productInput");
       const productNameDisplay = document.getElementById("modalProductName");
+      const brochurePdfInput = document.getElementById("brochurePdfInput");
 
       document.querySelectorAll(".btn-download").forEach((btn) => {
         btn.addEventListener("click", (e) => {
           e.preventDefault();
           const productName = btn.getAttribute("data-product");
           if (productInput) productInput.value = productName;
+          if (brochurePdfInput) brochurePdfInput.value = btn.getAttribute("data-brochure") || "";
           if (productNameDisplay) productNameDisplay.textContent = productName;
           if (modal) modal.classList.add("active");
         });
@@ -553,6 +556,7 @@
       }
     });
   </script>
+  <script src="assets/js/products-data.js"></script>
   <script src="assets/js/form-handler.js"></script>
 </body>
 

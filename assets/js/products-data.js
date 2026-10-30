@@ -11,6 +11,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A maize starch ingredient for manufacturers seeking texture, body and binding in suitable food formulations.",
     description: "A maize starch ingredient for manufacturers seeking texture, body and binding in suitable food formulations.",
     image: "assets/images/products/Shakti-Maize-Starch-Food-Grade.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maize Starch Powder – Food Grade Brochure-01.pdf",
     grade: "Food Grade",
     packFormat: "50 kg and 1,000 kg",
     packSize: "50 kg and 1,000 kg",
@@ -43,6 +44,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A functional glucose syrup for sweetness, body and texture in confectionery, ice cream, bakery and beverage formulations.",
     description: "A functional glucose syrup for sweetness, body and texture in confectionery, ice cream, bakery and beverage formulations.",
     image: "assets/images/products/Shakti-Liquid-Glucose.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Liquid Glucose-01.pdf",
     grade: "Food Grade",
     packFormat: "300 kg",
     packSize: "300 kg",
@@ -73,6 +75,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A versatile maltodextrin variant for food processing, premixes, instant mixes and suitable ingredient systems.",
     description: "A versatile maltodextrin variant for food processing, premixes, instant mixes and suitable ingredient systems.",
     image: "assets/images/products/Shakti-Maltodex-SD.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maltodextrin Powder-01.pdf",
     grade: "Food Grade",
     packFormat: "25 kg",
     packSize: "25 kg",
@@ -103,6 +106,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A maltodextrin variant for food processing, beverage premixes and dry blends. Discuss the specification around your formulation.",
     description: "A maltodextrin variant for food processing, beverage premixes and dry blends. Discuss the specification around your formulation.",
     image: "assets/images/products/Shakti-Maltodex-HD.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maltodextrin Powder-01.pdf",
     grade: "Food Grade",
     packFormat: "25 kg",
     packSize: "25 kg",
@@ -132,6 +136,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A maltodextrin variant for blending, carrier and bulking requirements in suitable dry ingredient systems.",
     description: "A maltodextrin variant for blending, carrier and bulking requirements in suitable dry ingredient systems.",
     image: "assets/images/products/Shakti-Maltodex-LD.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maltodextrin Powder-01.pdf",
     grade: "Food Grade",
     packFormat: "25 kg",
     packSize: "25 kg",
@@ -163,6 +168,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "Industrial maize starch for binding, adhesion and process requirements in paper, textiles, adhesives and corrugation.",
     description: "Industrial maize starch for binding, adhesion and process requirements in paper, textiles, adhesives and corrugation.",
     image: "assets/images/products/Shakti-Maize-Starch-Industrial.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maize Starch Powder – Industrial Grade Brochure-01.pdf",
     grade: "Industrial Grade",
     packFormat: "50 kg and 1,000 kg",
     packSize: "50 kg and 1,000 kg",
@@ -193,6 +199,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A fibre rich maize fraction for cattle feed, poultry feed, feed premixes and animal nutrition applications.",
     description: "A fibre rich maize fraction for cattle feed, poultry feed, feed premixes and animal nutrition applications.",
     image: "assets/images/products/Shakti-Maize-Dry-Fiber.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maize Dry Fiber-01.pdf",
     grade: "Animal Nutrition",
     packFormat: "50 kg",
     packSize: "50 kg",
@@ -223,6 +230,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A protein rich maize derivative for poultry, cattle, aquaculture and compound feed formulations.",
     description: "A protein rich maize derivative for poultry, cattle, aquaculture and compound feed formulations.",
     image: "assets/images/products/Shakti-Gluten-Meal.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maize Gluten Meal-01.pdf",
     grade: "Animal Nutrition",
     packFormat: "50 kg",
     packSize: "50 kg",
@@ -253,6 +261,7 @@ const SAATVIK_PRODUCTS = [
     subtitle: "A maize kernel fraction for downstream oil extraction, feed processing and the wider maize value chain.",
     description: "A maize kernel fraction for downstream oil extraction, feed processing and the wider maize value chain.",
     image: "assets/images/products/Shakti-Maize-Germ.png",
+    brochure: "assets/brochure/Saatvik Agro Shakti Maize Germ-01.pdf",
     grade: "Animal Nutrition",
     packFormat: "50 kg",
     packSize: "50 kg",
@@ -286,4 +295,14 @@ function getProductById(id) {
   const targetId = aliases[id] || id;
   const found = SAATVIK_PRODUCTS.find(p => p.id === targetId);
   return found || SAATVIK_PRODUCTS[0];
+}
+
+// Helper to get brochure PDF path by Product ID or Name
+function getProductBrochure(identifier) {
+  if (!identifier) return SAATVIK_PRODUCTS[0].brochure;
+  const prod = getProductById(identifier) || SAATVIK_PRODUCTS.find(p => 
+    p.name.toLowerCase() === identifier.toLowerCase() || 
+    p.title.toLowerCase() === identifier.toLowerCase()
+  );
+  return (prod && prod.brochure) || SAATVIK_PRODUCTS[0].brochure;
 }
