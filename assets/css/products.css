@@ -264,6 +264,7 @@
   margin: 0;
   line-height: 1.35;
   font-family: var(--font-heading);
+  text-align: center;
 }
 
 .shop-card h3 a {

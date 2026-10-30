@@ -190,9 +190,10 @@ npx serve .
 
 ### Contact & Company Details
 
-- **Email:** marketing.agro@saatvikgroup.com
+- **Email:** marketing.agro@saatvikgroup.com / info@saatvikgroup.com
 - **Instagram:** https://www.instagram.com/saatvikagro/
 - **LinkedIn:** https://www.linkedin.com/company/saatvik-agro-processors-private-limited/posts/?viewAsMember=true
+- **X (Twitter):** https://x.com/Saatvikagro
 - **Phone:** +91 95910 33188 (Official Toll-Free Number)
 - **Manufacturing Address:** Saatvik Agro Processors Private Limited, Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, Madhya Pradesh-476444
 - **Corporate Office:** Saatvik Agro Processors Private Limited, Unit 1418-1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, Uttar Pradesh-201318

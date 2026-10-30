@@ -385,19 +385,19 @@ a {
 
 @media (max-width: 768px) {
   .logo-group {
-    gap: 10px;
+    gap: 0px;
   }
 
   .saatvik-logo {
-    width: 160px;
+    width: 150px;
   }
 
   .shakti-logo {
-    width: 140px;
+    width: 130px;
   }
 
   .logo-divider {
-    height: 28px;
+    height: 24px;
     margin: 0 5px;
   }
 }
