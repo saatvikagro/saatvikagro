@@ -16,7 +16,7 @@
 | 6 | **Footer Social Channels** | ✅ Resolved | Official Instagram (`@saatvikagro`) and LinkedIn company page linked with `target="_blank"` |
 | 7 | **Official Phone Number** | ✅ Resolved | Toll-free support number `+91 95910 33188` integrated across headers and footers |
 | 8 | **Lead Capture Engine (Google Sheets)** | ✅ Resolved | Serverless dual-channel integration (`docs/GOOGLE_APPS_SCRIPT.js` & `assets/js/form-handler.js`) writing to `"Contact-Us"` and `"Products-Download"` tabs with interactive button loader |
-| 9 | **Certifications Trust Marks** | ✅ Resolved | High-fidelity compliance marks for Halal India, ISO 9001:2015, FSSAI, and ISO 22000:2005 |
+| 9 | **Certifications Trust Marks** | ✅ Resolved | 9 high-fidelity compliance marks: FSSAI, ISO 9001:2015, FSSC 22000, ISO 14001:2015, ISO 45001:2018, JUHF Halal, BPJPH Halal, Sedex ISO, and Ecovadis |
 | 10 | **Hero Ambient Video & Messaging** | ✅ Resolved | Headline: *"Driven by purity. Guided by science. Built for consistency."* + optimized video backdrop |
 | 11 | **About Section & Corn Visuals** | ✅ Resolved | Authentic story, mission, vision, 500 TPD Morena plant metrics, corn-focused photography, and facility overview |
 | 12 | **Client Content Staging** | ✅ Resolved | News & Articles section on Home and Team section on About cleanly commented out per client direction until final copy and photos are finalized |
@@ -25,6 +25,7 @@
 | 15 | **Legal Compliance Pages** | ✅ Resolved | Full Terms & Conditions (`terms-conditions.html`) and DPDPA-compliant Privacy Policy (`privacy-policy.html`) active and linked |
 | 16 | **Repository Asset Purge & Audit** | ✅ Resolved | Removed 118 MB unreferenced client dump folder and 11 unused legacy assets; 39 active production assets verified with 0 broken links |
 | 17 | **Product Brochure PDF Downloads** | ✅ Resolved | All 7 client PDFs in `assets/brochure/` mapped to the 9 Shakti products (Maltodex HD, SD, LD mapped to shared PDF); automated browser download on lead form submission |
+| 18 | **Industries We Serve Expansion** | ✅ Resolved | Added Personal Care, Adhesives, and Bioplastics Renewable to Home industries grid with vector SVG icons; total 12 industries in 4x3 layout |
 
 ---
 
