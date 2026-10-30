@@ -1,3 +1,44 @@
+// =========================================================
+// 0. Always Scroll to Top on Page Load & Refresh (All Pages)
+// =========================================================
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+
+function scrollToTopInstant() {
+  try {
+    window.scrollTo({ top: 0, left: 0, behavior: 'instant' });
+  } catch (e) {
+    window.scrollTo(0, 0);
+  }
+}
+
+// Immediate execution on script parse
+scrollToTopInstant();
+
+// Before browser unloads / saves scroll state on reload
+window.addEventListener('beforeunload', () => {
+  window.scrollTo(0, 0);
+});
+
+// Back/Forward cache and standard page show
+window.addEventListener('pageshow', () => {
+  scrollToTopInstant();
+});
+
+// When DOM elements are available
+document.addEventListener('DOMContentLoaded', () => {
+  scrollToTopInstant();
+});
+
+// When images, styles, and assets finish loading
+window.addEventListener('load', () => {
+  scrollToTopInstant();
+  if (typeof ScrollTrigger !== 'undefined' && typeof ScrollTrigger.clearScrollMemory === 'function') {
+    ScrollTrigger.clearScrollMemory('manual');
+  }
+});
+
 // Fullscreen Mobile/Desktop Menu Toggle
 const hamburger = document.getElementById('hamburger-menu');
 const navOverlay = document.getElementById('nav-overlay');

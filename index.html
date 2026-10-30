@@ -18,6 +18,13 @@
 
   <link rel="stylesheet" href="assets/css/global.css" />
   <link rel="stylesheet" href="assets/css/index.css" />
+  <!-- Force page to start at top on refresh/load -->
+  <script>
+    if ('scrollRestoration' in history) {
+      history.scrollRestoration = 'manual';
+    }
+    window.scrollTo(0, 0);
+  </script>
 </head>
 
 <body>
@@ -88,7 +95,7 @@
     <!-- Background Video -->
     <div class="hero-video-bg">
       <video autoplay muted loop playsinline class="hero-bg-video">
-        <source src="assets/images/Adobe Express - Untitled design.mp4" type="video/mp4" />
+        <source src="assets/images/Hero-Video.mp4" type="video/mp4" />
       </video>
     </div>
 

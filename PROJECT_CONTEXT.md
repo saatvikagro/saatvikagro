@@ -232,6 +232,7 @@ npx serve .
 
 | Date | Agent/Model | What was done | Files touched |
 |---|---|---|---|
+| 2026-10-30 | Antigravity AI | Enforced universal scroll-to-top on refresh/load across all 9 pages using `history.scrollRestoration = 'manual'`, instant scroll lifecycle triggers, and GSAP ScrollTrigger memory clearing; added X social link and secondary email `info@saatvikgroup.com` | `assets/js/main.js`, `*.html`, `data/site-config.json` |
 | 2026-10-30 | Antigravity AI | Integrated automated PDF brochure downloads on single product lead submission; mapped all 9 Shakti products to `assets/brochure/` PDFs (with Maltodex HD, SD, LD mapped to shared PDF); added interactive download progress alert & fallback link | `assets/js/form-handler.js`, `assets/js/products-data.js`, `assets/js/product-single.js`, `product-single.html`, `products.html` |
 | 2026-10-28 | Antigravity AI | Sanitized repo documentation, updated readme.md, PROJECT_CONTEXT.md, and docs/ for GitHub push; purged 118 MB raw dump folder; audited all 39 active media assets with 0 broken references | `readme.md`, `PROJECT_CONTEXT.md`, `docs/*`, `.gitignore` |
 | 2026-10-28 | Antigravity AI | Integrated Google Apps Script serverless lead capture engine with dual tabs ("Contact-Us" & "Products-Download"), animated button loaders, and error fallbacks | `assets/js/form-handler.js`, `contact.html`, `product-single.html`, `docs/GOOGLE_APPS_SCRIPT.js` |
