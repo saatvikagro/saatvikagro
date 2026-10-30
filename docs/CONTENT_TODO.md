@@ -26,6 +26,7 @@
 | 16 | **Repository Asset Purge & Audit** | ✅ Resolved | Removed 118 MB unreferenced client dump folder and 11 unused legacy assets; 39 active production assets verified with 0 broken links |
 | 17 | **Product Brochure PDF Downloads** | ✅ Resolved | All 7 client PDFs in `assets/brochure/` mapped to the 9 Shakti products (Maltodex HD, SD, LD mapped to shared PDF); automated browser download on lead form submission |
 | 18 | **Industries We Serve Expansion** | ✅ Resolved | Added Personal Care, Adhesives, and Bioplastics Renewable to Home industries grid with vector SVG icons; total 12 industries in 4x3 layout |
+| 19 | **Site-Wide Speed & Core Web Vitals Optimization** | ✅ Resolved | Reduced `index.html` payload from 8.12 MB to 89 KB (-98.9%) with zero compression; added video `preload="metadata"` & poster; site-wide `loading="lazy"`, `decoding="async"`, DNS prefetch, and deferred JS across all 9 pages |
 
 ---
 

@@ -13,8 +13,12 @@
   <link rel="apple-touch-icon" href="assets/images/content/favicon.png" />
 
   <!-- Google Fonts -->
+  <link rel="dns-prefetch" href="https://fonts.googleapis.com" />
+  <link rel="dns-prefetch" href="https://fonts.gstatic.com" />
+  <link rel="dns-prefetch" href="https://cdnjs.cloudflare.com" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="preconnect" href="https://cdnjs.cloudflare.com" crossorigin />
   <link
     href="https://fonts.googleapis.com/css2?family=Instrument+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=DM+Sans:wght@400;500;700&display=swap"
     rel="stylesheet" />
@@ -36,9 +40,9 @@
   <!-- NAVBAR -->
   <header class="header flex-between">
     <a href="index.html" class="logo-group" aria-label="Saatvik Agro Home">
-      <img src="assets/images/Logo_Saatvik Agro.png" alt="Saatvik Agro" class="logo-img saatvik-logo" />
+      <img src="assets/images/Logo_Saatvik Agro.png" alt="Saatvik Agro" class="logo-img saatvik-logo" / decoding="async">
       <div class="logo-divider"></div>
-      <img src="assets/images/Logo_Shakti.png" alt="Shakti" class="logo-img shakti-logo" />
+      <img src="assets/images/Logo_Shakti.png" alt="Shakti" class="logo-img shakti-logo" / decoding="async">
     </a>
 
     <ul class="nav-links">
@@ -350,7 +354,7 @@
     <div class="container">
       <div class="footer-top">
         <div class="footer-logo">
-          <img src="assets/images/Logo_Saatvik Agro.png" alt="Saatvik" />
+          <img src="assets/images/Logo_Saatvik Agro.png" alt="Saatvik" / loading="lazy" decoding="async">
         </div>
         <div class="footer-top-text">
           <h2>Growing soil and food <br /> organically</h2>
@@ -434,7 +438,7 @@
   </footer>
 
   <!-- Global Main Script -->
-  <script src="assets/js/main.js"></script>
+  <script defer src="assets/js/main.js"></script>
 </body>
 
 </html>

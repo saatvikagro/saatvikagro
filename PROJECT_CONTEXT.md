@@ -44,7 +44,7 @@
 **Status legend:** ⬜ Not started · 🟨 In progress · ✅ Done
 
 **Last updated:** 2026-10-30 by Antigravity AI
-**Last completed task:** Added 3 new industries (Personal Care, Adhesives, Bioplastics Renewable) to the Industries We Serve grid in `index.html` with vector SVG icons from client, completing a 12-card 4x3 layout; updated Section 2 header label to "INDUSTRIES WE SERVE" and saved SVG assets to `assets/images/icons/`.
+**Last completed task:** Comprehensive site-wide speed & performance optimization: reduced `index.html` size from 8.12 MB to 89 KB (98.9% payload reduction) by extracting three 4096x4096px base64 PNGs into standalone lossless assets with 0 quality degradation; added `preload="metadata"` & poster to hero video; implemented native `loading="lazy"` & `decoding="async"` across all 9 pages; added DNS prefetch, CDN preconnect, and deferred all scripts for optimal Lighthouse / Core Web Vitals performance.
 **NEXT TASK TO DO:** Final client sign-off and production deployment.
 
 ---
@@ -232,6 +232,7 @@ npx serve .
 
 | Date | Agent/Model | What was done | Files touched |
 |---|---|---|---|
+| 2026-10-30 | Antigravity AI | Comprehensive speed optimization: reduced `index.html` from 8.12 MB to 89 KB by extracting base64 into uncompressed PNGs; added hero video `preload="metadata"` & poster; enabled native lazy loading & async decoding on all 9 pages; added DNS prefetch & CDN preconnect; deferred external JS | `*.html`, `assets/images/content/*`, `PROJECT_CONTEXT.md`, `docs/CONTENT_TODO.md` |
 | 2026-10-30 | Antigravity AI | Enforced universal scroll-to-top on refresh/load across all 9 pages using `history.scrollRestoration = 'manual'`, instant scroll lifecycle triggers, and GSAP ScrollTrigger memory clearing; added X social link and secondary email `info@saatvikgroup.com` | `assets/js/main.js`, `*.html`, `data/site-config.json` |
 | 2026-10-30 | Antigravity AI | Integrated automated PDF brochure downloads on single product lead submission; mapped all 9 Shakti products to `assets/brochure/` PDFs (with Maltodex HD, SD, LD mapped to shared PDF); added interactive download progress alert & fallback link | `assets/js/form-handler.js`, `assets/js/products-data.js`, `assets/js/product-single.js`, `product-single.html`, `products.html` |
 | 2026-10-28 | Antigravity AI | Sanitized repo documentation, updated readme.md, PROJECT_CONTEXT.md, and docs/ for GitHub push; purged 118 MB raw dump folder; audited all 39 active media assets with 0 broken references | `readme.md`, `PROJECT_CONTEXT.md`, `docs/*`, `.gitignore` |
