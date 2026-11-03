@@ -3,6 +3,7 @@
   position: relative;
   height: calc(100vh - 71px);
   overflow: hidden;
+  background-color: #0b111a;
 }
 
 .hero-video-bg,

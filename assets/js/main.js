@@ -29,6 +29,10 @@ window.addEventListener('pageshow', () => {
 // When DOM elements are available
 document.addEventListener('DOMContentLoaded', () => {
   scrollToTopInstant();
+  const heroVideo = document.querySelector('.hero-bg-video');
+  if (heroVideo) {
+    heroVideo.play().catch(() => {});
+  }
 });
 
 // When images, styles, and assets finish loading

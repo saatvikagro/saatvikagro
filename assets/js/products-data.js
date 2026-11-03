@@ -46,7 +46,7 @@ const SAATVIK_PRODUCTS = [
     image: "assets/images/products/Shakti-Liquid-Glucose.png",
     brochure: "assets/brochure/Saatvik Agro Shakti Liquid Glucose-01.pdf",
     grade: "Food Grade",
-    packFormat: "300 kg",
+    packFormat: "25 Kg | 300 kg",
     packSize: "300 kg",
     form: "Syrup",
     function: "Sweetness and body",
