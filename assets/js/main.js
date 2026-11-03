@@ -31,7 +31,10 @@ document.addEventListener('DOMContentLoaded', () => {
   scrollToTopInstant();
   const heroVideo = document.querySelector('.hero-bg-video');
   if (heroVideo) {
-    heroVideo.play().catch(() => {});
+    const playVideo = () => heroVideo.play().catch(() => {});
+    playVideo();
+    heroVideo.addEventListener('loadeddata', playVideo, { once: true });
+    heroVideo.addEventListener('canplay', playVideo, { once: true });
   }
 });
 

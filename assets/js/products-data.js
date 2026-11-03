@@ -13,8 +13,8 @@ const SAATVIK_PRODUCTS = [
     image: "assets/images/products/Shakti-Maize-Starch-Food-Grade.png",
     brochure: "assets/brochure/Saatvik Agro Shakti Maize Starch Powder – Food Grade Brochure-01.pdf",
     grade: "Food Grade",
-    packFormat: "50 kg and 1,000 kg",
-    packSize: "50 kg and 1,000 kg",
+    packFormat: "50 kg and 1000 kg",
+    packSize: "50 kg and 1000 kg",
     form: "Powder",
     function: "Thickening and binding",
     features: [
@@ -47,7 +47,7 @@ const SAATVIK_PRODUCTS = [
     brochure: "assets/brochure/Saatvik Agro Shakti Liquid Glucose-01.pdf",
     grade: "Food Grade",
     packFormat: "25 Kg | 300 kg",
-    packSize: "300 kg",
+    packSize: "25 Kg | 300 kg",
     form: "Syrup",
     function: "Sweetness and body",
     features: [
@@ -170,8 +170,8 @@ const SAATVIK_PRODUCTS = [
     image: "assets/images/products/Shakti-Maize-Starch-Industrial.png",
     brochure: "assets/brochure/Saatvik Agro Shakti Maize Starch Powder – Industrial Grade Brochure-01.pdf",
     grade: "Industrial Grade",
-    packFormat: "50 kg and 1,000 kg",
-    packSize: "50 kg and 1,000 kg",
+    packFormat: "50 kg and 1000 kg",
+    packSize: "50 kg and 1000 kg",
     form: "Powder",
     function: "Binding and adhesion",
     features: [
