@@ -363,4 +363,191 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     });
   }
+
+  // =========================================================================
+  // 3. Careers Job Application / Resume Modal Form (#careerForm)
+  // =========================================================================
+  const careerForm = document.getElementById("careerForm");
+  const careerModal = document.getElementById("careerModal");
+  const careerAlert = document.getElementById("careerAlert");
+  const careerRoleInput = document.getElementById("careerRoleInput");
+  const careerResumeInput = document.getElementById("careerResumeInput");
+  const fileUploadText = document.getElementById("fileUploadText");
+  const careerModalClose = document.getElementById("careerModalClose");
+
+  // Update file name display when candidate selects a resume
+  if (careerResumeInput && fileUploadText) {
+    careerResumeInput.addEventListener("change", () => {
+      if (careerResumeInput.files && careerResumeInput.files[0]) {
+        const file = careerResumeInput.files[0];
+        const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+        fileUploadText.textContent = `✓ ${file.name} (${sizeMB} MB)`;
+      } else {
+        fileUploadText.textContent = "Choose File (PDF, DOC, DOCX, JPG, PNG)";
+      }
+    });
+  }
+
+  // Open modal on any career apply / resume button click
+  document.querySelectorAll(".btn--resume, .btn--opening-apply, [data-open-career-modal]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Look for role title from data-role attribute or parent opening card
+      let roleName = btn.getAttribute("data-role");
+      if (!roleName) {
+        const parentOpening = btn.closest(".opening-item");
+        if (parentOpening) {
+          const titleEl = parentOpening.querySelector(".opening-title");
+          if (titleEl) roleName = titleEl.textContent.trim();
+        }
+      }
+      if (careerRoleInput) {
+        careerRoleInput.value = roleName || "Production Executive";
+      }
+      if (careerModal) {
+        careerModal.classList.add("active");
+        careerModal.setAttribute("aria-hidden", "false");
+      }
+    });
+  });
+
+  if (careerModalClose && careerModal) {
+    careerModalClose.addEventListener("click", () => {
+      careerModal.classList.remove("active");
+      careerModal.setAttribute("aria-hidden", "true");
+    });
+  }
+
+  if (careerModal) {
+    careerModal.addEventListener("click", (e) => {
+      if (e.target === careerModal) {
+        careerModal.classList.remove("active");
+        careerModal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  if (careerForm) {
+    careerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = careerForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn ? submitBtn.querySelector(".btn-text") : null;
+      const btnLoader = submitBtn ? submitBtn.querySelector(".btn-loader") : null;
+
+      const formData = new FormData(careerForm);
+      const roleName = formData.get("careerProfile") || "General Application";
+
+      // Reset alert
+      if (careerAlert) {
+        careerAlert.style.display = "none";
+        careerAlert.className = "form-alert";
+      }
+
+      // Check and process resume file
+      let fileData = "";
+      let fileName = "";
+      let fileMime = "";
+
+      if (careerResumeInput && careerResumeInput.files && careerResumeInput.files[0]) {
+        const file = careerResumeInput.files[0];
+
+        // 10MB size limit check
+        if (file.size > 10 * 1024 * 1024) {
+          if (careerAlert) {
+            careerAlert.className = "form-alert error";
+            careerAlert.textContent = "⚠️ File size exceeds 10MB limit. Please upload a smaller file.";
+            careerAlert.style.display = "block";
+          }
+          return;
+        }
+
+        fileName = file.name;
+        fileMime = file.type || "application/octet-stream";
+
+        try {
+          fileData = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const res = reader.result;
+              const base64 = typeof res === "string" ? res.split(",")[1] : "";
+              resolve(base64);
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+        } catch (fErr) {
+          console.error("File reading error:", fErr);
+        }
+      }
+
+      const payload = {
+        sheetName: "Careers",
+        careerProfile: roleName,
+        fullName: formData.get("fullName") || "",
+        email: formData.get("email") || "",
+        phone: formData.get("phone") || "",
+        fileName: fileName,
+        fileMime: fileMime,
+        fileData: fileData,
+      };
+
+      // Enter loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("is-loading");
+      }
+      if (btnText && btnLoader) {
+        btnText.style.display = "none";
+        btnLoader.style.display = "inline-flex";
+        btnLoader.style.alignItems = "center";
+        btnLoader.style.justifyContent = "center";
+      }
+
+      try {
+        await sendToGoogleSheet(payload);
+
+        if (careerAlert) {
+          careerAlert.className = "form-alert success";
+          careerAlert.textContent =
+            "✓ Thank you! Your application & resume for " + roleName + " has been submitted successfully. Our talent team will connect with you soon.";
+          careerAlert.style.display = "block";
+        }
+
+        careerForm.reset();
+        if (fileUploadText) {
+          fileUploadText.textContent = "Choose File (PDF, DOC, DOCX, JPG, PNG)";
+        }
+
+        setTimeout(() => {
+          if (careerModal) {
+            careerModal.classList.remove("active");
+            careerModal.setAttribute("aria-hidden", "true");
+          }
+          if (careerAlert) {
+            careerAlert.style.display = "none";
+            careerAlert.className = "form-alert";
+          }
+        }, 3000);
+
+      } catch (err) {
+        console.error("Career submission error:", err);
+        if (careerAlert) {
+          careerAlert.className = "form-alert error";
+          careerAlert.textContent =
+            "⚠️ Submission failed. Please try again or email your resume directly to info@saatvikgroup.com.";
+          careerAlert.style.display = "block";
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("is-loading");
+        }
+        if (btnText && btnLoader) {
+          btnText.style.display = "inline";
+          btnLoader.style.display = "none";
+        }
+      }
+    });
+  }
 });
