@@ -30,6 +30,9 @@ Thumbs.db
 # OS
 .DS_Store
 
+# Archives
+*.zip
+
 # Raw Client Assets / Deliverables
 Saatvik Agro Shakti Products/
 *.psd
