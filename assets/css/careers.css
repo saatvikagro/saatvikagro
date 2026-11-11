@@ -1,0 +1,1015 @@
+/* =========================================================
+   CAREERS PAGE STYLES — SAATVIK AGRO
+   Strict Zero Border-Radius Brutalist Architecture
+   Pixel-Perfect Match to Client Figma Specifications
+   ========================================================= */
+
+.careers-page {
+  background-color: var(--color-bg, #ffffff);
+  color: var(--color-text, #4a505e);
+  overflow-x: clip;
+}
+
+/* ---------------------------------------------------------
+   SECTION 1: HERO SPLIT ("Grow with Saatvik Agro")
+   Exact 50/50 Split Matching Figma media_1793688902124_f896c334
+   --------------------------------------------------------- */
+.careers-hero-split {
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.careers-hero-split-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  background-color: #ffffff;
+  width: 100%;
+}
+
+.careers-hero-img-col {
+  position: relative;
+  width: 100%;
+  background-color: #e2e8f0;
+  overflow: hidden;
+  border-radius: 0 !important;
+}
+
+.careers-hero-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 993 / 744;
+  object-fit: cover;
+  object-position: center;
+  display: block;
+  border-radius: 0 !important;
+}
+
+.careers-hero-text-col {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  padding: clamp(40px, 5vw, 80px) clamp(30px, 6vw, 90px);
+  background-color: #ffffff;
+  height: 100%;
+}
+
+.careers-hero-text-box {
+  max-width: 520px;
+}
+
+.careers-hero-title {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.1;
+  letter-spacing: -0.025em;
+  margin: 0 0 20px 0;
+}
+
+.careers-hero-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.65;
+  margin: 0;
+  max-width: 480px;
+}
+
+/* ---------------------------------------------------------
+   SECTION 2: WHY JOIN SAATVIK AGRO
+   Great Ingredients Start with Great People
+   --------------------------------------------------------- */
+.careers-join-section {
+  padding: clamp(70px, 8vw, 115px) 0;
+  background-color: #ffffff;
+}
+
+.careers-join-grid {
+  display: grid;
+  grid-template-columns: 1.15fr 0.85fr;
+  gap: clamp(40px, 6vw, 80px);
+  align-items: center;
+}
+
+.careers-eyebrow {
+  display: inline-block;
+  font-family: var(--font-body);
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #EA7124;
+  margin-bottom: 16px;
+}
+
+.careers-join-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.12;
+  letter-spacing: -0.02em;
+  margin: 0 0 26px 0;
+}
+
+.careers-join-paragraphs {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.careers-join-paragraphs p {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.careers-join-img-col {
+  width: 100%;
+}
+
+.careers-join-img-wrapper {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  background-color: #f1f5f9;
+  border-radius: 0 !important;
+}
+
+.careers-join-img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 502 / 285;
+  object-fit: cover;
+  display: block;
+  border-radius: 0 !important;
+}
+
+/* ---------------------------------------------------------
+   SECTION 3: WHY PEOPLE LIKE TO WORK AT SAATVIK?
+   Centered Title + 8-Item Icon Grid (4x2) Matching Figma
+   --------------------------------------------------------- */
+.careers-perks-section {
+  padding: clamp(70px, 8vw, 120px) 0 clamp(80px, 10vw, 130px) 0;
+  background-color: #ffffff;
+}
+
+.careers-perks-header {
+  text-align: center;
+  margin-bottom: clamp(50px, 7vw, 85px);
+}
+
+.careers-perks-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0;
+  text-align: center;
+}
+
+.careers-perks-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  column-gap: clamp(32px, 5vw, 80px);
+  row-gap: clamp(48px, 6vw, 72px);
+  max-width: 1120px;
+  margin: 0 auto;
+}
+
+.perk-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 10px;
+}
+
+.perk-icon-wrap {
+  width: 52px;
+  height: 52px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 18px;
+  color: #EA7124;
+  transition: transform 0.25s ease;
+}
+
+.perk-card:hover .perk-icon-wrap {
+  transform: translateY(-4px);
+}
+
+.perk-icon-wrap svg {
+  width: 42px;
+  height: 42px;
+  stroke: #EA7124;
+}
+
+.perk-title {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.4;
+  margin: 0;
+  max-width: 230px;
+}
+
+/* ---------------------------------------------------------
+   SECTION 4: FIND YOUR PLACE AT SAATVIK AGRO
+   3-Column Opportunities Grid with Orange Left Accent Stripe
+   --------------------------------------------------------- */
+.careers-roles-section {
+  padding: clamp(70px, 8vw, 115px) 0;
+  background-color: #ffffff;
+}
+
+.careers-roles-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.careers-roles-header-left {
+  max-width: 640px;
+}
+
+.careers-roles-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 16px 0;
+}
+
+.careers-roles-desc {
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.65;
+  margin: 0;
+}
+
+.careers-roles-header-right {
+  flex-shrink: 0;
+}
+
+.btn--resume {
+  background-color: #EA7124;
+  color: #ffffff;
+  padding: 0 32px;
+  height: 48px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #EA7124;
+  border-radius: 0 !important;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn--resume:hover {
+  background-color: #d25f17;
+  border-color: #d25f17;
+  color: #ffffff;
+  transform: translateY(-2px);
+}
+
+.careers-roles-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: clamp(24px, 2.5vw, 32px);
+}
+
+.role-card {
+  position: relative;
+  background-color: #ffffff;
+  padding: clamp(34px, 3.5vw, 42px) clamp(24px, 2.5vw, 32px) clamp(34px, 3.5vw, 40px) clamp(32px, 3vw, 38px);
+  box-shadow: 0 4px 20px rgba(18, 26, 47, 0.05);
+  border: 1px solid #f0f2f6;
+  border-radius: 0 !important;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 230px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.role-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(18, 26, 47, 0.08);
+}
+
+/* Orange Vertical Accent Stripe on the Left */
+.role-card::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: clamp(34px, 3.5vw, 42px);
+  width: 4px;
+  height: 75px;
+  background-color: #EA7124;
+}
+
+.role-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.3vw, 1.35rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.25;
+  letter-spacing: -0.015em;
+  margin: 0 0 20px 0;
+}
+
+.role-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------
+   SECTION 5: CURRENT OPENINGS ACCORDION
+   Clean Neutral-Gray Accordion Cards Matching Figma
+   --------------------------------------------------------- */
+.careers-openings-section {
+  padding: clamp(60px, 8vw, 110px) 0 clamp(80px, 10vw, 130px) 0;
+  background-color: #ffffff;
+}
+
+.openings-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 0 0 clamp(32px, 4vw, 48px) 0;
+}
+
+.openings-accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.opening-item {
+  background-color: #f6f7f9;
+  border: 1px solid #edf0f4;
+  border-radius: 0 !important;
+  transition: background-color 0.2s ease, border-color 0.2s ease;
+  overflow: hidden;
+}
+
+.opening-item:hover {
+  background-color: #f1f3f6;
+}
+
+.opening-header {
+  width: 100%;
+  padding: clamp(20px, 2.5vw, 28px) clamp(24px, 3vw, 36px);
+  background: transparent;
+  border: none;
+  border-radius: 0 !important;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  text-align: left;
+  cursor: pointer;
+  outline: none;
+  gap: 20px;
+}
+
+.opening-header-info {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.opening-title {
+  font-family: var(--font-heading);
+  font-size: clamp(1.15rem, 1.3vw, 1.35rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.25;
+  margin: 0;
+}
+
+.opening-meta {
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #777777;
+  font-weight: 400;
+}
+
+.meta-separator {
+  margin: 0 6px;
+  color: #aaaaaa;
+}
+
+.opening-chevron {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #121a2f;
+  flex-shrink: 0;
+  transition: transform 0.25s ease;
+}
+
+.opening-chevron svg {
+  width: 20px;
+  height: 20px;
+}
+
+/* Accordion Content Body */
+.opening-content {
+  display: none;
+  padding: 0 clamp(24px, 3vw, 36px) clamp(24px, 3vw, 32px);
+}
+
+.opening-item.active .opening-content {
+  display: block;
+}
+
+.opening-item.active .opening-chevron {
+  transform: rotate(180deg);
+}
+
+.opening-body {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 30px;
+  border-top: 1px solid #e7ebf0;
+  padding-top: 20px;
+  flex-wrap: wrap;
+}
+
+.opening-details {
+  max-width: 600px;
+}
+
+.opening-desc {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.6;
+  margin: 0 0 16px 0;
+}
+
+.opening-location {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  color: #777777;
+}
+
+.opening-location svg {
+  color: #EA7124;
+  flex-shrink: 0;
+}
+
+.opening-action {
+  flex-shrink: 0;
+}
+
+.btn--opening-apply {
+  background-color: #EA7124;
+  color: #ffffff;
+  padding: 0 26px;
+  height: 42px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: var(--font-body);
+  font-size: 14px;
+  font-weight: 600;
+  text-decoration: none;
+  border: 1px solid #EA7124;
+  border-radius: 0 !important;
+  transition: all 0.25s ease;
+  white-space: nowrap;
+}
+
+.btn--opening-apply:hover {
+  background-color: #d25f17;
+  border-color: #d25f17;
+  color: #ffffff;
+}
+
+/* ---------------------------------------------------------
+   SECTION 6: OUR HIRING PROCESS
+   5 Steps Grid Matching Figma
+   --------------------------------------------------------- */
+.careers-process-section {
+  padding: clamp(70px, 8vw, 115px) 0;
+  background-color: #ffffff;
+}
+
+.careers-process-header {
+  text-align: center;
+  margin-bottom: clamp(45px, 6vw, 70px);
+}
+
+.careers-process-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0 0;
+}
+
+.careers-process-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: clamp(20px, 2.5vw, 32px);
+}
+
+.process-card {
+  display: flex;
+  flex-direction: column;
+}
+
+.process-number {
+  font-family: var(--font-heading);
+  font-size: clamp(2.4rem, 3.4vw, 3rem);
+  font-weight: 500;
+  color: #F8B486;
+  line-height: 1;
+  margin-bottom: 14px;
+}
+
+.process-title {
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  line-height: 1.25;
+  margin: 0 0 10px 0;
+}
+
+.process-desc {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: var(--color-text, #4a505e);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ---------------------------------------------------------
+   SECTION 7: OUR VALUES
+   Dark Navy Section with 6 Values Table
+   --------------------------------------------------------- */
+.careers-values-section {
+  padding: clamp(80px, 9vw, 130px) 0;
+  background-color: #121a2f;
+  color: #ffffff;
+}
+
+.careers-values-header {
+  margin-bottom: clamp(40px, 5vw, 60px);
+}
+
+.careers-values-heading {
+  font-family: var(--font-heading);
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+  margin: 8px 0 0 0;
+}
+
+.values-table {
+  width: 100%;
+}
+
+.values-table-head {
+  display: grid;
+  grid-template-columns: 80px 240px 1fr;
+  gap: 24px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #94a3b8;
+  letter-spacing: 0.5px;
+}
+
+.values-table-row {
+  display: grid;
+  grid-template-columns: 80px 240px 1fr;
+  gap: 24px;
+  padding: clamp(20px, 2.5vw, 26px) 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  align-items: flex-start;
+}
+
+.val-col-no {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #EA7124;
+}
+
+.val-col-name {
+  font-family: var(--font-heading);
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #ffffff;
+  line-height: 1.3;
+}
+
+.val-col-content {
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  color: #cbd5e1;
+  line-height: 1.65;
+}
+
+/* ---------------------------------------------------------
+   CAREER APPLICATION MODAL STYLES
+   --------------------------------------------------------- */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(18, 26, 47, 0.7);
+  backdrop-filter: blur(4px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.3s ease;
+  padding: 20px;
+}
+
+.modal-overlay.active {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-box {
+  background: #ffffff;
+  padding: clamp(30px, 4vw, 44px);
+  width: 100%;
+  max-width: 480px;
+  border-radius: 0 !important;
+  position: relative;
+  transform: translateY(20px);
+  transition: transform 0.3s ease;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.25);
+  border: 1px solid #edf0f4;
+}
+
+.modal-overlay.active .modal-box {
+  transform: translateY(0);
+}
+
+.modal-close {
+  position: absolute;
+  top: 14px;
+  right: 18px;
+  background: none;
+  border: none;
+  font-size: 32px;
+  cursor: pointer;
+  color: #888;
+  line-height: 1;
+  transition: color 0.2s ease;
+}
+
+.modal-close:hover {
+  color: #121a2f;
+}
+
+.modal-header-block {
+  margin-bottom: 22px;
+}
+
+.modal-title {
+  font-family: var(--font-heading);
+  font-size: 1.65rem;
+  font-weight: 500;
+  color: var(--color-primary, #121a2f);
+  margin: 0 0 8px 0;
+}
+
+.modal-subtitle {
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  color: #777777;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.form-group {
+  margin-bottom: 16px;
+}
+
+.form-label {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #121a2f;
+  margin-bottom: 6px;
+}
+
+.form-control {
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px solid #d1d5db;
+  border-radius: 0 !important;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  color: #121a2f;
+  transition: border-color 0.2s ease;
+  box-sizing: border-box;
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: #EA7124;
+}
+
+/* Custom File Upload Box */
+.file-upload-box {
+  position: relative;
+  width: 100%;
+}
+
+.file-input {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.file-label {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  padding: 12px 14px;
+  border: 1px dashed #d1d5db;
+  border-radius: 0 !important;
+  background-color: #fafbfc;
+  color: #4a505e;
+  font-family: var(--font-body);
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.file-label svg {
+  color: #EA7124;
+  flex-shrink: 0;
+}
+
+.file-input:hover + .file-label,
+.file-input:focus + .file-label {
+  border-color: #EA7124;
+  background-color: #fff9f5;
+  color: #121a2f;
+}
+
+.file-hint {
+  display: block;
+  font-family: var(--font-body);
+  font-size: 0.76rem;
+  color: #777777;
+  margin-top: 5px;
+}
+
+.form-alert {
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  border-radius: 0 !important;
+}
+
+.form-alert.success {
+  background-color: #ecfdf5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+
+.form-alert.error {
+  background-color: #fef2f2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+
+.btn-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid rgba(255, 255, 255, 0.4);
+  border-top-color: #ffffff;
+  border-radius: 50% !important;
+  animation: btnSpin 0.7s infinite linear;
+  margin-right: 8px;
+}
+
+@keyframes btnSpin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* ---------------------------------------------------------
+   RESPONSIVE BREAKPOINTS
+   Desktop (> 1024px), Tablet (768px - 1024px), Mobile (< 768px)
+   --------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .careers-hero-split-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .careers-hero-img-col {
+    width: 100%;
+  }
+
+  .careers-hero-text-col {
+    padding: 44px 5% 50px 5%;
+  }
+
+  .careers-hero-text-box {
+    max-width: 100%;
+  }
+
+  .careers-join-grid {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+
+  .careers-perks-grid {
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: clamp(20px, 3vw, 40px);
+    row-gap: 45px;
+  }
+
+  .careers-roles-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .careers-process-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 820px) {
+  .careers-perks-grid {
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 24px;
+    row-gap: 40px;
+  }
+}
+
+@media (max-width: 768px) {
+  .careers-process-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .values-table-head {
+    display: none;
+  }
+
+  .values-table-row {
+    grid-template-columns: 1fr;
+    gap: 8px;
+    padding: 22px 0;
+  }
+
+  .val-col-no {
+    font-size: 1.1rem;
+    display: inline-block;
+  }
+
+  .val-col-name {
+    font-size: 1.25rem;
+  }
+}
+
+@media (max-width: 680px) {
+  .careers-roles-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .btn--resume {
+    width: 100%;
+  }
+
+  .careers-roles-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .role-card {
+    min-height: auto;
+    padding: 28px 20px 28px 26px;
+  }
+
+  .role-card::before {
+    top: 28px;
+    height: 70px;
+  }
+
+  .opening-body {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .opening-action {
+    width: 100%;
+  }
+
+  .btn--opening-apply {
+    width: 100%;
+  }
+}
+
+@media (max-width: 640px) {
+  .careers-hero-text-col {
+    padding: 32px 5% 42px 5%;
+  }
+
+  .careers-hero-title {
+    font-size: 2rem;
+    margin-bottom: 14px;
+  }
+
+  .careers-join-section {
+    padding: 50px 0;
+  }
+
+  .careers-join-heading {
+    font-size: 2rem;
+  }
+
+  .careers-perks-section {
+    padding: 50px 0;
+  }
+
+  .careers-perks-heading {
+    font-size: 2rem;
+  }
+
+  .careers-perks-grid {
+    grid-template-columns: 1fr;
+    row-gap: 36px;
+  }
+
+  .perk-card {
+    max-width: 280px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 480px) {
+  .careers-process-grid {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+}

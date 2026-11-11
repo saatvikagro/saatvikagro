@@ -1,0 +1,12 @@
+# robots.txt for Saatvik Agro Processors Private Limited
+# https://saatvikagro.com
+
+User-agent: *
+Allow: /
+
+# Disallow WordPress admin
+Disallow: /wp-admin/
+Allow: /wp-admin/admin-ajax.php
+
+# Sitemap
+Sitemap: https://saatvikagro.com/sitemap.xml

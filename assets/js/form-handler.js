@@ -1,0 +1,586 @@
+/**
+ * =========================================================================
+ * Saatvik Agro - Google Sheets Form Submission & Brochure Handler
+ * =========================================================================
+ * Handles:
+ *  1. Contact Us Form (#contactForm) -> Saves to "Contact-Us" Tab
+ *  2. Download Brochure Form (#brochureForm) -> Saves to "Products-Download" Tab
+ *     AND automatically triggers direct PDF download to user's system!
+ *
+ * NOTE FOR SETUP:
+ * Paste your deployed Google Apps Script Web App URL below in GOOGLE_SCRIPT_URL.
+ */
+
+// >>>>>> PASTE YOUR GOOGLE APPS SCRIPT WEB APP URL HERE <<<<<<
+const GOOGLE_SCRIPT_URL = "https://script.google.com/macros/s/AKfycbwZVOZPHbwtUXR_RTzSWuCqTCUXuefOTJnE62T1qCAN4FXJRIr4pqiH0F8YuQWz-tBh/exec";
+
+/**
+ * Send payload to Google Apps Script Web App
+ */
+async function sendToGoogleSheet(payload) {
+  // If the user hasn't replaced the placeholder yet, simulate submission in local dev
+  if (!GOOGLE_SCRIPT_URL || GOOGLE_SCRIPT_URL.includes("YOUR_GOOGLE_APPS_SCRIPT")) {
+    console.warn(
+      "⚠️ [Saatvik Agro] Google Apps Script URL is not set yet.\n" +
+      "Payload to be sent:", payload
+    );
+    // Simulate network delay for testing UX/loader
+    await new Promise((resolve) => setTimeout(resolve, 900));
+    return { success: true, simulated: true };
+  }
+
+  const formData = new FormData();
+  Object.keys(payload).forEach((key) => {
+    formData.append(key, payload[key] != null ? payload[key] : "");
+  });
+
+  try {
+    // Attempt standard fetch first
+    await fetch(GOOGLE_SCRIPT_URL, {
+      method: "POST",
+      body: formData,
+    });
+    return { success: true };
+  } catch (err) {
+    // If standard fetch encounters CORS on Google redirect, fallback to no-cors mode
+    try {
+      await fetch(GOOGLE_SCRIPT_URL, {
+        method: "POST",
+        body: formData,
+        mode: "no-cors",
+      });
+      return { success: true };
+    } catch (fallbackError) {
+      console.error("Submission failed:", fallbackError);
+      throw fallbackError;
+    }
+  }
+}
+
+/**
+ * Map product identifier (id, title, or name) to brochure PDF path
+ */
+function getBrochurePdfPath(identifier) {
+  const defaultPdf = "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maize%20Starch%20Powder%20%E2%80%93%20Food%20Grade%20Brochure-01.pdf";
+  if (!identifier) {
+    return defaultPdf;
+  }
+
+  // If already a valid PDF path or full URL
+  if (typeof identifier === "string" && (identifier.startsWith("http") || identifier.startsWith("/wp-content/") || identifier.endsWith(".pdf"))) {
+    return identifier;
+  }
+
+  const clean = String(identifier).trim().toLowerCase();
+
+  // Keyword / partial matching
+  if (clean.includes("glucose")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Liquid%20Glucose-01.pdf";
+  }
+  if (clean.includes("maltodex")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maltodextrin%20Powder-01.pdf";
+  }
+  if (clean.includes("gluten")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maize%20Gluten%20Meal-01.pdf";
+  }
+  if (clean.includes("germ")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maize%20Germ-01.pdf";
+  }
+  if (clean.includes("fiber") || clean.includes("fibre")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maize%20Dry%20Fiber-01.pdf";
+  }
+  if (clean.includes("industrial")) {
+    return "/wp-content/uploads/2026/11/Saatvik%20Agro%20Shakti%20Maize%20Starch%20Powder%20%E2%80%93%20Industrial%20Grade%20Brochure-01.pdf";
+  }
+  if (clean.includes("food") || clean.includes("starch")) {
+    return defaultPdf;
+  }
+
+  return defaultPdf;
+}
+
+/**
+ * Trigger programmatic browser file download for a brochure PDF
+ */
+function triggerBrochureDownload(fileUrl, preferredFilename) {
+  if (!fileUrl) return;
+  try {
+    let resolvedUrl = fileUrl;
+    if (typeof window !== "undefined" && window.SAATVIK_THEME_URI && fileUrl.startsWith("assets/")) {
+      resolvedUrl = window.SAATVIK_THEME_URI + "/" + fileUrl;
+    }
+    // Clean single-encoding: decode first so any %20/%E2 are resolved, then encodeURI once cleanly
+    try {
+      resolvedUrl = encodeURI(decodeURI(resolvedUrl));
+    } catch (e) {
+      // fallback to raw resolvedUrl
+    }
+    const link = document.createElement("a");
+    link.href = resolvedUrl;
+    const rawName = resolvedUrl.split("/").pop() || "Product-Brochure.pdf";
+    let cleanFilename = preferredFilename;
+    if (!cleanFilename) {
+      try {
+        cleanFilename = decodeURIComponent(rawName);
+      } catch (e) {
+        cleanFilename = rawName;
+      }
+    }
+    link.setAttribute("download", cleanFilename);
+    link.setAttribute("target", "_blank");
+    link.rel = "noopener noreferrer";
+    document.body.appendChild(link);
+    link.click();
+    setTimeout(() => {
+      if (link && link.parentNode) {
+        link.parentNode.removeChild(link);
+      }
+    }, 400);
+  } catch (err) {
+    console.error("Auto download trigger error:", err);
+  }
+}
+
+document.addEventListener("DOMContentLoaded", () => {
+  // =========================================================================
+  // 1. Contact Us Form Handler (#contactForm)
+  // =========================================================================
+  const contactForm = document.getElementById("contactForm");
+  const contactAlert = document.getElementById("contactFormAlert");
+
+  if (contactForm) {
+    contactForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = contactForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn ? submitBtn.querySelector(".btn-text") : null;
+      const btnLoader = submitBtn ? submitBtn.querySelector(".btn-loader") : null;
+
+      // Extract form values
+      const formData = new FormData(contactForm);
+      const payload = {
+        sheetName: "Contact-Us",
+        fullName: formData.get("fullName") || "",
+        company: formData.get("company") || "",
+        email: formData.get("email") || "",
+        phone: formData.get("phone") || "",
+        location: formData.get("location") || "",
+        requirement: formData.get("requirement") || "",
+        quantity: formData.get("quantity") || "",
+        message: formData.get("message") || "",
+      };
+
+      // Reset alert
+      if (contactAlert) {
+        contactAlert.style.display = "none";
+        contactAlert.className = "form-alert";
+      }
+
+      // Enter loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("is-loading");
+      }
+      if (btnText && btnLoader) {
+        btnText.style.display = "none";
+        btnLoader.style.display = "inline-flex";
+        btnLoader.style.alignItems = "center";
+        btnLoader.style.justifyContent = "center";
+      }
+
+      try {
+        await sendToGoogleSheet(payload);
+
+        // Success state
+        if (contactAlert) {
+          contactAlert.className = "form-alert success";
+          contactAlert.textContent =
+            "✓ Thank you! Your message has been sent successfully. Our team will get back to you shortly.";
+          contactAlert.style.display = "block";
+          contactAlert.scrollIntoView({ behavior: "smooth", block: "nearest" });
+        }
+
+        contactForm.reset();
+      } catch (err) {
+        // Error state
+        if (contactAlert) {
+          contactAlert.className = "form-alert error";
+          contactAlert.textContent =
+            "⚠️ Submission failed. Please check your internet connection or connect with us on WhatsApp.";
+          contactAlert.style.display = "block";
+        }
+      } finally {
+        // Exit loading state
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("is-loading");
+        }
+        if (btnText && btnLoader) {
+          btnText.style.display = "inline";
+          btnLoader.style.display = "none";
+        }
+      }
+    });
+  }
+
+  // =========================================================================
+  // 2. Download Brochure Modal Form (#brochureForm)
+  // =========================================================================
+  const brochureForm = document.getElementById("brochureForm");
+  const brochureModal = document.getElementById("brochureModal");
+  const brochureAlert = document.getElementById("brochureAlert");
+
+  if (brochureForm) {
+    brochureForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = brochureForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn ? submitBtn.querySelector(".btn-text") : null;
+      const btnLoader = submitBtn ? submitBtn.querySelector(".btn-loader") : null;
+      const formData = new FormData(brochureForm);
+      const productInput = brochureForm.querySelector('[name="product"]') || document.getElementById("productInput") || document.getElementById("brochureProductInput");
+      const modalProdName = document.getElementById("modalProductName");
+      
+      let productName = "";
+      if (productInput && productInput.value && productInput.value.trim()) {
+        productName = productInput.value.trim();
+      } else if (modalProdName && modalProdName.textContent && modalProdName.textContent.trim()) {
+        productName = modalProdName.textContent.trim();
+      } else if (formData.get("product") && formData.get("product").trim()) {
+        productName = formData.get("product").trim();
+      } else {
+        const pageHeading = document.querySelector(".product-title, h1");
+        productName = pageHeading ? pageHeading.textContent.trim() : "Food Grade Maize Starch";
+      }
+
+      const payload = {
+        sheetName: "Products-Download",
+        product: productName,
+        fullName: formData.get("fullName") || "",
+        email: formData.get("email") || "",
+        phone: formData.get("phone") || "",
+      };
+
+      // Determine PDF file path for this product
+      const brochurePdfInput = brochureForm.querySelector('[name="brochurePdf"]') || document.getElementById("brochurePdfInput");
+      const pdfUrl = (brochurePdfInput && brochurePdfInput.value && brochurePdfInput.value.trim())
+        ? brochurePdfInput.value.trim()
+        : getBrochurePdfPath(productName);
+
+      if (brochureAlert) {
+        brochureAlert.style.display = "none";
+        brochureAlert.className = "form-alert";
+      }
+
+      // Enter loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("is-loading");
+      }
+      if (btnText && btnLoader) {
+        btnText.style.display = "none";
+        btnLoader.style.display = "inline-flex";
+        btnLoader.style.alignItems = "center";
+        btnLoader.style.justifyContent = "center";
+      }
+
+      try {
+        await sendToGoogleSheet(payload);
+
+        // Trigger automatic PDF download to user's system
+        triggerBrochureDownload(pdfUrl);
+
+        // Success state
+        if (btnText && btnLoader) {
+          btnLoader.style.display = "none";
+          btnText.style.display = "inline";
+          btnText.textContent = "✓ Download Started!";
+        }
+        if (submitBtn) {
+          submitBtn.style.backgroundColor = "#10b981";
+          submitBtn.style.color = "#ffffff";
+        }
+        if (brochureAlert) {
+          brochureAlert.className = "form-alert success";
+          const filename = pdfUrl.split("/").pop();
+          brochureAlert.innerHTML = `
+            <strong>✓ Thank you!</strong> Your brochure download has started.<br>
+            <span style="font-size: 0.85rem; display: block; margin-top: 6px;">
+              If the download didn't start automatically, 
+              <a href="${encodeURI(pdfUrl)}" download="${filename}" target="_blank" style="text-decoration: underline; font-weight: 700; color: inherit;">click here to download manually</a>.
+            </span>
+          `;
+          brochureAlert.style.display = "block";
+        }
+
+        setTimeout(() => {
+          if (brochureModal) {
+            brochureModal.classList.remove("active");
+          }
+          brochureForm.reset();
+
+          // Reset button to initial state
+          if (submitBtn) {
+            submitBtn.disabled = false;
+            submitBtn.classList.remove("is-loading");
+            submitBtn.style.backgroundColor = "";
+            submitBtn.style.color = "";
+          }
+          if (btnText) {
+            btnText.textContent = "Download Now";
+          }
+          if (brochureAlert) {
+            brochureAlert.style.display = "none";
+            brochureAlert.innerHTML = "";
+            brochureAlert.className = "form-alert";
+          }
+        }, 2500);
+      } catch (err) {
+        console.error("Brochure submission error:", err);
+        // Fallback: Still trigger the brochure download so user is never blocked
+        triggerBrochureDownload(pdfUrl);
+
+        if (brochureAlert) {
+          brochureAlert.className = "form-alert success";
+          const filename = pdfUrl.split("/").pop();
+          brochureAlert.innerHTML = `
+            <strong>✓ Thank you!</strong> Your brochure download has started.<br>
+            <span style="font-size: 0.85rem; display: block; margin-top: 6px;">
+              If the download didn't start automatically, 
+              <a href="${encodeURI(pdfUrl)}" download="${filename}" target="_blank" style="text-decoration: underline; font-weight: 700; color: inherit;">click here to download manually</a>.
+            </span>
+          `;
+          brochureAlert.style.display = "block";
+        }
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("is-loading");
+          submitBtn.style.backgroundColor = "#10b981";
+          submitBtn.style.color = "#ffffff";
+        }
+        if (btnText && btnLoader) {
+          btnText.style.display = "inline";
+          btnLoader.style.display = "none";
+          btnText.textContent = "✓ Download Started!";
+        }
+        setTimeout(() => {
+          if (brochureModal) {
+            brochureModal.classList.remove("active");
+          }
+          brochureForm.reset();
+          if (submitBtn) {
+            submitBtn.style.backgroundColor = "";
+            submitBtn.style.color = "";
+          }
+          if (btnText) btnText.textContent = "Download Now";
+          if (brochureAlert) {
+            brochureAlert.style.display = "none";
+            brochureAlert.innerHTML = "";
+            brochureAlert.className = "form-alert";
+          }
+        }, 2500);
+      }
+    });
+    // Wire up brochure modal close buttons & outside click
+    if (brochureModal) {
+      const modalClose = brochureModal.querySelector(".modal-close, #modalClose");
+      if (modalClose) {
+        modalClose.addEventListener("click", () => {
+          brochureModal.classList.remove("active");
+        });
+      }
+      brochureModal.addEventListener("click", (e) => {
+        if (e.target === brochureModal) {
+          brochureModal.classList.remove("active");
+        }
+      });
+    }
+  }
+
+  // =========================================================================
+  // 3. Careers Job Application / Resume Modal Form (#careerForm)
+  // =========================================================================
+  const careerForm = document.getElementById("careerForm");
+  const careerModal = document.getElementById("careerModal");
+  const careerAlert = document.getElementById("careerAlert");
+  const careerRoleInput = document.getElementById("careerRoleInput");
+  const careerResumeInput = document.getElementById("careerResumeInput");
+  const fileUploadText = document.getElementById("fileUploadText");
+  const careerModalClose = document.getElementById("careerModalClose");
+
+  // Update file name display when candidate selects a resume
+  if (careerResumeInput && fileUploadText) {
+    careerResumeInput.addEventListener("change", () => {
+      if (careerResumeInput.files && careerResumeInput.files[0]) {
+        const file = careerResumeInput.files[0];
+        const sizeMB = (file.size / (1024 * 1024)).toFixed(1);
+        fileUploadText.textContent = `✓ ${file.name} (${sizeMB} MB)`;
+      } else {
+        fileUploadText.textContent = "Choose File (PDF, DOC, DOCX, JPG, PNG)";
+      }
+    });
+  }
+
+  // Open modal on any career apply / resume button click
+  document.querySelectorAll(".btn--resume, .btn--opening-apply, [data-open-career-modal]").forEach((btn) => {
+    btn.addEventListener("click", (e) => {
+      e.preventDefault();
+      // Look for role title from data-role attribute or parent opening card
+      let roleName = btn.getAttribute("data-role");
+      if (!roleName) {
+        const parentOpening = btn.closest(".opening-item");
+        if (parentOpening) {
+          const titleEl = parentOpening.querySelector(".opening-title");
+          if (titleEl) roleName = titleEl.textContent.trim();
+        }
+      }
+      if (careerRoleInput) {
+        careerRoleInput.value = roleName || "Production Executive";
+      }
+      if (careerModal) {
+        careerModal.classList.add("active");
+        careerModal.setAttribute("aria-hidden", "false");
+      }
+    });
+  });
+
+  if (careerModalClose && careerModal) {
+    careerModalClose.addEventListener("click", () => {
+      careerModal.classList.remove("active");
+      careerModal.setAttribute("aria-hidden", "true");
+    });
+  }
+
+  if (careerModal) {
+    careerModal.addEventListener("click", (e) => {
+      if (e.target === careerModal) {
+        careerModal.classList.remove("active");
+        careerModal.setAttribute("aria-hidden", "true");
+      }
+    });
+  }
+
+  if (careerForm) {
+    careerForm.addEventListener("submit", async (e) => {
+      e.preventDefault();
+
+      const submitBtn = careerForm.querySelector('button[type="submit"]');
+      const btnText = submitBtn ? submitBtn.querySelector(".btn-text") : null;
+      const btnLoader = submitBtn ? submitBtn.querySelector(".btn-loader") : null;
+
+      const formData = new FormData(careerForm);
+      const roleName = formData.get("careerProfile") || "General Application";
+
+      // Reset alert
+      if (careerAlert) {
+        careerAlert.style.display = "none";
+        careerAlert.className = "form-alert";
+      }
+
+      // Check and process resume file
+      let fileData = "";
+      let fileName = "";
+      let fileMime = "";
+
+      if (careerResumeInput && careerResumeInput.files && careerResumeInput.files[0]) {
+        const file = careerResumeInput.files[0];
+
+        // 10MB size limit check
+        if (file.size > 10 * 1024 * 1024) {
+          if (careerAlert) {
+            careerAlert.className = "form-alert error";
+            careerAlert.textContent = "⚠️ File size exceeds 10MB limit. Please upload a smaller file.";
+            careerAlert.style.display = "block";
+          }
+          return;
+        }
+
+        fileName = file.name;
+        fileMime = file.type || "application/octet-stream";
+
+        try {
+          fileData = await new Promise((resolve, reject) => {
+            const reader = new FileReader();
+            reader.onload = () => {
+              const res = reader.result;
+              const base64 = typeof res === "string" ? res.split(",")[1] : "";
+              resolve(base64);
+            };
+            reader.onerror = reject;
+            reader.readAsDataURL(file);
+          });
+        } catch (fErr) {
+          console.error("File reading error:", fErr);
+        }
+      }
+
+      const payload = {
+        sheetName: "Careers",
+        careerProfile: roleName,
+        fullName: formData.get("fullName") || "",
+        email: formData.get("email") || "",
+        phone: formData.get("phone") || "",
+        fileName: fileName,
+        fileMime: fileMime,
+        fileData: fileData,
+      };
+
+      // Enter loading state
+      if (submitBtn) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("is-loading");
+      }
+      if (btnText && btnLoader) {
+        btnText.style.display = "none";
+        btnLoader.style.display = "inline-flex";
+        btnLoader.style.alignItems = "center";
+        btnLoader.style.justifyContent = "center";
+      }
+
+      try {
+        await sendToGoogleSheet(payload);
+
+        if (careerAlert) {
+          careerAlert.className = "form-alert success";
+          careerAlert.textContent =
+            "✓ Thank you! Your application & resume for " + roleName + " has been submitted successfully. Our talent team will connect with you soon.";
+          careerAlert.style.display = "block";
+        }
+
+        careerForm.reset();
+        if (fileUploadText) {
+          fileUploadText.textContent = "Choose File (PDF, DOC, DOCX, JPG, PNG)";
+        }
+
+        setTimeout(() => {
+          if (careerModal) {
+            careerModal.classList.remove("active");
+            careerModal.setAttribute("aria-hidden", "true");
+          }
+          if (careerAlert) {
+            careerAlert.style.display = "none";
+            careerAlert.className = "form-alert";
+          }
+        }, 3000);
+
+      } catch (err) {
+        console.error("Career submission error:", err);
+        if (careerAlert) {
+          careerAlert.className = "form-alert error";
+          careerAlert.textContent =
+            "⚠️ Submission failed. Please try again or email your resume directly to info@saatvikgroup.com.";
+          careerAlert.style.display = "block";
+        }
+      } finally {
+        if (submitBtn) {
+          submitBtn.disabled = false;
+          submitBtn.classList.remove("is-loading");
+        }
+        if (btnText && btnLoader) {
+          btnText.style.display = "inline";
+          btnLoader.style.display = "none";
+        }
+      }
+    });
+  }
+});

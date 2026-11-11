@@ -1,0 +1,261 @@
+<?php
+/**
+ * Template Name: Terms & Conditions
+ * Description: Commercial terms & manufacturing service conditions
+ * Location: page-terms-conditions.php
+ */
+
+$page_css = 'assets/css/legal.css';
+get_header();
+?>
+<main>
+  <!-- HERO BANNER -->
+  <section class="legal-hero">
+    <div class="container">
+      <span class="legal-hero-kicker">Legal &amp; Compliance</span>
+      <h1>Terms &amp; Conditions</h1>
+      <div class="legal-hero-meta">
+        <span><strong>Effective Date:</strong> October 2026</span>
+        <span><strong>Entity:</strong> Saatvik Agro Processors Private Limited</span>
+        <span><strong>Jurisdiction:</strong> India</span>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTENT SECTION -->
+  <section class="legal-section">
+    <div class="container">
+      <div class="legal-grid">
+
+        <!-- Sticky Sidebar -->
+        <aside class="legal-toc">
+          <div class="legal-toc-title">Quick Navigation</div>
+          <ul class="legal-toc-list">
+            <li><a href="#acceptance">1. Acceptance of Terms</a></li>
+            <li><a href="#company">2. Corporate Identity</a></li>
+            <li><a href="#website-use">3. Website Use &amp; Conduct</a></li>
+            <li><a href="#products">4. Products &amp; Inquiries</a></li>
+            <li><a href="#samples">5. Samples &amp; Quotes</a></li>
+            <li><a href="#specifications">6. Specifications &amp; Quality</a></li>
+            <li><a href="#ip">7. Intellectual Property</a></li>
+            <li><a href="#disclaimers">8. Warranties &amp; Disclaimers</a></li>
+            <li><a href="#liability">9. Limitation of Liability</a></li>
+            <li><a href="#governing-law">10. Governing Law</a></li>
+            <li><a href="#contact">11. Contact &amp; Notices</a></li>
+          </ul>
+        </aside>
+
+        <!-- Main Legal Content -->
+        <div class="legal-content">
+          <p class="legal-lead">
+            Welcome to the official website of <strong>Saatvik Agro Processors Private Limited</strong>
+            (&ldquo;Saatvik Agro&rdquo;, &ldquo;Company&rdquo;, &ldquo;we&rdquo;, &ldquo;our&rdquo;, or
+            &ldquo;us&rdquo;). These Terms and Conditions govern your access to and use of our digital platforms,
+            product catalogs, commercial enquiry portals, and associated services. By accessing or using this website,
+            you agree to be bound by these Terms.
+          </p>
+
+          <!-- 1 -->
+          <div class="legal-block" id="acceptance">
+            <h2>1. Acceptance of Terms</h2>
+            <p>
+              By visiting, browsing, or submitting inquiries through <strong>www.saatvikagro.com</strong>, you
+              acknowledge that you have read, understood, and agreed to be bound by these Terms and Conditions
+              together with our <a href="privacy-policy.html" style="color: #ea7124; font-weight: 600;">Privacy
+                Policy</a>.
+            </p>
+            <p>
+              If you are accessing this website on behalf of a company, corporate enterprise, or legal entity, you
+              represent and warrant that you possess the requisite authority to bind such entity to these Terms. If
+              you do not agree to these Terms, you must discontinue using our website immediately.
+            </p>
+          </div>
+
+          <!-- 2 -->
+          <div class="legal-block" id="company">
+            <h2>2. Corporate Identity &amp; Operations</h2>
+            <p>
+              Saatvik Agro Processors Private Limited is the agro-ingredient manufacturing unit of the Saatvik Group.
+              We operate a high-capacity wet maize milling and processing facility with an intake capacity of 500 TPD
+              located at Morena, Madhya Pradesh, producing food-grade, industrial-grade, and animal-nutrition maize
+              ingredients under the <strong>Shakti</strong> brand.
+            </p>
+            <ul>
+              <li><strong>Corporate Office:</strong> Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4,
+                Greater Noida West, Uttar Pradesh - 201318</li>
+              <li><strong>Manufacturing Plant:</strong> Plot No. 32, 33, 40 AND 41, Sector-H, Sitapur, MPIDC, Phase 2,
+                Morena, Banmore, Madhya Pradesh - 476444</li>
+            </ul>
+          </div>
+
+          <!-- 3 -->
+          <div class="legal-block" id="website-use">
+            <h2>3. Website Use &amp; Permitted Conduct</h2>
+            <p>
+              You agree to use this website solely for lawful commercial and information-gathering purposes. You agree
+              not to:
+            </p>
+            <ul>
+              <li>Introduce viruses, trojans, worms, or malicious computer software targeting our servers or data
+                infrastructure.</li>
+              <li>Attempt unauthorized access to any part of our website, contact forms, databases, or hosting
+                servers.</li>
+              <li>Use automated scrapers, data-mining tools, or crawlers without our express prior written permission.
+              </li>
+              <li>Misrepresent your identity, corporate affiliation, or submit fraudulent quotation or sample
+                requests.</li>
+            </ul>
+          </div>
+
+          <!-- 4 -->
+          <div class="legal-block" id="products">
+            <h2>4. Product Range &amp; Inquiries</h2>
+            <p>
+              The products displayed on this website, including but not limited to <em>Food Grade Maize Starch, Liquid
+                Glucose, Maltodextrin (LD, SD, HD), Industrial Maize Starch, Maize Gluten Meal, Maize Germ, and Maize
+                Dry Fibre</em>, represent commercial B2B offerings.
+            </p>
+            <p>
+              Information provided on this site is illustrative and designed to assist procurement teams, formulation
+              specialists, and commercial buyers. Submission of an inquiry, RFQ (Request for Quotation), or WhatsApp
+              chat does not constitute a legally binding sales contract until confirmed by a formal Commercial
+              Proforma Invoice or Sales Agreement executed by Saatvik Agro.
+            </p>
+          </div>
+
+          <!-- 5 -->
+          <div class="legal-block" id="samples">
+            <h2>5. Sample Requests &amp; Commercial Quotes</h2>
+            <p>
+              Saatvik Agro provides product samples for formulation testing, laboratory validation, and commercial
+              qualification at its sole discretion.
+            </p>
+            <div class="legal-callout">
+              <h4>Sample Dispatch Policy</h4>
+              <p>
+                Samples are intended exclusively for verified business entities, manufacturing laboratories, and
+                commercial clients. Saatvik Agro reserves the right to authenticate corporate credentials before
+                dispatching product samples or issuing Certificates of Analysis (COA).
+              </p>
+            </div>
+            <p>
+              Commercial quotations, prices, minimum order quantities (MOQ), and packaging terms are subject to formal
+              confirmation based on current market dynamics, logistics considerations, and prevailing raw material
+              rates.
+            </p>
+          </div>
+
+          <!-- 6 -->
+          <div class="legal-block" id="specifications">
+            <h2>6. Specifications, Certifications &amp; Quality</h2>
+            <p>
+              Our manufacturing operations adhere strictly to international benchmarks, with verified accreditations
+              including <strong>FSSAI, ISO 9001:2015, ISO 22000:2018, Intertek HACCP, and Halal</strong>.
+            </p>
+            <p>
+              Technical parameters (such as moisture content, viscosity, dextrose equivalent, pH, and purity levels)
+              specified on product sheets reflect standard laboratory specifications. Exact batch metrics are
+              delivered with each commercial consignment through a signed <strong>Certificate of Analysis
+                (COA)</strong>.
+            </p>
+          </div>
+
+          <!-- 7 -->
+          <div class="legal-block" id="ip">
+            <h2>7. Intellectual Property Rights</h2>
+            <p>
+              All content published on this website—including trademarks, corporate logos (&ldquo;Saatvik Agro&rdquo;,
+              &ldquo;Shakti&rdquo;), brand assets, product photography, technical text, graphics, and layout
+              structure—is the exclusive intellectual property of Saatvik Agro Processors Private Limited and is
+              protected under applicable Indian and international copyright and trademark laws.
+            </p>
+            <p>
+              No content, photography, or technical datasheets may be copied, reproduced, republished, downloaded, or
+              distributed for external commercial use without express prior written consent from Saatvik Agro.
+            </p>
+          </div>
+
+          <!-- 8 -->
+          <div class="legal-block" id="disclaimers">
+            <h2>8. Warranties &amp; Disclaimers</h2>
+            <p>
+              While we strive to ensure all information, technical descriptions, and operational glimpses on this site
+              are accurate and current, the website and its contents are provided on an &ldquo;AS IS&rdquo; and
+              &ldquo;AS AVAILABLE&rdquo; basis without warranties of any kind, whether express or implied.
+            </p>
+            <p>
+              Saatvik Agro does not warrant that website functions will be uninterrupted, error-free, or that defects
+              will be immediately rectified. Formulation compatibility for client-specific applications remains the
+              sole responsibility of the respective manufacturing or R&amp;D team.
+            </p>
+          </div>
+
+          <!-- 9 -->
+          <div class="legal-block" id="liability">
+            <h2>9. Limitation of Liability &amp; Force Majeure</h2>
+            <p>
+              To the fullest extent permitted by law, Saatvik Agro Processors Private Limited, its directors,
+              officers, and employees shall not be liable for any indirect, incidental, consequential, or punitive
+              damages arising from the use of, or inability to use, this website or reliance on its technical content.
+            </p>
+            <p>
+              Neither party shall be held liable for failure or delay in performance resulting from causes beyond
+              reasonable control, including acts of God, extreme weather, supply disruptions, industrial strikes,
+              epidemics, power failures, or regulatory embargoes.
+            </p>
+          </div>
+
+          <!-- 10 -->
+          <div class="legal-block" id="governing-law">
+            <h2>10. Governing Law &amp; Dispute Resolution</h2>
+            <p>
+              These Terms and Conditions shall be governed by, construed, and enforced in accordance with the laws of
+              <strong>India</strong>. Any disputes, controversies, or claims arising out of or in connection with
+              these Terms or website usage shall be subject to the exclusive jurisdiction of the competent courts in
+              <strong>Morena / Gwalior, Madhya Pradesh, India</strong>.
+            </p>
+          </div>
+
+          <!-- 11 -->
+          <div class="legal-block" id="contact">
+            <h2>11. Contact &amp; Legal Notices</h2>
+            <p>
+              If you have any questions, clarifications, or legal inquiries concerning these Terms &amp; Conditions,
+              please reach out to our corporate legal and communications team:
+            </p>
+
+            <div class="legal-contact-card">
+              <h3>Saatvik Agro Processors Private Limited</h3>
+              <p>
+                Official channel for commercial agreements, compliance notices, and institutional inquiries.
+              </p>
+              <div class="legal-contact-details">
+                <div class="legal-contact-col">
+                  <h5>Official Email</h5>
+                  <p><a href="mailto:marketing.agro@saatvikgroup.com">marketing.agro@saatvikgroup.com</a></p>
+                </div>
+                <div class="legal-contact-col">
+                  <h5>Direct Helpline</h5>
+                  <p><a href="tel:+91 95910 33188">+91 95910 33188</a></p>
+                </div>
+                <div class="legal-contact-col">
+                  <h5>Corporate Office</h5>
+                  <p>Unit 1418 - 1419, Tower A, Grandthum, Plot No 7, Techzone 4, Greater Noida West, UP - 201318</p>
+                </div>
+                <div class="legal-contact-col">
+                  <h5>Manufacturing Unit</h5>
+                  <p>Plot No. 32, 33, 40 &amp; 41, Sector-H, Sitapur, MPIDC, Phase 2, Morena, Banmore, MP - 476444</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+
+<?php
+get_footer();
