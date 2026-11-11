@@ -4,7 +4,8 @@
  * Description: Global Brutalist Header, Google Fonts, Preconnects, Dual Logo & Sticky Navbar
  * Location: header.php
  */
-?><!doctype html>
+?>
+<!doctype html>
 <html <?php language_attributes(); ?>>
 
 <head>
@@ -20,40 +21,40 @@
   $canonical_url = trailingslashit($req_url);
 
   if (is_front_page()) {
-      $seo_title = 'Saatvik Agro — Premium Maize Ingredients';
-      $seo_desc = 'Saatvik Agro is a leading manufacturer of high-purity maize starch, liquid glucose syrups, maltodextrin, and animal feed ingredients.';
+    $seo_title = 'Saatvik Agro — Premium Maize Ingredients';
+    $seo_desc = 'Saatvik Agro is a leading manufacturer of high-purity maize starch, liquid glucose syrups, maltodextrin, and animal feed ingredients.';
   } elseif (is_singular('product')) {
-      $prod_t = get_the_title();
-      $seo_title = $prod_t . ' | Saatvik Agro';
-      $custom_desc = function_exists('get_field') ? get_field('product_description') : '';
-      if (empty($custom_desc)) {
-          $custom_desc = get_the_excerpt();
-      }
-      $seo_desc = !empty($custom_desc) ? wp_strip_all_tags($custom_desc) : $prod_t . ' manufactured by Saatvik Agro Processors with industry-leading purity and consistency standards.';
+    $prod_t = get_the_title();
+    $seo_title = $prod_t . ' | Saatvik Agro';
+    $custom_desc = function_exists('get_field') ? get_field('product_description') : '';
+    if (empty($custom_desc)) {
+      $custom_desc = get_the_excerpt();
+    }
+    $seo_desc = !empty($custom_desc) ? wp_strip_all_tags($custom_desc) : $prod_t . ' manufactured by Saatvik Agro Processors with industry-leading purity and consistency standards.';
   } elseif (is_page('about-us') || is_page('about')) {
-      $seo_title = 'About Us | Saatvik Agro';
-      $seo_desc = 'Discover Saatvik Agro Processors — advanced maize wet milling, state-of-the-art infrastructure, sustainable manufacturing, and world-class quality control.';
+    $seo_title = 'About Us | Saatvik Agro';
+    $seo_desc = 'Discover Saatvik Agro Processors — advanced maize wet milling, state-of-the-art infrastructure, sustainable manufacturing, and world-class quality control.';
   } elseif (is_page('products')) {
-      $seo_title = 'Products | Saatvik Agro';
-      $seo_desc = 'Explore our portfolio of premium food grade and industrial starches, high-purity liquid glucose, maltodextrin powder, and high-protein feed co-products.';
+    $seo_title = 'Products | Saatvik Agro';
+    $seo_desc = 'Explore our portfolio of premium food grade and industrial starches, high-purity liquid glucose, maltodextrin powder, and high-protein feed co-products.';
   } elseif (is_page('careers')) {
-      $seo_title = 'Careers | Saatvik Agro — Grow With Us';
-      $seo_desc = 'Explore career opportunities at Saatvik Agro. Join a passionate team turning quality maize into world-class ingredients with innovation, consistency, and growth.';
+    $seo_title = 'Careers | Saatvik Agro — Grow With Us';
+    $seo_desc = 'Explore career opportunities at Saatvik Agro. Join a passionate team turning quality maize into world-class ingredients with innovation, consistency, and growth.';
   } elseif (is_page('contact-us') || is_page('contact')) {
-      $seo_title = 'Contact Us | Saatvik Agro';
-      $seo_desc = 'Get in touch with Saatvik Agro Processors for commercial inquiries, technical ingredient consultations, custom specifications, and bulk sample requests.';
+    $seo_title = 'Contact Us | Saatvik Agro';
+    $seo_desc = 'Get in touch with Saatvik Agro Processors for commercial inquiries, technical ingredient consultations, custom specifications, and bulk sample requests.';
   } elseif (is_page('media')) {
-      $seo_title = 'Media Gallery | Saatvik Agro';
-      $seo_desc = 'Explore media, gallery photos, state-of-the-art manufacturing facilities, and operational glimpses of Saatvik Agro.';
+    $seo_title = 'Media Gallery | Saatvik Agro';
+    $seo_desc = 'Explore media, gallery photos, state-of-the-art manufacturing facilities, and operational glimpses of Saatvik Agro.';
   } elseif (is_page('privacy-policy')) {
-      $seo_title = 'Privacy Policy | Saatvik Agro';
-      $seo_desc = 'Privacy policy of Saatvik Agro Processors Private Limited outlining how we collect, safeguard, and process your business and personal information.';
+    $seo_title = 'Privacy Policy | Saatvik Agro';
+    $seo_desc = 'Privacy policy of Saatvik Agro Processors Private Limited outlining how we collect, safeguard, and process your business and personal information.';
   } elseif (is_page('terms-conditions')) {
-      $seo_title = 'Terms & Conditions | Saatvik Agro';
-      $seo_desc = 'Terms and conditions governing the use of Saatvik Agro website, product inquiries, sample requests, and commercial transactions.';
+    $seo_title = 'Terms & Conditions | Saatvik Agro';
+    $seo_desc = 'Terms and conditions governing the use of Saatvik Agro website, product inquiries, sample requests, and commercial transactions.';
   } else {
-      $seo_title = wp_get_document_title();
-      $seo_desc = get_bloginfo('description');
+    $seo_title = wp_get_document_title();
+    $seo_desc = get_bloginfo('description');
   }
   ?>
   <title><?php echo esc_html($seo_title); ?></title>
@@ -86,38 +87,41 @@
     rel="stylesheet" />
 
   <!-- Global Design System Stylesheet -->
-  <link rel="stylesheet" href="<?php echo esc_url(get_theme_file_uri('assets/css/global.css')); ?>?v=<?php echo wp_get_theme()->get('Version'); ?>" />
+  <link rel="stylesheet"
+    href="<?php echo esc_url(get_theme_file_uri('assets/css/global.css')); ?>?v=<?php echo wp_get_theme()->get('Version'); ?>" />
 
   <!-- Dedicated Per-Page Stylesheet Loading (Cyntexa Standard) -->
   <?php
   global $page_css;
   if (!empty($page_css)) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri($page_css)) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri($page_css)) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_front_page()) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/index.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/index.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('about-us') || is_page('about')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/about.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/about.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('products')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/products.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/products.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('product-single') || is_page('product') || is_singular('product')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/product-single.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/product-single.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('careers')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/careers.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/careers.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('contact-us') || is_page('contact')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/contact.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/contact.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('media')) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/media.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/media.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page('article-single') || is_single()) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/article-single.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/article-single.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   } elseif (is_page(array('privacy-policy', 'terms-conditions'))) {
-      echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/legal.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
+    echo '<link rel="stylesheet" href="' . esc_url(get_theme_file_uri('assets/css/legal.css')) . '?v=' . wp_get_theme()->get('Version') . '" />' . "\n";
   }
   ?>
 
-  <?php if (is_front_page()) : ?>
-  <!-- Preload Hero Fallback & Video for Instant Rendering -->
-  <link rel="preload" as="image" href="/wp-content/uploads/2026/11/Video-Fallback.webp" type="image/webp" fetchpriority="high" />
-  <link rel="preload" as="video" href="/wp-content/uploads/2026/11/Hero-Video.mp4" type="video/mp4" fetchpriority="high" />
+  <?php if (is_front_page()): ?>
+    <!-- Preload Hero Fallback & Video for Instant Rendering -->
+    <link rel="preload" as="image" href="/wp-content/uploads/2026/11/Video-Fallback.webp" type="image/webp"
+      fetchpriority="high" />
+    <link rel="preload" as="video" href="/wp-content/uploads/2026/11/Hero-Video.mp4" type="video/mp4"
+      fetchpriority="high" />
   <?php endif; ?>
 
   <!-- Theme Base URLs & Scroll Restoration -->
@@ -136,17 +140,23 @@
 <body <?php body_class(); ?>>
 
   <!-- NAVBAR -->
-  <header class="header flex-between">
+  <header class="header flex-between test-1">
     <a href="<?php echo esc_url(home_url('/')); ?>" class="logo-group" aria-label="Saatvik Agro Home">
-      <img src="/wp-content/uploads/2026/11/Logo_Saatvik%20Agro.png" alt="Saatvik Agro" class="logo-img saatvik-logo" decoding="async" />
+      <img src="/wp-content/uploads/2026/11/Logo_Saatvik%20Agro.png" alt="Saatvik Agro" class="logo-img saatvik-logo"
+        decoding="async" />
       <div class="logo-divider"></div>
-      <img src="/wp-content/uploads/2026/11/Logo_Shakti.png" alt="Shakti" class="logo-img shakti-logo" decoding="async" />
+      <img src="/wp-content/uploads/2026/11/Logo_Shakti.png" alt="Shakti" class="logo-img shakti-logo"
+        decoding="async" />
     </a>
     <ul class="nav-links">
-      <li><a href="<?php echo esc_url(home_url('/')); ?>" class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a></li>
-      <li><a href="<?php echo esc_url(home_url('/products/')); ?>" class="<?php echo (is_page('products') || is_page('product')) ? 'active' : ''; ?>">Product</a></li>
-      <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="<?php echo (is_page('about-us') || is_page('about')) ? 'active' : ''; ?>">About Us</a></li>
-      <li><a href="<?php echo esc_url(home_url('/careers/')); ?>" class="<?php echo is_page('careers') ? 'active' : ''; ?>">Careers</a></li>
+      <li><a href="<?php echo esc_url(home_url('/')); ?>"
+          class="<?php echo is_front_page() ? 'active' : ''; ?>">Home</a></li>
+      <li><a href="<?php echo esc_url(home_url('/products/')); ?>"
+          class="<?php echo (is_page('products') || is_page('product')) ? 'active' : ''; ?>">Product</a></li>
+      <li><a href="<?php echo esc_url(home_url('/about-us/')); ?>"
+          class="<?php echo (is_page('about-us') || is_page('about')) ? 'active' : ''; ?>">About Us</a></li>
+      <li><a href="<?php echo esc_url(home_url('/careers/')); ?>"
+          class="<?php echo is_page('careers') ? 'active' : ''; ?>">Careers</a></li>
     </ul>
 
     <div class="nav-contact">

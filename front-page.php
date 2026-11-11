@@ -10,7 +10,7 @@ get_header();
 ?>
 
 <main class="main-container">
-<!-- HERO -->
+  <!-- HERO -->
   <section class="hero">
     <!-- Background Video -->
     <div class="hero-video-bg">
@@ -31,7 +31,8 @@ get_header();
         </h1>
         <div class="hero-btn-group">
           <a href="<?php echo esc_url(home_url('/about-us/')); ?>" class="btn btn--hero-orange">About Us</a>
-          <a href="<?php echo esc_url(home_url('/products/')); ?>" class="btn btn--hero-white">Explore the Shakti Range</a>
+          <a href="<?php echo esc_url(home_url('/products/')); ?>" class="btn btn--hero-white">Explore the Shakti
+            Range</a>
         </div>
       </div>
 
@@ -58,7 +59,8 @@ get_header();
         </div>
       </div>
 
-      <a href="<?php echo esc_url(home_url('/products/?category=food-grade')); ?>" class="banner-row bg-white" aria-label="Explore Food Grade Products">
+      <a href="<?php echo esc_url(home_url('/products/?category=food-grade')); ?>" class="banner-row bg-white"
+        aria-label="Explore Food Grade Products">
         <div class="banner-top">
           <h2>Food Grade</h2>
         </div>
@@ -135,7 +137,8 @@ get_header();
         </div>
       </a>
     </div>
-    <img src="/wp-content/uploads/2026/11/corn.png" class="cheese-img" alt="Ingredient" loading="lazy" decoding="async" />
+    <img src="/wp-content/uploads/2026/11/corn.png" class="cheese-img" alt="Ingredient" loading="lazy"
+      decoding="async" />
   </section>
 
   <!-- SECTION 2: Intro Grid -->
@@ -406,7 +409,8 @@ get_header();
 
       </div>
 
-      <img src="/wp-content/uploads/2026/11/corn-1.png" alt="Maize" class="intro-jug-img" loading="lazy" decoding="async" />
+      <img src="/wp-content/uploads/2026/11/corn-1.png" alt="Maize" class="intro-jug-img" loading="lazy"
+        decoding="async" />
     </div>
   </section>
 
