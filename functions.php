@@ -78,6 +78,14 @@ function add_cors_http_header()
 }
 add_action('init', 'add_cors_http_header');
 
+// Auto-flush rewrite rules if products rule is missing
+add_action('init', function () {
+    $rules = get_option('rewrite_rules');
+    if (empty($rules) || !isset($rules['products/?$'])) {
+        flush_rewrite_rules(false);
+    }
+}, 99);
+
 // Hide Admin Toolbar on Frontend
 add_filter('show_admin_bar', '__return_false');
 show_admin_bar(false);
